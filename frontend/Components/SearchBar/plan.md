@@ -8,6 +8,32 @@
 - Font icons
 - SVG icons DONE
 
+### Select menu 
+
+- imported code block from https://mui.com/material-ui/react-select/ 
+- refactored the categories from age to represent cinema, restaurant etc
+- refactored the code such as the state from setAge etc to setCategory
+- created a stylesheet for the search bar component so they now render beside each other
+
+created stylesheet file and styled the global class
+
+```
+SearchBarStyles.module.css
+
+```
+
+Imported styles into our component
+
+```
+import styles from "./SearchBarStyles.module.css";
+```
+Passed global class styling to our box component 
+
+``` 
+<Box className={styles.global}>
+```
+
+
 1. Create a drop-down via MUI
 2. Create a text input field via MUI
 3. Create a button via MUI
