@@ -6,12 +6,7 @@ export default function Home() {
   return (
     <div>
     <Logo />
-    <Gallery />
-    <Gallery />
-    <Gallery />
-    <Gallery />
-    <Gallery />
-     
+   <Gallery />
     </div>
   )
 }
