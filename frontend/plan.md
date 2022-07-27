@@ -1,4 +1,4 @@
-### :hatching_chick: Gallery and Logo Team - Shabana and Kendall 
+### :hatching_chick: Gallery and Logo Team Day 1 - Shabana and Kendall 
 
 
 
@@ -40,4 +40,26 @@ import Typography from '@mui/material/Typography';
 :white_check_mark: Rendered Logo in /pages/index.js
 
 :white_check_mark: Rendered Gallery in pages/index.js
+
+</br></br>
+----------------------------------------------------------
+
+</br></br>
+
+### :hatching_chick: Gallery and Logo Team Day 2 - Shabana and Kendall 
+
+</br>
+
+:white_check_mark: Moved everything from Gallery Component(/Components/Gallery/index.js) into Small Card Component(/Components/SmallCard/index.js)
+</br>
+
+:white_check_mark: Imported Small Card Component into Gallery
+
+</br>
+
+:white_check_mark: Set props in return for each of the SmallCard components rendered in return of Gallery Component(/Components/Gallery/index.js). 
+
+</br>
+
+:white_check_mark: Passed those props into the SmallCard Component(/Components/SmallCard/index.js)
 
