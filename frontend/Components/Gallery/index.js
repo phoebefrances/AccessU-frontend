@@ -1,13 +1,12 @@
 import * as React from 'react';
-import Image from 'next/image'
+import Image from 'next/image';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
-import AccessibleIcon from '@mui/icons-material'
-import CardContent from '@mui/material/CardContent'
+import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
-export default function MediaCard() {
+export default function Gallery() {
   return (
     <Card sx={{ maxWidth: 345 }}>
      <Image src="/pub.jpeg" alt="Pub" width="300" height="200" />
