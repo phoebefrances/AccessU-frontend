@@ -8,6 +8,8 @@ import TextField from "@mui/material/TextField";
 import styles from "./SearchBarStyles.module.css";
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
+import { red } from "@mui/material/colors";
+import SearchIcon from '@mui/icons-material/Search';
 
 // Custom Component containing category drop down menu, location search input field and search button 
 
@@ -19,7 +21,7 @@ export default function BasicSelect() {
   };
 
   return (
-    <Box sx={{ minWidth: 120 }} className={styles.global}>
+    <Stack direction="row" sx={{borderColor: '#ff0099'}} className={styles.global} >
 
       {/* Category drop down menu */}
       <FormControl fullWidth>
@@ -37,16 +39,18 @@ export default function BasicSelect() {
           <MenuItem value={"Shop"}>Shop</MenuItem>
           <MenuItem value={"Cafe"}>Cafe</MenuItem>
         </Select>
+      
       </FormControl>
 
       {/* Search Location input field  */}
       <TextField id="standard-basic" label="Standard" variant="standard" />
 
        {/* Search button  */}
-      <Stack direction="row" spacing={4}>
-      <Button variant="contained">Search</Button>
+      <Stack direction="column" spacing={4} >
+      <Button variant="contained" startIcon={<SearchIcon />}>Search</Button>
+  
     </Stack>
-    </Box>
+    </Stack>
   );
 }
 
