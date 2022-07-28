@@ -24,8 +24,9 @@ export default function BasicSelect() {
   return (
     <Box className={styles.global}>
       <Stack direction="row">
+      
         {/* Category drop down menu */}
-        <FormControl fullWidth variant="standard">
+        <FormControl variant="standard">
           <InputLabel id="demo-simple-select-label">Category</InputLabel>
           <Select
             labelId="demo-simple-select-label"

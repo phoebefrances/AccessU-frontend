@@ -3,6 +3,7 @@
     border-color: #FF9100;
     border-radius: 50px;
     padding: 10px;
+    width: 1700px;
 }
 
 .drop {
@@ -10,3 +11,4 @@
     border: none;
     background-color: blueviolet;
 }
+
