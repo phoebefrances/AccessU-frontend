@@ -4,19 +4,22 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import PropTypes from 'prop-types';
+import Box from '@mui/material/Box';
+
+
 
 export default function SmallCard({ name, category, img, address }) {
   return (
-    <Card sx={{ maxWidth: 345 }}>
-     <Image src={img} alt="Pub" width="300" height="200" />
+    <Card>
       <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
+        <Typography>
           {name}
         </Typography>
-        <Typography variant="body2" color="text.secondary">
+        <Typography>
           {category}
         </Typography>
-        <Typography variant="body2" color="text.secondary">
+        <Typography>
           {address}
         </Typography>
         <Image src="/wheelchair.png" alt="Wheelchair" width="50" height="50" />
@@ -26,6 +29,7 @@ export default function SmallCard({ name, category, img, address }) {
         <Button size="small">Share</Button>
         <Button size="small">Learn More</Button>
       </CardActions>
+      <Image src={img} alt="Pub" width="100" height="100" />
     </Card>
   );
 }

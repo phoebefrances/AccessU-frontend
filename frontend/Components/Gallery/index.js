@@ -1,8 +1,8 @@
-import react from 'react';
 import SmallCard from "../SmallCard/index";
 import pub from "../../public/pub.jpeg";
 import cinema from "../../public/cinema.jpeg";
 import queen from "../../public/queen.jpeg"
+
 
 export default function Gallery() {
   return (
