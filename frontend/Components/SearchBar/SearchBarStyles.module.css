@@ -12,3 +12,15 @@
     background-color: blueviolet;
 }
 
+.stack {
+    display: flex;
+    flex-direction: row;
+  }
+
+.input {
+    flex-grow: 2; 
+  }
+
+.button {
+    flex-grow: 0.5;
+}

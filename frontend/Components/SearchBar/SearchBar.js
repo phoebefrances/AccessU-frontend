@@ -23,10 +23,10 @@ export default function BasicSelect() {
 
   return (
     <Box className={styles.global}>
-      <Stack direction="row">
-      
+      <Stack direction="row" className={styles.stack}>
+
         {/* Category drop down menu */}
-        <FormControl variant="standard">
+        <FormControl variant="standard" className={styles.input}>
           <InputLabel id="demo-simple-select-label">Category</InputLabel>
           <Select
             labelId="demo-simple-select-label"
@@ -44,11 +44,11 @@ export default function BasicSelect() {
         </FormControl>
 
         {/* Search Location input field  */}
-        <TextField id="standard-basic" label="Standard" variant="standard" />
+        <TextField id="standard-basic" label="Standard" variant="standard" className={styles.input} />
 
         {/* Search button  */}
 
-        <Button variant="contained" startIcon={<SearchIcon />}>
+        <Button variant="contained" startIcon={<SearchIcon />} className={styles.button}>
           Search
         </Button>
       </Stack>
