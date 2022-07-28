@@ -12,6 +12,7 @@ import { red } from "@mui/material/colors";
 import SearchIcon from "@mui/icons-material/Search";
 import InputBase from "@mui/material/InputBase";
 
+
 // Custom Component containing category drop down menu, location search input field and search button
 
 export default function BasicSelect() {
@@ -23,10 +24,10 @@ export default function BasicSelect() {
 
   return (
     <Box className={styles.global}>
-      <Stack direction="row" className={styles.stack}>
+      {/* <Stack direction="row" > */}
 
         {/* Category drop down menu */}
-        <FormControl variant="standard" className={styles.input}>
+        <FormControl variant="standard" className={styles.category}>
           <InputLabel id="demo-simple-select-label">Category</InputLabel>
           <Select
             labelId="demo-simple-select-label"
@@ -44,14 +45,14 @@ export default function BasicSelect() {
         </FormControl>
 
         {/* Search Location input field  */}
-        <TextField id="standard-basic" label="Standard" variant="standard" className={styles.input} />
+        <TextField id="standard-basic" label="Standard" variant="standard" className={styles.location} />
 
         {/* Search button  */}
 
         <Button variant="contained" startIcon={<SearchIcon />} className={styles.button}>
           Search
         </Button>
-      </Stack>
+      {/* </Stack> */}
     </Box>
   );
 }
