@@ -7,9 +7,12 @@ import queen from "../../public/queen.jpeg"
 export default function Gallery() {
   return (
   <>
-  <SmallCard img={pub} name="The Laurel Pub and Entertainment Venue" category="Category: Pub" address="Street Address: 337-339 High Rd, Harrow HA3 5EQ" />
-  <SmallCard img={cinema} name ="Duke Of York Cinema" category="Category: Cinema" address="Street Address: Preston Rd, Brighton BN1 4NA"/>
-  <SmallCard img={queen} name ="The Queen's Head" category="Category: Pub" address="69 Queens Rd, Brighton BN1 3XD"/>
+  <SmallCard img={pub} name="The Laurel Pub" category="Pub" address="337-339 High Rd HA35EQ" />
+  <SmallCard img={cinema} name ="Duke Of York Cinema" category="Cinema" address="Preston Rd BN14NA"/>
+  <SmallCard img={queen} name ="The Queen's Head" category="Pub" address="Abbotsford Road BN14NA"/>
+  <SmallCard img={pub} name="The Laurel Pub" category="Pub" address="337-339 High Rd HA35EQ" />
+  <SmallCard img={cinema} name ="Duke Of York Cinema" category="Cinema" address="Preston Rd BN14NA"/>
+  <SmallCard img={queen} name ="The Queen's Head" category="Pub" address="Abbotsford Road BN14NA"/>
   </>
   )
 }
