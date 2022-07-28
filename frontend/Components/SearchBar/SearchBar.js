@@ -10,6 +10,7 @@ import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
 import { red } from "@mui/material/colors";
 import SearchIcon from "@mui/icons-material/Search";
+import InputBase from "@mui/material/InputBase";
 
 // Custom Component containing category drop down menu, location search input field and search button
 
@@ -24,7 +25,7 @@ export default function BasicSelect() {
     <Box className={styles.global}>
       <Stack direction="row">
         {/* Category drop down menu */}
-        <FormControl fullWidth>
+        <FormControl fullWidth variant="standard">
           <InputLabel id="demo-simple-select-label">Category</InputLabel>
           <Select
             labelId="demo-simple-select-label"

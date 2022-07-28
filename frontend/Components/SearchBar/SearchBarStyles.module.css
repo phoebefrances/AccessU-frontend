@@ -3,4 +3,10 @@
     border-color: #FF9100;
     border-radius: 50px;
     padding: 10px;
-};
+}
+
+.drop {
+    border-style: none;
+    border: none;
+    background-color: blueviolet;
+}
