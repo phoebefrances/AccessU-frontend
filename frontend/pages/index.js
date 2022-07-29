@@ -25,10 +25,12 @@ const Home = () => {
 
     navigator.geolocation.getCurrentPosition(({coords: {latitude, longitude}}) => {
     console.log({latitude, longitude});
-    setCoordinates=({lat: latitude, lng: longitude})
+    setCoordinates=({lat: latitude, lng: longitude});
     })
 
   }, [])
+
+  useEffect(())
 
   return (
     <Flex
