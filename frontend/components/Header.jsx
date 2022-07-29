@@ -38,7 +38,7 @@ const Header = ({ setType, setRatings, setCoordinates }) => {
         <InputGroup width={"35vw"} shadow="lg">
           <InputRightElement
             pointerEvents={"none"}
-            children={<BiSearch color="grey" fontsize={20} />}
+            children={<BiSearch color="gray" fontsize={20} />}
           />
 
           <Input
@@ -80,7 +80,9 @@ const Header = ({ setType, setRatings, setCoordinates }) => {
                   justifyContent="center"
                   onClick={() => setRatings("")}
                 >
-                  <Text fontsize={20} fontWeight={500} color={"orange.500"}>All Rating</Text>
+                  <Text fontsize={20} fontWeight={500} color={"orange.500"}>
+                    All Rating
+                  </Text>
                 </MenuItem>
 
                 <MenuItem
@@ -89,12 +91,10 @@ const Header = ({ setType, setRatings, setCoordinates }) => {
                   justifyContent="center"
                   onClick={() => setRatings("")}
                 >
-                  <Text fontsize={20} fontWeight={500} color={"orange.500"}>2.0</Text>
-
-
-                <Rating size="small" value={4} readOnly />
+                  <Text fontsize={20} fontWeight={500} color={"orange.500"}>
+                    2.0
+                  </Text>
                 </MenuItem>
-
               </MenuList>
             </Menu>
           </Flex>
