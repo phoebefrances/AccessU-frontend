@@ -15,9 +15,9 @@ const Home = () => {
       maxHeight={"100vh"}
       position={"relative"}
     >
-      <Header />
+      {/* <Header /> */}
 
-      <List />
+      {/* <List /> */}
 
       <Map />
     </Flex>
