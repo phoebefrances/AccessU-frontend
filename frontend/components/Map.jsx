@@ -3,9 +3,9 @@ import { Box } from "@chakra-ui/react";
 import GoogleMapReact from "google-map-react"
 
 const Map = ({coordinates, setCoordinates}) => {
-  return <Box width={"full"} height={"full"}>
+  return ( <Box width={"full"} height={"full"}>
   <GoogleMapReact
-    bootstrapURLKeys={{}}
+    bootstrapURLKeys={{key: "AIzaSyD93tjfea30qHGkuhHJWQ0vQB9FF-HYIZo"}}
     defaultCenter={coordinates}
     center= {coordinates}
     defaultZoom= {10}
@@ -13,12 +13,9 @@ const Map = ({coordinates, setCoordinates}) => {
     options= {""}
     onChange= {() => {}}
     onChildClick= {() => {}}
-  >
-
-
-  </GoogleMapReact>
-
-  </Box>;
+  ></GoogleMapReact>
+  </Box>
+  );
 };
 
 export default Map;
