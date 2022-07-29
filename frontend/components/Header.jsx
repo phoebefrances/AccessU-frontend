@@ -91,6 +91,8 @@ const Header = ({ setType, setRatings, setCoordinates }) => {
                 >
                   <Text fontsize={20} fontWeight={500} color={"orange.500"}>2.0</Text>
 
+
+                <Rating size="small" value={4} readOnly />
                 </MenuItem>
 
               </MenuList>
