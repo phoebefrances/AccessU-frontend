@@ -6,8 +6,9 @@ import PlaceDetail from "../components/PlaceDetail";
 import { useState } from "react";
 
 const Home = () => {
-
-  const [coordinates, setCoordinates] = useState({ lat: 0, lng: 0}); 
+  const [coordinates, setCoordinates] = useState({ lat: 0, lng: 0 });
+  const [type, setType] = useState("restaurants");
+  const [ratings, setRatings] = useState("");
 
   return (
     <Flex
@@ -19,11 +20,15 @@ const Home = () => {
       maxHeight={"100vh"}
       position={"relative"}
     >
-      {/* <Header /> */}
+      <Header
+        setType={setType}
+        setRatings={setRatings}
+        setCoordinates={setCoordinates}
+      />
 
       {/* <List /> */}
 
-      <Map setCoordinates= {setCoordinates} coordinates = {coordinates} />
+      <Map setCoordinates={setCoordinates} coordinates={coordinates} />
     </Flex>
   );
 };
