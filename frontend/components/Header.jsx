@@ -123,7 +123,19 @@ const Header = ({ setType, setRatings, setCoordinates }) => {
 
                   <Rating size="small" value={4} readOnly />
                 </MenuItem>
-                
+
+                <MenuItem
+                  display={"flex"}
+                  alignItems={"center"}
+                  justifyContent="center"
+                  onClick={() => setRatings("5")}
+                >
+                  <Text fontsize={20} fontWeight={500} color={"orange.500"}>
+                    5.0
+                  </Text>
+
+                  <Rating size="small" value={5} readOnly />
+                </MenuItem>
               </MenuList>
             </Menu>
           </Flex>
