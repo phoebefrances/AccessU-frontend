@@ -165,7 +165,30 @@ const Header = ({ setType, setRatings, setCoordinates }) => {
             <Text ml={3} fontsize={16} fontWeight={500}>
               Restaurants
             </Text>
+          </Flex>
 
+
+
+          {/* {Hotels} */}
+          <Flex
+           alignItems={"center"}
+            justifyContent={"center"}
+            px={4}
+            py={2}
+            bg={"white"}
+            rounded={"full"}
+            ml={4}
+            shadow="lg"
+            cursor={"pointer"}
+            _hover={{ bg: 'gray.100'}}
+            transition= {'ease-in-out'}
+            transitionDuration = {'0.3s'}
+            onClick={() => setType('Hotels')}
+          >
+            <BiHotel fontsize={25}/>
+            <Text ml={3} fontsize={16} fontWeight={500}>
+              Hotels
+            </Text>
           </Flex>
 
         </Flex>
