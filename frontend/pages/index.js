@@ -3,11 +3,11 @@ import Header from "../components/Header";
 import List from "../components/List";
 import Map from "../components/Map";
 import PlaceDetail from "../components/PlaceDetail";
+import { useState } from "react";
 
 const Home = () => {
 
   const [coordinates, setCoordinates] = useState({ lat: 0, lng: 0}); 
-
 
   return (
     <Flex
