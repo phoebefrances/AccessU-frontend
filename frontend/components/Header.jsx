@@ -95,7 +95,7 @@ const Header = ({ setType, setRatings, setCoordinates }) => {
                     2.0
                   </Text>
 
-                  <Rating size="small" value={4} readOnly />
+                  <Rating size="small" value={2} readOnly />
                 </MenuItem>
 
                 <MenuItem
@@ -138,6 +138,8 @@ const Header = ({ setType, setRatings, setCoordinates }) => {
                 </MenuItem>
               </MenuList>
             </Menu>
+
+            <BiChevronDown fontsize={25}/>
           </Flex>
         </Flex>
       </Flex>
