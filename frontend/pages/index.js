@@ -3,7 +3,7 @@ import Header from "../components/Header";
 import List from "../components/List";
 import Map from "../components/Map";
 import PlaceDetail from "../components/PlaceDetail";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const places = [
   { name: "sample Place1" },
@@ -14,11 +14,22 @@ const places = [
 
 const Home = () => {
   //The 3 states below are for our Header component
-  const [coordinates, setCoordinates] = useState({ lat: 0, lng: 0 });
+  const [coordinates, setCoordinates] = useState({ });
   const [type, setType] = useState("restaurants");
   const [ratings, setRatings] = useState("");
   //This state is for talking to the API
   const [isLoading, setIsLoading] = useState(false);
+
+  useEffect(() => {
+    // get the users current location on intial login 
+
+    navigator.geolocation.getCurrentPosition(({coords: {latitude, longitude}}) => {
+    console.log({latitude, longitude});
+    setCoordinates=({lat: latitude, lng: longitude})
+    })
+
+  }, [])
+
   return (
     <Flex
       justifyContent={"center"}
