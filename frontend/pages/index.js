@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+import Logo from '../Components/Logo/index'
+import Gallery from '../Components/Gallery/index'
+import Map from '../Components/Map/index'
+import MyMap from '../Components/Map/index'
+
+
+export default function Home() {
+  return (
+    <div>
+   <Logo />
+   <Gallery />
+=======
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
@@ -12,6 +25,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <SearchBar />
+>>>>>>> bc11b294a8d29b51f3d0bd7bcea250c9c85ac5fd
     </div>
   );
 }
