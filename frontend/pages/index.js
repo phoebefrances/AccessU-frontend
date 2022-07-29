@@ -4,6 +4,8 @@ import List from "../components/List";
 import Map from "../components/Map";
 import PlaceDetail from "../components/PlaceDetail";
 import { useEffect, useState } from "react";
+import { getPlacesData } from "./api";
+import { Data } from "@react-google-maps/api";
 
 const places = [
   { name: "sample Place1" },
@@ -20,6 +22,7 @@ const Home = () => {
   //This state is for talking to the API
   const [isLoading, setIsLoading] = useState(false);
 
+
   useEffect(() => {
     // get the users current location on intial login 
 
@@ -30,7 +33,12 @@ const Home = () => {
 
   }, [])
 
-  useEffect(())
+  useEffect(() => {
+    getPlacesData().then((data) => {
+      console.log(data)
+    })
+
+  }, [])
 
   return (
     <Flex

@@ -17,7 +17,7 @@ params: {
     }
   };
 
-export const getPlacesData = async (sw, ne) => {
+export const getPlacesData = async () => {
     try {
         const {data: {data}, 
     }= await axios.get(url, options)
