@@ -77,7 +77,7 @@ const Header = ({ setType, setRatings, setCoordinates }) => {
                 <MenuItem
                   display={"flex"}
                   alignItems={"center"}
-                  justifyContent="center"
+                  justifyContent="space-around"
                   onClick={() => setRatings("")}
                 >
                   <Text fontsize={20} fontWeight={500} color={"orange.500"}>
@@ -88,7 +88,7 @@ const Header = ({ setType, setRatings, setCoordinates }) => {
                 <MenuItem
                   display={"flex"}
                   alignItems={"center"}
-                  justifyContent="center"
+                  justifyContent="space-around"
                   onClick={() => setRatings("2")}
                 >
                   <Text fontsize={20} fontWeight={500} color={"orange.500"}>
@@ -101,7 +101,7 @@ const Header = ({ setType, setRatings, setCoordinates }) => {
                 <MenuItem
                   display={"flex"}
                   alignItems={"center"}
-                  justifyContent="center"
+                  justifyContent="space-around"
                   onClick={() => setRatings("3")}
                 >
                   <Text fontsize={20} fontWeight={500} color={"orange.500"}>
@@ -114,7 +114,7 @@ const Header = ({ setType, setRatings, setCoordinates }) => {
                 <MenuItem
                   display={"flex"}
                   alignItems={"center"}
-                  justifyContent="center"
+                  justifyContent="space-around"
                   onClick={() => setRatings("4")}
                 >
                   <Text fontsize={20} fontWeight={500} color={"orange.500"}>
@@ -127,7 +127,7 @@ const Header = ({ setType, setRatings, setCoordinates }) => {
                 <MenuItem
                   display={"flex"}
                   alignItems={"center"}
-                  justifyContent="center"
+                  justifyContent="space-around"
                   onClick={() => setRatings("5")}
                 >
                   <Text fontsize={20} fontWeight={500} color={"orange.500"}>
