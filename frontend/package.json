@@ -9,21 +9,14 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@chakra-ui/react": "^2.2.4",
     "@emotion/react": "^11.9.3",
-<<<<<<< HEAD
-    "@emotion/styled": "^11.9.3",
-    "@mui/icons-material": "^5.8.4",
-    "@mui/material": "^5.9.2",
-    "@react-google-maps/api": "^2.12.1",
-    "google-map-react": "^2.2.0",
-    "mapbox-gl": "^2.9.2",
-=======
     "@emotion/server": "^11.4.0",
     "@emotion/styled": "^11.9.3",
     "@fontsource/roboto": "^4.5.7",
     "@mui/icons-material": "^5.8.4",
     "@mui/material": "^5.9.2",
->>>>>>> bc11b294a8d29b51f3d0bd7bcea250c9c85ac5fd
+    "framer-motion": "^6.5.1",
     "next": "12.2.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
