@@ -2,7 +2,7 @@ import React from "react";
 import { Box } from "@chakra-ui/react";
 import GoogleMapReact from "google-map-react"
 
-const Map = () => {
+const Map = ({coordinates, setCoordinates}) => {
   return <Box width={"full"} height={"full"}>
   <GoogleMapReact
     bootstrapURLKeys={{}}
@@ -14,6 +14,7 @@ const Map = () => {
     onChange= {() => {}}
     onChildClick= {() => {}}
   >
+
 
   </GoogleMapReact>
 
