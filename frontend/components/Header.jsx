@@ -66,6 +66,9 @@ const Header = ({ setType, setRatings, setCoordinates }) => {
             ml={4}
             shadow="lg"
             cursor={"pointer"}
+            _hover={{ bg: 'gray.100'}}
+            transition= {'ease-in-out'}
+            transitionDuration = {'0.3s'}
           >
             <Menu>
               <BiStar fontSize={25} />
@@ -141,6 +144,18 @@ const Header = ({ setType, setRatings, setCoordinates }) => {
 
             <BiChevronDown fontsize={25}/>
           </Flex>
+
+          {/* {Restaurants} */}
+          <Flex
+          
+          >
+            <BiRestaurant fontsize={25}/>
+            <Text ml={3} fontsize={16} fontWeight={500}>
+              Restaurants
+            </Text>
+
+          </Flex>
+
         </Flex>
       </Flex>
     </Flex>
