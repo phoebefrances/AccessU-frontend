@@ -89,12 +89,26 @@ const Header = ({ setType, setRatings, setCoordinates }) => {
                   display={"flex"}
                   alignItems={"center"}
                   justifyContent="center"
-                  onClick={() => setRatings("")}
+                  onClick={() => setRatings("2")}
                 >
                   <Text fontsize={20} fontWeight={500} color={"orange.500"}>
                     2.0
                   </Text>
+
                   <Rating size="small" value={4} readOnly />
+                </MenuItem>
+
+                <MenuItem
+                  display={"flex"}
+                  alignItems={"center"}
+                  justifyContent="center"
+                  onClick={() => setRatings("3")}
+                >
+                  <Text fontsize={20} fontWeight={500} color={"orange.500"}>
+                    3.0
+                  </Text>
+
+                  <Rating size="small" value={3} readOnly />
                 </MenuItem>
               </MenuList>
             </Menu>
