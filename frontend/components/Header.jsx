@@ -1,8 +1,26 @@
-import {  Flex,  Input,  InputGroup,  InputRightElement,  Menu,  MenuButton,  MenuItem,  MenuList,  Text,} from “@chakra-ui/react”;import { Rating } from “@material-ui/lab”;import { Autocomplete } from “@react-google-maps/api”;import React, { useState } from “react”;
-import {  BiChevronDown,  BiHotel,  BiMapAlt,  BiRestaurant,  BiSearch,  BiStar,} from “react-icons/bi”;
+import {
+  Flex,
+  Input,
+  InputGroup,
+  InputRightElement,
+  Menu,
+  MenuButton,
+  MenuItem,
+  MenuList,
+  Text,
+} from "@chakra-ui/react";
+import { Rating } from "@material-ui/lab";
+import { Autocomplete } from "@react-google-maps/api";
+import React, { useState } from "react";
 
-
-
+import {
+  BiChevronDown,
+  BiHotel,
+  BiMapAlt,
+  BiRestaurant,
+  BiSearch,
+  BiStar,
+} from "react-icons/bi";
 
 const Header = ({ setType, setRatings, setCoordinates }) => {
   return (
