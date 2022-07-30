@@ -1,6 +1,7 @@
-
-import { Image, Flex, Text } from "@chakra-ui/react";
 import React from "react";
+import { Image, Flex, Text } from "@chakra-ui/react";
+import { Rating } from "@material-ui/lab";
+
 
 const PlaceDetail = ({ place }) => {
   return (
@@ -40,7 +41,24 @@ const PlaceDetail = ({ place }) => {
               {place.price}
             </Text>
           </Flex>
-
+             
+             {/* Ratings */}
+          <Flex alignItems={"center"} width={"full"}>
+            <Rating size="small" value={Number(place.rating)} readOnly />
+            <Text
+              fontSize={"sm"}
+              fontWeight={"500"}
+              color={"gray.500"}
+            >{`(${place.num_reviews})`}</Text>
+            <Text
+              fontSize={"sm"}
+              fontWeight={"500"}
+              color={"gray.500"}
+              ml={"auto"}
+            >
+              {place.price_level}
+            </Text>
+          </Flex>
           
         </Flex>
         
