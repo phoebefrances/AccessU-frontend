@@ -1,7 +1,7 @@
 import React from "react";
 import { Flex, Text, Image, Badge } from "@chakra-ui/react";
 import { Rating } from "@material-ui/lab";
-
+import { IoLocation } from "react-icons/io5";
 
 const PlaceDetail = ({ place }) => {
   return (
@@ -37,19 +37,31 @@ const PlaceDetail = ({ place }) => {
               {place.name}
             </Text>
 
-            <Text fontSize={"sm"} fontWeight={"500"} color={"gray.500"}>
+            <Text 
+            fontSize={"sm"}
+            fontWeight={"500"}
+            color={"gray.500"}>
               {place.price}
             </Text>
           </Flex>
              
              {/* Ratings */}
-          <Flex alignItems={"center"} width={"full"}>
-            <Rating size="small" value={Number(place.rating)} readOnly />
+          <Flex 
+            alignItems={"center"}
+            width={"full"}>
+
+            <Rating 
+            size="small" 
+            value={Number(place.rating)}
+            readOnly />
+
             <Text
               fontSize={"sm"}
               fontWeight={"500"}
               color={"gray.500"}
-            >{`(${place.num_reviews})`}</Text>
+            >{`(${place.num_reviews})`}
+            </Text>
+
             <Text
               fontSize={"sm"}
               fontWeight={"500"}
@@ -96,6 +108,7 @@ const PlaceDetail = ({ place }) => {
         </Flex>
         
       </Flex>
+
       <Image
           objectFit={"cover"}
           width={"120px"}
@@ -107,6 +120,29 @@ const PlaceDetail = ({ place }) => {
               : "https://explorelompoc.com/wp-content/uploads/2021/06/food_placeholder.jpg"
           }
         />
+
+        {place?.address && (
+
+        <Flex 
+        alignItems={"center"}
+        width={"full"}
+        px={1} my={2}>
+
+          <IoLocation 
+          fontSize={20} 
+          color="gray" />
+
+          <Text
+            fontSize={"small"}
+            fontWeight={500}
+            color={"gray.700"}
+            ml={1}
+          >
+            {place.address}
+
+          </Text>
+        </Flex>
+      )}
     </Flex>
   );
 };
