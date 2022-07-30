@@ -1,5 +1,5 @@
 import React from "react";
-import { Image, Flex, Text } from "@chakra-ui/react";
+import { Flex, Text, Image, Badge } from "@chakra-ui/react";
 import { Rating } from "@material-ui/lab";
 
 
@@ -67,6 +67,32 @@ const PlaceDetail = ({ place }) => {
               color={"gray.400"}>
             {place.ranking}
           </Text>
+
+            {/* Open status */}
+            <Text 
+            fontSize={"sm"}
+            fontWeight={"500"}
+            color={"gray.600"}>
+            {place.open_now_text}
+          </Text> 
+
+
+          {/* dietary_restrictions */}
+          {place?.dietary_restrictions && (
+            <Flex width={"full"} flexWrap={"wrap"}>
+              {place.dietary_restrictions.map((n, i) => (
+                <Badge
+                  colorScheme={"teal"}
+                  cursor={"pointer"}
+                  key={i}
+                  m={1}
+                  fontSize={10}
+                >
+                  {n.name}
+                </Badge>
+              ))}
+            </Flex>
+          )}
         </Flex>
         
       </Flex>
