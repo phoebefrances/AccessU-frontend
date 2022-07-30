@@ -24,6 +24,8 @@ const Home = () => {
   //This state is for talking to the API
   const [isLoading, setIsLoading] = useState(false);
 
+  const [bounds, setBounds] = useState(null)
+
   // get the users current location on intial login 
   useEffect(() => {
     navigator.geolocation.getCurrentPosition(({coords: {latitude, longitude}}) => {
@@ -57,7 +59,10 @@ const Home = () => {
 
       <List places={places} isLoading={isLoading} />
 
-      <Map setCoordinates={setCoordinates} coordinates={coordinates} />
+      <Map 
+      setCoordinates={setCoordinates}
+      coordinates={coordinates} 
+      setBounds={setBounds} />
     </Flex>
   );
 };
