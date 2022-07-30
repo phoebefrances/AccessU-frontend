@@ -12,7 +12,41 @@ const PlaceDetail = ({ place }) => {
   alignItems={'start'}
   justifyContent='space-evenly'
   >
-  
+    <Flex
+    justifyContent={'space-between'}
+    width='full'
+    >
+      <Flex
+      direction={'column'}
+      justifyContent={'start'}
+      alignItems={'start'}
+      width='full'
+      px={2}
+      >
+      <Flex 
+      alignItems={'center'}
+      width={'full'}
+      justifyContent={'space-between'}
+      >
+        <Text 
+        textTransform={'capitalize'}
+        width={'40'}
+        fontSize={'lg'}
+        fontWeight={'500'}
+        isTruncated
+        >
+          {place.name}
+        </Text>
+        <Text
+        fontSize={'sm'}
+        fontWeight={'500'}
+        color={'gray.500'}
+        >
+
+        </Text>
+      </Flex>
+      </Flex>
+    </Flex>
   </Flex>
 };
 
