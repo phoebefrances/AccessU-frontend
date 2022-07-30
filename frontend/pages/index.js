@@ -24,6 +24,7 @@ const Home = () => {
   //This state is for talking to the API
   const [isLoading, setIsLoading] = useState(false);
 
+  // This state is for getting the lat and lng for ne, nw, se, sw boundaries
   const [bounds, setBounds] = useState(null)
 
   // get the users current location on intial login 
@@ -36,10 +37,10 @@ const Home = () => {
   }, [])
 
   useEffect(() => {
-    getPlacesData().then((data) => {
+    getPlacesData(bounds?.sw, bounds?.ne).then((data) => {
       console.log(data);
     })
-  } ,[])
+  } ,[coordinates, bounds])
 
   return (
     <Flex
