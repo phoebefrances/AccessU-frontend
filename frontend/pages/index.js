@@ -4,30 +4,49 @@ import List from "../components/List";
 import Map from "../components/Map";
 import PlaceDetail from "../components/PlaceDetail";
 import { useEffect, useState } from "react";
+import { getPlacesData } from "./api";
 
-const places = [
-  { name: "sample Place1" },
-  { name: "sample Place1" },
-  { name: "sample Place1" },
-  { name: "sample Place1" },
-];
+// dummy data 
+// const places = [
+//   { name: "sample Place1" },
+//   { name: "sample Place1" },
+//   { name: "sample Place1" },
+//   { name: "sample Place1" },
+// ];
 
 const Home = () => {
+
   //The 3 states below are for our Header component
   const [coordinates, setCoordinates] = useState({ lat: 0, lng: 0 });
   const [type, setType] = useState("restaurants");
   const [ratings, setRatings] = useState("");
+
   //This state is for talking to the API
   const [isLoading, setIsLoading] = useState(false);
 
-  useEffect(() => {
-    // get the users current location on intial login 
+  // This state is for getting the lat and lng for ne, nw, se, sw boundaries
+  const [bounds, setBounds] = useState(null)
 
+  // This state is for updating the places once the places data has loaded which is passed to the List
+  const [places, setPlaces] = useState([])
+
+  // get the users current location on intial login 
+  useEffect(() => {
     navigator.geolocation.getCurrentPosition(({coords: {latitude, longitude}}) => {
     console.log({latitude, longitude});
+    setCoordinates({lat: latitude, lng: longitude})
     })
 
   }, [])
+
+  useEffect(() => {
+    setIsLoading(true)
+    getPlacesData(bounds?.sw, bounds?.ne).then((data) => {
+      console.log(data);
+      setPlaces(data)
+      setIsLoading(false)
+    })
+  } ,[coordinates, bounds])
 
   return (
     <Flex
@@ -47,7 +66,10 @@ const Home = () => {
 
       <List places={places} isLoading={isLoading} />
 
-      <Map setCoordinates={setCoordinates} coordinates={coordinates} />
+      <Map 
+      setCoordinates={setCoordinates}
+      coordinates={coordinates} 
+      setBounds={setBounds} />
     </Flex>
   );
 };
