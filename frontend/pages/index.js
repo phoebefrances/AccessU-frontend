@@ -7,12 +7,12 @@ import { useEffect, useState } from "react";
 import { getPlacesData } from "./api";
 
 // dummy data 
-const places = [
-  { name: "sample Place1" },
-  { name: "sample Place1" },
-  { name: "sample Place1" },
-  { name: "sample Place1" },
-];
+// const places = [
+//   { name: "sample Place1" },
+//   { name: "sample Place1" },
+//   { name: "sample Place1" },
+//   { name: "sample Place1" },
+// ];
 
 const Home = () => {
 
@@ -27,6 +27,9 @@ const Home = () => {
   // This state is for getting the lat and lng for ne, nw, se, sw boundaries
   const [bounds, setBounds] = useState(null)
 
+  // This state is for updating the places once the places data has loaded which is passed to the List
+  const [places, setPlaces] = useState([])
+
   // get the users current location on intial login 
   useEffect(() => {
     navigator.geolocation.getCurrentPosition(({coords: {latitude, longitude}}) => {
@@ -37,8 +40,11 @@ const Home = () => {
   }, [])
 
   useEffect(() => {
+    setIsLoading(true)
     getPlacesData(bounds?.sw, bounds?.ne).then((data) => {
       console.log(data);
+      setPlaces(data)
+      setIsLoading(false)
     })
   } ,[coordinates, bounds])
 
