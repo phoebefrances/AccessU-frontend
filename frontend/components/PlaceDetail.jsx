@@ -60,6 +60,13 @@ const PlaceDetail = ({ place }) => {
             </Text>
           </Flex>
           
+             {/* Ranking */}
+             <Text 
+             fontSize={"sm"} 
+             fontWeight={"500"}
+              color={"gray.400"}>
+            {place.ranking}
+          </Text>
         </Flex>
         
       </Flex>
