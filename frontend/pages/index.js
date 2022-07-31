@@ -82,7 +82,8 @@ const Home = () => {
       <Map 
       setCoordinates={setCoordinates}
       coordinates={coordinates} 
-      setBounds={setBounds} />
+      setBounds={setBounds}
+      places ={filteredPlaces.length ? filteredPlaces : places} />
     </Flex>
   );
 };
