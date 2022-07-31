@@ -4,7 +4,7 @@ import List from "../components/List";
 import Map from "../components/Map";
 import PlaceDetail from "../components/PlaceDetail";
 import { useEffect, useState } from "react";
-import { getPlacesData } from "./api";
+import { getPlacesData } from "./api/getPlacesData";
 
 // dummy data 
 // const places = [
@@ -30,6 +30,9 @@ const Home = () => {
   // This state is for updating the places once the places data has loaded which is passed to the List
   const [places, setPlaces] = useState([])
 
+  // This state is for updating the data if the user chooses to filter the places listed e.g. by rating, n.b. filteredPlaces is passed to places
+  const [filteredPlaces, setFilteredPlaces] = useState([])
+
   // get the users current location on intial login 
   useEffect(() => {
     navigator.geolocation.getCurrentPosition(({coords: {latitude, longitude}}) => {
@@ -39,6 +42,14 @@ const Home = () => {
 
   }, [])
 
+  // updates the data to the users choice of rating 
+  useEffect(() => {
+    const filteredData = places.filter((place) => place.rating > ratings);
+    setFilteredPlaces(filteredData);
+    console.log({ ratings });
+  }, [ratings]);
+  
+  // updates the data to the users choice of category or location 
   useEffect(() => {
     setIsLoading(true)
     getPlacesData(type, bounds?.sw, bounds?.ne).then((data) => {
@@ -64,7 +75,9 @@ const Home = () => {
         setCoordinates={setCoordinates}
       />
 
-      <List places={places} isLoading={isLoading} />
+      <List 
+      places={filteredPlaces.length ? filteredPlaces : places}
+      isLoading={isLoading} />
 
       <Map 
       setCoordinates={setCoordinates}
