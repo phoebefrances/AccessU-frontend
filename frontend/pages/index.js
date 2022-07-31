@@ -1,63 +1,56 @@
 import { Flex } from "@chakra-ui/react";
+import { useEffect, useState } from "react";
 import Header from "../components/Header";
 import List from "../components/List";
 import Map from "../components/Map";
 import PlaceDetail from "../components/PlaceDetail";
-import { useEffect, useState } from "react";
 import { getPlacesData } from "./api/getPlacesData";
+import Head from "next/head";
 
 // dummy data 
-// const places = [
-//   { name: "sample Place1" },
-//   { name: "sample Place1" },
-//   { name: "sample Place1" },
-//   { name: "sample Place1" },
-// ];
+const places = [
+  { name: "sample Place1" },
+  { name: "sample Place1" },
+  { name: "sample Place1" },
+  { name: "sample Place1" },
+];
 
 const Home = () => {
-
-  //The 3 states below are for our Header component
-  const [coordinates, setCoordinates] = useState({ lat: 0, lng: 0 });
+  const [places, setPlaces] = useState([]);
+  const [filteredPlaces, setFilteredPlaces] = useState([]);
+  const [coordinates, setCoordinates] = useState({});
+  const [bounds, setBounds] = useState(null);
   const [type, setType] = useState("restaurants");
   const [ratings, setRatings] = useState("");
-
-  //This state is for talking to the API
   const [isLoading, setIsLoading] = useState(false);
 
-  // This state is for getting the lat and lng for ne, nw, se, sw boundaries
-  const [bounds, setBounds] = useState(null)
-
-  // This state is for updating the places once the places data has loaded which is passed to the List
-  const [places, setPlaces] = useState([])
-
-  // This state is for updating the data if the user chooses to filter the places listed e.g. by rating, n.b. filteredPlaces is passed to places
-  const [filteredPlaces, setFilteredPlaces] = useState([])
-
-  // get the users current location on intial login 
+// get the users current location on intial login
   useEffect(() => {
-    navigator.geolocation.getCurrentPosition(({coords: {latitude, longitude}}) => {
-    console.log({latitude, longitude});
-    setCoordinates({lat: latitude, lng: longitude})
-    })
 
-  }, [])
+    navigator.geolocation.getCurrentPosition(
+      ({ coords: { latitude, longitude } }) => {
+        console.log({ latitude, longitude });
+        setCoordinates({ lat: latitude, lng: longitude });
+      }
+    );
+  }, []);
 
-  // updates the data to the users choice of rating 
+// updates the data to the users choice of rating 
   useEffect(() => {
     const filteredData = places.filter((place) => place.rating > ratings);
     setFilteredPlaces(filteredData);
     console.log({ ratings });
   }, [ratings]);
-  
+
   // updates the data to the users choice of category or location 
   useEffect(() => {
-    setIsLoading(true)
+    setIsLoading(true);
     getPlacesData(type, bounds?.sw, bounds?.ne).then((data) => {
       console.log(data);
-      setPlaces(data)
-      setIsLoading(false)
-    })
-  } ,[type, coordinates, bounds])
+      setPlaces(data);
+      setIsLoading(false);
+    });
+  }, [type, coordinates, bounds]);
 
   return (
     <Flex
@@ -69,21 +62,27 @@ const Home = () => {
       maxHeight={"100vh"}
       position={"relative"}
     >
+      <Head>
+        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyD93tjfea30qHGkuhHJWQ0vQB9FF-HYIZo"></script>
+      </Head>
+
       <Header
         setType={setType}
         setRatings={setRatings}
         setCoordinates={setCoordinates}
       />
 
-      <List 
-      places={filteredPlaces.length ? filteredPlaces : places}
-      isLoading={isLoading} />
+      <List
+        places={filteredPlaces.length ? filteredPlaces : places}
+        isLoading={isLoading}
+      />
 
-      <Map 
-      setCoordinates={setCoordinates}
-      coordinates={coordinates} 
-      setBounds={setBounds}
-      places ={filteredPlaces.length ? filteredPlaces : places} />
+      <Map
+        setCoordinates={setCoordinates}
+        coordinates={coordinates}
+        setBounds={setBounds}
+        places={filteredPlaces.length ? filteredPlaces : places}
+      />
     </Flex>
   );
 };
