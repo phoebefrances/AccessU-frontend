@@ -5,6 +5,10 @@ import { IoLocation } from "react-icons/io5";
 
 const Map = ({coordinates, setCoordinates, setBounds, places}) => {
 
+  //This state updates when you click the Iolocation icon for a particular place, that place icon will update from not having a card to having a card i.e. from false to true 
+  const [isCard, setisCard] = useState(false)
+
+
   return ( <Box width={"full"} height={"full"}>
 
   <GoogleMapReact
@@ -19,7 +23,7 @@ const Map = ({coordinates, setCoordinates, setBounds, places}) => {
       setCoordinates({lat : e.center.lat, lng: e.center.lng})
       setBounds({ne: e.marginBounds.ne, sw: e.marginBounds.sw})
     }}
-    onChildClick= {() => {}}
+    onChildClick= {(child) => {log}}
   >
     {places?.map((place, i) => (
           <Box
