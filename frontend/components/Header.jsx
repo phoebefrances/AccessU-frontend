@@ -10,6 +10,13 @@ import {
   Text,
   Select, 
   Button,
+<<<<<<< HEAD
+=======
+  Grid, 
+  GridItem,
+  Divider,
+  Container
+>>>>>>> 650c6423aed107c4812d686b5327f67b703e6fb8
 } from "@chakra-ui/react";
 import { Rating } from "@material-ui/lab";
 import { Autocomplete } from "@react-google-maps/api";
