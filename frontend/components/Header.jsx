@@ -67,11 +67,11 @@ const Header = ({ setType, setRatings, setCoordinates }) => {
               _placeholder={{ color: "gray.700" }}
             /> */}
             <Select placeholder='What?'>
-            <option value='option1'></option>
-            <option value='option2'>Option 2</option>
-            <option value='option3'>Option 3</option>
-            <option value='option3'>Option 3</option>
-            <option value='option3'>Option 3</option>
+            <option value='Cinema'>Cinema</option>
+            <option value='Restaurant'>Restaurant</option>
+            <option value='Gym'>Gym</option>
+            <option value='Shop'>Shop</option>
+            <option value='Cafe'>Cafe</option>
             </Select>
             </GridItem>
             <GridItem>
