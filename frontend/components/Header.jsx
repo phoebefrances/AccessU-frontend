@@ -12,7 +12,8 @@ import {
   Button,
   Grid, 
   GridItem,
-  Divider
+  Divider,
+  Container
 } from "@chakra-ui/react";
 import { Rating } from "@material-ui/lab";
 import { Autocomplete } from "@react-google-maps/api";
