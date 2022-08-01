@@ -8,6 +8,7 @@ import {
   MenuItem,
   MenuList,
   Text,
+  Select
 } from "@chakra-ui/react";
 import { Rating } from "@material-ui/lab";
 import { Autocomplete } from "@react-google-maps/api";
@@ -54,7 +55,7 @@ const Header = ({ setType, setRatings, setCoordinates }) => {
             />
            <Grid templateColumns='repeat(2, 1fr)' gap={6}>
            <GridItem>
-            <Input
+            {/* <Input
               type={"text"}
               placeholder="Search For Accessible Places..."
               variant={"filled"}
@@ -64,7 +65,14 @@ const Header = ({ setType, setRatings, setCoordinates }) => {
               _hover={{ bg: "whiteAlpha.800" }}
               _focus={{ bg: "whiteAlpha.800" }}
               _placeholder={{ color: "gray.700" }}
-            />
+            /> */}
+            <Select placeholder='What?'>
+            <option value='option1'></option>
+            <option value='option2'>Option 2</option>
+            <option value='option3'>Option 3</option>
+            <option value='option3'>Option 3</option>
+            <option value='option3'>Option 3</option>
+            </Select>
             </GridItem>
             <GridItem>
           <Input
