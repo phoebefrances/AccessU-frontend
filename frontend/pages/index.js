@@ -6,7 +6,7 @@ import Map from "../components/Map";
 import PlaceDetail from "../components/PlaceDetail";
 import { getPlacesData } from "./api/getPlacesData";
 import Head from "next/head";
-import data from "../libs/offlineData.js";
+import { data } from "../libs/offlineData.js";
 
 // dummy data
 // const places = [
@@ -24,8 +24,8 @@ const Home = () => {
   const [type, setType] = useState("restaurants");
   const [ratings, setRatings] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  const places = data[0];
-
+  const places = data;
+  console.log(data);
   // get the users current location on intial login
   useEffect(() => {
     navigator.geolocation.getCurrentPosition(
