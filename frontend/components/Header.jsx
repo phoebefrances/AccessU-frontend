@@ -19,8 +19,6 @@ import React, { useState } from "react";
 import { Search2Icon } from '@chakra-ui/icons'
 
 
-
-
 import {
   BiChevronDown,
   BiHotel,
@@ -61,7 +59,7 @@ const Header = ({ setType, setRatings, setCoordinates }) => {
             /> */}
            <Grid templateColumns='repeat(3, 1fr)' gap={6}>
            <GridItem>
-            <Select placeholder='What?'>
+            <Select placeholder='What?' borderColor='tomato'>
             <option value='Cinema'>Cinema</option>
             <option value='Restaurant'>Restaurant</option>
             <option value='Gym'>Gym</option>
@@ -80,6 +78,7 @@ const Header = ({ setType, setRatings, setCoordinates }) => {
               _hover={{ bg: "whiteAlpha.800" }}
               _focus={{ bg: "whiteAlpha.800" }}
               _placeholder={{ color: "gray.700" }}
+              borderColor='blue'
             />
             </GridItem>
             <GridItem>
