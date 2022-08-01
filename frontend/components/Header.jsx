@@ -86,10 +86,10 @@ const Header = ({ setType, setRatings, setCoordinates }) => {
             />
             </GridItem>
             <GridItem>
-            <Button leftIcon={<Search2Icon/>} colorScheme='teal' variant='solid'>
-    Search
-  </Button>
-  </GridItem>
+            <Button leftIcon={<Search2Icon/>} colorScheme='teal' variant='solid' size='lg'>
+            Search
+            </Button>
+            </GridItem>
             </Grid>
           </InputGroup>
         </Autocomplete>
