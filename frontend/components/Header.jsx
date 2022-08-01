@@ -49,9 +49,9 @@ const Header = ({ setType, setRatings, setCoordinates }) => {
           px={4}
           py={2}
           zIndex={101}>
-      <Flex>
+      <Flex >
         <Autocomplete onLoad={onLoad} onPlaceChanged={onPlaceChanged}>
-          <InputGroup width={"35vw"} shadow="lg">
+          <InputGroup width={"35vw"} shadow="lg" >
             {/* <InputRightElement
               pointerEvents={"none"}
               children={<BiSearch color="gray" fontSize={20} />}
@@ -72,6 +72,7 @@ const Header = ({ setType, setRatings, setCoordinates }) => {
             <Select placeholder='What?'
             _hover={{ bg: "whiteAlpha.800" }}
             borderColor={"blue"}
+            rounded={"full"}
             >
             <option value='Cinema'>Cinema</option>
             <option value='Restaurant'>Restaurant</option>
@@ -95,10 +96,11 @@ const Header = ({ setType, setRatings, setCoordinates }) => {
               _hover={{ bg: "whiteAlpha.800" }}
               _focus={{ bg: "whiteAlpha.800" }}
               _placeholder={{ color: "gray.700" }}
+              rounded={"full"}
             />
             </GridItem>
-            <GridItem>
-            <Button leftIcon={<Search2Icon/>} colorScheme='teal' variant='solid' size='lg'>
+            <GridItem >
+            <Button leftIcon={<Search2Icon/>} colorScheme='teal' variant='solid' size='lg' rounded={"full"} >
             Search
             </Button>
             </GridItem>
