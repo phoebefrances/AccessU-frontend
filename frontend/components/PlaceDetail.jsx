@@ -148,3 +148,4 @@ const PlaceDetail = ({ place }) => {
 };
 
 export default PlaceDetail;
+

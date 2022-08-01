@@ -21,7 +21,7 @@ function Profile() {
       alignItems='center'
       direction='column'>
       <Image
-        src='https://i.ibb.co/xmP2pS6/Profile.png'
+        src='https://cataas.com/cat'
         maxW='100%'
         borderRadius='20px'
       />
@@ -94,3 +94,5 @@ function Profile() {
 }
 
 export default Profile;
+
+// added export 
