@@ -10,15 +10,11 @@ import {
   Text,
   Select, 
   Button,
-  Grid, 
-  GridItem,
-  Divider
 } from "@chakra-ui/react";
 import { Rating } from "@material-ui/lab";
 import { Autocomplete } from "@react-google-maps/api";
 import React, { useState } from "react";
-import { Search2Icon } from '@chakra-ui/icons'
-
+import { Grid, GridItem } from '@chakra-ui/react'
 
 import {
   BiChevronDown,
@@ -50,31 +46,20 @@ const Header = ({ setType, setRatings, setCoordinates }) => {
       px={4}
       py={2}
       zIndex={101}
+      borderColor={"blue"}
     >
       <Flex>
         <Autocomplete onLoad={onLoad} onPlaceChanged={onPlaceChanged}>
-          <InputGroup width={"35vw"} shadow="lg">
+          <InputGroup width={"35vw"} shadow="lg" >
             {/* <InputRightElement
               pointerEvents={"none"}
               children={<BiSearch color="gray" fontSize={20} />}
             /> */}
-           <Grid templateColumns='repeat(4, 1fr)' gap={6}>
+           <Grid templateColumns='repeat(3, 1fr)' gap={1}>
            <GridItem>
-            <Select placeholder='What?' borderColor='tomato'>
-            <option value='Cinema'>Cinema</option>
-            <option value='Restaurant'>Restaurant</option>
-            <option value='Gym'>Gym</option>
-            <option value='Shop'>Shop</option>
-            <option value='Cafe'>Cafe</option>
-            </Select>
-            </GridItem>
-            {/* <GridItem> */}
-              <Divider orientation='vertical' color='black' />
-            {/* </GridItem> */}
-            <GridItem>
-          <Input
+            {/* <Input
               type={"text"}
-              placeholder="Where?"
+              placeholder="Search For Accessible Places..."
               variant={"filled"}
               fontSize={18}
               bg={"white"}
@@ -82,12 +67,36 @@ const Header = ({ setType, setRatings, setCoordinates }) => {
               _hover={{ bg: "whiteAlpha.800" }}
               _focus={{ bg: "whiteAlpha.800" }}
               _placeholder={{ color: "gray.700" }}
-              borderColor='blue'
+            /> */}
+            <Select placeholder='What?'
+            _hover={{ bg: "whiteAlpha.800" }}
+            borderColor={"blue"}
+            >
+            <option value='Cinema'>Cinema</option>
+            <option value='Restaurant'>Restaurant</option>
+            <option value='Gym'>Gym</option>
+            <option value='Shop'>Shop</option>
+            <option value='Cafe'>Cafe</option>
+            </Select>
+            </GridItem>
+
+            <GridItem>
+          <Input
+              type={"text"}
+              placeholder="Where?"
+              variant={"filled"}
+              fontSize={18}
+              borderColor={"tomato"}
+              bg={"white"}
+              color={"gray.700"}
+              _hover={{ bg: "whiteAlpha.800" }}
+              _focus={{ bg: "whiteAlpha.800" }}
+              _placeholder={{ color: "gray.700" }}
             />
             </GridItem>
             <GridItem>
-            <Button leftIcon={<Search2Icon/>} colorScheme='teal' variant='solid'>
-    Search
+            <Button colorScheme='teal' variant='solid'>
+   Search
   </Button>
   </GridItem>
             </Grid>
