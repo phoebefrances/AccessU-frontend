@@ -10,13 +10,6 @@ import {
   Text,
   Select, 
   Button,
-<<<<<<< HEAD
-=======
-  Grid, 
-  GridItem,
-  Divider,
-  Container
->>>>>>> 650c6423aed107c4812d686b5327f67b703e6fb8
 } from "@chakra-ui/react";
 import { Rating } from "@material-ui/lab";
 import { Autocomplete } from "@react-google-maps/api";
@@ -55,9 +48,9 @@ const Header = ({ setType, setRatings, setCoordinates }) => {
       zIndex={101}
       borderColor={"blue"}
     >
-      <Flex >
-        <Autocomplete onLoad={onLoad} onPlaceChanged={onPlaceChanged}>
-          <InputGroup width={"35vw"} shadow="lg">
+      <Flex>
+        <Autocomplete onLoad={onLoad} onPlaceChanged={onPlaceChanged}/>
+          <InputGroup width={"35vw"} shadow="lg"/>
             {/* <InputRightElement
               pointerEvents={"none"}
               children={<BiSearch color="gray" fontSize={20} />}
@@ -266,8 +259,10 @@ const Header = ({ setType, setRatings, setCoordinates }) => {
               Attractions
             </Text>
           </Flex>
+          </Flex>
+      </Flex>
+    </Flex>
   );
 };
 
 export default Header;
-// TEST
