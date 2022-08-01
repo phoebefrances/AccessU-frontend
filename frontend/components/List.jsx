@@ -18,7 +18,7 @@ const List = ({ places, isLoading }) => {
         px={2}
       >
         <Box padding="6" boxShadow="lg" bg="white" mt={16}>
-          <SkeletonCircle size="10" />
+          <SkeletonCircle size="10"  />
           <SkeletonText mt="4" noOfLines={4} spacing="4" />
         </Box>
         <Box padding="6" boxShadow="lg" bg="white" mt={3}>

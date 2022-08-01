@@ -49,14 +49,14 @@ const Header = ({ setType, setRatings, setCoordinates }) => {
           px={4}
           py={2}
           zIndex={101}>
-      <Flex >
+      <Flex>
         <Autocomplete onLoad={onLoad} onPlaceChanged={onPlaceChanged}>
           <InputGroup width={"35vw"} shadow="lg" >
             {/* <InputRightElement
               pointerEvents={"none"}
               children={<BiSearch color="gray" fontSize={20} />}
             /> */}
-           <Grid templateColumns='repeat(3, 1fr)' gap={1}>
+           <Grid templateColumns='repeat(3, 1fr)' gap={1} >
            <GridItem>
             {/* <Input
               type={"text"}
@@ -71,7 +71,7 @@ const Header = ({ setType, setRatings, setCoordinates }) => {
             /> */}
             <Select placeholder='What?'
             _hover={{ bg: "whiteAlpha.800" }}
-            borderColor={"blue"}
+            borderColor={'#FF9100'}
             rounded={"full"}
             >
             <option value='Cinema'>Cinema</option>
@@ -90,7 +90,7 @@ const Header = ({ setType, setRatings, setCoordinates }) => {
               placeholder="Where?"
               variant={"filled"}
               fontSize={18}
-              borderColor={"tomato"}
+              borderColor={'#FF9100'}
               bg={"white"}
               color={"gray.700"}
               _hover={{ bg: "whiteAlpha.800" }}
@@ -100,7 +100,7 @@ const Header = ({ setType, setRatings, setCoordinates }) => {
             />
             </GridItem>
             <GridItem >
-            <Button leftIcon={<Search2Icon/>} colorScheme='teal' variant='solid' size='lg' rounded={"full"} >
+            <Button leftIcon={<Search2Icon/>} colorScheme='teal' variant='solid' rounded={"full"} >
             Search
             </Button>
             </GridItem>
