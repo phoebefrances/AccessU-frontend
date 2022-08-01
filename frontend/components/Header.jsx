@@ -51,14 +51,14 @@ const Header = ({ setType, setRatings, setCoordinates }) => {
       py={2}
       zIndex={101}
     >
-      <Flex>
+      <Flex >
         <Autocomplete onLoad={onLoad} onPlaceChanged={onPlaceChanged}>
           <InputGroup width={"35vw"} shadow="lg">
             {/* <InputRightElement
               pointerEvents={"none"}
               children={<BiSearch color="gray" fontSize={20} />}
             /> */}
-           <Grid templateColumns='repeat(4, 1fr)' gap={6}>
+           <Grid templateColumns='repeat(3, 1fr)' gap={6}>
            <GridItem>
             <Select placeholder='What?' borderColor='tomato'>
             <option value='Cinema'>Cinema</option>
@@ -69,7 +69,7 @@ const Header = ({ setType, setRatings, setCoordinates }) => {
             </Select>
             </GridItem>
             {/* <GridItem> */}
-              <Divider orientation='vertical' color='black' />
+              {/* <Divider orientation='vertical' color='black' /> */}
             {/* </GridItem> */}
             <GridItem>
           <Input
