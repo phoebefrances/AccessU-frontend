@@ -12,6 +12,7 @@ import {
 import { Rating } from "@material-ui/lab";
 import { Autocomplete } from "@react-google-maps/api";
 import React, { useState } from "react";
+import { Grid, GridItem } from '@chakra-ui/react'
 
 import {
   BiChevronDown,
@@ -51,10 +52,11 @@ const Header = ({ setType, setRatings, setCoordinates }) => {
               pointerEvents={"none"}
               children={<BiSearch color="gray" fontSize={20} />}
             />
-
+           <Grid templateColumns='repeat(2, 1fr)' gap={6}>
+           <GridItem>
             <Input
               type={"text"}
-              placeholder="Search Google Map..."
+              placeholder="Search For Accessible Places..."
               variant={"filled"}
               fontSize={18}
               bg={"white"}
@@ -63,6 +65,21 @@ const Header = ({ setType, setRatings, setCoordinates }) => {
               _focus={{ bg: "whiteAlpha.800" }}
               _placeholder={{ color: "gray.700" }}
             />
+            </GridItem>
+            <GridItem>
+          <Input
+              type={"text"}
+              placeholder="Search For Accessible Places..."
+              variant={"filled"}
+              fontSize={18}
+              bg={"white"}
+              color={"gray.700"}
+              _hover={{ bg: "whiteAlpha.800" }}
+              _focus={{ bg: "whiteAlpha.800" }}
+              _placeholder={{ color: "gray.700" }}
+            />
+            </GridItem>
+            </Grid>
           </InputGroup>
         </Autocomplete>
 
@@ -227,3 +244,4 @@ const Header = ({ setType, setRatings, setCoordinates }) => {
 };
 
 export default Header;
+// TEST
