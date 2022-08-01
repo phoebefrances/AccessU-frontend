@@ -11,7 +11,8 @@ import {
   Select, 
   Button,
   Grid, 
-  GridItem 
+  GridItem,
+  Divider
 } from "@chakra-ui/react";
 import { Rating } from "@material-ui/lab";
 import { Autocomplete } from "@react-google-maps/api";
@@ -57,7 +58,7 @@ const Header = ({ setType, setRatings, setCoordinates }) => {
               pointerEvents={"none"}
               children={<BiSearch color="gray" fontSize={20} />}
             /> */}
-           <Grid templateColumns='repeat(3, 1fr)' gap={6}>
+           <Grid templateColumns='repeat(4, 1fr)' gap={6}>
            <GridItem>
             <Select placeholder='What?' borderColor='tomato'>
             <option value='Cinema'>Cinema</option>
@@ -67,6 +68,9 @@ const Header = ({ setType, setRatings, setCoordinates }) => {
             <option value='Cafe'>Cafe</option>
             </Select>
             </GridItem>
+            {/* <GridItem> */}
+              <Divider orientation='vertical' color='black' />
+            {/* </GridItem> */}
             <GridItem>
           <Input
               type={"text"}
