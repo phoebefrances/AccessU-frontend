@@ -61,17 +61,6 @@ const Header = ({ setType, setRatings, setCoordinates }) => {
             /> */}
            <Grid templateColumns='repeat(3, 1fr)' gap={6}>
            <GridItem>
-            {/* <Input
-              type={"text"}
-              placeholder="Search For Accessible Places..."
-              variant={"filled"}
-              fontSize={18}
-              bg={"white"}
-              color={"gray.700"}
-              _hover={{ bg: "whiteAlpha.800" }}
-              _focus={{ bg: "whiteAlpha.800" }}
-              _placeholder={{ color: "gray.700" }}
-            /> */}
             <Select placeholder='What?'>
             <option value='Cinema'>Cinema</option>
             <option value='Restaurant'>Restaurant</option>
@@ -83,7 +72,7 @@ const Header = ({ setType, setRatings, setCoordinates }) => {
             <GridItem>
           <Input
               type={"text"}
-              placeholder="Search For Accessible Places..."
+              placeholder="Where?"
               variant={"filled"}
               fontSize={18}
               bg={"white"}
