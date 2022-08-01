@@ -7,8 +7,9 @@ import Profile from "../components/LargeCard";
 import PlaceDetail from "../components/PlaceDetail";
 import { getPlacesData } from "./api/getPlacesData";
 import Head from "next/head";
+import LargeCard from "../components/LargeCard";
 
-// dummy data 
+// dummy data
 const places = [
   { name: "sample Place1" },
   { name: "sample Place1" },
@@ -25,9 +26,8 @@ const Home = () => {
   const [ratings, setRatings] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
-// get the users current location on intial login
+  // get the users current location on intial login
   useEffect(() => {
-
     navigator.geolocation.getCurrentPosition(
       ({ coords: { latitude, longitude } }) => {
         console.log({ latitude, longitude });
@@ -36,14 +36,14 @@ const Home = () => {
     );
   }, []);
 
-// updates the data to the users choice of rating 
+  // updates the data to the users choice of rating
   useEffect(() => {
     const filteredData = places.filter((place) => place.rating > ratings);
     setFilteredPlaces(filteredData);
     console.log({ ratings });
   }, [ratings]);
 
-  // updates the data to the users choice of category or location 
+  // updates the data to the users choice of category or location
   useEffect(() => {
     setIsLoading(true);
     getPlacesData(type, bounds?.sw, bounds?.ne).then((data) => {
@@ -85,9 +85,7 @@ const Home = () => {
         places={filteredPlaces.length ? filteredPlaces : places}
       />
 
-      <Profile
-      />
-
+      <LargeCard />
     </Flex>
   );
 };

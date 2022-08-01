@@ -1,98 +1,73 @@
-// if small card is clicked large card will appear on the lefthand side with more information
-// ( if statement, onClick/ onChange )
-// use the same functionality as the small card but render in a larger format
+import { Box } from "@chakra-ui/react";
+import { Badge } from "@chakra-ui/react";
+import { StarIcon } from "@chakra-ui/react";
 
-import React from "react";
-// Chakra imports
-import { Flex, Image, Text, useColorModeValue } from "@chakra-ui/react";
-
-function Profile() {
-  let boxBg = useColorModeValue("white !important", "#111c44 !important");
-  let mainText = useColorModeValue("gray.800", "white");
-  let secondaryText = useColorModeValue("gray.400", "gray.400");
+function LargeCard() {
+  const property = {
+    imageUrl: "https://bit.ly/2Z4KKcF",
+    imageAlt: "Rear view of modern home with pool",
+    beds: 3,
+    baths: 2,
+    title: "Modern home in city center in the heart of historic Los Angeles",
+    formattedPrice: "$1,900.00",
+    reviewCount: 34,
+    rating: 4,
+  };
 
   return (
-    <Flex
-      borderRadius='20px'
-      bg={boxBg}
-      p='20px'
-      h='345px'
-      w={{ base: "315px", md: "345px" }}
-      alignItems='center'
-      direction='column'>
-      <Image
-        src='https://cataas.com/cat'
-        maxW='100%'
-        borderRadius='20px'
-      />
-      <Flex flexDirection='column' mb='30px'>
-        <Image
-          src='https://i.ibb.co/B3gYTYs/Profile-Image.png'
-          border='5px solid red'
-          mx='auto'
-          borderColor={boxBg}
-          width='68px'
-          height='68px'
-          mt='-38px'
-          borderRadius='50%'
-        />
-        <Text
-          fontWeight='600'
-          color={mainText}
-          textAlign='center'
-          fontSize='xl'>
-          Adela Parkson
-        </Text>
-        <Text
-          color={secondaryText}
-          textAlign='center'
-          fontSize='sm'
-          fontWeight='500'>
-          Product Designer
-        </Text>
-      </Flex>
-      <Flex justify='space-between' w='100%' px='36px'>
-        <Flex flexDirection='column'>
-          <Text
-            fontWeight='600'
-            color={mainText}
-            fontSize='xl'
-            textAlign='center'>
-            17
-          </Text>
-          <Text color={secondaryText} fontWeight='500'>
-            Posts
-          </Text>
-        </Flex>
-        <Flex flexDirection='column'>
-          <Text
-            fontWeight='600'
-            color={mainText}
-            fontSize='xl'
-            textAlign='center'>
-            9.7k
-          </Text>
-          <Text color={secondaryText} fontWeight='500'>
-            Followers
-          </Text>
-        </Flex>
-        <Flex flexDirection='column'>
-          <Text
-            fontWeight='600'
-            fontSize='xl'
-            color={mainText}
-            textAlign='center'>
-            274
-          </Text>
-          <Text color={secondaryText} fontWeight='500'>
-            Following
-          </Text>
-        </Flex>
-      </Flex>
-    </Flex>
+    <Box maxW="sm" borderWidth="1px" borderRadius="lg" overflow="hidden">
+      <Image src={property.imageUrl} alt={property.imageAlt} />
+
+      <Box p="6">
+        <Box display="flex" alignItems="baseline">
+          <Badge borderRadius="full" px="2" colorScheme="teal">
+            New
+          </Badge>
+          <Box
+            color="gray.500"
+            fontWeight="semibold"
+            letterSpacing="wide"
+            fontSize="xs"
+            textTransform="uppercase"
+            ml="2"
+          >
+            {property.beds} beds &bull; {property.baths} baths
+          </Box>
+        </Box>
+
+        <Box
+          mt="1"
+          fontWeight="semibold"
+          as="h4"
+          lineHeight="tight"
+          noOfLines={1}
+        >
+          {property.title}
+        </Box>
+
+        <Box>
+          {property.formattedPrice}
+          <Box as="span" color="gray.600" fontSize="sm">
+            / wk
+          </Box>
+        </Box>
+
+        <Box display="flex" mt="2" alignItems="center">
+          {Array(5)
+            .fill("")
+            .map((_, i) => (
+              <StarIcon
+                key={i}
+                color={i < property.rating ? "teal.500" : "gray.300"}
+              />
+            ))}
+          <Box as="span" ml="2" color="gray.600" fontSize="sm">
+            {property.reviewCount} reviews
+          </Box>
+        </Box>
+      </Box>
+    </Box>
   );
 }
 
-export default Profile;
-
-// added export 
+export default LargeCard;
