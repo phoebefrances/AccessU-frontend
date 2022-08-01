@@ -10,11 +10,16 @@ import {
   Text,
   Select, 
   Button,
+  Grid, 
+  GridItem 
 } from "@chakra-ui/react";
 import { Rating } from "@material-ui/lab";
 import { Autocomplete } from "@react-google-maps/api";
 import React, { useState } from "react";
-import { Grid, GridItem } from '@chakra-ui/react'
+import { Search2Icon } from '@chakra-ui/icons'
+
+
+
 
 import {
   BiChevronDown,
@@ -89,8 +94,8 @@ const Header = ({ setType, setRatings, setCoordinates }) => {
             />
             </GridItem>
             <GridItem>
-            <Button colorScheme='teal' variant='solid'>
-    Email
+            <Button leftIcon={<Search2Icon/>} colorScheme='teal' variant='solid'>
+    Search
   </Button>
   </GridItem>
             </Grid>
