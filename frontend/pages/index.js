@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import Header from "../components/Header";
 import List from "../components/List";
 import Map from "../components/Map";
+import Profile from "../components/LargeCard";
 import PlaceDetail from "../components/PlaceDetail";
 import { getPlacesData } from "./api/getPlacesData";
 import Head from "next/head";
@@ -83,6 +84,10 @@ const Home = () => {
         setBounds={setBounds}
         places={filteredPlaces.length ? filteredPlaces : places}
       />
+
+      <Profile
+      />
+
     </Flex>
   );
 };
