@@ -50,16 +50,12 @@ const Header = ({ setType, setRatings, setCoordinates }) => {
     >
       <Flex >
         <Autocomplete onLoad={onLoad} onPlaceChanged={onPlaceChanged}>
-          <InputGroup width={"35vw"} shadow="lg" >
+          <InputGroup width={"35vw"} shadow="lg">
             {/* <InputRightElement
               pointerEvents={"none"}
               children={<BiSearch color="gray" fontSize={20} />}
             /> */}
-<<<<<<< HEAD
            <Grid templateColumns='repeat(3, 1fr)' gap={1}>
-=======
-           <Grid templateColumns='repeat(3, 1fr)' gap={6}>
->>>>>>> bfd080708ce2d3e701c9c8baea760e93765cd07d
            <GridItem>
             {/* <Input
               type={"text"}
@@ -82,14 +78,10 @@ const Header = ({ setType, setRatings, setCoordinates }) => {
             <option value='Shop'>Shop</option>
             <option value='Cafe'>Cafe</option>
             </Select>
-            </GridItem>
-<<<<<<< HEAD
-
-=======
             {/* <GridItem> */}
               {/* <Divider orientation='vertical' color='black' /> */}
             {/* </GridItem> */}
->>>>>>> bfd080708ce2d3e701c9c8baea760e93765cd07d
+            </GridItem>
             <GridItem>
           <Input
               type={"text"}
@@ -105,20 +97,13 @@ const Header = ({ setType, setRatings, setCoordinates }) => {
             />
             </GridItem>
             <GridItem>
-<<<<<<< HEAD
-            <Button colorScheme='teal' variant='solid'>
-   Search
-  </Button>
-  </GridItem>
-=======
             <Button leftIcon={<Search2Icon/>} colorScheme='teal' variant='solid' size='lg'>
             Search
             </Button>
             </GridItem>
->>>>>>> bfd080708ce2d3e701c9c8baea760e93765cd07d
             </Grid>
-          </InputGroup>
-        </Autocomplete>
+          
+       
 
         <Flex alignItems={"center"} justifyContent={"center"}>
           <Flex
@@ -274,9 +259,6 @@ const Header = ({ setType, setRatings, setCoordinates }) => {
               Attractions
             </Text>
           </Flex>
-        </Flex>
-      </Flex>
-    </Flex>
   );
 };
 
