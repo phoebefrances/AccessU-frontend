@@ -10,11 +10,14 @@ import {
   Text,
   Select, 
   Button,
+  Grid, 
+  GridItem,
+  Divider,
+  Container
 } from "@chakra-ui/react";
 import { Rating } from "@material-ui/lab";
 import { Autocomplete } from "@react-google-maps/api";
 import React, { useState } from "react";
-import { Grid, GridItem } from '@chakra-ui/react'
 
 import {
   BiChevronDown,
