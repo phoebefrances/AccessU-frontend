@@ -8,7 +8,8 @@ import {
   MenuItem,
   MenuList,
   Text,
-  Select
+  Select, 
+  Button,
 } from "@chakra-ui/react";
 import { Rating } from "@material-ui/lab";
 import { Autocomplete } from "@react-google-maps/api";
@@ -49,11 +50,11 @@ const Header = ({ setType, setRatings, setCoordinates }) => {
       <Flex>
         <Autocomplete onLoad={onLoad} onPlaceChanged={onPlaceChanged}>
           <InputGroup width={"35vw"} shadow="lg">
-            <InputRightElement
+            {/* <InputRightElement
               pointerEvents={"none"}
               children={<BiSearch color="gray" fontSize={20} />}
-            />
-           <Grid templateColumns='repeat(2, 1fr)' gap={6}>
+            /> */}
+           <Grid templateColumns='repeat(3, 1fr)' gap={6}>
            <GridItem>
             {/* <Input
               type={"text"}
@@ -87,6 +88,11 @@ const Header = ({ setType, setRatings, setCoordinates }) => {
               _placeholder={{ color: "gray.700" }}
             />
             </GridItem>
+            <GridItem>
+            <Button colorScheme='teal' variant='solid'>
+    Email
+  </Button>
+  </GridItem>
             </Grid>
           </InputGroup>
         </Autocomplete>
