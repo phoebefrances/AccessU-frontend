@@ -6,17 +6,12 @@ import Map from "../components/Map";
 import PlaceDetail from "../components/PlaceDetail";
 import { getPlacesData } from "./api/getPlacesData";
 import Head from "next/head";
-
-// dummy data 
-const places = [
-  { name: "sample Place1" },
-  { name: "sample Place1" },
-  { name: "sample Place1" },
-  { name: "sample Place1" },
-];
+//👇 Comment out if using API. Uncomment if using offline database.
+import { data } from "../libs/offlineData.js";
 
 const Home = () => {
-  const [places, setPlaces] = useState([]);
+  //👇 Comment out if using offline database. Uncomment if using API
+  // const [places, setPlaces] = useState([]);
   const [filteredPlaces, setFilteredPlaces] = useState([]);
   const [coordinates, setCoordinates] = useState({});
   const [bounds, setBounds] = useState(null);
@@ -24,9 +19,11 @@ const Home = () => {
   const [ratings, setRatings] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
-// get the users current location on intial login
-  useEffect(() => {
+  //👇 Comment out if using API. Uncomment if using offline database.
+  const places = data;
 
+  // get the users current location on intial login
+  useEffect(() => {
     navigator.geolocation.getCurrentPosition(
       ({ coords: { latitude, longitude } }) => {
         console.log({ latitude, longitude });
@@ -35,22 +32,24 @@ const Home = () => {
     );
   }, []);
 
-// updates the data to the users choice of rating 
+  // updates the data to the users choice of rating
   useEffect(() => {
     const filteredData = places.filter((place) => place.rating > ratings);
     setFilteredPlaces(filteredData);
     console.log({ ratings });
   }, [ratings]);
 
-  // updates the data to the users choice of category or location 
-  useEffect(() => {
-    setIsLoading(true);
-    getPlacesData(type, bounds?.sw, bounds?.ne).then((data) => {
-      console.log(data);
-      setPlaces(data);
-      setIsLoading(false);
-    });
-  }, [type, coordinates, bounds]);
+  // updates the data to the users choice of category or location
+  // 👇 Comment out if using offline database. Uncomment if using the API
+  // useEffect(() => {
+  //   setIsLoading(true);
+  //   getPlacesData(type, bounds?.sw, bounds?.ne).then((data) => {
+  //     console.log(`This is data: ${data}`);
+  //     console.dir(data);
+  //     setPlaces(data);
+  //     setIsLoading(false);
+  //   });
+  // }, [type, coordinates, bounds]);
 
   return (
     <Flex
