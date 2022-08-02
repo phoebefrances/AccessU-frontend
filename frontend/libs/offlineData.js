@@ -5,7 +5,6 @@ export let data = [
     category: "restaurant",
     name: "The Breakfast Club Soho",
     rating: "5.0",
-
     photo:
       "https://media-cdn.tripadvisor.com/media/photo-o/1a/4c/1f/f8/wagyu-japones.jpg",
     address: "18 Castle Street, Buckingham MK18 1BP England",

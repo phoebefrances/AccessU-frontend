@@ -6,17 +6,11 @@ import Map from "../components/Map";
 import PlaceDetail from "../components/PlaceDetail";
 import { getPlacesData } from "./api/getPlacesData";
 import Head from "next/head";
+//👇 Comment out if using API. Uncomment if using offline database.
 import { data } from "../libs/offlineData.js";
 
-// dummy data
-// const places = [
-//   { name: "sample Place1" },
-//   { name: "sample Place1" },
-//   { name: "sample Place1" },
-//   { name: "sample Place1" },
-// ];
-
 const Home = () => {
+  //👇 Comment out if using offline database. Uncomment if using API
   // const [places, setPlaces] = useState([]);
   const [filteredPlaces, setFilteredPlaces] = useState([]);
   const [coordinates, setCoordinates] = useState({});
@@ -24,8 +18,10 @@ const Home = () => {
   const [type, setType] = useState("restaurants");
   const [ratings, setRatings] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+
+  //👇 Comment out if using API. Uncomment if using offline database.
   const places = data;
-  console.log(data);
+
   // get the users current location on intial login
   useEffect(() => {
     navigator.geolocation.getCurrentPosition(
@@ -44,7 +40,7 @@ const Home = () => {
   }, [ratings]);
 
   // updates the data to the users choice of category or location
-  //Commenting out as we probably won't need it for the hardcoded data
+  // 👇 Comment out if using offline database. Uncomment if using the API
   // useEffect(() => {
   //   setIsLoading(true);
   //   getPlacesData(type, bounds?.sw, bounds?.ne).then((data) => {
