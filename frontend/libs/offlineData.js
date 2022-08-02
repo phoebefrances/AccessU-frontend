@@ -145,5 +145,5 @@ export let data = [
 -Accesibility labels (one for each badge) ✅ 
 -phone number ✅
 -web address ✅
--opening times 
+-opening times ✅
 -picture ✅ */
