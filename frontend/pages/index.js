@@ -6,6 +6,7 @@ import Map from "../components/Map";
 import PlaceDetail from "../components/PlaceDetail";
 import { getPlacesData } from "./api/getPlacesData";
 import Head from "next/head";
+<<<<<<< HEAD
 import LargeCard from "../components/LargeCard";
 
 // dummy data
@@ -15,9 +16,14 @@ const places = [
   { name: "sample Place1" },
   { name: "sample Place1" },
 ];
+=======
+//👇 Comment out if using API. Uncomment if using offline database.
+import { data } from "../libs/offlineData.js";
+>>>>>>> 4855e6ff29cee908ea05d303b5f7339fb349a3e0
 
 const Home = () => {
-  const [places, setPlaces] = useState([]);
+  //👇 Comment out if using offline database. Uncomment if using API
+  // const [places, setPlaces] = useState([]);
   const [filteredPlaces, setFilteredPlaces] = useState([]);
   const [coordinates, setCoordinates] = useState({});
   const [bounds, setBounds] = useState(null);
@@ -25,6 +31,12 @@ const Home = () => {
   const [ratings, setRatings] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
+<<<<<<< HEAD
+=======
+  //👇 Comment out if using API. Uncomment if using offline database.
+  const places = data;
+
+>>>>>>> 4855e6ff29cee908ea05d303b5f7339fb349a3e0
   // get the users current location on intial login
   useEffect(() => {
     navigator.geolocation.getCurrentPosition(
@@ -43,6 +55,7 @@ const Home = () => {
   }, [ratings]);
 
   // updates the data to the users choice of category or location
+<<<<<<< HEAD
   useEffect(() => {
     setIsLoading(true);
     getPlacesData(type, bounds?.sw, bounds?.ne).then((data) => {
@@ -51,6 +64,18 @@ const Home = () => {
       setIsLoading(false);
     });
   }, [type, coordinates, bounds]);
+=======
+  // 👇 Comment out if using offline database. Uncomment if using the API
+  // useEffect(() => {
+  //   setIsLoading(true);
+  //   getPlacesData(type, bounds?.sw, bounds?.ne).then((data) => {
+  //     console.log(`This is data: ${data}`);
+  //     console.dir(data);
+  //     setPlaces(data);
+  //     setIsLoading(false);
+  //   });
+  // }, [type, coordinates, bounds]);
+>>>>>>> 4855e6ff29cee908ea05d303b5f7339fb349a3e0
 
   return (
     <Flex

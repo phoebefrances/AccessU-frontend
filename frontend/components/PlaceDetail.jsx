@@ -36,61 +36,16 @@ const PlaceDetail = ({ place }) => {
             >
               {place.name}
             </Text>
-
-            <Text 
-            fontSize={"sm"}
-            fontWeight={"500"}
-            color={"gray.500"}>
-              {place.price}
-            </Text>
           </Flex>
-             
-             {/* Ratings */}
-          <Flex 
-            alignItems={"center"}
-            width={"full"}>
 
-            <Rating 
-            size="small" 
-            value={Number(place.rating)}
-            readOnly />
-
-            <Text
-              fontSize={"sm"}
-              fontWeight={"500"}
-              color={"gray.500"}
-            >{`(${place.num_reviews})`}
-            </Text>
-
-            <Text
-              fontSize={"sm"}
-              fontWeight={"500"}
-              color={"gray.500"}
-              ml={"auto"}
-            >
-              {place.price_level}
-            </Text>
+          {/* Ratings */}
+          <Flex alignItems={"center"} width={"full"}>
+            <Rating size="small" value={Number(place.rating)} readOnly />
           </Flex>
-          
-             {/* Ranking */}
-             <Text 
-             fontSize={"sm"} 
-             fontWeight={"500"}
-              color={"gray.400"}>
-            {place.ranking}
-          </Text>
-
-            {/* Open status */}
-            <Text 
-            fontSize={"sm"}
-            fontWeight={"500"}
-            color={"gray.600"}>
-            {place.open_now_text}
-          </Text> 
-
 
           {/* dietary_restrictions */}
-          {place?.dietary_restrictions && (
+          {/* We may use this as behaviour for rendering accesibility badges */}
+          {/* {place?.dietary_restrictions && (
             <Flex width={"full"} flexWrap={"wrap"}>
               {place.dietary_restrictions.map((n, i) => (
                 <Badge
@@ -104,42 +59,28 @@ const PlaceDetail = ({ place }) => {
                 </Badge>
               ))}
             </Flex>
-          )}
+          )} */}
         </Flex>
-        
       </Flex>
 
       <Image
-          objectFit={"cover"}
-          width={"120px"}
-          height={"120px"}
-          rounded="lg"
-          src={
-            place.photo
-              ? place.photo.images.large.url
-              : "https://explorelompoc.com/wp-content/uploads/2021/06/food_placeholder.jpg"
-          }
-        />
+        objectFit={"cover"}
+        width={"120px"}
+        height={"120px"}
+        rounded="lg"
+        src={
+          place.photo
+            ? place.photo
+            : "https://explorelompoc.com/wp-content/uploads/2021/06/food_placeholder.jpg"
+        }
+      />
 
-        {place?.address && (
+      {place?.address && (
+        <Flex alignItems={"center"} width={"full"} px={1} my={2}>
+          <IoLocation fontSize={20} color="gray" />
 
-        <Flex 
-        alignItems={"center"}
-        width={"full"}
-        px={1} my={2}>
-
-          <IoLocation 
-          fontSize={20} 
-          color="gray" />
-
-          <Text
-            fontSize={"small"}
-            fontWeight={500}
-            color={"gray.700"}
-            ml={1}
-          >
+          <Text fontSize={"small"} fontWeight={500} color={"gray.700"} ml={1}>
             {place.address}
-
           </Text>
         </Flex>
       )}
@@ -148,4 +89,7 @@ const PlaceDetail = ({ place }) => {
 };
 
 export default PlaceDetail;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4855e6ff29cee908ea05d303b5f7339fb349a3e0

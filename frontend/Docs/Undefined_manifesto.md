@@ -35,7 +35,7 @@ _Remember to conduct discussions in a calm manner. if the conflict gwets heated,
 - Group discussion: tickets' priorities, pairing for the day;
 - Individual: Which ticket will you work on for today?
 - Individual: What may you struggle with today and how would you tackle that ? (pre-mortem)
-- Individual: What would success look like to you today?
+- Individual: What would success look like to you today? _Write this down on the ticket and use as a criteria for ticking it off._
 
 **11:00** | Break (30min)
 
@@ -54,25 +54,42 @@ _Remember to conduct discussions in a calm manner. if the conflict gwets heated,
 
 </br>
 
-# 🌊 GitHub Flow
+_**Out of hours**: No expectation to work after hours | All after-hours work needs to be approved by the team beforehand (team mates need to be invited to join) | No guarantee after-hours changes will be deployed -> subject to team approval_
 
-1. **Create a new branch.** No one works on main
+# 🌊 GitHub: Feature Branch Flow
+
+We have 3 kinds of branches:
+
+- **Main**: stores our release history
+- **Develop**: our current working copy
+- **Feature**: Multiple smaller branches used for work on individual features/tickets.
+
+<br>
+
+<img src="./feature_branches.svg" width="700">
+
+## The Flow
+
+1. **Create a new feature branch** off Develop.❗No one works on Develop or Main❗
 2. **Make changes**:
    - Add comments as you go
    - Plan inside [Dev Log](./Dev_log.md) and tick things off as you go.
-   - Important things (variable names, shape of data etc.) also to be put in [Dev Log](./Dev_log.md)
+   - Important things (variable names, shape of data etc.) also to be put in [Dev Log](./Dev_log.md)'s Standards section
 3. **Add-Commit-Push**
    - Commit names to be descriptive: sentences, not words.
-   - Atomic commits: one task per commit.
-4. **Review**
+   - Atomic commits: Each commit contains an isolated, complete change.
+4. **Pull request**
+   - Leave a descriptive comment on what you've changed (can include imqges, links and tables)
+5. **Review - Deploy - Merge**
    - Done as a group
-5. **Deploy**
-6. **Merge**
-
-_**Out of hours**: No expectation to work after hours | All after-hours work needs to be approved by the team beforehand (team mates need to be invited to join) | No guarantee after-hours changes will be deployed -> subject to team approval_
+   - Merge to Develop, not Main.
+6. **Delete branch**
+   - Both on gitHub and locally
 
 </br>
+
 👉[Phoebe's master guide to GitHub](https://docs.google.com/document/d/1VifQDxUm9TVDRkqp9MZDh9r6rHuaBmK22ObcDI2DICo/edit?usp=sharing)
+
 👉[More info about GitHub Flow](https://www.w3schools.com/git/git_github_flow.asp)
 
 </br>
