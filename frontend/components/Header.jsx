@@ -2,29 +2,24 @@ import {
   Flex,
   Input,
   InputGroup,
-  InputRightElement,
   Menu,
   MenuButton,
   MenuItem,
   MenuList,
   Text,
-  Select, 
   Button,
-  Grid, 
-  GridItem,
-  Divider, 
 } from "@chakra-ui/react";
 import { Rating } from "@material-ui/lab";
 import { Autocomplete } from "@react-google-maps/api";
 import React, { useState } from "react";
-import { Search2Icon } from '@chakra-ui/icons'
+
+import { ChevronDownIcon } from '@chakra-ui/icons'
 
 import {
   BiChevronDown,
   BiHotel,
   BiMapAlt,
   BiRestaurant,
-  BiSearch,
   BiStar,
 } from "react-icons/bi";
 
@@ -42,73 +37,45 @@ const Header = ({ setType, setRatings, setCoordinates }) => {
 
   return (
     <Flex
-          position={"absolute"}
-          top={0}
-          left={0}
-          width={"full"}
-          px={4}
-          py={2}
-          zIndex={101}>
+      position={"absolute"}
+      top={0}
+      left={0}
+      width={"full"}
+      px={4}
+      py={2}
+      zIndex={101}
+    >
       <Flex>
         <Autocomplete onLoad={onLoad} onPlaceChanged={onPlaceChanged}>
-          <InputGroup width={"35vw"} shadow="lg" >
-            {/* <InputRightElement
-              pointerEvents={"none"}
-              children={<BiSearch color="gray" fontSize={20} />}
-            /> */}
-           <Grid templateColumns='repeat(3, 1fr)' gap={1} >
-           <GridItem>
-            {/* <Input
+          <InputGroup width={"35vw"} shadow="lg" border='4px' borderColor='orange' rounded="full">
+          <Menu>
+          <MenuButton as={Button} rounded="full" bg={"white"} rightIcon={<ChevronDownIcon />} fontWeight={"normal"}>
+    Venue Type
+  </MenuButton>
+  <MenuList>
+    <MenuItem onClick={() => setType("restaurants")}>Restaurants</MenuItem>
+    <MenuItem onClick={() => setType("hotels")}>Hotels</MenuItem>
+    <MenuItem onClick={() => setType("attractions")}>Attractions</MenuItem>
+  </MenuList>
+</Menu>
+            <Input
               type={"text"}
-              placeholder="Search For Accessible Places..."
               variant={"filled"}
-              fontSize={18}
+              fontSize={17}
+              placeholder="Where To?"
               bg={"white"}
               color={"gray.700"}
-              _hover={{ bg: "whiteAlpha.800" }}
-              _focus={{ bg: "whiteAlpha.800" }}
               _placeholder={{ color: "gray.700" }}
-            /> */}
-            <Select placeholder='What?'
-            _hover={{ bg: "whiteAlpha.800" }}
-            borderColor={'#FF9100'}
-            rounded={"full"}
-            >
-            <option value='Cinema'>Cinema</option>
-            <option value='Restaurant'>Restaurant</option>
-            <option value='Gym'>Gym</option>
-            <option value='Shop'>Shop</option>
-            <option value='Cafe'>Cafe</option>
-            </Select>
-            {/* <GridItem> */}
-              {/* <Divider orientation='vertical' color='black' /> */}
-            {/* </GridItem> */}
-            </GridItem>
-            <GridItem>
-          <Input
-              type={"text"}
-              placeholder="Where?"
-              variant={"filled"}
-              fontSize={18}
-              borderColor={'#FF9100'}
-              bg={"white"}
-              color={"gray.700"}
-              _hover={{ bg: "whiteAlpha.800" }}
-              _focus={{ bg: "whiteAlpha.800" }}
-              _placeholder={{ color: "gray.700" }}
-              rounded={"full"}
+              rounded="full"
+              width={"200px"}
             />
-            </GridItem>
-            <GridItem >
-            <Button leftIcon={<Search2Icon/>} colorScheme='teal' variant='solid' rounded={"full"} >
-            Search
-            </Button>
-            </GridItem>
-            </Grid>
-            </InputGroup>
+             
+              <Button bgGradient='linear(to-r, blue.200, purple.500)' rounded="full" _hover={"linear(to-r, blue.200, purple.500)"}>
+              Search
+             </Button>
+            
+          </InputGroup>
         </Autocomplete>
-          
-       
 
         <Flex alignItems={"center"} justifyContent={"center"}>
           <Flex
@@ -264,12 +231,12 @@ const Header = ({ setType, setRatings, setCoordinates }) => {
               Attractions
             </Text>
           </Flex>
-          </Flex>
+        </Flex>
       </Flex>
-      </Flex> 
- 
+    </Flex>
   );
 };
 
 export default Header;
+
 
