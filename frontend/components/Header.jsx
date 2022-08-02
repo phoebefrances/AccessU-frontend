@@ -82,6 +82,7 @@ const Header = ({ setType, setRatings, setCoordinates }) => {
     <MenuItem>Cafe</MenuItem>
   </MenuList>
   </Menu>
+
             <Input
               type={"text"}
               variant={"filled"}
