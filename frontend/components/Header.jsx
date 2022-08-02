@@ -69,7 +69,7 @@ const Header = ({ setType, setRatings, setCoordinates }) => {
               width={"200px"}
             />
              
-              <Button bgGradient='linear(to-r, blue.200, purple.500)' rounded="full" _hover={"linear(to-r, blue.200, purple.500)"} leftIcon={<Search2Icon/>} color='white'>
+              <Button bgGradient='linear(to-r, #17CEDA, #032396)' rounded="full" _hover={"linear(to-r, blue.200, purple.500)"} leftIcon={<Search2Icon/>} color='white'>
               Search
              </Button>
             
