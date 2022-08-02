@@ -12,7 +12,7 @@ import {
 import { Rating } from "@material-ui/lab";
 import { Autocomplete } from "@react-google-maps/api";
 import React, { useState } from "react";
-import { ChevronDownIcon, Search2Icon} from '@chakra-ui/icons'
+import { TriangleDownIcon, Search2Icon} from '@chakra-ui/icons'
 
 import {
   BiChevronDown,
@@ -48,23 +48,28 @@ const Header = ({ setType, setRatings, setCoordinates }) => {
         <Autocomplete onLoad={onLoad} onPlaceChanged={onPlaceChanged}>
           <InputGroup width={"35vw"} shadow="lg" border='4px' borderColor='orange' rounded="full">
           <Menu>
-          <MenuButton as={Button} rounded="full" bg={"white"} rightIcon={<ChevronDownIcon />} fontWeight={"normal"}>
-    Venue Type
+          <MenuButton color={`#2C2C68`} as={Button} rounded="full" bg={"white"} rightIcon={<TriangleDownIcon color='orange' />} fontWeight={"bold"} fontSize={17}>
+    What?
   </MenuButton>
   <MenuList>
     <MenuItem onClick={() => setType("restaurants")}>Restaurants</MenuItem>
     <MenuItem onClick={() => setType("hotels")}>Hotels</MenuItem>
     <MenuItem onClick={() => setType("attractions")}>Attractions</MenuItem>
+    <MenuItem>Gym</MenuItem>
+    <MenuItem>Cinema</MenuItem>
+    <MenuItem>Shop</MenuItem>
+    <MenuItem>Cafe</MenuItem>
   </MenuList>
 </Menu>
             <Input
               type={"text"}
               variant={"filled"}
               fontSize={17}
-              placeholder="Where To?"
+              fontWeight={"bold"}
+              placeholder="Where?"
               bg={"white"}
               color={"gray.700"}
-              _placeholder={{ color: "gray.700" }}
+              _placeholder={{ color: `#2C2C68` }}
               rounded="full"
               width={"200px"}
             />
