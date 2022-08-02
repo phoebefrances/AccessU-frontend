@@ -4,17 +4,17 @@
 	 viewBox="0 0 800 455" style="enable-background:new 0 0 800 455;" xml:space="preserve">
 <style type="text/css">
 	.st0{fill:#404040;}
-	.st1{fill:#B18BE8;stroke:#404040;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-	.st2{fill:#4ED1A1;stroke:#404040;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-	.st3{fill:none;stroke:#404040;stroke-width:4;stroke-miterlimit:10;}
-	.st4{fill:#4ED1A1;stroke:#404040;stroke-width:4;stroke-miterlimit:10;}
-	.st5{fill:#B18BE8;stroke:#404040;stroke-width:4;stroke-miterlimit:10;}
+	.st1{fill:#B18BE8;stroke:#ffffff;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st2{fill:#4ED1A1;stroke:#ffffff;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st3{fill:none;stroke:#ffffff;stroke-width:4;stroke-miterlimit:10;}
+	.st4{fill:#4ED1A1;stroke:#ffffff;stroke-width:4;stroke-miterlimit:10;}
+	.st5{fill:#B18BE8;stroke:#ffffff;stroke-width:4;stroke-miterlimit:10;}
 	.st6{fill:none;stroke:#ffffff;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:0,14.1243;}
 	.st7{fill:none;stroke:#ffffff;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;}
 	.st8{fill:none;stroke:#ffffff;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:0,14.9632;}
-	.st9{fill:#B3E3FF;stroke:#404040;stroke-width:4;stroke-miterlimit:10;}
-	.st10{fill:#B3E3FF;stroke:#404040;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-	.st11{fill:none;stroke:#404040;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st9{fill:#B3E3FF;stroke:#ffffff;stroke-width:4;stroke-miterlimit:10;}
+	.st10{fill:#B3E3FF;stroke:#ffffff;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st11{fill:none;stroke:#ffffff;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
 	.st12{fill:none;stroke:#ffffff;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:0,13.6844;}
 	.st13{fill:none;stroke:#ffffff;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:0,13.7717;}
 	.st14{fill:none;stroke:#ffffff;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:0,13.6492;}
