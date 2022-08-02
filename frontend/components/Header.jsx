@@ -46,12 +46,12 @@ const Header = ({ setType, setRatings, setCoordinates }) => {
     >
       <Flex>
         <Autocomplete onLoad={onLoad} onPlaceChanged={onPlaceChanged}>
-          <InputGroup width={"35vw"} shadow="lg" border='4px' borderColor='orange' rounded="full">
+          <InputGroup width={"35vw"} shadow="lg" border='4px' borderColor={`#FF9100`} rounded="full">
           <Menu>
-          <MenuButton color={`#2C2C68`} as={Button} rounded="full" bg={"white"} rightIcon={<TriangleDownIcon color='orange' />} fontWeight={"bold"} fontSize={17}>
+          <MenuButton color={`#2C2C68`} as={Button} rounded="full" bg={"white"} rightIcon={<TriangleDownIcon color={`#FF9100`} />} fontWeight={"bold"} fontSize={17}>
     What?
   </MenuButton>
-  <MenuList>
+  <MenuList rounded='lg' border='4px' borderColor={`#FF9100`} >
     <MenuItem onClick={() => setType("restaurants")}>Restaurants</MenuItem>
     <MenuItem onClick={() => setType("hotels")}>Hotels</MenuItem>
     <MenuItem onClick={() => setType("attractions")}>Attractions</MenuItem>
