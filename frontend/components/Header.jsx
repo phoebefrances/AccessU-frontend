@@ -59,11 +59,17 @@ const Header = ({ setType, setRatings, setCoordinates }) => {
     </Flex>
  
     <MenuItem onClick={() => setType("hotels")}>Hotels</MenuItem>
+    <Divider orientation='horizontal' width="70%" />
     <MenuItem onClick={() => setType("attractions")}>Attractions</MenuItem>
+    <Divider orientation='horizontal' width="70%" />
     <MenuItem>Gym</MenuItem>
+    <Divider orientation='horizontal' width="70%" />
     <MenuItem>Cinema</MenuItem>
+    <Divider orientation='horizontal' width="70%" />
     <MenuItem>Shop</MenuItem>
+    <Divider orientation='horizontal' width="70%" />
     <MenuItem>Cafe</MenuItem>
+    <Divider orientation='horizontal' width="70%" />
   </MenuList>
 </Menu>
             <Input
@@ -249,4 +255,3 @@ const Header = ({ setType, setRatings, setCoordinates }) => {
 export default Header;
 
 
-// test
