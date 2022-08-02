@@ -24,7 +24,7 @@ import {
   BiStar,
 } from "react-icons/bi";
 
-const Header = ({ setType, setRatings, setCoordinates }) => {
+const Header = ({ setType, setRatings, setCoordinates, setCategory }) => {
   
   const [autocomplete, setAutocomplete] = useState(null);
 
@@ -55,31 +55,31 @@ const Header = ({ setType, setRatings, setCoordinates }) => {
     What?
   </MenuButton>
   <MenuList rounded='lg' border='2px' borderColor={`#FF9100`} textColor={'#2C2C68'} >
-    <MenuItem onClick={() => setType("restaurants")}>Restaurants</MenuItem> 
+    <MenuItem onClick={() => setCategory('restaurant')}>Restaurants</MenuItem> 
     <Center height='10px' >
     <Divider borderColor={`#FF9100`} orientation='horizontal' width="90%" />
     </Center>
-    <MenuItem onClick={() => setType("hotels")}>Hotels</MenuItem>
+    {/* <MenuItem onClick={() => setCategory('')}>Hotels</MenuItem>
     <Center height='10px'>
     <Divider borderColor={`#FF9100`}  orientation='horizontal' width="90%" />
     </Center>
     <MenuItem onClick={() => setType("attractions")}>Attractions</MenuItem>
-    <Center height='10px'>
-    <Divider borderColor={`#FF9100`}  orientation='horizontal' width="90%" />
-    </Center>
-    <MenuItem>Gym</MenuItem>
-    <Center height='10px'>
-    <Divider borderColor={`#FF9100`} orientation='horizontal' width="90%" />
-    </Center>
-    <MenuItem>Cinema</MenuItem>
+    <Center height='10px'> */}
+    {/* <Divider borderColor={`#FF9100`}  orientation='horizontal' width="90%" />
+    </Center> */}
+    <MenuItem onClick={() => setCategory('gym')}>Gym</MenuItem>
     <Center height='10px'>
     <Divider borderColor={`#FF9100`} orientation='horizontal' width="90%" />
     </Center>
-    <MenuItem>Shop</MenuItem>
+    <MenuItem onClick={() => setCategory('cinema')}>Cinema</MenuItem>
     <Center height='10px'>
     <Divider borderColor={`#FF9100`} orientation='horizontal' width="90%" />
     </Center>
-    <MenuItem>Cafe</MenuItem>
+    <MenuItem onClick={() => setCategory('shop')}>Shop</MenuItem>
+    <Center height='10px'>
+    <Divider borderColor={`#FF9100`} orientation='horizontal' width="90%" />
+    </Center>
+    <MenuItem onClick={() => setCategory('shop')}>Cafe</MenuItem>
   </MenuList>
   </Menu>
 

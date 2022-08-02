@@ -20,7 +20,7 @@ const Home = () => {
   const [ratings, setRatings] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
-  console.log('THIS IS PLACESSSCATEGORYY', places[0].category)
+  
   //👇 Comment out if using API. Uncomment if using offline database.
 
   // get the users current location on intial login
@@ -42,8 +42,8 @@ const Home = () => {
 
   useEffect(() => {
     const filteredCategory = places.filter((place) => place.category === category);
-    
-    console.log();
+    // setCategory(filteredCategory)
+    console.log(filteredCategory);
   }, [category]);
 
   // updates the data to the users choice of category or location
@@ -76,6 +76,8 @@ const Home = () => {
         setType={setType}
         setRatings={setRatings}
         setCoordinates={setCoordinates}
+        setCategory={setCategory}
+        
       />
 
       <List
