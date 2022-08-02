@@ -36,39 +36,12 @@ const PlaceDetail = ({ place }) => {
             >
               {place.name}
             </Text>
-
-            {/* <Text fontSize={"sm"} fontWeight={"500"} color={"gray.500"}>
-              {place.price}
-            </Text> */}
           </Flex>
 
           {/* Ratings */}
           <Flex alignItems={"center"} width={"full"}>
             <Rating size="small" value={Number(place.rating)} readOnly />
-
-            {/* <Text fontSize={"sm"} fontWeight={"500"} color={"gray.500"}>
-              {`(${place.num_reviews})`}
-            </Text> */}
-
-            {/* <Text
-              fontSize={"sm"}
-              fontWeight={"500"}
-              color={"gray.500"}
-              ml={"auto"}
-            >
-              {place.price_level}
-            </Text> */}
           </Flex>
-
-          {/* Ranking */}
-          {/* <Text fontSize={"sm"} fontWeight={"500"} color={"gray.400"}>
-            {place.ranking}
-          </Text> */}
-
-          {/* Open status */}
-          {/* <Text fontSize={"sm"} fontWeight={"500"} color={"gray.600"}>
-            {place.open_now_text}
-          </Text> */}
 
           {/* dietary_restrictions */}
           {/* We may use this as behaviour for rendering accesibility badges */}
