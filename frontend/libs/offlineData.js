@@ -1,5 +1,3 @@
-//This is to be plugged into our components in place of variable data
-
 export let data = [
   {
     category: "restaurant",
@@ -30,6 +28,8 @@ export let data = [
       },
     },
     phone_number: "+44 (0) 9845754223",
+    web_address: "www.breakfastclub.com",
+    opening_times: "7am-7pm",
   },
   {
     category: "cinema",
@@ -56,6 +56,8 @@ export let data = [
       },
     },
     phone_number: "+44 (0) 9845754223",
+    web_address: "www.princecharles.com",
+    opening_times: "7am-7pm",
   },
   {
     category: "shop",
@@ -82,6 +84,8 @@ export let data = [
       },
     },
     phone_number: "+44 (0) 9845754223",
+    web_address: "www.sainsburys.com",
+    opening_times: "7am-7pm",
   },
   {
     category: "gym",
@@ -104,6 +108,8 @@ export let data = [
       },
     },
     phone_number: "+44 (0) 9845754223",
+    web_address: "www.all-hail-the-lobster.com",
+    opening_times: "7am-7pm",
   },
   {
     category: "café",
@@ -126,6 +132,8 @@ export let data = [
       },
     },
     phone_number: "+44 (0) 9845754223",
+    web_address: "www.roastedbeanz.com",
+    opening_times: "7am-7pm",
   },
 ];
 
@@ -135,7 +143,7 @@ export let data = [
 - Street address (with postcode) ✅ 
 -Accessibility badges (step-free, braille, sing_language, quiet_space) ✅ 
 -Accesibility labels (one for each badge) ✅ 
--phone number
--web address
+-phone number ✅
+-web address ✅
 -opening times 
--picture */
+-picture ✅ */
