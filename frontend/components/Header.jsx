@@ -41,10 +41,12 @@ const Header = ({ setType, setRatings, setCoordinates }) => {
       position={"absolute"}
       top={0}
       left={0}
+      height={"200px"}
       width={"full"}
       px={4}
       py={2}
       zIndex={101}
+      bgColor={"white"}
     >
       <Flex
       >
@@ -118,7 +120,7 @@ const Header = ({ setType, setRatings, setCoordinates }) => {
             transition={"ease-in-out"}
             transitionDuration={"0.3s"}
           >
-            <Menu>
+            {/* <Menu>
               <BiStar fontSize={25} />
               <MenuButton mx={2} transition="all 0.2s" borderRadius={"md"}>
                 Choose ratings
@@ -188,12 +190,12 @@ const Header = ({ setType, setRatings, setCoordinates }) => {
                   <Rating size="small" value={5} readOnly />
                 </MenuItem>
               </MenuList>
-            </Menu>
-            <BiChevronDown fontSize={25} />
+            </Menu> */}
+            {/* <BiChevronDown fontSize={25} /> */}
           </Flex>
 
           {/* Restaurants */}
-          <Flex
+          {/* <Flex
             alignItems={"center"}
             justifyContent={"center"}
             px={4}
@@ -212,10 +214,10 @@ const Header = ({ setType, setRatings, setCoordinates }) => {
             <Text ml={3} fontSize={16} fontWeight={500}>
               Restaurants
             </Text>
-          </Flex>
+          </Flex> */}
 
           {/* Hotels */}
-          <Flex
+          {/* <Flex
             alignItems={"center"}
             justifyContent={"center"}
             px={4}
@@ -234,10 +236,10 @@ const Header = ({ setType, setRatings, setCoordinates }) => {
             <Text ml={3} fontSize={16} fontWeight={500}>
               Hotels
             </Text>
-          </Flex>
+          </Flex> */}
 
           {/* Attractions */}
-          <Flex
+          {/* <Flex
             alignItems={"center"}
             justifyContent={"center"}
             px={4}
@@ -256,7 +258,7 @@ const Header = ({ setType, setRatings, setCoordinates }) => {
             <Text ml={3} fontSize={16} fontWeight={500}>
               Attractions
             </Text>
-          </Flex>
+          </Flex> */}
         </Flex>
       </Flex>
     </Flex>
