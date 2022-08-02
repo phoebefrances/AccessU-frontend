@@ -8,6 +8,7 @@ import {
   MenuList,
   Text,
   Button,
+  Divider
 } from "@chakra-ui/react";
 import { Rating } from "@material-ui/lab";
 import { Autocomplete } from "@react-google-maps/api";
@@ -46,13 +47,17 @@ const Header = ({ setType, setRatings, setCoordinates }) => {
     >
       <Flex>
         <Autocomplete onLoad={onLoad} onPlaceChanged={onPlaceChanged}>
-          <InputGroup width={"35vw"} shadow="lg" border='4px' borderColor={`#FF9100`} rounded="full">
+          <InputGroup width={"35vw"} shadow="lg" border='2px' borderColor={`#FF9100`} rounded="full">
           <Menu>
           <MenuButton color={`#2C2C68`} as={Button} rounded="full" bg={"white"} rightIcon={<TriangleDownIcon color={`#FF9100`} />} fontWeight={"bold"} fontSize={17}>
     What?
   </MenuButton>
-  <MenuList rounded='lg' border='4px' borderColor={`#FF9100`} >
+  <MenuList rounded='lg' border='2px' borderColor={`#FF9100`} >
     <MenuItem onClick={() => setType("restaurants")}>Restaurants</MenuItem>
+    <Flex alignItems="center" justify="content">
+    <Divider orientation='horizontal' width="70%" />
+    </Flex>
+ 
     <MenuItem onClick={() => setType("hotels")}>Hotels</MenuItem>
     <MenuItem onClick={() => setType("attractions")}>Attractions</MenuItem>
     <MenuItem>Gym</MenuItem>
