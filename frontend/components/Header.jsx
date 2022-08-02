@@ -12,8 +12,7 @@ import {
 import { Rating } from "@material-ui/lab";
 import { Autocomplete } from "@react-google-maps/api";
 import React, { useState } from "react";
-
-import { ChevronDownIcon } from '@chakra-ui/icons'
+import { ChevronDownIcon, Search2Icon} from '@chakra-ui/icons'
 
 import {
   BiChevronDown,
@@ -70,7 +69,7 @@ const Header = ({ setType, setRatings, setCoordinates }) => {
               width={"200px"}
             />
              
-              <Button bgGradient='linear(to-r, blue.200, purple.500)' rounded="full" _hover={"linear(to-r, blue.200, purple.500)"}>
+              <Button bgGradient='linear(to-r, blue.200, purple.500)' rounded="full" _hover={"linear(to-r, blue.200, purple.500)"} leftIcon={<Search2Icon/>}>
               Search
              </Button>
             
