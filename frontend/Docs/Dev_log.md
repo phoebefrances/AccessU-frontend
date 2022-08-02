@@ -1,4 +1,4 @@
-### 02/08 | Sam & Philip | Create offline data
+### **02/08 | Sam & Philip | Create offline data**
 
 1. Created libs/offlineData.js to be used in lieu of calling API
 2. Commented functionality which calls API from index.js- substituted it with an import of offlineData.js
@@ -10,6 +10,18 @@
 8. Simplified path to venue photo in offlineData.js
 
 <br>
+
+### **02/08 | Kendall & Philip | Clean up the header**
+
+1. get the header to the appropriate height (viz. wireframe: 5.46vh )
+2. Render and style the filter-by-rating component (separate button? part of searchbar?)
+3. Render logo
+4. Center the logo, searchbar and rating button.
+5. Get rid of ghost div in the header
+6. Fix the overlap of List
+7. Fix the overlap with map
+
+8. Give the logo desired behaviour (yeets the user to the landing page)
 
 # Standards
 
