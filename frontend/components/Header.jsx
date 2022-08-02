@@ -249,3 +249,4 @@ const Header = ({ setType, setRatings, setCoordinates }) => {
 export default Header;
 
 
+// test
