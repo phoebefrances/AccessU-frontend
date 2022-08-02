@@ -89,7 +89,3 @@ const PlaceDetail = ({ place }) => {
 };
 
 export default PlaceDetail;
-<<<<<<< HEAD
-
-=======
->>>>>>> 4855e6ff29cee908ea05d303b5f7339fb349a3e0
