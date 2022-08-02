@@ -16,6 +16,7 @@ function LargeCard() {
 
   return (
     <Box
+    rounded='xl' border='2px' borderColor={`#FF9100`} textColor={'#2C2C68'}
       bg="white"
       position="absolute"
       width="217px"
@@ -23,7 +24,7 @@ function LargeCard() {
       left="530px"
       top="138px"
     >
-      <Image src={property.imageUrl} alt={property.imageAlt} />
+      <Image rounded='lg' src={property.imageUrl} alt={property.imageAlt} />
 
       <Box p="6">
         <Box display="flex" alignItems="baseline">
@@ -36,7 +37,6 @@ function LargeCard() {
             ml="2"
           ></Box>
         </Box>
-        <Rating size="small" value={Number(property.rating)} readOnly />
         <Box
           mt="1"
           fontWeight="semibold"
@@ -54,11 +54,54 @@ function LargeCard() {
           noOfLines={1}
         >
           {property.category}
-          {property.address}
+        </Box>
+        <Box>
+        <Rating size="small" value={Number(property.rating)} readOnly />
+</Box>
+        <Box
+          mt="1"
+          fontWeight="semibold"
+          as="h4"
+          lineHeight="tight"
+          noOfLines={1}
+          word-break= "break-word"
+          line-break= 'auto'
+          white-space= 'initial'
+          display= 'inline'
+        >
+         {property.address}
+         </Box>
+          <Box
+           mt="1"
+          fontWeight="semibold"
+          as="h4"
+          lineHeight="tight"
+          noOfLines={1}
+         
+         >
           {property.telephoneNumber}
+         </Box>
+         <Box
+          mt="1"
+          fontWeight="semibold"
+          as="h4"
+          lineHeight="tight"
+          noOfLines={1}
+          display= 'inline'
+        >
           {property.website}
+        </Box>
+         
+         <Box
+          mt="1"
+          fontWeight="semibold"
+          as="h4"
+          lineHeight="tight"
+          noOfLines={1}
+         >
           {property.openingTime}
         </Box>
+
         <Box>
           {property.formattedPrice}
           <Box as="span" color="gray.600" fontSize="sm"></Box>
@@ -66,7 +109,7 @@ function LargeCard() {
 
         <Box display="flex" mt="2" alignItems="center"></Box>
       </Box>
-    </Box>
+      </Box>
   );
 }
 
