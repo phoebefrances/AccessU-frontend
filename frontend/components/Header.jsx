@@ -1,10 +1,8 @@
-import { Flex } from "@chakra-ui/react";
+import { Flex, Text } from "@chakra-ui/react";
 import { useState } from "react";
-import OurButton from "./OurButton";
 import Search from "./Search";
-import AccessibilityIcon from "@mui/icons-material/Accessibility";
-import Image from 'next/image'
-import logo from '../public/logo.png'
+import Image from "next/image";
+import logo from "../public/logo.png";
 
 const Header = () => {
   return (
@@ -20,8 +18,13 @@ const Header = () => {
       zIndex={101}
       bgColor={"white"}
     >
-      <Image src={logo} width={"60px"}/>
-      <Search />
+      <Flex className="logo-name-container" bgColor={"red"}>
+        <Image src={logo} width={"60px"} />
+        <Text fontFamily="Roboto" fontSize="30">
+          Enable
+        </Text>
+      </Flex>
+      <Search width={"full"} />
     </Flex>
   );
 };

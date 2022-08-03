@@ -30,7 +30,9 @@ const Search = ({ setType, setCoordinates }) => {
   return (
     <Autocomplete onLoad={onLoad} onPlaceChanged={onPlaceChanged}>
       <InputGroup
-        width={"75vw"}
+        width={"50vw"}
+        minWidth="500px"
+        // width={"75vw"}
         height={"90%"}
         shadow="lg"
         border="2px"
