@@ -1,6 +1,6 @@
 //This is in the format our API data would be after initial destructuring (which would happen in getPlacesData.js)
 // You can check the correctness of this format by comparing it to the console.dir in index.js
-export const placesData = [
+export const places = [
   {
     category: "restaurant",
     name: "The Breakfast Club Soho",

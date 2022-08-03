@@ -7,11 +7,11 @@ import PlaceDetail from "../components/PlaceDetail";
 import { getPlacesData } from "./api/getPlacesData";
 import Head from "next/head";
 //👇 Comment out if using API. Uncomment if using offline database.
-import { placesData } from "../libs/offlineData.js";
+import { places } from "../libs/offlineData.js";
 
 const Home = () => {
   //👇 Comment out if using offline database. Uncomment if using API
-const [places, setPlaces] = useState({});
+// const [places, setPlaces] = useState({});
   const [filteredPlaces, setFilteredPlaces] = useState([]);
   const [coordinates, setCoordinates] = useState({});
   const [bounds, setBounds] = useState(null);
@@ -19,7 +19,7 @@ const [places, setPlaces] = useState({});
    const [type, setType] = useState("restaurants");
   const [ratings, setRatings] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  setPlaces(placesData)
+  // setPlaces(places)
 
   //👇 Comment out if using API. Uncomment if using offline database.
 
@@ -43,14 +43,14 @@ const [places, setPlaces] = useState({});
   useEffect(() => {
     const filteredCategory = places.filter((place) => place.category === category);
     // setCategory(filteredCategory)
-    setPlaces(filteredCategory)
+    // setPlaces(filteredCategory)
     console.log(filteredCategory);
   }, [category]);
 
-  useEffect(() => {
+  // useEffect(() => {
 
-    //re-render map
-  }, [places]);
+  //   //re-render map
+  // }, [places]);
   // updates the data to the users choice of category or location
   // 👇 Comment out if using offline database. Uncomment if using the API
   // useEffect(() => {
