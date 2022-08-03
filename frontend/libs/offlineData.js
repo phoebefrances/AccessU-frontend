@@ -11,22 +11,13 @@ export const places = [
     longitude: "-0.13521278619092814",
     latitude: "51.51226090514994",
     acessibility: {
-      step_free: {
-        token: "step_free",
-        label: "This venue has step-free access.",
-      },
-      braille: {
-        token: "braille",
-        label: "This venue has materials printed in Braille alphabet.",
-      },
-      sign_lang: {
-        token: "sign_lang",
-        label: "This venue employs staff who know British Sign Language.",
-      },
-      quiet: {
-        token: "quiet",
-        label: "This venue has a quiet zone.",
-      },
+      wheelchair: true,
+      sign_language: true,  
+      hearing_aid: true, 
+      vision: false,
+      quiet: true,
+      other1: null,
+      other2: null
     },
     phone_number: "+44 (0) 9845754223",
     web_address: "www.breakfastclub.com",
@@ -113,7 +104,7 @@ export const places = [
     opening_times: "7am-7pm",
   },
   {
-    category: "café",
+    category: "cafe",
     name: "Roasted Beanz",
     rating: "1.0",
     photo:

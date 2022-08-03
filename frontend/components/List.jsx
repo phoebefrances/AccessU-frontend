@@ -1,8 +1,7 @@
 import React from "react";
 import PlaceDetail from "./PlaceDetail";
 import { Flex, Box, SkeletonCircle, SkeletonText } from "@chakra-ui/react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCoffee, faWheelchair } from '@fortawesome/free-solid-svg-icons'
+
 
 const List = ({ places, isLoading }) => {
   if (isLoading)
@@ -52,7 +51,7 @@ const List = ({ places, isLoading }) => {
       px={2}
     >
      
-     <FontAwesomeIcon className="fa-2xl" icon={faWheelchair} />
+     
       <Flex flex={1} overflowY={"scroll"} mt={16} direction={"column"}>
         {places && 
         places.map((place, i) => <PlaceDetail place={place} key={i} />)}

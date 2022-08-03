@@ -23,8 +23,12 @@ import {
   BiRestaurant,
   BiStar,
 } from "react-icons/bi";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCoffee, faWheelchair, faBraille } from '@fortawesome/free-solid-svg-icons'
+
+import SignLanguageIcon from "@mui/icons-material/SignLanguage";
+import HearingIcon from "@mui/icons-material/Hearing";
+import AccessibleIcon from "@mui/icons-material/Accessible";
+import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
+
 
 const Header = ({ setType, setRatings, setCoordinates, setCategory }) => {
   
@@ -70,8 +74,12 @@ const Header = ({ setType, setRatings, setCoordinates, setCategory }) => {
     {/* <Divider borderColor={`#FF9100`}  orientation='horizontal' width="90%" />
     </Center> */}
     <MenuItem onClick={() => setCategory('gym')}>Gym</MenuItem>
-    <FontAwesomeIcon className="fa-2xl" icon={faWheelchair} />
-    <FontAwesomeIcon className="fa-2xl" icon={faBraille} />
+ 
+        <SignLanguageIcon fontSize="large" />
+        <HearingIcon fontSize="large" />
+        <RemoveRedEyeIcon fontSize="large" />
+        <AccessibleIcon fontSize="large" />
+    
     
     <Center height='50px'>
     <Divider borderColor={`#FF9100`} orientation='horizontal' width="90%" />
@@ -84,7 +92,7 @@ const Header = ({ setType, setRatings, setCoordinates, setCategory }) => {
     <Center height='10px'>
     <Divider borderColor={`#FF9100`} orientation='horizontal' width="90%" />
     </Center>
-    <MenuItem onClick={() => setCategory('shop')}>Cafe</MenuItem>
+    <MenuItem onClick={() => setCategory('cafe')}>Cafe</MenuItem>
   </MenuList>
   </Menu>
 

@@ -8,8 +8,7 @@ import { getPlacesData } from "./api/getPlacesData";
 import Head from "next/head";
 //👇 Comment out if using API. Uncomment if using offline database.
 import { places } from "../libs/offlineData.js";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCoffee, faWheelchair } from '@fortawesome/free-solid-svg-icons'
+
 
 const Home = () => {
   //👇 Comment out if using offline database. Uncomment if using API
