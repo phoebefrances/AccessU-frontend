@@ -78,15 +78,35 @@ const Search = ({ setType, setCoordinates }) => {
           <option value="option2" style={{ fontWeight: `normal` }}>
             Restaurants
           </option>
+          <Divider
+            orientation="horizontal"
+            borderStyle="solid"
+            borderColor={"#FF9100"}
+          />
           <option value="option3" style={{ fontWeight: `normal` }}>
             Gym
           </option>
+          <Divider
+            orientation="horizontal"
+            borderStyle="solid"
+            borderColor={"#FF9100"}
+          />
           <option value="option4" style={{ fontWeight: `normal` }}>
             Cinema
           </option>
+          <Divider
+            orientation="horizontal"
+            borderStyle="solid"
+            borderColor={"#FF9100"}
+          />
           <option value="option5" style={{ fontWeight: `normal` }}>
             Shop
           </option>
+          <Divider
+            orientation="horizontal"
+            borderStyle="solid"
+            borderColor={"#FF9100"}
+          />
           <option value="option6" style={{ fontWeight: `normal` }}>
             Cafe
           </option>
@@ -106,18 +126,43 @@ const Search = ({ setType, setCoordinates }) => {
           <option value="option1" style={{ fontWeight: `normal` }}>
             All
           </option>
+          <Divider
+            orientation="horizontal"
+            borderStyle="solid"
+            borderColor={"#FF9100"}
+          />
           <option value="option2" style={{ fontWeight: `normal` }}>
             Mobility imapirement
           </option>
+          <Divider
+            orientation="horizontal"
+            borderStyle="solid"
+            borderColor={"#FF9100"}
+          />
           <option value="option3" style={{ fontWeight: `normal` }}>
             Hearing impairment
           </option>
+          <Divider
+            orientation="horizontal"
+            borderStyle="solid"
+            borderColor={"#FF9100"}
+          />
           <option value="option4" style={{ fontWeight: `normal` }}>
             Vision impairment
           </option>
+          <Divider
+            orientation="horizontal"
+            borderStyle="solid"
+            borderColor={"#FF9100"}
+          />
           <option value="option5" style={{ fontWeight: `normal` }}>
             Neurodivergent
           </option>
+          <Divider
+            orientation="horizontal"
+            borderStyle="solid"
+            borderColor={"#FF9100"}
+          />
         </Select>
 
         {/* Venue category menu: */}
