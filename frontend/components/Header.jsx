@@ -23,6 +23,8 @@ import {
   BiRestaurant,
   BiStar,
 } from "react-icons/bi";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCoffee, faWheelchair, faBraille } from '@fortawesome/free-solid-svg-icons'
 
 const Header = ({ setType, setRatings, setCoordinates, setCategory }) => {
   
@@ -56,7 +58,7 @@ const Header = ({ setType, setRatings, setCoordinates, setCategory }) => {
   </MenuButton>
   <MenuList rounded='lg' border='2px' borderColor={`#FF9100`} textColor={'#2C2C68'} >
     <MenuItem onClick={() => setCategory('restaurant')}>Restaurants</MenuItem> 
-    <Center height='10px' >
+    <Center height='50px' >
     <Divider borderColor={`#FF9100`} orientation='horizontal' width="90%" />
     </Center>
     {/* <MenuItem onClick={() => setCategory('')}>Hotels</MenuItem>
@@ -68,7 +70,10 @@ const Header = ({ setType, setRatings, setCoordinates, setCategory }) => {
     {/* <Divider borderColor={`#FF9100`}  orientation='horizontal' width="90%" />
     </Center> */}
     <MenuItem onClick={() => setCategory('gym')}>Gym</MenuItem>
-    <Center height='10px'>
+    <FontAwesomeIcon className="fa-2xl" icon={faWheelchair} />
+    <FontAwesomeIcon className="fa-2xl" icon={faBraille} />
+    
+    <Center height='50px'>
     <Divider borderColor={`#FF9100`} orientation='horizontal' width="90%" />
     </Center>
     <MenuItem onClick={() => setCategory('cinema')}>Cinema</MenuItem>
