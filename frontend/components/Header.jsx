@@ -1,6 +1,8 @@
 import { Flex } from "@chakra-ui/react";
 import { useState } from "react";
+import OurButton from "./OurButton";
 import Search from "./Search";
+import AccessibilityIcon from "@mui/icons-material/Accessibility";
 
 const Header = () => {
   return (
@@ -16,7 +18,9 @@ const Header = () => {
       zIndex={101}
       bgColor={"white"}
     >
+      {/* LOGO GOES HERE */}
       <Search />
+      <OurButton text="Accessibility filter" icon={<AccessibilityIcon />} />
     </Flex>
   );
 };
