@@ -57,7 +57,7 @@ const Search = ({ setType, setCoordinates }) => {
           // grow="1"
         />
         <Divider orientation="vertical" />
-        <Select placeholder="What?"  
+        <Select placeholder={"What?"} 
            color={`#2C2C68`}
             rounded="full"
             bgColor={"white"}
@@ -65,12 +65,14 @@ const Search = ({ setType, setCoordinates }) => {
             fontWeight={"bold"}
             fontSize={17}
             width="32%">
-        <option value='option1' >Gym</option>
-        <option value='option2'>Option 2</option>
-        <option value='option3'>Option 3</option>
+        <option value='option1'>Restaurants</option>
+        <option value='option2'>Gym</option>
+        <option value='option3'>Cinema</option>
+        <option value='option3'>Shop</option>
+        <option value='option3'>Cafe</option>
         </Select>
         
-        <Menu>
+        {/* <Menu>
           <MenuButton
             color={`#2C2C68`}
             as={Button}
@@ -101,24 +103,6 @@ const Search = ({ setType, setCoordinates }) => {
                 width="90%"
               />
             </Center>
-            {/* <MenuItem onClick={() => setType("hotels")}>Hotels</MenuItem>
-            <Center height="10px">
-              <Divider
-                borderColor={`#FF9100`}
-                orientation="horizontal"
-                width="90%"
-              />
-            </Center> */}
-            {/* <MenuItem onClick={() => setType("attractions")}>
-              Attractions
-            </MenuItem>
-            <Center height="10px">
-              <Divider
-                borderColor={`#FF9100`}
-                orientation="horizontal"
-                width="90%"
-              />
-            </Center> */}
             <MenuItem>Gym</MenuItem>
             <Center height="10px">
               <Divider
@@ -146,7 +130,7 @@ const Search = ({ setType, setCoordinates }) => {
             <MenuItem>Cafe</MenuItem>
           </MenuList>
         </Menu>
-        <Divider orientation="vertical" />
+        <Divider orientation="vertical" /> */}
         <Menu>
           <MenuButton
             color={`#2C2C68`}
