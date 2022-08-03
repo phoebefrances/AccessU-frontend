@@ -148,16 +148,8 @@ const Search = ({ setType, setCoordinates }) => {
             textColor={"#2C2C68"}
           >
             <MenuItem onClick={() => setType("restaurants")}>
-              Restaurants
+              Mobility
             </MenuItem>
-            <Center height="10px">
-              <Divider
-                borderColor={`#FF9100`}
-                orientation="horizontal"
-                width="90%"
-              />
-            </Center>
-            <MenuItem onClick={() => setType("hotels")}>Hotels</MenuItem>
             <Center height="10px">
               <Divider
                 borderColor={`#FF9100`}
@@ -166,7 +158,7 @@ const Search = ({ setType, setCoordinates }) => {
               />
             </Center>
             <MenuItem onClick={() => setType("attractions")}>
-              Attractions
+              Visual Impairment
             </MenuItem>
             <Center height="10px">
               <Divider
@@ -175,7 +167,7 @@ const Search = ({ setType, setCoordinates }) => {
                 width="90%"
               />
             </Center>
-            <MenuItem>Gym</MenuItem>
+            <MenuItem>Hearing Impairment</MenuItem>
             <Center height="10px">
               <Divider
                 borderColor={`#FF9100`}
@@ -183,23 +175,7 @@ const Search = ({ setType, setCoordinates }) => {
                 width="90%"
               />
             </Center>
-            <MenuItem>Cinema</MenuItem>
-            <Center height="10px">
-              <Divider
-                borderColor={`#FF9100`}
-                orientation="horizontal"
-                width="90%"
-              />
-            </Center>
-            <MenuItem>Shop</MenuItem>
-            <Center height="10px">
-              <Divider
-                borderColor={`#FF9100`}
-                orientation="horizontal"
-                width="90%"
-              />
-            </Center>
-            <MenuItem>Cafe</MenuItem>
+            <MenuItem>Neuro Divergent</MenuItem>
           </MenuList>
         </Menu>
 
