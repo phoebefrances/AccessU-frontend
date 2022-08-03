@@ -12,6 +12,7 @@ import { places } from "../libs/offlineData.js";
 const Home = () => {
   //👇 Comment out if using offline database. Uncomment if using API
 // const [places, setPlaces] = useState({});
+const [filteredCategory, setFilteredCategory] = useState([])
   const [filteredPlaces, setFilteredPlaces] = useState([]);
   const [coordinates, setCoordinates] = useState({});
   const [bounds, setBounds] = useState(null);
@@ -41,16 +42,21 @@ const Home = () => {
   }, [ratings]);
 
   useEffect(() => {
+    const userChoice = places.filter((place) => place.category === category);
+    console.log(userChoice);
+  }, [category]);
+
+  useEffect(() => {
     const filteredCategory = places.filter((place) => place.category === category);
-    // setCategory(filteredCategory)
-    // setPlaces(filteredCategory)
-    console.log(filteredCategory);
+    setFilteredCategory(filteredCategory)
+    console.log(filteredCategory)
   }, [category]);
 
   // useEffect(() => {
 
   //   //re-render map
   // }, [places]);
+  
   // updates the data to the users choice of category or location
   // 👇 Comment out if using offline database. Uncomment if using the API
   // useEffect(() => {
@@ -86,7 +92,7 @@ const Home = () => {
       />
 
       <List
-        places={filteredPlaces.length ? filteredPlaces : places}
+        places={filteredCategory.length ? filteredCategory : places}
         isLoading={isLoading}
       />
 
