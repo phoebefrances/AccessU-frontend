@@ -14,6 +14,7 @@ import {
 import { Autocomplete } from "@react-google-maps/api";
 import React, { useState } from "react";
 import { TriangleDownIcon, Search2Icon } from "@chakra-ui/icons";
+import OurButton from './OurButton';
 
 const Search = ({ setType, setCoordinates }) => {
   const [autocomplete, setAutocomplete] = useState(null);
@@ -124,16 +125,7 @@ const Search = ({ setType, setCoordinates }) => {
           width={"33%"}
         />
 
-        <Button
-          bgGradient="linear(to-r, #17CEDA, #032396)"
-          rounded="full"
-          _hover={"linear(to-r, blue.200, purple.500)"}
-          leftIcon={<Search2Icon />}
-          color="white"
-          width="33%"
-        >
-          Search
-        </Button>
+        <OurButton text={"Search"} icon={<Search2Icon />} />
       </InputGroup>
     </Autocomplete>
   );
