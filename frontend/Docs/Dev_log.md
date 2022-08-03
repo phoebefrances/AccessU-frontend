@@ -14,14 +14,15 @@
 ### **02/08 | Kendall & Philip | Clean up the header**
 
 1. get the header to the appropriate height DONE
-2. Render and style the filter-by-rating component (separate button? part of searchbar?)
-3. Render logo
-4. Center the logo, searchbar and rating button.
-5. Get rid of ghost div in the header
-6. Fix the overlap of List
-7. Fix the overlap with map
+2. Render and style the filter-by-rating component (separate button? part of searchbar?) DONE
+3. Render logo DONE
+4. Center the logo & searchbar and.
+   a. Get the searchbar and logo to have the size we want
+   b. Get the searchbar and logo to be positioned where we want (logo on the left, searchbar in the middle)
+5. Get rid of ghost div in the header DONE
+6. Fix the overlap of List DONE
 
-8. Give the logo desired behaviour (yeets the user to the landing page)
+7. Give the logo desired behaviour (yeets the user to the landing page)
 
 # Standards
 

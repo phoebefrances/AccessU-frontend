@@ -24,7 +24,7 @@ const Header = () => {
           Enable
         </Text>
       </Flex>
-      <Search width={"full"} />
+      <Search />
     </Flex>
   );
 };
