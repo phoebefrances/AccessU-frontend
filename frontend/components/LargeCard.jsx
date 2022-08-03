@@ -5,8 +5,10 @@ import HearingIcon from "@mui/icons-material/Hearing";
 import AccessibleIcon from "@mui/icons-material/Accessible";
 import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
 import { CloseButton } from '@chakra-ui/react'
+import { useDisclosure } from '@chakra-ui/react'
 
 function LargeCard() {
+  const { isOpen, onOpen, onClose } = useDisclosure()
   const property = {
     imageUrl: "https://bit.ly/2Z4KKcF",
     imageAlt: "Rear view of modern home with pool",
@@ -56,7 +58,7 @@ function LargeCard() {
   // z-index= '20'
   right= '1' 
   top= '1'
-  onClick= 'onClose' />
+  onClick= {onClose} />
 </Box>
         <Box
           mt="1"
