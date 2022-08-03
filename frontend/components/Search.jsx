@@ -87,15 +87,15 @@ const Search = ({ setType, setCoordinates }) => {
                 width="90%"
               />
             </Center>
-            <MenuItem onClick={() => setType("hotels")}>Hotels</MenuItem>
+            {/* <MenuItem onClick={() => setType("hotels")}>Hotels</MenuItem>
             <Center height="10px">
               <Divider
                 borderColor={`#FF9100`}
                 orientation="horizontal"
                 width="90%"
               />
-            </Center>
-            <MenuItem onClick={() => setType("attractions")}>
+            </Center> */}
+            {/* <MenuItem onClick={() => setType("attractions")}>
               Attractions
             </MenuItem>
             <Center height="10px">
@@ -104,7 +104,7 @@ const Search = ({ setType, setCoordinates }) => {
                 orientation="horizontal"
                 width="90%"
               />
-            </Center>
+            </Center> */}
             <MenuItem>Gym</MenuItem>
             <Center height="10px">
               <Divider
