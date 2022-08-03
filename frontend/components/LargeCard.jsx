@@ -1,5 +1,9 @@
 import { Box, Image, Badge } from "@chakra-ui/react";
 import { Rating } from "@material-ui/lab";
+import SignLanguageIcon from "@mui/icons-material/SignLanguage";
+import HearingIcon from "@mui/icons-material/Hearing";
+import AccessibleIcon from "@mui/icons-material/Accessible";
+import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
 
 function LargeCard() {
   const property = {
@@ -16,17 +20,19 @@ function LargeCard() {
 
   return (
     <Box
-    rounded='xl' border='2px' borderColor={`#FF9100`} textColor={'#2C2C68'}
+      rounded="xl"
+      border="2px"
+      borderColor={`#FF9100`}
+      textColor={"#2C2C68"}
       bg="white"
       position="absolute"
-      width="217px"
-      height="397px"
+      width="260px"
+      height="470px"
       left="530px"
       top="138px"
     >
-      <Image rounded='lg' src={property.imageUrl} alt={property.imageAlt} />
-
-      <Box p="6">
+      <Image rounded="lg" src={property.imageUrl} alt={property.imageAlt} />
+      <Box p="3">
         <Box display="flex" alignItems="baseline">
           <Box
             color="gray.500"
@@ -56,49 +62,48 @@ function LargeCard() {
           {property.category}
         </Box>
         <Box>
-        <Rating size="small" value={Number(property.rating)} readOnly />
-</Box>
+          <Rating size="small" value={Number(property.rating)} readOnly />
+        </Box>
         <Box
           mt="1"
           fontWeight="semibold"
           as="h4"
           lineHeight="tight"
           noOfLines={1}
-          word-break= "break-word"
-          line-break= 'auto'
-          white-space= 'initial'
-          display= 'inline'
+          word-break="break-word"
+          line-break="auto"
+          white-space="initial"
+          display="inline"
         >
-         {property.address}
-         </Box>
-          <Box
-           mt="1"
-          fontWeight="semibold"
-          as="h4"
-          lineHeight="tight"
-          noOfLines={1}
-         
-         >
-          {property.telephoneNumber}
-         </Box>
-         <Box
+          {property.address}
+        </Box>
+        <Box
           mt="1"
           fontWeight="semibold"
           as="h4"
           lineHeight="tight"
           noOfLines={1}
-          display= 'inline'
+        >
+          {property.telephoneNumber}
+        </Box>
+        <Box
+          mt="1"
+          fontWeight="semibold"
+          as="h4"
+          lineHeight="tight"
+          noOfLines={1}
+          display="inline"
         >
           {property.website}
         </Box>
-         
-         <Box
+
+        <Box
           mt="1"
           fontWeight="semibold"
           as="h4"
           lineHeight="tight"
           noOfLines={1}
-         >
+        >
           {property.openingTime}
         </Box>
 
@@ -109,7 +114,13 @@ function LargeCard() {
 
         <Box display="flex" mt="2" alignItems="center"></Box>
       </Box>
+      <Box p="3">
+        <SignLanguageIcon fontSize="large" />
+        <HearingIcon fontSize="large" />
+        <RemoveRedEyeIcon fontSize="large" />
+        <AccessibleIcon fontSize="large" />
       </Box>
+    </Box>
   );
 }
 
