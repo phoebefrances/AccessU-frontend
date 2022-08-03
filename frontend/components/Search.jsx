@@ -32,13 +32,14 @@ const Search = ({ setType, setCoordinates }) => {
       <InputGroup
         width={"50vw"}
         minWidth="500px"
-        // width={"75vw"}
         height={"90%"}
         shadow="lg"
         border="2px"
         borderColor={`#FF9100`}
         rounded="full"
         padding="3px"
+        display="flex"
+        justify="center"
       >
         <Input
           type={"text"}
@@ -50,7 +51,9 @@ const Search = ({ setType, setCoordinates }) => {
           color={"gray.700"}
           _placeholder={{ color: `#2C2C68` }}
           rounded="full"
-          width={"20%"}
+          width="32%"
+          // basis="0"
+          // grow="1"
         />
         <Divider orientation="vertical" />
         <Menu>
@@ -62,7 +65,9 @@ const Search = ({ setType, setCoordinates }) => {
             rightIcon={<TriangleDownIcon color={`#FF9100`} />}
             fontWeight={"bold"}
             fontSize={17}
-            width="33%"
+            width="32%"
+            // basis="0"
+            // grow="1"
           >
             What?
           </MenuButton>
@@ -137,7 +142,9 @@ const Search = ({ setType, setCoordinates }) => {
             rightIcon={<TriangleDownIcon color={`#FF9100`} />}
             fontWeight={"bold"}
             fontSize={17}
-            width="50%"
+            width="32%"
+            // basis="0"
+            // grow="1"
           >
             Accessibility Filter
           </MenuButton>
@@ -147,9 +154,7 @@ const Search = ({ setType, setCoordinates }) => {
             borderColor={`#FF9100`}
             textColor={"#2C2C68"}
           >
-            <MenuItem onClick={() => setType("restaurants")}>
-              Mobility
-            </MenuItem>
+            <MenuItem onClick={() => setType("restaurants")}>Mobility</MenuItem>
             <Center height="10px">
               <Divider
                 borderColor={`#FF9100`}
