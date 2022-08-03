@@ -3,6 +3,8 @@ import { useState } from "react";
 import OurButton from "./OurButton";
 import Search from "./Search";
 import AccessibilityIcon from "@mui/icons-material/Accessibility";
+import Image from 'next/image'
+import logo from '../public/logo.png'
 
 const Header = () => {
   return (
@@ -18,9 +20,8 @@ const Header = () => {
       zIndex={101}
       bgColor={"white"}
     >
-      {/* LOGO GOES HERE */}
+      <Image src={logo} width={"60px"}/>
       <Search />
-      <OurButton text="Accessibility filter" icon={<AccessibilityIcon />} />
     </Flex>
   );
 };
