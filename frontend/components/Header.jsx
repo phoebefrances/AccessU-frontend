@@ -1,8 +1,8 @@
-import { Flex, Text } from "@chakra-ui/react";
+import { Flex, Spacer, Text, GridItem, Grid } from "@chakra-ui/react";
 import { useState } from "react";
 import Search from "./Search";
-import Image from "next/image";
-import logo from "../public/logo.png";
+import Logo from './Logo';
+
 
 const Header = () => {
   return (
@@ -18,13 +18,20 @@ const Header = () => {
       zIndex={101}
       bgColor={"white"}
     >
-      <Flex className="logo-name-container" bgColor={"red"}>
-        <Image src={logo} width={"60px"} />
-        <Text fontFamily="Roboto" fontSize="30">
-          Enable
-        </Text>
-      </Flex>
-      <Search />
+    <Grid templateColumns='repeat(3, 1fr)' gap={1}>
+      {/* <Flex className="logo-name-container" bgColor={"red"}> */}
+      <GridItem w='100%' h='10'>
+       <Logo /> 
+       </GridItem> 
+        <GridItem w='100%' h='10'>
+      {/* </Flex> */}
+      <Search/>
+      </GridItem>
+      {/* <Spacer bgColor={"blue"} /> */}
+      <GridItem w='50%' h='10'>
+       <Spacer />
+        </GridItem> 
+      </Grid>
     </Flex>
   );
 };

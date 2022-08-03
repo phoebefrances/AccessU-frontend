@@ -50,7 +50,7 @@ const Search = ({ setType, setCoordinates }) => {
           color={"gray.700"}
           _placeholder={{ color: `#2C2C68` }}
           rounded="full"
-          width={"15%"}
+          width={"20%"}
         />
         <Divider orientation="vertical" />
         <Menu>
@@ -137,7 +137,7 @@ const Search = ({ setType, setCoordinates }) => {
             rightIcon={<TriangleDownIcon color={`#FF9100`} />}
             fontWeight={"bold"}
             fontSize={17}
-            width="33%"
+            width="50%"
           >
             Accessibility Filter
           </MenuButton>
