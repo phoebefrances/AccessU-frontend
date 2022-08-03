@@ -15,7 +15,7 @@ import { Autocomplete } from "@react-google-maps/api";
 import React, { useState } from "react";
 import { TriangleDownIcon, Search2Icon } from "@chakra-ui/icons";
 import OurButton from "./OurButton";
-import { Select } from '@chakra-ui/react'
+import { Select } from "@chakra-ui/react";
 
 const Search = ({ setType, setCoordinates }) => {
   const [autocomplete, setAutocomplete] = useState(null);
@@ -57,21 +57,70 @@ const Search = ({ setType, setCoordinates }) => {
           // grow="1"
         />
         <Divider orientation="vertical" />
-        <Select placeholder={"What?"} 
-           color={`#2C2C68`}
-            rounded="full"
-            bgColor={"white"}
-            rightIcon={<TriangleDownIcon color={`#FF9100`} />}
-            fontWeight={"bold"}
-            fontSize={17}
-            width="32%">
-        <option value='option1'>Restaurants</option>
-        <option value='option2'>Gym</option>
-        <option value='option3'>Cinema</option>
-        <option value='option3'>Shop</option>
-        <option value='option3'>Cafe</option>
+        <Select
+          placeholder={"What?"}
+          color={`#2C2C68`}
+          rounded="full"
+          bgColor={"white"}
+          fontWeight={"bold"}
+          fontSize={17}
+          width="32%"
+          border={"none"}
+        >
+          <option value="option1" style={{ fontWeight: `normal` }}>
+            All
+          </option>
+          <Divider
+            orientation="horizontal"
+            borderStyle="solid"
+            borderColor={"#FF9100"}
+          />
+          <option value="option2" style={{ fontWeight: `normal` }}>
+            Restaurants
+          </option>
+          <option value="option3" style={{ fontWeight: `normal` }}>
+            Gym
+          </option>
+          <option value="option4" style={{ fontWeight: `normal` }}>
+            Cinema
+          </option>
+          <option value="option5" style={{ fontWeight: `normal` }}>
+            Shop
+          </option>
+          <option value="option6" style={{ fontWeight: `normal` }}>
+            Cafe
+          </option>
         </Select>
-        
+
+        <Divider orientation="vertical" />
+        <Select
+          placeholder={"Accesibility Filter"}
+          color={`#2C2C68`}
+          rounded="full"
+          bgColor={"white"}
+          fontWeight={"bold"}
+          fontSize={17}
+          width="32%"
+          border={"none"}
+        >
+          <option value="option1" style={{ fontWeight: `normal` }}>
+            All
+          </option>
+          <option value="option2" style={{ fontWeight: `normal` }}>
+            Mobility imapirement
+          </option>
+          <option value="option3" style={{ fontWeight: `normal` }}>
+            Hearing impairment
+          </option>
+          <option value="option4" style={{ fontWeight: `normal` }}>
+            Vision impairment
+          </option>
+          <option value="option5" style={{ fontWeight: `normal` }}>
+            Neurodivergent
+          </option>
+        </Select>
+
+        {/* Venue category menu: */}
         {/* <Menu>
           <MenuButton
             color={`#2C2C68`}
@@ -131,7 +180,9 @@ const Search = ({ setType, setCoordinates }) => {
           </MenuList>
         </Menu>
         <Divider orientation="vertical" /> */}
-        <Menu>
+
+        {/* Accesibility filter menu: */}
+        {/* <Menu>
           <MenuButton
             color={`#2C2C68`}
             as={Button}
@@ -180,7 +231,7 @@ const Search = ({ setType, setCoordinates }) => {
             </Center>
             <MenuItem>Neuro Divergent</MenuItem>
           </MenuList>
-        </Menu>
+        </Menu> */}
 
         <OurButton text={"Search"} icon={<Search2Icon />} />
       </InputGroup>
