@@ -14,7 +14,7 @@ import {
 import { Autocomplete } from "@react-google-maps/api";
 import React, { useState } from "react";
 import { TriangleDownIcon, Search2Icon } from "@chakra-ui/icons";
-import OurButton from './OurButton';
+import OurButton from "./OurButton";
 
 const Search = ({ setType, setCoordinates }) => {
   const [autocomplete, setAutocomplete] = useState(null);
@@ -31,14 +31,14 @@ const Search = ({ setType, setCoordinates }) => {
     <Autocomplete onLoad={onLoad} onPlaceChanged={onPlaceChanged}>
       <InputGroup
         width={"75vw"}
+        height={"90%"}
         shadow="lg"
         border="2px"
         borderColor={`#FF9100`}
         rounded="full"
         padding="3px"
       >
-
-       <Input
+        <Input
           type={"text"}
           variant={"filled"}
           fontSize={17}
@@ -50,7 +50,7 @@ const Search = ({ setType, setCoordinates }) => {
           rounded="full"
           width={"15%"}
         />
-  
+        <Divider orientation="vertical" />
         <Menu>
           <MenuButton
             color={`#2C2C68`}
@@ -125,7 +125,7 @@ const Search = ({ setType, setCoordinates }) => {
             <MenuItem>Cafe</MenuItem>
           </MenuList>
         </Menu>
-
+        <Divider orientation="vertical" />
         <Menu>
           <MenuButton
             color={`#2C2C68`}
@@ -137,7 +137,7 @@ const Search = ({ setType, setCoordinates }) => {
             fontSize={17}
             width="33%"
           >
-           Accessibility Filter
+            Accessibility Filter
           </MenuButton>
           <MenuList
             rounded="lg"
