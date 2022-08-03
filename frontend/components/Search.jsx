@@ -15,6 +15,7 @@ import { Autocomplete } from "@react-google-maps/api";
 import React, { useState } from "react";
 import { TriangleDownIcon, Search2Icon } from "@chakra-ui/icons";
 import OurButton from "./OurButton";
+import { Select } from '@chakra-ui/react'
 
 const Search = ({ setType, setCoordinates }) => {
   const [autocomplete, setAutocomplete] = useState(null);
@@ -56,6 +57,19 @@ const Search = ({ setType, setCoordinates }) => {
           // grow="1"
         />
         <Divider orientation="vertical" />
+        <Select placeholder="What?"  
+           color={`#2C2C68`}
+            rounded="full"
+            bgColor={"white"}
+            rightIcon={<TriangleDownIcon color={`#FF9100`} />}
+            fontWeight={"bold"}
+            fontSize={17}
+            width="32%">
+        <option value='option1' >Gym</option>
+        <option value='option2'>Option 2</option>
+        <option value='option3'>Option 3</option>
+        </Select>
+        
         <Menu>
           <MenuButton
             color={`#2C2C68`}
