@@ -11,11 +11,10 @@ export const places = [
     longitude: "-0.13521278619092814",
     latitude: "51.51226090514994",
     acessibility: {
-      wheelchair: true,
-      sign_language: true,  
-      hearing_aid: true, 
-      vision: false,
-      quiet: true,
+      accessible: true,
+      eye: true,  
+      hearing: true, 
+      brain: false,
       other1: null,
       other2: null
     },
