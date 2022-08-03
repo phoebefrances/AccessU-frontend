@@ -5,7 +5,7 @@ import { IoLocation } from "react-icons/io5";
 import SignLanguageIcon from "@mui/icons-material/SignLanguage";
 import HearingIcon from "@mui/icons-material/Hearing";
 import AccessibleIcon from "@mui/icons-material/Accessible";
-import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
+import PsychologyIcon from '@mui/icons-material/Psychology';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 
 
@@ -122,6 +122,24 @@ const PlaceDetail = ({ place }) => {
           <Text fontSize={"small"} fontWeight={500} color={"gray.700"} ml={1}>
           
             <VisibilityIcon fontSize="large" />
+          </Text>
+        </Flex>
+      )}
+      {place.acessibility?.hearing && (
+        <Flex alignItems={"center"} width={"full"} px={1} my={2}>
+
+          <Text fontSize={"small"} fontWeight={500} color={"gray.700"} ml={1}>
+          
+            <HearingIcon fontSize="large" />
+          </Text>
+        </Flex>
+      )}
+      {place.acessibility?.hearing && (
+        <Flex alignItems={"center"} width={"full"} px={1} my={2}>
+
+          <Text fontSize={"small"} fontWeight={500} color={"gray.700"} ml={1}>
+          
+            <HearingIcon fontSize="large" />
           </Text>
         </Flex>
       )}
