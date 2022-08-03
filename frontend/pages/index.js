@@ -100,7 +100,7 @@ const [filteredCategory, setFilteredCategory] = useState([])
         setCoordinates={setCoordinates}
         coordinates={coordinates}
         setBounds={setBounds}
-        places={filteredPlaces.length ? filteredPlaces : places}
+        places={filteredCategory.length ? filteredCategory : places}
       />
     </Flex>
   );
