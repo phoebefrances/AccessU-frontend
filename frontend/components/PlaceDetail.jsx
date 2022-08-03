@@ -134,12 +134,12 @@ const PlaceDetail = ({ place }) => {
           </Text>
         </Flex>
       )}
-      {place.acessibility?.hearing && (
+      {place.acessibility?.brain && (
         <Flex alignItems={"center"} width={"full"} px={1} my={2}>
 
           <Text fontSize={"small"} fontWeight={500} color={"gray.700"} ml={1}>
           
-            <HearingIcon fontSize="large" />
+            <PsychologyIcon fontSize="large" />
           </Text>
         </Flex>
       )}
