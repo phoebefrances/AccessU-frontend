@@ -13,7 +13,7 @@
 
 ### **02/08 | Kendall & Philip | Clean up the header**
 
-1. get the header to the appropriate height (viz. wireframe: 5.46vh )
+1. get the header to the appropriate height DONE
 2. Render and style the filter-by-rating component (separate button? part of searchbar?)
 3. Render logo
 4. Center the logo, searchbar and rating button.

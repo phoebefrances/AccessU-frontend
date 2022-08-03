@@ -1,33 +1,38 @@
-import {
-  Flex,
-} from "@chakra-ui/react";
-import { useState } from 'react';
-import Search from './Search';
-
+import { Flex } from "@chakra-ui/react";
+import { useState } from "react";
+import Search from "./Search";
 
 const Header = () => {
-
-
   return (
     <Flex
       className="global-container"
       position={"absolute"}
       top={0}
       left={0}
-      minHeight={"70px"}
-      maxHeight={"10vh"}
+      height={"70px"}
       width={"full"}
       px={4}
       py={2}
       zIndex={101}
       bgColor={"white"}
     >
-      <Flex>
-       
-        <Search />
-        
-        <Flex alignItems={"center"} justifyContent={"center"}>
-          <Flex
+      <Search />
+    </Flex>
+  );
+};
+
+export default Header;
+{
+  /* <Flex>
+Leaving Search here so that we know where it was in the original design in case we have to come back to it
+        <Search /> */
+}
+
+{
+  /* <Flex alignItems={"center"} justifyContent={"center"}> */
+}
+{
+  /* <Flex
             alignItems={"center"}
             justifyContent={"center"}
             px={4}
@@ -40,8 +45,11 @@ const Header = () => {
             // _hover={{ bg: "gray.100" }}
             transition={"ease-in-out"}
             transitionDuration={"0.3s"}
-          >
-            {/* <Menu>
+            bgColor={"red"}
+          > */
+}
+{
+  /* <Menu>
               <BiStar fontSize={25} />
               <MenuButton mx={2} transition="all 0.2s" borderRadius={"md"}>
                 Choose ratings
@@ -111,12 +119,20 @@ const Header = () => {
                   <Rating size="small" value={5} readOnly />
                 </MenuItem>
               </MenuList>
-            </Menu> */}
-            {/* <BiChevronDown fontSize={25} /> */}
-          </Flex>
+            </Menu> */
+}
+{
+  /* <BiChevronDown fontSize={25} /> */
+}
+{
+  /* </Flex> */
+}
 
-          {/* Restaurants */}
-          {/* <Flex
+{
+  /* Restaurants */
+}
+{
+  /* <Flex
             alignItems={"center"}
             justifyContent={"center"}
             px={4}
@@ -135,10 +151,14 @@ const Header = () => {
             <Text ml={3} fontSize={16} fontWeight={500}>
               Restaurants
             </Text>
-          </Flex> */}
+          </Flex> */
+}
 
-          {/* Hotels */}
-          {/* <Flex
+{
+  /* Hotels */
+}
+{
+  /* <Flex
             alignItems={"center"}
             justifyContent={"center"}
             px={4}
@@ -157,10 +177,14 @@ const Header = () => {
             <Text ml={3} fontSize={16} fontWeight={500}>
               Hotels
             </Text>
-          </Flex> */}
+          </Flex> */
+}
 
-          {/* Attractions */}
-          {/* <Flex
+{
+  /* Attractions */
+}
+{
+  /* <Flex
             alignItems={"center"}
             justifyContent={"center"}
             px={4}
@@ -179,12 +203,9 @@ const Header = () => {
             <Text ml={3} fontSize={16} fontWeight={500}>
               Attractions
             </Text>
-          </Flex> */}
-        </Flex>
-      </Flex>
-    </Flex>
-  );
-};
-
-
-export default Header;
+          </Flex> */
+}
+{
+  /* </Flex>
+      </Flex> */
+}
