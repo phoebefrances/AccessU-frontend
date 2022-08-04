@@ -74,10 +74,10 @@ function LargeCard() {
               {property.openingTime}
               <br></br>
               <br></br>
-              <SignLanguageIcon fontSize="large" />
+              <SignLanguageIcon fontSize="large"  />
               <HearingIcon fontSize="large" />
-              <RemoveRedEyeIcon fontSize="large" />
-              <AccessibleIcon fontSize="large" />
+              <RemoveRedEyeIcon fontSize="large"  />
+              <AccessibleIcon fontSize="large"  />
             </ModalBody>
             <ModalFooter></ModalFooter>
           </ModalContent>

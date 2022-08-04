@@ -1,15 +1,23 @@
 import React, { useState } from "react";
-import { Box, Image, Text } from "@chakra-ui/react";
+import { Box, Image, Spacer, Text } from "@chakra-ui/react";
 import GoogleMapReact from "google-map-react";
 import { IoLocation } from "react-icons/io5";
 import { BiX } from "react-icons/bi";
+import places from "../libs/offlineData.js"
+import { Rating } from "@material-ui/lab";
+import SignLanguageIcon from "@mui/icons-material/SignLanguage";
+import HearingIcon from "@mui/icons-material/Hearing";
+import AccessibleIcon from "@mui/icons-material/Accessible";
+import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
 
-const Map = ({ coordinates, setCoordinates, setBounds, places }) => {
+
+const Map = ({ coordinates, setCoordinates, setBounds, places, place}) => {
    //This state updates when you click the Iolocation icon for a particular place, that place icon will update from not having a card to having a card i.e. from false to true 
   const [isCard, setIsCard] = useState(false);
 
   //This state updates the card for the icon of a particular place from not having any details to having details i.e. from null to '*Whatever details are fetched*'
   const [cardData, setCardData] = useState(null);
+
   return (
     <Box width={"full"} height={"full"}>
       <GoogleMapReact
@@ -45,14 +53,16 @@ const Map = ({ coordinates, setCoordinates, setBounds, places }) => {
         {isCard && (
           <Box
             width={"200px"}
-            height={"150px"}
+            height={"500px"}
             bg={"whiteAlpha.900"}
-            position={"absolute"}
-            top={-12}
+            position={"relative"}
+            top={-20}
             left={0}
             shadow={"lg"}
             rounded={"lg"}
+            
           >
+          
 
            {/* Chakra Image component to display place Image on small card */}
             <Image
@@ -60,24 +70,102 @@ const Map = ({ coordinates, setCoordinates, setBounds, places }) => {
               width={"full"}
               height={"120px"}
               rounded="lg"
-              src={
-                cardData?.photo
-                  ? cardData?.photo?.images?.large?.url
-                  : "https://explorelompoc.com/wp-content/uploads/2021/06/food_placeholder.jpg"
-              }
+              src={cardData.photo}
             />
             
             {/* Chakra Text component to display place name details on small card */}
+            
             <Text
               textTransform={"capitalize"}
               width={"40"}
-              fontSize={"lg"}
+              height={"20px"}
+              fontSize={"12px"}
               fontWeight={"500"}
               isTruncated
+              color={"#2C2C68"}
+            >
+              {cardData.category}
+              </Text>
+              <Text
+              textTransform={"capitalize"}
+              width={"40"}
+              height={"20px"}
+              fontSize={"12px"}
+              fontWeight={"500"}
+              isTruncated
+              color={"#2C2C68"}
             >
               {cardData.name}
-            </Text>
+              </Text>
+              <Text
+              textTransform={"capitalize"}
+              width={"40"}
+              height={"20px"}
+              fontSize={"12px"}
+              fontWeight={"500"}
+              isTruncated
+              color={"#2C2C68"}
+            >
+             <Rating size="small" value={Number(cardData.rating)} readOnly />
+              </Text>
+              <Spacer />
+              <Text
+              textTransform={"capitalize"}
+              width={"40"}
+              height={"20px"}
+              fontSize={"12px"}
+              fontWeight={"500"}
+              isTruncated
+              color={"#2C2C68"}
+            >
+              {cardData.address}
 
+            </Text>
+            <br></br>
+            <Text
+              textTransform={"capitalize"}
+              width={"40"}
+              height={"10px"}
+              fontSize={"12px"}
+              fontWeight={"500"}
+              isTruncated
+              color={"#2C2C68"}
+            >
+              {cardData.phone_number}
+
+            </Text>
+            <Spacer />
+            <br></br>
+            <Text
+              textTransform={"capitalize"}
+              width={"40"}
+              height={"20px"}
+              fontSize={"12px"}
+              fontWeight={"500"}
+              isTruncated
+              color={"#2C2C68"}
+            >
+              {cardData.web_address}
+
+            </Text>
+            <br></br>
+            <Text
+              textTransform={"capitalize"}
+              width={"40"}
+              height={"20px"}
+              fontSize={"12px"}
+              fontWeight={"500"}
+              isTruncated
+              color={"#2C2C68"}
+            >
+              {cardData.opening_times}
+
+            </Text>
+            <br></br>
+            <SignLanguageIcon color={"#032396"} fontSize="large"/>
+            <HearingIcon fontSize="large" />
+            <RemoveRedEyeIcon fontSize="large" />
+            <AccessibleIcon fontSize="large" />
             <Box
               cursor={"pointer"}
               position={"absolute"}
