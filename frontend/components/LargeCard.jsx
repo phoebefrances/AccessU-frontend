@@ -44,22 +44,35 @@ function LargeCard() {
       <>
       <Button onClick={onOpen}>View more</Button>
       <Modal isOpen={isOpen} onClose={onClose}>
-        <ModalOverlay />
-        <ModalContent>
-          <ModalHeader>Modal Title</ModalHeader>
+        <ModalOverlay/>
+        <ModalContent height= "450px" maxH="450px" maxW="250px">
+         
+          <Image rounded="lg" src={property.imageUrl} alt={property.imageAlt} />
           <ModalCloseButton />
           <ModalBody>
-          <Image rounded="lg" src={property.imageUrl} alt={property.imageAlt} />
+          {property.title}
+          <br></br>
+          {property.category}
+          <br></br>
+          {property.telephoneNumber}
+          <br></br>
+          {property.website}
+          <br></br>
+          {property.openingTime}
+
           </ModalBody>
           <ModalFooter>
-            <Button colorScheme='blue' mr={3} onClick={onClose}>
+            <Button position= 'relative' colorScheme='blue' mr={3} onClick={onClose}>
               Close
             </Button>
-            <Button variant='ghost'>Secondary Action</Button>
           </ModalFooter>
         </ModalContent>
       </Modal>
     </>
+
+
+
+
       <Image rounded="lg" src={property.imageUrl} alt={property.imageAlt} />
       <Box p="3">
         <Box display="flex" alignItems="baseline">
