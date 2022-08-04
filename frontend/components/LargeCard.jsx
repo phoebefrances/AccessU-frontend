@@ -35,7 +35,7 @@ function LargeCard() {
         <Button  bgGradient='linear(to-r, #17CEDA, #032396)' rounded="full" _hover={"linear(to-r, blue.200, purple.500)"} leftIcon={<ReadMoreIcon/>} color='white' width='5%' onClick={onOpen}>View more </Button>
         <Modal isOpen={isOpen} onClose={onClose}>
           <ModalOverlay />
-          <ModalContent height="450px" maxH="450px" maxW="250px">
+          <ModalContent height="500px" maxH="500px" maxW="250px">
             <Image
               rounded="lg"
               src={property.imageUrl}
