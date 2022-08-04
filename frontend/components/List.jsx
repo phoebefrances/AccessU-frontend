@@ -10,13 +10,15 @@ const List = ({ places, isLoading }) => {
         direction={"column"}
         bg={"whiteAlpha.900"}
         width={"37vw"}
+        maxWidth={"300vw"}
         height="100vh" //may need {} around the ""
-        position={"absolute"}
+        position={"fixed"}
         left={0}
         top={0}
         zIndex={1}
         overflow="hidden" //may need {} around the ""
         px={2}
+        backgroundAttachment= {"fixed"}
       >
         <Box padding="6" boxShadow="lg" bg="white" mt={16}>
           <SkeletonCircle size="10"  />
@@ -43,7 +45,7 @@ const List = ({ places, isLoading }) => {
       bg={"whiteAlpha.900"}
       width={"37vw"}
       height="100vh" //may need {} around the ""
-      position={"absolute"}
+      position={"fixed"}
       left={0}
       top={0}
       zIndex={1}

@@ -6,6 +6,9 @@ import Map from "../components/Map";
 import PlaceDetail from "../components/PlaceDetail";
 import { getPlacesData } from "./api/getPlacesData";
 import Head from "next/head";
+import LargeCard from "../components/LargeCard";
+
+
 //👇 Comment out if using API. Uncomment if using offline database.
 import { places } from "../libs/offlineData.js";
 
@@ -107,6 +110,10 @@ const [filteredCategory, setFilteredCategory] = useState([])
         coordinates={coordinates}
         setBounds={setBounds}
         places={filteredCategory.length ? filteredCategory : places}
+      />
+
+      <LargeCard
+      
       />
     </Flex>
   );
