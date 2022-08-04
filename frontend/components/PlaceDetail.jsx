@@ -2,6 +2,13 @@ import React from "react";
 import { Flex, Text, Image, Badge } from "@chakra-ui/react";
 import { Rating } from "@material-ui/lab";
 import { IoLocation } from "react-icons/io5";
+import SignLanguageIcon from "@mui/icons-material/SignLanguage";
+import HearingIcon from "@mui/icons-material/Hearing";
+import AccessibleIcon from "@mui/icons-material/Accessible";
+import PsychologyIcon from '@mui/icons-material/Psychology';
+import VisibilityIcon from '@mui/icons-material/Visibility';
+
+
 
 const PlaceDetail = ({ place }) => {
   return (
@@ -36,6 +43,19 @@ const PlaceDetail = ({ place }) => {
             >
               {place.name}
             </Text>
+
+            <Text
+              textTransform={"capitalize"}
+              width={"40"}
+              fontSize={"lg"}
+              fontWeight={"500"}
+            >
+              
+
+              
+            </Text>
+
+
           </Flex>
 
           {/* Ratings */}
@@ -84,6 +104,46 @@ const PlaceDetail = ({ place }) => {
           </Text>
         </Flex>
       )}
+
+      <Flex>
+      {place.acessibility?.accessible && (
+        <Flex alignItems={"center"} width={"full"} px={1} my={2}>
+
+          <Text fontSize={"small"} fontWeight={500} color={"gray.700"} ml={1}>
+          
+            <AccessibleIcon fontSize="large" />
+          </Text>
+        </Flex>
+
+      )}
+      {place.acessibility?.eye && (
+        <Flex alignItems={"center"} width={"full"} px={1} my={2}>
+
+          <Text fontSize={"small"} fontWeight={500} color={"gray.700"} ml={1}>
+          
+            <VisibilityIcon fontSize="large" />
+          </Text>
+        </Flex>
+      )}
+      {place.acessibility?.hearing && (
+        <Flex alignItems={"center"} width={"full"} px={1} my={2}>
+
+          <Text fontSize={"small"} fontWeight={500} color={"gray.700"} ml={1}>
+          
+            <HearingIcon fontSize="large" />
+          </Text>
+        </Flex>
+      )}
+      {place.acessibility?.brain && (
+        <Flex alignItems={"center"} width={"full"} px={1} my={2}>
+
+          <Text fontSize={"small"} fontWeight={500} color={"gray.700"} ml={1}>
+          
+            <PsychologyIcon fontSize="large" />
+          </Text>
+        </Flex>
+      )}
+      </Flex> 
     </Flex>
   );
 };

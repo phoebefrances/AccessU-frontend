@@ -14,6 +14,7 @@ const Map = ({ coordinates, setCoordinates, setBounds, places }) => {
     <Box width={"full"} height={"full"}>
       <GoogleMapReact
         bootstrapURLKeys={{key: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}}
+        // icon={url: 'http://maps.google.com/mapfiles/kml/paddle/blu-blank.png'}
         defaultCenter={coordinates}
         center={coordinates}
         defaultZoom={10}

@@ -3,6 +3,34 @@ import { useState } from "react";
 import Search from "./Search";
 import Logo from './Logo';
 
+<<<<<<< HEAD
+import {
+  BiChevronDown,
+  BiHotel,
+  BiMapAlt,
+  BiRestaurant,
+  BiStar,
+} from "react-icons/bi";
+
+import SignLanguageIcon from "@mui/icons-material/SignLanguage";
+import HearingIcon from "@mui/icons-material/Hearing";
+import AccessibleIcon from "@mui/icons-material/Accessible";
+import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
+
+
+const Header = ({ setType, setRatings, setCoordinates, setCategory }) => {
+  
+  const [autocomplete, setAutocomplete] = useState(null);
+
+  const onLoad = (autoC) => setAutocomplete(autoC);
+
+  const onPlaceChanged = () => {
+    const lat = autocomplete.getPlace().geometry.location.lat();
+    const lng = autocomplete.getPlace().geometry.location.lng();
+    setCoordinates({ lat, lng });
+  };
+=======
+>>>>>>> de06fc3c342e59a351b51734fac96de46a308e06
 
 const Header = () => {
   return (
@@ -18,6 +46,71 @@ const Header = () => {
       zIndex={101}
       bgColor={"white"}
     >
+<<<<<<< HEAD
+      <Flex
+      >
+        <Autocomplete onLoad={onLoad} onPlaceChanged={onPlaceChanged}>
+          <InputGroup width={"35vw"} shadow="lg" border='2px' borderColor={`#FF9100`} rounded="full" padding='3px'>
+          <Menu>
+          <MenuButton color={`#2C2C68`} as={Button} rounded="full" bg={"white"} rightIcon={<TriangleDownIcon color={`#FF9100`} />} fontWeight={"bold"} fontSize={17} width='33%'>
+    What?
+  </MenuButton>
+  <MenuList rounded='lg' border='2px' borderColor={`#FF9100`} textColor={'#2C2C68'} >
+    <MenuItem onClick={() => setCategory('restaurant')}>Restaurants</MenuItem> 
+    <Center height='50px' >
+    <Divider borderColor={`#FF9100`} orientation='horizontal' width="90%" />
+    </Center>
+    {/* <MenuItem onClick={() => setCategory('')}>Hotels</MenuItem>
+    <Center height='10px'>
+    <Divider borderColor={`#FF9100`}  orientation='horizontal' width="90%" />
+    </Center>
+    <MenuItem onClick={() => setType("attractions")}>Attractions</MenuItem>
+    <Center height='10px'> */}
+    {/* <Divider borderColor={`#FF9100`}  orientation='horizontal' width="90%" />
+    </Center> */}
+    <MenuItem onClick={() => setCategory('gym')}>Gym</MenuItem>
+ 
+        <SignLanguageIcon fontSize="large" />
+        <HearingIcon fontSize="large" />
+        <RemoveRedEyeIcon fontSize="large" />
+        <AccessibleIcon fontSize="large" />
+    
+    
+    <Center height='50px'>
+    <Divider borderColor={`#FF9100`} orientation='horizontal' width="90%" />
+    </Center>
+    <MenuItem onClick={() => setCategory('cinema')}>Cinema</MenuItem>
+    <Center height='10px'>
+    <Divider borderColor={`#FF9100`} orientation='horizontal' width="90%" />
+    </Center>
+    <MenuItem onClick={() => setCategory('shop')}>Shop</MenuItem>
+    <Center height='10px'>
+    <Divider borderColor={`#FF9100`} orientation='horizontal' width="90%" />
+    </Center>
+    <MenuItem onClick={() => setCategory('cafe')}>Cafe</MenuItem>
+  </MenuList>
+  </Menu>
+
+            <Input
+              type={"text"}
+              variant={"filled"}
+              fontSize={17}
+              fontWeight={"bold"}
+              placeholder="Where?"
+              bg={"white"}
+              color={"gray.700"}
+              _placeholder={{ color: `#2C2C68` }}
+              rounded="full"
+              width={"33%"}
+            />
+             
+              <Button bgGradient='linear(to-r, #17CEDA, #032396)' rounded="full" _hover={"linear(to-r, blue.200, purple.500)"} leftIcon={<Search2Icon/>} color='white' width='33%'>
+              Search
+             </Button>
+            
+          </InputGroup>
+        </Autocomplete>
+=======
     <Grid templateColumns='repeat(3, 1fr)' gap={1}>
       {/* <Flex className="logo-name-container" bgColor={"red"}> */}
       <GridItem w='100%' h='10'>
@@ -35,6 +128,7 @@ const Header = () => {
     </Flex>
   );
 };
+>>>>>>> de06fc3c342e59a351b51734fac96de46a308e06
 
 export default Header;
 {

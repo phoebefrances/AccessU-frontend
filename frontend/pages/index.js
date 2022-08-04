@@ -7,20 +7,23 @@ import PlaceDetail from "../components/PlaceDetail";
 import { getPlacesData } from "./api/getPlacesData";
 import Head from "next/head";
 //👇 Comment out if using API. Uncomment if using offline database.
-import { data } from "../libs/offlineData.js";
+import { places } from "../libs/offlineData.js";
+
 
 const Home = () => {
   //👇 Comment out if using offline database. Uncomment if using API
-  // const [places, setPlaces] = useState([]);
+// const [places, setPlaces] = useState({});
+const [filteredCategory, setFilteredCategory] = useState([])
   const [filteredPlaces, setFilteredPlaces] = useState([]);
   const [coordinates, setCoordinates] = useState({});
   const [bounds, setBounds] = useState(null);
-  const [type, setType] = useState("restaurants");
+  const [category, setCategory] = useState('') 
+   const [type, setType] = useState("restaurants");
   const [ratings, setRatings] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  // setPlaces(places)
 
   //👇 Comment out if using API. Uncomment if using offline database.
-  const places = data;
 
   // get the users current location on intial login
   useEffect(() => {
@@ -39,6 +42,22 @@ const Home = () => {
     console.log({ ratings });
   }, [ratings]);
 
+  useEffect(() => {
+    const userChoice = places.filter((place) => place.category === category);
+    console.log(userChoice);
+  }, [category]);
+
+  useEffect(() => {
+    const filteredCategory = places.filter((place) => place.category === category);
+    setFilteredCategory(filteredCategory)
+    console.log(filteredCategory)
+  }, [category]);
+
+  // useEffect(() => {
+
+  //   //re-render map
+  // }, [places]);
+  
   // updates the data to the users choice of category or location
   // 👇 Comment out if using offline database. Uncomment if using the API
   // useEffect(() => {
@@ -52,6 +71,8 @@ const Home = () => {
   // }, [type, coordinates, bounds]);
 
   return (
+
+    
     <Flex
       justifyContent={"center"}
       alignItems={"center"}
@@ -61,6 +82,7 @@ const Home = () => {
       maxHeight={"100vh"}
       position={"relative"}
     >
+      
       <Head>
         <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyD93tjfea30qHGkuhHJWQ0vQB9FF-HYIZo"></script>
       </Head>
@@ -69,10 +91,12 @@ const Home = () => {
         setType={setType}
         setRatings={setRatings}
         setCoordinates={setCoordinates}
+        setCategory={setCategory}
+        
       />
 
       <List
-        places={filteredPlaces.length ? filteredPlaces : places}
+        places={filteredCategory.length ? filteredCategory : places}
         isLoading={isLoading}
       />
 
@@ -80,7 +104,7 @@ const Home = () => {
         setCoordinates={setCoordinates}
         coordinates={coordinates}
         setBounds={setBounds}
-        places={filteredPlaces.length ? filteredPlaces : places}
+        places={filteredCategory.length ? filteredCategory : places}
       />
     </Flex>
   );
