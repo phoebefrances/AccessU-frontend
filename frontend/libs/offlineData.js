@@ -1,6 +1,6 @@
 //This is in the format our API data would be after initial destructuring (which would happen in getPlacesData.js)
 // You can check the correctness of this format by comparing it to the console.dir in index.js
-export let data = [
+export const places = [
   {
     category: "restaurant",
     name: "The Breakfast Club Soho",
@@ -11,22 +11,12 @@ export let data = [
     longitude: "-0.13521278619092814",
     latitude: "51.51226090514994",
     acessibility: {
-      step_free: {
-        token: "step_free",
-        label: "This venue has step-free access.",
-      },
-      braille: {
-        token: "braille",
-        label: "This venue has materials printed in Braille alphabet.",
-      },
-      sign_lang: {
-        token: "sign_lang",
-        label: "This venue employs staff who know British Sign Language.",
-      },
-      quiet: {
-        token: "quiet",
-        label: "This venue has a quiet zone.",
-      },
+      accessible: true,
+      eye: true,  
+      hearing: true, 
+      brain: false,
+      other1: null,
+      other2: null
     },
     phone_number: "+44 (0) 9845754223",
     web_address: "www.breakfastclub.com",
@@ -43,18 +33,12 @@ export let data = [
     longitude: "-0.13042340946513464",
     latitude: "51.51184071143942",
     acessibility: {
-      braille: {
-        token: "braille",
-        label: "This venue has materials printed in Braille alphabet.",
-      },
-      sign_lang: {
-        token: "sign_lang",
-        label: "This venue employs staff who know British Sign Language.",
-      },
-      quiet: {
-        token: "quiet",
-        label: "This venue has a quiet zone.",
-      },
+      accessible: true,
+      eye: true,  
+      hearing: true, 
+      brain: true,
+      other1: null,
+      other2: null
     },
     phone_number: "+44 (0) 9845754223",
     web_address: "www.princecharles.com",
@@ -71,18 +55,12 @@ export let data = [
     longitude: "-0.1386631551988991",
     latitude: "51.51787642984117",
     acessibility: {
-      braille: {
-        token: "braille",
-        label: "This venue has materials printed in Braille alphabet.",
-      },
-      sign_lang: {
-        token: "sign_lang",
-        label: "This venue employs staff who know British Sign Language.",
-      },
-      quiet: {
-        token: "quiet",
-        label: "This venue has a quiet zone.",
-      },
+      accessible: true,
+      eye: true,  
+      hearing: false, 
+      brain: false,
+      other1: null,
+      other2: null
     },
     phone_number: "+44 (0) 9845754223",
     web_address: "www.sainsburys.com",
@@ -99,21 +77,19 @@ export let data = [
     longitude: "-0.13119588562767506",
     latitude: "51.51683492491375",
     acessibility: {
-      step_free: {
-        token: "step_free",
-        label: "This venue has step-free access.",
-      },
-      quiet: {
-        token: "quiet",
-        label: "This venue has a quiet zone.",
-      },
+      accessible: true,
+      eye: false,  
+      hearing: true, 
+      brain: false,
+      other1: null,
+      other2: null
     },
     phone_number: "+44 (0) 9845754223",
     web_address: "www.all-hail-the-lobster.com",
     opening_times: "7am-7pm",
   },
   {
-    category: "café",
+    category: "cafe",
     name: "Roasted Beanz",
     rating: "1.0",
     photo:
@@ -123,14 +99,12 @@ export let data = [
     longitude: "-0.1381910864329022",
     latitude: "51.50871571116749",
     acessibility: {
-      step_free: {
-        token: "step_free",
-        label: "This venue has step-free access.",
-      },
-      quiet: {
-        token: "quiet",
-        label: "This venue has a quiet zone.",
-      },
+      accessible: true,
+      eye: true,  
+      hearing: true, 
+      brain: false,
+      other1: null,
+      other2: null
     },
     phone_number: "+44 (0) 9845754223",
     web_address: "www.roastedbeanz.com",

@@ -2,6 +2,7 @@ import React from "react";
 import PlaceDetail from "./PlaceDetail";
 import { Flex, Box, SkeletonCircle, SkeletonText } from "@chakra-ui/react";
 
+
 const List = ({ places, isLoading }) => {
   if (isLoading)
     return (
@@ -51,9 +52,11 @@ const List = ({ places, isLoading }) => {
       overflow="hidden" //may need {} around the ""
       px={2}
     >
+     
+     
       <Flex flex={1} overflowY={"scroll"} mt={16} direction={"column"}>
-        {places &&
-          places.map((place, i) => <PlaceDetail place={place} key={i} />)}
+        {places && 
+        places.map((place, i) => <PlaceDetail place={place} key={i} />)}
       </Flex>
     </Flex>
   );
