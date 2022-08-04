@@ -6,6 +6,8 @@ import AccessibleIcon from "@mui/icons-material/Accessible";
 import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
 import { Button } from "@chakra-ui/react";
 import { useDisclosure } from "@chakra-ui/react";
+import ReadMoreIcon from '@mui/icons-material/ReadMore';
+import ExpandCircleDownIcon from '@mui/icons-material/ExpandCircleDown';
 import {
   Modal,
   ModalOverlay,
@@ -29,20 +31,8 @@ function LargeCard() {
   };
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
-    <Box
-      rounded="xl"
-      border="2px"
-      borderColor={`#FF9100`}
-      textColor={"#2C2C68"}
-      bg="white"
-      position="absolute"
-      width="260px"
-      height="470px"
-      left="530px"
-      top="138px"
-    >
-      <>
-        <Button onClick={onOpen}>View more</Button>
+     <>
+        <Button  bgGradient='linear(to-r, #17CEDA, #032396)' rounded="full" _hover={"linear(to-r, blue.200, purple.500)"} leftIcon={<ReadMoreIcon/>} color='white' width='5%' onClick={onOpen}>View more </Button>
         <Modal isOpen={isOpen} onClose={onClose}>
           <ModalOverlay />
           <ModalContent height="450px" maxH="450px" maxW="250px">
@@ -58,113 +48,42 @@ function LargeCard() {
               colorScheme="white"
               color="white"
               borderColor="white"
+              border-radius= {`5%`}
               // z-index= '20'
               right="1"
               top="1"
             />
-            <ModalBody>
+
+            <ModalBody
+              color="gray.500"
+              fontWeight="semibold"
+              letterSpacing="wide"
+              fontSize="md"
+              ml="2"
+            >
               {property.title}
               <br></br>
               {property.category}
+              <br></br>
+              <Rating size="small" value={Number(property.rating)} readOnly />
               <br></br>
               {property.telephoneNumber}
               <br></br>
               {property.website}
               <br></br>
               {property.openingTime}
+              <br></br>
+              <br></br>
+              <SignLanguageIcon fontSize="large" />
+              <HearingIcon fontSize="large" />
+              <RemoveRedEyeIcon fontSize="large" />
+              <AccessibleIcon fontSize="large" />
             </ModalBody>
             <ModalFooter></ModalFooter>
           </ModalContent>
         </Modal>
-      </>
-
-      <Image rounded="lg" src={property.imageUrl} alt={property.imageAlt} />
-      <Box p="3">
-        <Box display="flex" alignItems="baseline">
-          <Box
-            color="gray.500"
-            fontWeight="semibold"
-            letterSpacing="wide"
-            fontSize="xs"
-            textTransform="uppercase"
-            ml="2"
-          ></Box>
-        </Box>
-        <Box
-          mt="1"
-          fontWeight="semibold"
-          as="h4"
-          lineHeight="tight"
-          noOfLines={1}
-        >
-          {property.title}
-        </Box>
-        <Box
-          mt="1"
-          fontWeight="semibold"
-          as="h4"
-          lineHeight="tight"
-          noOfLines={1}
-        >
-          {property.category}
-        </Box>
-        <Box>
-          <Rating size="small" value={Number(property.rating)} readOnly />
-        </Box>
-        <Box
-          mt="1"
-          fontWeight="semibold"
-          as="h4"
-          lineHeight="tight"
-          noOfLines={1}
-          word-break="break-word"
-          line-break="auto"
-          white-space="initial"
-          display="inline"
-        >
-          {property.address}
-        </Box>
-        <Box
-          mt="1"
-          fontWeight="semibold"
-          as="h4"
-          lineHeight="tight"
-          noOfLines={1}
-        >
-          {property.telephoneNumber}
-        </Box>
-        <Box
-          mt="1"
-          fontWeight="semibold"
-          as="h4"
-          lineHeight="tight"
-          noOfLines={1}
-          display="inline"
-        >
-          {property.website}
-        </Box>
-        <Box
-          mt="1"
-          fontWeight="semibold"
-          as="h4"
-          lineHeight="tight"
-          noOfLines={1}
-        >
-          {property.openingTime}
-        </Box>
-        <Box>
-          {property.formattedPrice}
-          <Box as="span" color="gray.600" fontSize="sm"></Box>
-        </Box>
-        <Box display="flex" mt="2" alignItems="center"></Box>
-      </Box>
-      <Box p="3">
-        <SignLanguageIcon fontSize="large" />
-        <HearingIcon fontSize="large" />
-        <RemoveRedEyeIcon fontSize="large" />
-        <AccessibleIcon fontSize="large" />
-      </Box>
-    </Box>
-  );
+    </>
+  )
 }
+  
 export default LargeCard;
