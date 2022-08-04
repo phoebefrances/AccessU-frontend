@@ -275,7 +275,7 @@ function accessibilityChanges(accessibility){
               />
             </Center>
             <MenuItem onClick={() => accessibilityChanges("Visual")}>
-              Visual Impairment
+              Visual
             </MenuItem>
             <Center height="10px">
               <Divider
@@ -284,7 +284,7 @@ function accessibilityChanges(accessibility){
                 width="90%"
               />
             </Center>
-            <MenuItem onClick={() => accessibilityChanges("Hearing")}>Hearing Impairment</MenuItem>
+            <MenuItem onClick={() => accessibilityChanges("Hearing")}>Hearing</MenuItem>
             <Center height="10px">
               <Divider
                 borderColor={`#FF9100`}
