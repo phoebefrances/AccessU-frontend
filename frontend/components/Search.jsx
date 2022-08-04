@@ -183,7 +183,7 @@ function accessibilityChanges(accessibility){
         </Select> */}
 
         {/* Venue category menu: */}
-        <Menu>
+         <Menu>
           <MenuButton
             color={`#2C2C68`}
             as={Button}
@@ -244,7 +244,7 @@ function accessibilityChanges(accessibility){
         <Divider orientation="vertical" />
 
         {/* Accesibility filter menu: */}
-        <Menu>
+         <Menu>
           <MenuButton
             color={`#2C2C68`}
             as={Button}
@@ -294,7 +294,7 @@ function accessibilityChanges(accessibility){
             </Center>
             <MenuItem onClick={() => accessibilityChanges("Neurodivergent")}>Neurodivergent</MenuItem>
           </MenuList>
-        </Menu>
+        </Menu>  
 
         <OurButton text={"Search"} icon={<Search2Icon />} />
       </InputGroup>
