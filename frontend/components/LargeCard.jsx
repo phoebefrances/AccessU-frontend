@@ -42,14 +42,14 @@ function LargeCard() {
       top="138px"
     >
       <>
-      <Button onClick={onOpen}>Open Modal</Button>
+      <Button onClick={onOpen}>View more</Button>
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
         <ModalContent>
           <ModalHeader>Modal Title</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
-           
+          <Image rounded="lg" src={property.imageUrl} alt={property.imageAlt} />
           </ModalBody>
           <ModalFooter>
             <Button colorScheme='blue' mr={3} onClick={onClose}>
