@@ -14,7 +14,7 @@ import {
   ModalFooter,
   ModalBody,
   ModalCloseButton,
-} from '@chakra-ui/react'
+} from "@chakra-ui/react";
 function LargeCard() {
   const property = {
     imageUrl: "https://bit.ly/2Z4KKcF",
@@ -27,7 +27,7 @@ function LargeCard() {
     openingTime: "9:00 - 21:00",
     rating: 4,
   };
-  const { isOpen, onOpen, onClose } = useDisclosure()
+  const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <Box
       rounded="xl"
@@ -42,36 +42,41 @@ function LargeCard() {
       top="138px"
     >
       <>
-      <Button onClick={onOpen}>View more</Button>
-      <Modal isOpen={isOpen} onClose={onClose}>
-        <ModalOverlay/>
-        <ModalContent height= "450px" maxH="450px" maxW="250px">
-         
-          <Image rounded="lg" src={property.imageUrl} alt={property.imageAlt} />
-          <ModalCloseButton />
-          <ModalBody>
-          {property.title}
-          <br></br>
-          {property.category}
-          <br></br>
-          {property.telephoneNumber}
-          <br></br>
-          {property.website}
-          <br></br>
-          {property.openingTime}
-
-          </ModalBody>
-          <ModalFooter>
-            <Button position= 'relative' colorScheme='blue' mr={3} onClick={onClose}>
-              Close
-            </Button>
-          </ModalFooter>
-        </ModalContent>
-      </Modal>
-    </>
-
-
-
+        <Button onClick={onOpen}>View more</Button>
+        <Modal isOpen={isOpen} onClose={onClose}>
+          <ModalOverlay />
+          <ModalContent height="450px" maxH="450px" maxW="250px">
+            <Image
+              rounded="lg"
+              src={property.imageUrl}
+              alt={property.imageAlt}
+            />
+            <ModalCloseButton
+              size="sm"
+              position="absolute"
+              bg={`#FF9100`}
+              colorScheme="white"
+              color="white"
+              borderColor="white"
+              // z-index= '20'
+              right="1"
+              top="1"
+            />
+            <ModalBody>
+              {property.title}
+              <br></br>
+              {property.category}
+              <br></br>
+              {property.telephoneNumber}
+              <br></br>
+              {property.website}
+              <br></br>
+              {property.openingTime}
+            </ModalBody>
+            <ModalFooter></ModalFooter>
+          </ModalContent>
+        </Modal>
+      </>
 
       <Image rounded="lg" src={property.imageUrl} alt={property.imageAlt} />
       <Box p="3">
