@@ -17,7 +17,9 @@ const [filteredCategory, setFilteredCategory] = useState([])
   const [filteredPlaces, setFilteredPlaces] = useState([]);
   const [coordinates, setCoordinates] = useState({});
   const [bounds, setBounds] = useState(null);
-  const [category, setCategory] = useState('') 
+  const [category, setCategory] = useState('')
+  const [accessibility, setAccessibility] = useState('')  
+
    const [type, setType] = useState("restaurants");
   const [ratings, setRatings] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -92,7 +94,7 @@ const [filteredCategory, setFilteredCategory] = useState([])
         setRatings={setRatings}
         setCoordinates={setCoordinates}
         setCategory={setCategory}
-        
+        setAccessibility={setAccessibility}
       />
 
       <List

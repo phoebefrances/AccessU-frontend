@@ -17,8 +17,10 @@ import { TriangleDownIcon, Search2Icon } from "@chakra-ui/icons";
 import OurButton from "./OurButton";
 import { Select } from "@chakra-ui/react";
 
-const Search = ({ setType, setCoordinates }) => {
+const Search = ({  setCoordinates, setCategory, setAccessibility }) => {
   const [autocomplete, setAutocomplete] = useState(null);
+  const [categoryText, setCategoryText] = useState('What?')
+  const [accessibilityText, setAccessibilityText] = useState('Accessibility')
 
   const onLoad = (autoC) => setAutocomplete(autoC);
 
@@ -28,6 +30,21 @@ const Search = ({ setType, setCoordinates }) => {
     setCoordinates({ lat, lng });
   };
 
+  //This function, categoryChanges(restaurant) replaces the onChange
+  function categoryChanges(cat){
+    console.log(cat)
+    setCategory(cat)
+    setCategoryText(cat)
+  }
+
+
+function accessibilityChanges(accessibility){
+  console.log(accessibility)
+  setAccessibility(accessibility)
+  setAccessibilityText(accessibility)
+
+
+}
   return (
     <Autocomplete onLoad={onLoad} onPlaceChanged={onPlaceChanged}>
       <InputGroup
@@ -179,7 +196,7 @@ const Search = ({ setType, setCoordinates }) => {
             // basis="0"
             // grow="1"
           >
-            What?
+            {categoryText}
           </MenuButton>
           <MenuList
             rounded="lg"
@@ -187,7 +204,7 @@ const Search = ({ setType, setCoordinates }) => {
             borderColor={`#FF9100`}
             textColor={"#2C2C68"}
           >
-            <MenuItem onClick={() => setType("restaurants")}>
+            <MenuItem onClick={() => categoryChanges('restaurant')}>
               Restaurants
             </MenuItem>
             <Center height="10px">
@@ -197,7 +214,7 @@ const Search = ({ setType, setCoordinates }) => {
                 width="90%"
               />
             </Center>
-            <MenuItem>Gym</MenuItem>
+            <MenuItem onClick={() => categoryChanges('gym')}>Gym</MenuItem>
             <Center height="10px">
               <Divider
                 borderColor={`#FF9100`}
@@ -205,7 +222,7 @@ const Search = ({ setType, setCoordinates }) => {
                 width="90%"
               />
             </Center>
-            <MenuItem>Cinema</MenuItem>
+            <MenuItem onClick={() => categoryChanges('cinema')}>Cinema</MenuItem>
             <Center height="10px">
               <Divider
                 borderColor={`#FF9100`}
@@ -213,7 +230,7 @@ const Search = ({ setType, setCoordinates }) => {
                 width="90%"
               />
             </Center>
-            <MenuItem>Shop</MenuItem>
+            <MenuItem onClick={() => categoryChanges('shop')}>Shop</MenuItem>
             <Center height="10px">
               <Divider
                 borderColor={`#FF9100`}
@@ -221,7 +238,7 @@ const Search = ({ setType, setCoordinates }) => {
                 width="90%"
               />
             </Center>
-            <MenuItem>Cafe</MenuItem>
+            <MenuItem onClick={() => categoryChanges('cafe')}>Cafe</MenuItem>
           </MenuList>
         </Menu>
         <Divider orientation="vertical" />
@@ -240,7 +257,8 @@ const Search = ({ setType, setCoordinates }) => {
             // basis="0"
             // grow="1"
           >
-            Accessibility Filter
+             {accessibilityText}
+
           </MenuButton>
           <MenuList
             rounded="lg"
@@ -248,7 +266,7 @@ const Search = ({ setType, setCoordinates }) => {
             borderColor={`#FF9100`}
             textColor={"#2C2C68"}
           >
-            <MenuItem onClick={() => setType("restaurants")}>Mobility</MenuItem>
+            <MenuItem onClick={() => accessibilityChanges("Mobility")}>Mobility</MenuItem>
             <Center height="10px">
               <Divider
                 borderColor={`#FF9100`}
@@ -256,7 +274,7 @@ const Search = ({ setType, setCoordinates }) => {
                 width="90%"
               />
             </Center>
-            <MenuItem onClick={() => setType("attractions")}>
+            <MenuItem onClick={() => accessibilityChanges("Visual")}>
               Visual Impairment
             </MenuItem>
             <Center height="10px">
@@ -266,7 +284,7 @@ const Search = ({ setType, setCoordinates }) => {
                 width="90%"
               />
             </Center>
-            <MenuItem>Hearing Impairment</MenuItem>
+            <MenuItem onClick={() => accessibilityChanges("Hearing")}>Hearing Impairment</MenuItem>
             <Center height="10px">
               <Divider
                 borderColor={`#FF9100`}
@@ -274,7 +292,7 @@ const Search = ({ setType, setCoordinates }) => {
                 width="90%"
               />
             </Center>
-            <MenuItem>Neuro Divergent</MenuItem>
+            <MenuItem onClick={() => accessibilityChanges("Neurodivergent")}>Neurodivergent</MenuItem>
           </MenuList>
         </Menu>
 

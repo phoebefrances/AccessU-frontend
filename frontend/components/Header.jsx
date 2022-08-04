@@ -4,7 +4,7 @@ import Search from "./Search";
 import Logo from './Logo';
 
 
-const Header = () => {
+const Header = ({setCategory, setAccessibility}) => {
   return (
     <Flex
       className="global-container"
@@ -25,7 +25,7 @@ const Header = () => {
        </GridItem> 
         <GridItem w='100%' h='10'>
       {/* </Flex> */}
-      <Search/>
+      <Search setCategory={setCategory} setAccessibility={setAccessibility}/>
       </GridItem>
       {/* <Spacer bgColor={"blue"} /> */}
       <GridItem w='50%' h='10'>
