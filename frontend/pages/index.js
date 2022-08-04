@@ -8,13 +8,7 @@ import { getPlacesData } from "./api/getPlacesData";
 import Head from "next/head";
 import LargeCard from "../components/LargeCard";
 
-// dummy data
-const places = [
-  { name: "sample Place1" },
-  { name: "sample Place1" },
-  { name: "sample Place1" },
-  { name: "sample Place1" },
-];
+
 //👇 Comment out if using API. Uncomment if using offline database.
 import { places } from "../libs/offlineData.js";
 
