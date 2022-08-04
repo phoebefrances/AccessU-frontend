@@ -11,6 +11,7 @@ import VisibilityIcon from "@mui/icons-material/Visibility";
 const PlaceDetail = ({ place }) => {
   return (
     <Flex
+     marginTop="15px"
       bg={"whiteAlpha.900"}
       px={4}
       py={2}
@@ -30,6 +31,7 @@ const PlaceDetail = ({ place }) => {
             width={"100%"}
             fontSize={"14px"}
             fontWeight={"bold"}
+            color={"#2C2C68"}
           >
             {place.name}
           </Text>
@@ -43,7 +45,7 @@ const PlaceDetail = ({ place }) => {
 
         {place?.address && (
           <Flex alignItems={"center"} width={"full"} px={1} my={2}>
-            <IoLocation fontSize={20} color="gray" />
+            <IoLocation fontSize={20} color="#2C2C68" />
 
             <Text fontSize={"12px"} fontWeight={500} color={"gray.700"} ml={1}>
               {place.address}
@@ -57,7 +59,7 @@ const PlaceDetail = ({ place }) => {
               <Text
                 fontSize={"small"}
                 fontWeight={500}
-                color={"gray.700"}
+                color={"#2C2C68"}
                 ml={1}
               >
                 <AccessibleIcon fontSize="large" />
@@ -69,7 +71,7 @@ const PlaceDetail = ({ place }) => {
               <Text
                 fontSize={"small"}
                 fontWeight={500}
-                color={"gray.700"}
+                color={"#2C2C68"}
                 ml={1}
               >
                 <VisibilityIcon fontSize="large" />
@@ -81,7 +83,7 @@ const PlaceDetail = ({ place }) => {
               <Text
                 fontSize={"small"}
                 fontWeight={500}
-                color={"gray.700"}
+                color={"#2C2C68"}
                 ml={1}
               >
                 <HearingIcon fontSize="large" />
@@ -93,7 +95,7 @@ const PlaceDetail = ({ place }) => {
               <Text
                 fontSize={"small"}
                 fontWeight={500}
-                color={"gray.700"}
+                color={"#2C2C68"}
                 ml={1}
               >
                 <PsychologyIcon fontSize="large" />
