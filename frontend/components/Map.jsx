@@ -37,7 +37,7 @@ const Map = ({ coordinates, setCoordinates, setBounds, places }) => {
             position={"relative"}
             cursor="pointer"
           >
-            <IoLocation color="red" fontSize={30} />
+            <IoLocation color="#032396" fontSize={30} />
           </Box>
         ))}
 
