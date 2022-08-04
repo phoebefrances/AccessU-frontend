@@ -205,7 +205,7 @@ function accessibilityChanges(accessibility){
             textColor={"#2C2C68"}
           >
             <MenuItem onClick={() => categoryChanges('restaurant')}>
-              Restaurants
+              Restaurant
             </MenuItem>
             <Center height="10px">
               <Divider
