@@ -59,7 +59,7 @@ const PlaceDetail = ({ place }) => {
               <Text
                 fontSize={"small"}
                 fontWeight={500}
-                color={"#2C2C68"}
+                color={"#032396"}
                 ml={1}
               >
                 <AccessibleIcon fontSize="large" />
@@ -71,7 +71,7 @@ const PlaceDetail = ({ place }) => {
               <Text
                 fontSize={"small"}
                 fontWeight={500}
-                color={"#2C2C68"}
+                color={"#032396"}
                 ml={1}
               >
                 <VisibilityIcon fontSize="large" />
@@ -83,7 +83,7 @@ const PlaceDetail = ({ place }) => {
               <Text
                 fontSize={"small"}
                 fontWeight={500}
-                color={"#2C2C68"}
+                color={"#032396"}
                 ml={1}
               >
                 <HearingIcon fontSize="large" />
@@ -95,7 +95,7 @@ const PlaceDetail = ({ place }) => {
               <Text
                 fontSize={"small"}
                 fontWeight={500}
-                color={"#2C2C68"}
+                color={"#032396"}
                 ml={1}
               >
                 <PsychologyIcon fontSize="large" />
