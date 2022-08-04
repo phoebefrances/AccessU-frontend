@@ -56,7 +56,7 @@ const Search = ({ setType, setCoordinates }) => {
           // basis="0"
           // grow="1"
         />
-        <Divider orientation="vertical" />
+        {/* <Divider orientation="vertical" />
         <Select
           placeholder={"What?"}
           color={`#2C2C68`}
@@ -163,10 +163,10 @@ const Search = ({ setType, setCoordinates }) => {
             borderStyle="solid"
             borderColor={"#FF9100"}
           />
-        </Select>
+        </Select> */}
 
         {/* Venue category menu: */}
-        {/* <Menu>
+        <Menu>
           <MenuButton
             color={`#2C2C68`}
             as={Button}
@@ -224,10 +224,10 @@ const Search = ({ setType, setCoordinates }) => {
             <MenuItem>Cafe</MenuItem>
           </MenuList>
         </Menu>
-        <Divider orientation="vertical" /> */}
+        <Divider orientation="vertical" />
 
         {/* Accesibility filter menu: */}
-        {/* <Menu>
+        <Menu>
           <MenuButton
             color={`#2C2C68`}
             as={Button}
@@ -276,7 +276,7 @@ const Search = ({ setType, setCoordinates }) => {
             </Center>
             <MenuItem>Neuro Divergent</MenuItem>
           </MenuList>
-        </Menu> */}
+        </Menu>
 
         <OurButton text={"Search"} icon={<Search2Icon />} />
       </InputGroup>
