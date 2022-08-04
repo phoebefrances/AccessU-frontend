@@ -17,46 +17,43 @@ const PlaceDetail = ({ place }) => {
       mb={2}
       shadow="lg"
       direction={"column"}
-      alignItems={"start"}
-      justifyContent="space-between"
-      bg="red"
+      alignItems={"left"}
       direction="row"
     >
-      <Flex direction="column" bg="yellow">
+      <Flex direction="column">
         <Flex
           alignItems={"center"}
           width={"full"}
-          justifyContent={"space-between"}
-          bg="purple"
         >
           <Text
             textTransform={"capitalize"}
-            width={"40"}
-            fontSize={"lg"}
-            fontWeight={"500"}
+            width={"100%"}
+            fontSize={"14px"}
+            fontWeight={"bold"}
           >
             {place.name}
           </Text>
-        </Flex>
-
-        {/* Ratings */}
-        <Flex alignItems={"center"} width={"full"} bg="blue">
           <Rating size="small" value={Number(place.rating)} readOnly />
         </Flex>
 
+        {/* Ratings */}
+        {/* <Flex alignItems={"center"} width={"full"}>
+          <Rating size="small" value={Number(place.rating)} readOnly />
+        </Flex> */}
+
         {place?.address && (
-          <Flex alignItems={"center"} width={"full"} px={1} my={2} bg="orange">
+          <Flex alignItems={"center"} width={"full"} px={1} my={2}>
             <IoLocation fontSize={20} color="gray" />
 
-            <Text fontSize={"small"} fontWeight={500} color={"gray.700"} ml={1}>
+            <Text fontSize={"12px"} fontWeight={500} color={"gray.700"} ml={1}>
               {place.address}
             </Text>
           </Flex>
         )}
 
-        <Flex bg="pink" width="full">
+        <Flex width="full">
           {place.acessibility?.accessible && (
-            <Flex alignItems={"center"} width={"full"} px={1} my={2}>
+            <Flex alignItems={"center"} width={"20%"} px={1} my={2} height={"10px"}>
               <Text
                 fontSize={"small"}
                 fontWeight={500}
@@ -68,7 +65,7 @@ const PlaceDetail = ({ place }) => {
             </Flex>
           )}
           {place.acessibility?.eye && (
-            <Flex alignItems={"center"} width={"full"} px={1} my={2}>
+            <Flex alignItems={"center"} width={"20%"} px={1} my={2} height={"10px"}>
               <Text
                 fontSize={"small"}
                 fontWeight={500}
@@ -80,7 +77,7 @@ const PlaceDetail = ({ place }) => {
             </Flex>
           )}
           {place.acessibility?.hearing && (
-            <Flex alignItems={"center"} width={"full"} px={1} my={2}>
+            <Flex alignItems={"center"} width={"20%"} px={1} my={2} height={"10px"}>
               <Text
                 fontSize={"small"}
                 fontWeight={500}
@@ -92,7 +89,7 @@ const PlaceDetail = ({ place }) => {
             </Flex>
           )}
           {place.acessibility?.brain && (
-            <Flex alignItems={"center"} width={"full"} px={1} my={2}>
+            <Flex alignItems={"center"} width={"20%"} px={1} my={2} height={"10px"}>
               <Text
                 fontSize={"small"}
                 fontWeight={500}
@@ -106,11 +103,11 @@ const PlaceDetail = ({ place }) => {
         </Flex>
       </Flex>
       <Image
+        marginTop={"10px"}
         objectFit={"cover"}
-        height={"120px"}
-        width={"120px"}
+        height={"100px"}
+        width={"100px"}
         rounded="lg"
-        bg="green"
         src={
           place.photo
             ? place.photo
