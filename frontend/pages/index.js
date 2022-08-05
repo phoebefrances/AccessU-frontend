@@ -87,7 +87,7 @@ const [filteredCategory, setFilteredCategory] = useState([])
     >
       
       <Head>
-        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyD93tjfea30qHGkuhHJWQ0vQB9FF-HYIZo"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyD93tjfea30qHGkuhHJWQ0vQB9FF-HYIZo" async></script>
       </Head>
 
       <Header
