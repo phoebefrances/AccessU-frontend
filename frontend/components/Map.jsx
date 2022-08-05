@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Box, Image, Spacer, Text, Flex } from "@chakra-ui/react";
 import GoogleMapReact from "google-map-react";
+import GoogleMap from "google-map-react"
 import { IoLocation } from "react-icons/io5";
 import LargeCard from "./LargeCard";
 
@@ -20,11 +21,14 @@ const Map = ({ coordinates, setCoordinates, setBounds, places, place }) => {
         center={coordinates}
         defaultZoom={10}
         margin={[50, 50, 50, 50]}
-        options={""}
+        options={{
+          styles: require('../libs/map-style1.json')
+      }}
         onChange={(e) => {
           setCoordinates({ lat: e.center.lat, lng: e.center.lng });
           setBounds({ ne: e.marginBounds.ne, sw: e.marginBounds.sw });
         }}
+
         //added click event by setting setCardData to places and passed the child as an array to places to get the index number (not getting an object) and set setisCard to true
         onChildClick={(child) => {
           setCardData(places[child]);
@@ -35,6 +39,8 @@ const Map = ({ coordinates, setCoordinates, setBounds, places, place }) => {
           setIsCard(false);
         }}
       >
+    
+
         {places?.map((place, i) => (
           <Box key={i}
             lat={Number(place.latitude)}
@@ -42,7 +48,7 @@ const Map = ({ coordinates, setCoordinates, setBounds, places, place }) => {
             position={"relative"}
             cursor="pointer"
           >
-            <IoLocation color="#032396" fontSize={30} />
+            <IoLocation color="#00396" fontSize={30} />
           </Box>
         ))}
 
