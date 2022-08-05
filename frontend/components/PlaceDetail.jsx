@@ -17,7 +17,6 @@ const PlaceDetail = ({ place }) => {
       py={2}
       mb={2}
       shadow="lg"
-      direction={"column"}
       alignItems={"left"}
       direction="row"
       maxWidth={"500px"}

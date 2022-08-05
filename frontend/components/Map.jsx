@@ -4,8 +4,6 @@ import GoogleMapReact from "google-map-react";
 import { IoLocation } from "react-icons/io5";
 import LargeCard from "./LargeCard";
 
-
-
 const Map = ({ coordinates, setCoordinates, setBounds, places, place }) => {
   //This state updates when you click the Iolocation icon for a particular place, that place icon will update from not having a card to having a card i.e. from false to true
   const [isCard, setIsCard] = useState(false);
@@ -48,10 +46,8 @@ const Map = ({ coordinates, setCoordinates, setBounds, places, place }) => {
           </Box>
         ))}
 
-        {/* Conditionally rendered the Box chakra component if isCard is true  */}
-        {isCard && (
-         <LargeCard cardData={cardData}/>
-        )}
+        {/* Conditionally rendered the LargeCard component if isCard is true  */}
+        {isCard && <LargeCard cardData={cardData} />}
       </GoogleMapReact>
     </Box>
   );
