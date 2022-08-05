@@ -153,7 +153,6 @@ finalFilter = [...filteredCategory, ...filteredAccessibility, ...filteredRatings
         setCoordinates={setCoordinates}
         setCategory={setCategory}
         setAccessibility={setAccessibility}
-        setRatings={setRatings}
         setSearchStatus={setSearchStatus}
         searchStatus={searchStatus}
       />
