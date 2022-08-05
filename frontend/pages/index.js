@@ -19,6 +19,7 @@ const Home = () => {
   //👇 Comment out if using offline database. Uncomment if using API
 // const [places, setPlaces] = useState({});
 const [filteredCategory, setFilteredCategory] = useState([])
+const [searchStatus, setSearchStatus] = useState(false)
   const [filteredPlaces, setFilteredPlaces] = useState([]);
   const [coordinates, setCoordinates] = useState({});
   const [bounds, setBounds] = useState(null);
@@ -45,11 +46,11 @@ const [filteredCategory, setFilteredCategory] = useState([])
   }, []);
 
   // updates the data to the users choice of rating
-  useEffect(() => {
-    const filteredData = places.filter((place) => place.rating > ratings);
-    setFilteredPlaces(filteredData);
-    console.log({ ratings });
-  }, [ratings]);
+  // useEffect(() => {
+  //   const filteredData = places.filter((place) => place.rating > ratings);
+  //   setFilteredPlaces(filteredData);
+  //   console.log({ ratings });
+  // }, [ratings]);
 
   // useEffect(() => {
   //   const userChoice = places.filter((place) => place.category === category);
@@ -71,6 +72,7 @@ const [filteredCategory, setFilteredCategory] = useState([])
     console.log(places.accessibility?.accessible)
     let filteredCategory = [];
     let filteredAccessibility = [];
+    let filteredRatings = []
     let finalFilter = []
     if (category !== '') {
        filteredCategory =  places.filter((place) => place.category === category)
@@ -94,13 +96,18 @@ if (accessibility !== '') {
       console.log('default select case...')
       // code block
   }
+
   filteredAccessibility = places.filter((place) => place.acessibility === accessibleObject);
 }
-finalFilter = [...filteredCategory, ...filteredAccessibility]
+if (ratings !== ''){
+  filteredRatings = places.filter((place) => place.rating > ratings)
+}
+
+finalFilter = [...filteredCategory, ...filteredAccessibility, ...filteredRatings]
     // const filteredCategory = places.filter((place) => place.category === category);
     setFilteredCategory(finalFilter)
     console.log(finalFilter)
-  }, [category, accessibility]);
+  }, [category, accessibility, ratings]);
 
   // let placeFilter = {
   //   category: category,
@@ -146,6 +153,9 @@ finalFilter = [...filteredCategory, ...filteredAccessibility]
         setCoordinates={setCoordinates}
         setCategory={setCategory}
         setAccessibility={setAccessibility}
+        setRatings={setRatings}
+        setSearchStatus={setSearchStatus}
+        searchStatus={searchStatus}
       />
 
       <List

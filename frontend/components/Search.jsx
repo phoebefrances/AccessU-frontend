@@ -17,9 +17,10 @@ import { TriangleDownIcon, Search2Icon } from "@chakra-ui/icons";
 import OurButton from "./OurButton";
 import { Select } from "@chakra-ui/react";
 
-const Search = ({  setCoordinates, setCategory, setAccessibility }) => {
+const Search = ({  setCoordinates, setCategory, setAccessibility, setRatings, setSearchStatus, searchStatus }) => {
   const [autocomplete, setAutocomplete] = useState(null);
   const [categoryText, setCategoryText] = useState('What?')
+  const [ratingText, setRatingText] = useState('Rating')
   const [accessibilityText, setAccessibilityText] = useState('Accessibility')
 
   const onLoad = (autoC) => setAutocomplete(autoC);
@@ -42,8 +43,16 @@ function accessibilityChanges(accessibility){
   console.log(accessibility)
   setAccessibility(accessibility)
   setAccessibilityText(accessibility)
+}
 
+function ratingChanges(rate){
+  console.log(rate)
+  setRatings(rate)
+  setRatingText(rate)
+}
 
+function searchFilter(){
+  setSearchStatus(!searchStatus)
 }
   return (
     <Autocomplete onLoad={onLoad} onPlaceChanged={onPlaceChanged}>
@@ -204,7 +213,7 @@ function accessibilityChanges(accessibility){
             borderColor={`#FF9100`}
             textColor={"#2C2C68"}
           >
-            <MenuItem onClick={() => categoryChanges('restaurant')}>
+            <MenuItem onClick={() => setRatingText('setRatingText')}>
               Restaurant
             </MenuItem>
             <Center height="10px">
@@ -243,8 +252,69 @@ function accessibilityChanges(accessibility){
         </Menu>
         <Divider orientation="vertical" />
 
+{/* Rating filter menu */}
+
+<Menu>
+          <MenuButton
+            color={`#2C2C68`}
+            as={Button}
+            rounded="full"
+            bg={"white"}
+            rightIcon={<TriangleDownIcon color={`#FF9100`} />}
+            fontWeight={"bold"}
+            fontSize={17}
+            width="32%"
+            // basis="0"
+            // grow="1"
+          >
+             {ratingText}
+
+          </MenuButton>
+          <MenuList
+            rounded="lg"
+            border="2px"
+            borderColor={`#FF9100`}
+            textColor={"#2C2C68"}
+          >
+            <MenuItem onClick={() => ratingChanges("1")}>1 Star</MenuItem>
+            <Center height="10px">
+              <Divider
+                borderColor={`#FF9100`}
+                orientation="horizontal"
+                width="90%"
+              />
+            </Center>
+            <MenuItem onClick={() => ratingChanges("2")}>
+              2 Stars
+            </MenuItem>
+            <Center height="10px">
+              <Divider
+                borderColor={`#FF9100`}
+                orientation="horizontal"
+                width="90%"
+              />
+            </Center>
+            <MenuItem onClick={() => ratingChanges("3")}>3 Stars</MenuItem>
+            <Center height="10px">
+              <Divider
+                borderColor={`#FF9100`}
+                orientation="horizontal"
+                width="90%"
+              />
+            </Center>
+            <MenuItem onClick={() => ratingChanges("4")}>4 Stars</MenuItem>
+            <Center height="10px">
+              <Divider
+                borderColor={`#FF9100`}
+                orientation="horizontal"
+                width="90%"
+              />
+            </Center>
+            <MenuItem onClick={() => ratingChanges("5")}>5 Stars</MenuItem>
+          </MenuList>
+        </Menu>  
         {/* Accesibility filter menu: */}
-         <Menu>
+         {/* <Menu>
           <MenuButton
             color={`#2C2C68`}
             as={Button}
@@ -294,9 +364,9 @@ function accessibilityChanges(accessibility){
             </Center>
             <MenuItem onClick={() => accessibilityChanges("Neurodivergent")}>Neurodivergent</MenuItem>
           </MenuList>
-        </Menu>  
+        </Menu>   */}
 
-        <OurButton text={"Search"} icon={<Search2Icon />} />
+        <OurButton onClick={searchFilter} text={"Search"} icon={<Search2Icon />} />
       </InputGroup>
     </Autocomplete>
   );
