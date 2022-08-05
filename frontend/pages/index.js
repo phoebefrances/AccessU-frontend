@@ -169,10 +169,6 @@ finalFilter = [...filteredCategory, ...filteredAccessibility, ...filteredRatings
         setBounds={setBounds}
         places={filteredCategory.length ? filteredCategory : places}
       />
-
-      <LargeCard
-      
-      />
     </Flex>
   );
 };
