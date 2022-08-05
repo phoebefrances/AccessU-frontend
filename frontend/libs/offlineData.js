@@ -122,3 +122,4 @@ export const places = [
 -web address ✅
 -opening times ✅
 -picture ✅ */
+
