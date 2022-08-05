@@ -175,7 +175,7 @@ function accessibilityChanges(accessibility){
           <option value="option5" style={{ fontWeight: `normal` }}>
             Neurodivergent
           </option>
-          <Divider
+           <Divider
             orientation="horizontal"
             borderStyle="solid"
             borderColor={"#FF9100"}
