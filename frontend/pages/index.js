@@ -22,7 +22,7 @@ const Home = () => {
   const [category, setCategory] = useState("");
   const [accessibility, setAccessibility] = useState("");
 
-  //type is the same as category but we sometimes use one sometimes the other :(
+  //❗type is the same as category but we sometimes use one sometimes the other- confusing :(
   const [type, setType] = useState("restaurants");
   const [ratings, setRatings] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -30,7 +30,7 @@ const Home = () => {
 
   const [accessibilityFilter, setaccessibilityFilter] = useState({});
 
-  //👇 Comment out if using API. Uncomment if using offline database.
+  //👇 Comment out if using API. Uncomment if using offline database. ❗What was here and where did it go?
 
   // get the users current location on intial login
   useEffect(() => {
@@ -61,6 +61,7 @@ const Home = () => {
       //☝️ else, if neither category nor rating is selected, it filters for places with rating of 420, which don't exist in our database
     }
     const filteredData = places.filter(conditionSelector);
+
     setFilteredPlaces(filteredData);
     console.log(`currently selected ratings: ${ratings}`);
     console.log(`currently selected category: ${category}`);
