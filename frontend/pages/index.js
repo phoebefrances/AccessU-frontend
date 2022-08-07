@@ -20,7 +20,9 @@ const Home = () => {
   const [coordinates, setCoordinates] = useState({});
   const [bounds, setBounds] = useState(null);
   const [category, setCategory] = useState("");
-  const [accessibility, setAccessibility] = useState("");
+
+  //❗ To be deleted? 👇
+  // const [accessibility, setAccessibility] = useState("");
 
   //❗type is the same as category but we sometimes use one sometimes the other- confusing :(
   const [type, setType] = useState("restaurants");
@@ -28,7 +30,8 @@ const Home = () => {
   const [isLoading, setIsLoading] = useState(false);
   // setPlaces(places)
 
-  const [accessibilityFilter, setaccessibilityFilter] = useState({});
+  //❗ To be deleted? 👇
+  // const [accessibilityFilter, setaccessibilityFilter] = useState({});
 
   //👇 Comment out if using API. Uncomment if using offline database. ❗What was here and where did it go?
 
