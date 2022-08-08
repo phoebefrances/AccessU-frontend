@@ -141,8 +141,15 @@ const Search = ({ setCoordinates, setCategory, setRatings }) => {
             fontSize={17}
             width="32%"
           >
-            <Rating value={Number(ratingText)} readOnly />
-            {/* {ratingText} stars and up */}
+            {/* If ratingText's value is "Rating" (as it will be upon load- it's
+            the default), this prints "Rating". Otherwise (if it's a number-string), it displays it in
+            star rating format. */}
+            {ratingText == "Rating" ? (
+              ratingText
+            ) : (
+              <Rating value={Number(ratingText)} readOnly />
+              //{ratingText} stars and up
+            )}
           </MenuButton>
           <MenuList
             rounded="lg"
@@ -151,7 +158,7 @@ const Search = ({ setCoordinates, setCategory, setRatings }) => {
             textColor={"#2C2C68"}
           >
             <MenuItem onClick={() => ratingChanges("1")}>
-              <Rating size="large" value={1} readOnly /> & Up
+              <Rating size="medium" value={1} readOnly /> & Up
             </MenuItem>
             <Center height="10px">
               <Divider
@@ -161,7 +168,7 @@ const Search = ({ setCoordinates, setCategory, setRatings }) => {
               />
             </Center>
             <MenuItem onClick={() => ratingChanges("2")}>
-              <Rating size="large" value={2} readOnly /> & Up
+              <Rating size="medium" value={2} readOnly /> & Up
             </MenuItem>
             <Center height="10px">
               <Divider
@@ -171,7 +178,7 @@ const Search = ({ setCoordinates, setCategory, setRatings }) => {
               />
             </Center>
             <MenuItem onClick={() => ratingChanges("3")}>
-              <Rating size="large" value={3} readOnly /> & Up
+              <Rating size="medium" value={3} readOnly /> & Up
             </MenuItem>
             <Center height="10px">
               <Divider
@@ -181,7 +188,7 @@ const Search = ({ setCoordinates, setCategory, setRatings }) => {
               />
             </Center>
             <MenuItem onClick={() => ratingChanges("4")}>
-              <Rating size="large" value={4} readOnly /> & Up
+              <Rating size="medium" value={4} readOnly /> & Up
             </MenuItem>
             <Center height="10px">
               <Divider
@@ -191,7 +198,7 @@ const Search = ({ setCoordinates, setCategory, setRatings }) => {
               />
             </Center>
             <MenuItem onClick={() => ratingChanges("5")}>
-              <Rating size="large" value={5} readOnly /> & Up
+              <Rating size="medium" value={5} readOnly /> & Up
             </MenuItem>
           </MenuList>
         </Menu>
