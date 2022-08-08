@@ -224,9 +224,9 @@ export const places = [
     photo:
       "https://lh5.googleusercontent.com/p/AF1QipPfGBw5lUaPbrobd3Hlu9lbKUGunHG4_J3VXFcz=w1920-h1080-k-no",
 
-    address: "191 Portobello Rd, London W11 2ED",
-    longitude: "-0.20494379615020933",
-    latitude: "51.516255277758276",
+    address: "11/18 Panton St, London SW1Y 4DP",
+    longitude: "-0.13128621685259437",
+    latitude: "51.50971082851679",
     acessibility: {
       accessible: true,
       eye: true,
