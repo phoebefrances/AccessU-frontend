@@ -180,9 +180,9 @@ export const places = [
     photo:
       "https://c8.alamy.com/comp/2CC0M9P/a-lone-woman-walks-past-he-curzon-mayfair-cinema-in-curzon-street-mayfair-london-england-uk-2CC0M9P.jpg",
 
-    address: "38 Curzon St, London W1J 7TY",
-    longitude: "-0.1478705999930868",
-    latitude: "51.50671419298587",
+    address: "14 D'Arblay St, London W1F 8DY",
+    longitude: "-0.1364835015108443",
+    latitude: "51.51471926727698",
     acessibility: {
       accessible: true,
       eye: false,
