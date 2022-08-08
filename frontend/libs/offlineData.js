@@ -250,9 +250,9 @@ export const places = [
       other1: null,
       other2: null,
     },
-    phone_number: "+44 (0) 9845754223",
-    web_address: "www.sainsburys.com",
-    opening_times: "7am-7pm",
+    phone_number: "020 7486 8770",
+    web_address: "https://monocle.com/shop/",
+    opening_times: "11am-7pm",
   },
   {
     category: "shop",
