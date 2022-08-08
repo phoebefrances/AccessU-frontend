@@ -2,13 +2,12 @@ import React from "react";
 import { Flex, Text, Image, Spacer } from "@chakra-ui/react";
 import { Rating } from "@material-ui/lab";
 import { IoLocation } from "react-icons/io5";
-import SignLanguageIcon from "@mui/icons-material/SignLanguage";
 import HearingIcon from "@mui/icons-material/Hearing";
 import AccessibleIcon from "@mui/icons-material/Accessible";
 import PsychologyIcon from "@mui/icons-material/Psychology";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 
-const PlaceDetail = ({ place, setCardData, setIsCard }) => {
+const PlaceDetail = ({ place }) => {
   return (
     <Flex
       marginTop="15px"
@@ -35,11 +34,6 @@ const PlaceDetail = ({ place, setCardData, setIsCard }) => {
           </Text>
           <Rating size="small" value={Number(place.rating)} readOnly />
         </Flex>
-
-        {/* Ratings */}
-        {/* <Flex alignItems={"center"} width={"full"}>
-          <Rating size="small" value={Number(place.rating)} readOnly />
-        </Flex> */}
 
         {place?.address && (
           <Flex alignItems={"center"} width={"full"} px={1} my={2}>
@@ -145,36 +139,5 @@ const PlaceDetail = ({ place, setCardData, setIsCard }) => {
 
 export default PlaceDetail;
 
-{
-  /* <Text
-              textTransform={"capitalize"}
-              width={"40"}
-              fontSize={"lg"}
-              fontWeight={"500"}
-              bgColor="blue"
-            ></Text> */
-}
 
-{
-  /* dietary_restrictions */
-}
-{
-  /* We may use this as behaviour for rendering accesibility badges */
-}
-{
-  // {place?.dietary_restrictions && (
-  //           <Flex width={"full"} flexWrap={"wrap"}>
-  //             {place.dietary_restrictions.map((n, i) => (
-  //               <Badge
-  //                 colorScheme={"teal"}
-  //                 cursor={"pointer"}
-  //                 key={i}
-  //                 m={1}
-  //                 fontSize={10}
-  //               >
-  //                 {n.name}
-  //               </Badge>
-  //             ))}
-  //           </Flex>
-  //         )}
-}
+ 

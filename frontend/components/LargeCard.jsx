@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import { Box, Image, Spacer, Text, Flex } from "@chakra-ui/react";
 import { Rating } from "@material-ui/lab";
 
 //Icon imports:
+
 import AccessibleIcon from "@mui/icons-material/Accessible";
 import HearingIcon from "@mui/icons-material/Hearing";
 import PsychologyIcon from "@mui/icons-material/Psychology";
@@ -14,119 +15,109 @@ const LargeCard = ({ cardData }) => {
       bg="white"
       height="550px"
       width="250px"
-      position={"absolute"}
-      top={"-25vh"}
-      left={"-25vw"}
+      position="absolute"
+      top="-25vh"
+      left="-25vw"
       bottom="50px"
       borderRadius="15"
     >
-      {/* Chakra Image component to display place Image on small card */}
+      {/* Chakra Image component to display place Image on cards */}
+
       <Image
         alt={"Display Place"}
-        objectFit={"cover"}
-        width={"full"}
-        height={"120px"}
+        objectFit="cover"
+        width="full"
+        height="120px"
         rounded="lg"
         src={cardData.photo}
       />
 
-      {/* Chakra Text component to display place name details on small card */}
+      {/* Chakra Text component to display place name details on cards */}
+
       <Box padding="3">
         <Text
-          textTransform={"capitalize"}
-          width={"full"}
-          fontSize={"22px"}
-          fontWeight={"500"}
+          textTransform="capitalize"
+          width="full"
+          fontSize="22px"
+          fontWeight="500"
           isTruncated
-          color={"#2C2C68"}
+          color="#2C2C68"
         >
           {cardData.name}
         </Text>
         <Text
-          textTransform={"capitalize"}
-          fontSize={"18px"}
-          fontWeight={"500"}
+          textTransform="capitalize"
+          fontSize="18px"
+          fontWeight="500"
           isTruncated
-          color={"#2C2C68"}
+          color="#2C2C68"
         >
           {cardData.category}
         </Text>
         <Text
-          textTransform={"capitalize"}
-          width={"full"}
-          fontSize={"12px"}
-          fontWeight={"500"}
+          textTransform="capitalize"
+          width="full"
+          fontSize="12px"
+          fontWeight="500"
           isTruncated
-          color={"#2C2C68"}
+          color="#2C2C68"
         >
           <Rating size="small" value={Number(cardData.rating)} readOnly />
         </Text>
         <Spacer />
         <Text
-          textTransform={"capitalize"}
-          width={"full"}
-          fontSize={"14px"}
-          fontWeight={"500"}
+          textTransform="capitalize"
+          width="full"
+          fontSize="14px"
+          fontWeight="500"
           isTruncated
-          color={"#2C2C68"}
+          color="#2C2C68"
         >
           {cardData.address}
         </Text>
         <br></br>
         <Text
-          textTransform={"capitalize"}
-          width={"full"}
-          fontSize={"14px"}
-          fontWeight={"500"}
+          textTransform="capitalize"
+          width="full"
+          fontSize="14px"
+          fontWeight="500"
           isTruncated
-          color={"#2C2C68"}
+          color="#2C2C68"
         >
           {cardData.phone_number}
         </Text>
         <Spacer />
         <br></br>
         <Text
-          width={"full"}
-          fontSize={"14px"}
-          fontWeight={"500"}
+          width="full"
+          fontSize="14px"
+          fontWeight="500"
           isTruncated
-          color={"#2C2C68"}
+          color="#2C2C68"
         >
           {cardData.web_address}
         </Text>
         <br></br>
         <Text
-          textTransform={"capitalize"}
-          width={"full"}
-          fontSize={"14px"}
-          fontWeight={"500"}
+          textTransform="capitalize"
+          width="full"
+          fontSize="14px"
+          fontWeight="500"
           isTruncated
-          color={"#2C2C68"}
+          color="#2C2C68"
         >
           {cardData.opening_times}
         </Text>
         <br></br>
 
-        <Flex
-          width="full"
-          // bg="red"
-          direction="column"
-          gap="3"
-          pt={"3"}
-        >
+        <Flex width="full" direction="column" gap="3" pt={3}>
           {cardData.acessibility?.accessible && (
-            <Flex
-              alignItems={"center"}
-              width={"full"}
-              px={1}
-              height={"25%"}
-              // bg="yellow"
-            >
-              <Text color={"#032396"}>
+            <Flex alignItems="center" width="full" px={1} height="25%">
+              <Text color="#032396">
                 <AccessibleIcon fontSize="large" />
               </Text>
 
-              <Text fontSize={"small"} fontWeight={500} color={"#2C2C68"}>
+              <Text fontSize="small" fontWeight={500} color="#2C2C68">
                 This place is wheelchair accesible
               </Text>
             </Flex>
@@ -153,13 +144,7 @@ const LargeCard = ({ cardData }) => {
             </Flex>
           )}
           {cardData.acessibility?.hearing && (
-            <Flex
-              alignItems={"center"}
-              width={"full"}
-              px={1}
-              height={"25%"}
-              // bg="yellow"
-            >
+            <Flex alignItems={"center"} width={"full"} px={1} height={"25%"}>
               <Text color={"#032396"}>
                 <HearingIcon fontSize="large" />
               </Text>
@@ -174,13 +159,7 @@ const LargeCard = ({ cardData }) => {
             </Flex>
           )}
           {cardData.acessibility?.brain && (
-            <Flex
-              alignItems={"center"}
-              width={"full"}
-              px={1}
-              height={"25%"}
-              // bg="yellow"
-            >
+            <Flex alignItems={"center"} width={"full"} px={1} height={"25%"}>
               {" "}
               <Text color={"#032396"}>
                 <PsychologyIcon fontSize="large" />

@@ -8,21 +8,23 @@ import {
   SkeletonText,
 } from "@chakra-ui/react";
 
+// When the page loads, the skeleton frame shows, but only if we're using the API. 
+
 const List = ({ places, isLoading }) => {
   if (isLoading)
     return (
       <Flex
-        direction={"column"}
-        bg={"whiteAlpha.900"}
-        width={"37vw"}
-        height="100vh" //may need {} around the ""
-        position={"fixed"}
+        direction="column"
+        bg="whiteAlpha.900"
+        width="37vw"
+        height="100vh" 
+        position="fixed"
         left={0}
         top={0}
         zIndex={1}
-        overflow="hidden" //may need {} around the ""
+        overflow="hidden" 
         px={2}
-        backgroundAttachment={"fixed"}
+        backgroundAttachment="fixed"
       >
         <Box padding="6" boxShadow="lg" bg="white" mt={16}>
           <SkeletonCircle size="10" />
@@ -45,19 +47,19 @@ const List = ({ places, isLoading }) => {
 
   return (
     <Flex
-      direction={"column"}
-      bg={"whiteAlpha.900"}
+      direction="column"
+      bg="whiteAlpha.900"
       width={"37vw"}
-      maxWidth={"450px"} //If width of the gallery is causing problems, comment this line out
-      height="100vh" //may need {} around the ""
-      position={"fixed"}
+      maxWidth="450px" //If width of the gallery is causing problems, comment this line out
+      height="100vh" 
+      position="fixed"
       left={0}
       top={0}
       zIndex={1}
-      overflow="hidden" //may need {} around the ""
+      overflow="hidden" 
       px={2}
     >
-      <Flex flex={1} overflowY={"scroll"} mt={16} direction={"column"}>
+      <Flex flex={1} overflowY="scroll" mt={16} direction="column">
         {places.length ? (
           places &&
           places.map((place, i) => <PlaceDetail place={place} key={i} />)
