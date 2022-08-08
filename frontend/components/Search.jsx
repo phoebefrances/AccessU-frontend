@@ -13,7 +13,7 @@ import { Autocomplete } from "@react-google-maps/api";
 import React, { useState } from "react";
 import { TriangleDownIcon, Search2Icon } from "@chakra-ui/icons";
 import OurButton from "./OurButton";
-
+import { Rating } from "@material-ui/lab";
 const Search = ({ setCoordinates, setCategory, setRatings }) => {
   const [autocomplete, setAutocomplete] = useState(null);
   const [categoryText, setCategoryText] = useState("What?");
@@ -141,7 +141,8 @@ const Search = ({ setCoordinates, setCategory, setRatings }) => {
             fontSize={17}
             width="32%"
           >
-            {ratingText}
+            <Rating value={Number(ratingText)} readOnly />
+            {/* {ratingText} stars and up */}
           </MenuButton>
           <MenuList
             rounded="lg"
@@ -149,7 +150,9 @@ const Search = ({ setCoordinates, setCategory, setRatings }) => {
             borderColor={`#FF9100`}
             textColor={"#2C2C68"}
           >
-            <MenuItem onClick={() => ratingChanges("1")}>1 Star</MenuItem>
+            <MenuItem onClick={() => ratingChanges("1")}>
+              <Rating size="large" value={1} readOnly /> & Up
+            </MenuItem>
             <Center height="10px">
               <Divider
                 borderColor={`#FF9100`}
@@ -157,7 +160,9 @@ const Search = ({ setCoordinates, setCategory, setRatings }) => {
                 width="90%"
               />
             </Center>
-            <MenuItem onClick={() => ratingChanges("2")}>2 Stars</MenuItem>
+            <MenuItem onClick={() => ratingChanges("2")}>
+              <Rating size="large" value={2} readOnly /> & Up
+            </MenuItem>
             <Center height="10px">
               <Divider
                 borderColor={`#FF9100`}
@@ -165,7 +170,9 @@ const Search = ({ setCoordinates, setCategory, setRatings }) => {
                 width="90%"
               />
             </Center>
-            <MenuItem onClick={() => ratingChanges("3")}>3 Stars</MenuItem>
+            <MenuItem onClick={() => ratingChanges("3")}>
+              <Rating size="large" value={3} readOnly /> & Up
+            </MenuItem>
             <Center height="10px">
               <Divider
                 borderColor={`#FF9100`}
@@ -173,7 +180,9 @@ const Search = ({ setCoordinates, setCategory, setRatings }) => {
                 width="90%"
               />
             </Center>
-            <MenuItem onClick={() => ratingChanges("4")}>4 Stars</MenuItem>
+            <MenuItem onClick={() => ratingChanges("4")}>
+              <Rating size="large" value={4} readOnly /> & Up
+            </MenuItem>
             <Center height="10px">
               <Divider
                 borderColor={`#FF9100`}
@@ -181,7 +190,9 @@ const Search = ({ setCoordinates, setCategory, setRatings }) => {
                 width="90%"
               />
             </Center>
-            <MenuItem onClick={() => ratingChanges("5")}>5 Stars</MenuItem>
+            <MenuItem onClick={() => ratingChanges("5")}>
+              <Rating size="large" value={5} readOnly /> & Up
+            </MenuItem>
           </MenuList>
         </Menu>
 
