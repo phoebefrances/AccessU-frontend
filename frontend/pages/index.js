@@ -169,7 +169,7 @@ const Home = () => {
         setRatings={setRatings}
         setCoordinates={setCoordinates}
         setCategory={setCategory}
-        setAccessibility={setAccessibility}
+        // setAccessibility={setAccessibility}
         setSearchStatus={setSearchStatus}
         searchStatus={searchStatus}
       />
