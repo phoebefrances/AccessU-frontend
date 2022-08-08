@@ -14,24 +14,17 @@ import { places } from "../libs/offlineData.js";
 const Home = () => {
   //👇 Comment out if using offline database. Uncomment if using API
   // const [places, setPlaces] = useState({});
-  // const [filteredPlaces, setfilteredPlaces] = useState([]);
+
   const [searchStatus, setSearchStatus] = useState(false);
   const [filteredPlaces, setFilteredPlaces] = useState([]);
   const [coordinates, setCoordinates] = useState({});
   const [bounds, setBounds] = useState(null);
   const [category, setCategory] = useState("");
 
-  //❗ To be deleted? 👇
-  // const [accessibility, setAccessibility] = useState("");
-
   //❗type is the same as category but we sometimes use one sometimes the other- confusing :(
   const [type, setType] = useState("restaurants");
   const [ratings, setRatings] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  // setPlaces(places)
-
-  //❗ To be deleted? 👇
-  // const [accessibilityFilter, setaccessibilityFilter] = useState({});
 
   //👇 Comment out if using API. Uncomment if using offline database. ❗What was here and where did it go?
 
@@ -72,70 +65,7 @@ const Home = () => {
     console.log(`this is filteredPlaces.length: ${filteredPlaces.length}`);
   }, [ratings, category]);
 
-  // useEffect(() => {
-  //   const userChoice = places.filter((place) => place.category === category);
-  //   console.log(userChoice);
-  // }, [category]);
-
-  // useEffect(() => {
-  //   const filteredPlaces = places.filter((place) => place.category === category);
-  //   setfilteredPlaces(filteredPlaces)
-  //   console.log(filteredPlaces)
-  // }, [category]);
-
-  // useEffect(() => {
-
-  //   //re-render map
-  // }, [places]);
-
-  //   useEffect(() => {
-  //     console.log(places.accessibility?.accessible)
-  //     let filteredPlaces = [];
-  //     let filteredAccessibility = [];
-  //     let filteredRatings = []
-  //     let finalFilter = []
-  //     if (category !== '') {
-  //        filteredPlaces =  places.filter((place) => place.category === category)
-  //     }
-  //     let accessibleObject = {}
-  // if (accessibility !== '') {
-  //   switch(accessibility) {
-  //     case 'Mobility':
-  //       accessibleObject = {accessible: true}
-  //     break;
-  //     case 'Hearing':
-  //       accessibleObject =  {hearing: true}
-  //       break;
-  //     case 'Vision':
-  //       accessibleObject =  {eye: true}
-  //         break;
-  //     case 'Neurodivergent':
-  //       accessibleObject =  {brain: true}
-  //       break;
-  //     default:
-  //       console.log('default select case...')
-  //       // code block
-  //   }
-
-  //   filteredAccessibility = places.filter((place) => place.acessibility === accessibleObject);
-  // }
-  // if (ratings !== ''){
-  //   filteredRatings = places.filter((place) => place.rating > ratings)
-  // }
-
-  // finalFilter = [...filteredPlaces, ...filteredAccessibility, ...filteredRatings]
-  //     // const filteredPlaces = places.filter((place) => place.category === category);
-  //     setfilteredPlaces(finalFilter)
-  //     console.log(finalFilter)
-  //   }, [category, accessibility, ratings]);
-
-  // let placeFilter = {
-  //   category: category,
-  //   accessibility: accessibility,
-  //   rating: ratings
-  // };
-
-  // updates the data to the users choice of category or location
+  // 👇 Updates the data to the users choice of category or location
   // 👇 Comment out if using offline database. Uncomment if using the API
   // useEffect(() => {
   //   setIsLoading(true);
@@ -169,22 +99,16 @@ const Home = () => {
         setRatings={setRatings}
         setCoordinates={setCoordinates}
         setCategory={setCategory}
-        // setAccessibility={setAccessibility}
         setSearchStatus={setSearchStatus}
         searchStatus={searchStatus}
       />
 
-      <List
-        // places={filteredPlaces.length ? filteredPlaces : places}
-        places={filteredPlaces}
-        isLoading={isLoading}
-      />
+      <List places={filteredPlaces} isLoading={isLoading} />
 
       <Map
         setCoordinates={setCoordinates}
         coordinates={coordinates}
         setBounds={setBounds}
-        // places={filteredPlaces.length ? filteredPlaces : places}
         places={filteredPlaces}
       />
     </Flex>

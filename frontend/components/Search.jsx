@@ -20,7 +20,6 @@ import { Select } from "@chakra-ui/react";
 const Search = ({
   setCoordinates,
   setCategory,
-  setAccessibility,
   setRatings,
   setSearchStatus,
   searchStatus,
@@ -28,7 +27,6 @@ const Search = ({
   const [autocomplete, setAutocomplete] = useState(null);
   const [categoryText, setCategoryText] = useState("What?");
   const [ratingText, setRatingText] = useState("Rating");
-  const [accessibilityText, setAccessibilityText] = useState("Accessibility");
 
   const onLoad = (autoC) => setAutocomplete(autoC);
 
@@ -45,11 +43,11 @@ const Search = ({
     setCategoryText(cat);
   }
 
-  function accessibilityChanges(accessibility) {
-    console.log(accessibility);
-    setAccessibility(accessibility);
-    setAccessibilityText(accessibility);
-  }
+  // function accessibilityChanges(accessibility) {
+  //   console.log(accessibility);
+  //   setAccessibility(accessibility);
+  //   setAccessibilityText(accessibility);
+  // }
 
   function ratingChanges(rate) {
     console.log(rate);

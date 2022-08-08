@@ -1,10 +1,15 @@
 import { Flex, Spacer, Text, GridItem, Grid } from "@chakra-ui/react";
 import { useState } from "react";
 import Search from "./Search";
-import Logo from './Logo';
+import Logo from "./Logo";
 
-
-const Header = ({setCategory, setCoordinates, setAccessibility, setRatings, setSearchStatus, searchStatus}) => {
+const Header = ({
+  setCategory,
+  setCoordinates,
+  setRatings,
+  setSearchStatus,
+  searchStatus,
+}) => {
   return (
     <Flex
       className="global-container"
@@ -18,19 +23,24 @@ const Header = ({setCategory, setCoordinates, setAccessibility, setRatings, setS
       zIndex={101}
       bgColor={"white"}
     >
-    <Grid templateColumns='repeat(3, 1fr)' gap={1}>
-      {/* <Flex className="logo-name-container" bgColor={"red"}> */}
-      <GridItem w='100%' h='10'>
-       <Logo /> 
-       </GridItem> 
-        <GridItem w='100%' h='10'>
-      {/* </Flex> */}
-      <Search setCoordinates={setCoordinates} setCategory={setCategory} setAccessibility={setAccessibility} setRatings={setRatings} setSearchStatus={setSearchStatus}/>
-      </GridItem>
-      {/* <Spacer bgColor={"blue"} /> */}
-      <GridItem w='50%' h='10'>
-       <Spacer />
-        </GridItem> 
+      <Grid templateColumns="repeat(3, 1fr)" gap={1}>
+        {/* <Flex className="logo-name-container" bgColor={"red"}> */}
+        <GridItem w="100%" h="10">
+          <Logo />
+        </GridItem>
+        <GridItem w="100%" h="10">
+          {/* </Flex> */}
+          <Search
+            setCoordinates={setCoordinates}
+            setCategory={setCategory}
+            setRatings={setRatings}
+            setSearchStatus={setSearchStatus}
+          />
+        </GridItem>
+        {/* <Spacer bgColor={"blue"} /> */}
+        <GridItem w="50%" h="10">
+          <Spacer />
+        </GridItem>
       </Grid>
     </Flex>
   );
