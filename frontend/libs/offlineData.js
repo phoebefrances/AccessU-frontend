@@ -158,9 +158,9 @@ export const places = [
     photo:
       "https://images.squarespace-cdn.com/content/54f84e69e4b021b24483c6ef/1426513826276-B26Q5RJV1J9QR2YOP7N6/image-asset.jpeg?content-type=image%2Fjpeg",
 
-    address: "107 Kingsland High St, London E8 2PB",
-    longitude: "-0.07537702697780378",
-    latitude: "51.54976330993359",
+    address: "99 Shaftesbury Ave, London W1D 5DY",
+    longitude: "-0.1305654284984301",
+    latitude: "51.512851727291334",
     acessibility: {
       accessible: true,
       eye: true,
