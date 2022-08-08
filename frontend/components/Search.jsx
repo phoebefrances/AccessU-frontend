@@ -14,11 +14,7 @@ import React, { useState } from "react";
 import { TriangleDownIcon, Search2Icon } from "@chakra-ui/icons";
 import OurButton from "./OurButton";
 
-const Search = ({
-  setCoordinates,
-  setCategory,
-  setRatings,
-}) => {
+const Search = ({ setCoordinates, setCategory, setRatings }) => {
   const [autocomplete, setAutocomplete] = useState(null);
   const [categoryText, setCategoryText] = useState("What?");
   const [ratingText, setRatingText] = useState("Rating");
@@ -50,7 +46,7 @@ const Search = ({
       <InputGroup
         width={"50vw"}
         minWidth="500px"
-        height={"90%"}
+        height={"50px"} //these units need to be absolute otherwise Dividers won't show
         shadow="lg"
         border="2px"
         borderColor={`#FF9100`}
@@ -71,7 +67,7 @@ const Search = ({
           rounded="full"
           width="32%"
         />
-
+        <Divider orientation="vertical" />
         {/* Venue category menu: */}
 
         <Menu>
@@ -189,10 +185,7 @@ const Search = ({
           </MenuList>
         </Menu>
 
-        <OurButton
-          text={"Search"}
-          icon={<Search2Icon />}
-        />
+        <OurButton text={"Search"} icon={<Search2Icon />} />
       </InputGroup>
     </Autocomplete>
   );
