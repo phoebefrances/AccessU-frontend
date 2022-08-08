@@ -16,16 +16,18 @@ const Home = () => {
   //👇 Comment out if using offline database. Uncomment if using API
   // const [places, setPlaces] = useState({});
 
-  const [searchStatus, setSearchStatus] = useState(false);
   const [filteredPlaces, setFilteredPlaces] = useState([]);
   const [coordinates, setCoordinates] = useState({});
   //👇 Comment out if using offline database. Uncomment if using API
   // const [bounds, setBounds] = useState(null);
   const [category, setCategory] = useState("");
 
-  //❗type is the same as category but we sometimes use one sometimes the other- confusing :(
-  const [type, setType] = useState("restaurants");
+  // this sets the initial state of the ratings.
+ 
   const [ratings, setRatings] = useState("");
+
+  // This is not used, unless this is used in conjunction with API. It is not useful without that. 
+
   const [isLoading, setIsLoading] = useState(false);
 
   //👇 Comment out if using API. Uncomment if using offline database. ❗What was here and where did it go?
@@ -58,13 +60,11 @@ const Home = () => {
           ratings == 420;
       //☝️ else, if neither category nor rating is selected, it filters for places with rating of 420, which don't exist in our database
     }
+    
     const filteredData = places.filter(conditionSelector);
 
     setFilteredPlaces(filteredData);
-    console.log(`currently selected ratings: ${ratings}`);
-    console.log(`currently selected category: ${category}`);
-    console.dir(filteredPlaces);
-    console.log(`this is filteredPlaces.length: ${filteredPlaces.length}`);
+
   }, [ratings, category]);
 
   // 👇 Updates the data to the users choice of category or location
@@ -97,12 +97,9 @@ const Home = () => {
       </Head>
 
       <Header
-        setType={setType}
         setRatings={setRatings}
         setCoordinates={setCoordinates}
         setCategory={setCategory}
-        setSearchStatus={setSearchStatus}
-        searchStatus={searchStatus}
       />
 
       <List places={filteredPlaces} isLoading={isLoading} />

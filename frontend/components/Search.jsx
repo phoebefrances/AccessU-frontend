@@ -18,8 +18,6 @@ const Search = ({
   setCoordinates,
   setCategory,
   setRatings,
-  setSearchStatus,
-  searchStatus,
 }) => {
   const [autocomplete, setAutocomplete] = useState(null);
   const [categoryText, setCategoryText] = useState("What?");
@@ -34,6 +32,7 @@ const Search = ({
   };
 
   //This function, categoryChanges(restaurant) replaces the onChange
+
   function categoryChanges(cat) {
     console.log(cat);
     setCategory(cat);
@@ -46,9 +45,6 @@ const Search = ({
     setRatingText(rate);
   }
 
-  function searchFilter() {
-    setSearchStatus(!searchStatus);
-  }
   return (
     <Autocomplete onLoad={onLoad} onPlaceChanged={onPlaceChanged}>
       <InputGroup
@@ -194,7 +190,6 @@ const Search = ({
         </Menu>
 
         <OurButton
-          onClick={searchFilter}
           text={"Search"}
           icon={<Search2Icon />}
         />

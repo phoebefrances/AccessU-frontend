@@ -8,6 +8,8 @@ import {
   SkeletonText,
 } from "@chakra-ui/react";
 
+// When the page loads, the skeleton frame shows, but only if we're using the API. 
+
 const List = ({ places, isLoading }) => {
   if (isLoading)
     return (

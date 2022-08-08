@@ -6,7 +6,6 @@ const Header = ({
   setCategory,
   setCoordinates,
   setRatings,
-  setSearchStatus,
 }) => {
   return (
     <Flex
@@ -31,7 +30,6 @@ const Header = ({
             setCoordinates={setCoordinates}
             setCategory={setCategory}
             setRatings={setRatings}
-            setSearchStatus={setSearchStatus}
           />
         </GridItem>
       
