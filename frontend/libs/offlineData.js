@@ -202,9 +202,9 @@ export const places = [
     photo:
       "https://i2-prod.birminghammail.co.uk/incoming/article17247369.ece/ALTERNATES/s1200c/3_Broad-Street-roadworks.jpg",
 
-    address: "5-6 Leicester Square, London WC2H 7NA",
-    longitude: "-0.1304867595133289",
-    latitude: "51.51095747930455",
+    address: "17 Berwick St, London W1F 0PT",
+    longitude: "-0.1346889861692242",
+    latitude: "51.51377201661237",
     acessibility: {
       accessible: true,
       eye: true,
@@ -483,9 +483,9 @@ export const places = [
     name: "Ace Cafe London",
     rating: "5.0",
     photo: 'https://www.bikesure.co.uk/bikesureblog/wp-content/uploads/2018/06/unnamed.jpg',
-    address: "Ace Corner, N Circular Rd., London NW10 7UD",
-    longitude: "-0.2776811708269187",
-    latitude: "51.541502226491126",
+    address: "17 Berwick St, London W1F 0PT",
+    longitude: "-0.1338628658429789",
+    latitude: "51.51371860186969",
     acessibility: {
       accessible: true,
       eye: true,
