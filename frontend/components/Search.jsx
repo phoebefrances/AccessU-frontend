@@ -1,12 +1,10 @@
 import {
-  Flex,
   Input,
   InputGroup,
   Menu,
   MenuButton,
   MenuItem,
   MenuList,
-  Text,
   Button,
   Divider,
   Center,
@@ -15,7 +13,7 @@ import { Autocomplete } from "@react-google-maps/api";
 import React, { useState } from "react";
 import { TriangleDownIcon, Search2Icon } from "@chakra-ui/icons";
 import OurButton from "./OurButton";
-import { Select } from "@chakra-ui/react";
+
 
 const Search = ({
   setCoordinates,
@@ -43,11 +41,6 @@ const Search = ({
     setCategoryText(cat);
   }
 
-  // function accessibilityChanges(accessibility) {
-  //   console.log(accessibility);
-  //   setAccessibility(accessibility);
-  //   setAccessibilityText(accessibility);
-  // }
 
   function ratingChanges(rate) {
     console.log(rate);
@@ -83,119 +76,10 @@ const Search = ({
           _placeholder={{ color: `#2C2C68` }}
           rounded="full"
           width="32%"
-          // basis="0"
-          // grow="1"
         />
-        {/* <Divider orientation="vertical" />
-        <Select
-          placeholder={"What?"}
-          color={`#2C2C68`}
-          rounded="full"
-          bgColor={"white"}
-          fontWeight={"bold"}
-          fontSize={17}
-          width="32%"
-          border={"none"}
-        >
-          <option value="option1" style={{ fontWeight: `normal` }}>
-            All
-          </option>
-          <Divider
-            orientation="horizontal"
-            borderStyle="solid"
-            borderColor={"#FF9100"}
-          />
-          <option value="option2" style={{ fontWeight: `normal` }}>
-            Restaurants
-          </option>
-          <Divider
-            orientation="horizontal"
-            borderStyle="solid"
-            borderColor={"#FF9100"}
-          />
-          <option value="option3" style={{ fontWeight: `normal` }}>
-            Gym
-          </option>
-          <Divider
-            orientation="horizontal"
-            borderStyle="solid"
-            borderColor={"#FF9100"}
-          />
-          <option value="option4" style={{ fontWeight: `normal` }}>
-            Cinema
-          </option>
-          <Divider
-            orientation="horizontal"
-            borderStyle="solid"
-            borderColor={"#FF9100"}
-          />
-          <option value="option5" style={{ fontWeight: `normal` }}>
-            Shop
-          </option>
-          <Divider
-            orientation="horizontal"
-            borderStyle="solid"
-            borderColor={"#FF9100"}
-          />
-          <option value="option6" style={{ fontWeight: `normal` }}>
-            Cafe
-          </option>
-        </Select>
-
-        <Divider orientation="vertical" />
-        <Select
-          placeholder={"Accesibility Filter"}
-          color={`#2C2C68`}
-          rounded="full"
-          bgColor={"white"}
-          fontWeight={"bold"}
-          fontSize={17}
-          width="32%"
-          border={"none"}
-        >
-          <option value="option1" style={{ fontWeight: `normal` }}>
-            All
-          </option>
-          <Divider
-            orientation="horizontal"
-            borderStyle="solid"
-            borderColor={"#FF9100"}
-          />
-          <option value="option2" style={{ fontWeight: `normal` }}>
-            Mobility imapirement
-          </option>
-          <Divider
-            orientation="horizontal"
-            borderStyle="solid"
-            borderColor={"#FF9100"}
-          />
-          <option value="option3" style={{ fontWeight: `normal` }}>
-            Hearing impairment
-          </option>
-          <Divider
-            orientation="horizontal"
-            borderStyle="solid"
-            borderColor={"#FF9100"}
-          />
-          <option value="option4" style={{ fontWeight: `normal` }}>
-            Vision impairment
-          </option>
-          <Divider
-            orientation="horizontal"
-            borderStyle="solid"
-            borderColor={"#FF9100"}
-          />
-          <option value="option5" style={{ fontWeight: `normal` }}>
-            Neurodivergent
-          </option>
-           <Divider
-            orientation="horizontal"
-            borderStyle="solid"
-            borderColor={"#FF9100"}
-          />
-        </Select> */}
-
+    
         {/* Venue category menu: */}
+
         <Menu>
           <MenuButton
             color={`#2C2C68`}
@@ -206,8 +90,6 @@ const Search = ({
             fontWeight={"bold"}
             fontSize={17}
             width="32%"
-            // basis="0"
-            // grow="1"
           >
             {categoryText}
           </MenuButton>
@@ -270,8 +152,6 @@ const Search = ({
             fontWeight={"bold"}
             fontSize={17}
             width="32%"
-            // basis="0"
-            // grow="1"
           >
             {ratingText}
           </MenuButton>
@@ -316,58 +196,6 @@ const Search = ({
             <MenuItem onClick={() => ratingChanges("5")}>5 Stars</MenuItem>
           </MenuList>
         </Menu>
-        {/* Accesibility filter menu: */}
-        {/* <Menu>
-          <MenuButton
-            color={`#2C2C68`}
-            as={Button}
-            rounded="full"
-            bg={"white"}
-            rightIcon={<TriangleDownIcon color={`#FF9100`} />}
-            fontWeight={"bold"}
-            fontSize={17}
-            width="32%"
-            // basis="0"
-            // grow="1"
-          >
-             {accessibilityText}
-
-          </MenuButton>
-          <MenuList
-            rounded="lg"
-            border="2px"
-            borderColor={`#FF9100`}
-            textColor={"#2C2C68"}
-          >
-            <MenuItem onClick={() => accessibilityChanges("Mobility")}>Mobility</MenuItem>
-            <Center height="10px">
-              <Divider
-                borderColor={`#FF9100`}
-                orientation="horizontal"
-                width="90%"
-              />
-            </Center>
-            <MenuItem onClick={() => accessibilityChanges("Visual")}>
-              Visual
-            </MenuItem>
-            <Center height="10px">
-              <Divider
-                borderColor={`#FF9100`}
-                orientation="horizontal"
-                width="90%"
-              />
-            </Center>
-            <MenuItem onClick={() => accessibilityChanges("Hearing")}>Hearing</MenuItem>
-            <Center height="10px">
-              <Divider
-                borderColor={`#FF9100`}
-                orientation="horizontal"
-                width="90%"
-              />
-            </Center>
-            <MenuItem onClick={() => accessibilityChanges("Neurodivergent")}>Neurodivergent</MenuItem>
-          </MenuList>
-        </Menu>   */}
 
         <OurButton
           onClick={searchFilter}
