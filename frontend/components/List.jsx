@@ -6,6 +6,8 @@ import {
   Box,
   SkeletonCircle,
   SkeletonText,
+  Divider,
+  Center,
 } from "@chakra-ui/react";
 
 // When the page loads, the skeleton frame shows, but only if we're using the API.
@@ -63,12 +65,21 @@ const List = ({ places, isLoading, setIsCard, setCardData }) => {
         {places.length ? (
           places &&
           places.map((place, i) => (
-            <PlaceDetail
-              place={place}
-              key={i}
-              setIsCard={setIsCard}
-              setCardData={setCardData}
-            />
+            <>
+              <PlaceDetail
+                place={place}
+                key={i}
+                setIsCard={setIsCard}
+                setCardData={setCardData}
+              />
+              <Divider
+                orientation="horizontal"
+                borderColor={`#FF9100`}
+                weight="10px"
+                width="95%"
+                alignSelf="center"
+              />
+            </>
           ))
         ) : (
           <Text fontSize="38px" justify="center">

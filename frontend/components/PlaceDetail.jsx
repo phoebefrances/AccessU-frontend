@@ -14,8 +14,8 @@ const PlaceDetail = ({ place, setIsCard, setCardData }) => {
       bg={"whiteAlpha.900"}
       px={4}
       py={2}
-      mb={2}
-      shadow="lg"
+      m={1} //comment out if want fewer cards to display at the same time
+      // shadow="lg"
       alignItems={"left"}
       direction="row"
       maxWidth={"500px"}
@@ -25,7 +25,7 @@ const PlaceDetail = ({ place, setIsCard, setCardData }) => {
         setIsCard(true);
       }}
     >
-      <Flex direction="column">
+      <Flex direction="column" width="full">
         <Flex alignItems={"center"} width={"full"}>
           <Text
             textTransform={"capitalize"}
@@ -40,7 +40,7 @@ const PlaceDetail = ({ place, setIsCard, setCardData }) => {
         </Flex>
 
         {place?.address && (
-          <Flex alignItems={"center"} width={"full"} px={1} my={2}>
+          <Flex align={"start"} width={"full"} my={2}>
             <IoLocation fontSize={20} color="#2C2C68" />
 
             <Text fontSize={"12px"} fontWeight={500} color={"gray.700"} ml={1}>
