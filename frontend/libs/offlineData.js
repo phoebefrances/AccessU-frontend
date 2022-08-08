@@ -543,9 +543,9 @@ export const places = [
     name: "Caffè Concerto ",
     rating: "2.0",
     photo: "https://www.caffeconcerto.co.uk/images-branches/kings-2-jpg_1465827697.jpg",
-    address: "39 S Molton St, London W1K 5RN",
-    longitude: "-0.1485704880170873",
-    latitude: "51.51428112942227",
+    address: "34 Old Compton St, London W1D 4TS",
+    longitude: "-0.13113938801707892",
+    latitude: "51.513520548040034",
     acessibility: {
       accessible: true,
       eye: true,
