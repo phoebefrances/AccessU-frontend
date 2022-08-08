@@ -300,14 +300,14 @@ export const places = [
   },
   {
     category: "shop",
-    name: "Big Sainsburys",
-    rating: "3.0",
+    name: "National Gallery Shop",
+    rating: "2.0",
     photo:
-      "https://cached.imagescaler.hbpl.co.uk/resize/scaleHeight/815/cached.offlinehbpl.hbpl.co.uk/news/OTM/sainsburysGettyImages-1192224191.jpg",
+      "https://www.nationalgallery.org.uk/media/29323/shopping-feature-page-header.gif",
 
-    address: "18 Castle Street, Buckingham MK18 1BP England",
-    longitude: "-0.1386631551988991",
-    latitude: "51.51787642984117",
+    address: "National Gallery, London WC2N 5DN",
+    longitude: " -0.13005764175658302",
+    latitude: "51.50862555612391",
     acessibility: {
       accessible: true,
       eye: true,
@@ -316,9 +316,9 @@ export const places = [
       other1: null,
       other2: null,
     },
-    phone_number: "+44 (0) 9845754223",
-    web_address: "www.sainsburys.com",
-    opening_times: "7am-7pm",
+    phone_number: "020 7747 2870",
+    web_address: "https://shop.nationalgallery.org.uk/",
+    opening_times: "10am-6pm",
   },
   {
     category: "shop",
