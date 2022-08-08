@@ -5,13 +5,14 @@ import { IoLocation } from "react-icons/io5";
 import LargeCard from "./LargeCard";
 
 //👇setCoordinates and setBounds only used with API
-const Map = ({ coordinates, /*setCoordinates, setBounds,*/ places }) => {
-  //This state changes from false to true when a pin/marker (IoLocation in the code) is clicked, indicating that a venue has been selected
-  const [isCard, setIsCard] = useState(false);
-
-  //This state holds the details of the venue that has been selected. This is later passed to Large Card to be displayed.
-  const [cardData, setCardData] = useState(null);
-
+const Map = ({
+  coordinates,
+  /*setCoordinates, setBounds,*/ places,
+  isCard,
+  setIsCard,
+  cardData,
+  setCardData,
+}) => {
   return (
     <Box width={"full"} height={"full"}>
       <GoogleMapReact

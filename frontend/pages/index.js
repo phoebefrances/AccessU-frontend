@@ -13,6 +13,12 @@ import Head from "next/head";
 import { places } from "../libs/offlineData.js";
 
 const Home = () => {
+  //This state changes from false to true when a pin/marker (IoLocation in the code) is clicked, indicating that a venue has been selected
+  const [isCard, setIsCard] = useState(false);
+
+  //This state holds the details of the venue that has been selected. This is later passed to Large Card to be displayed.
+  const [cardData, setCardData] = useState(null);
+
   //👇 Comment out if using offline database. Uncomment if using API
   // const [places, setPlaces] = useState({});
 
@@ -23,10 +29,10 @@ const Home = () => {
   const [category, setCategory] = useState("");
 
   // this sets the initial state of the ratings.
- 
+
   const [ratings, setRatings] = useState("");
 
-  // This is not used, unless this is used in conjunction with API. It is not useful without that. 
+  // This is not used, unless this is used in conjunction with API. It is not useful without that.
 
   const [isLoading, setIsLoading] = useState(false);
 
@@ -60,11 +66,10 @@ const Home = () => {
           ratings == 420;
       //☝️ else, if neither category nor rating is selected, it filters for places with rating of 420, which don't exist in our database
     }
-    
+
     const filteredData = places.filter(conditionSelector);
 
     setFilteredPlaces(filteredData);
-
   }, [ratings, category]);
 
   // 👇 Updates the data to the users choice of category or location
@@ -102,7 +107,12 @@ const Home = () => {
         setCategory={setCategory}
       />
 
-      <List places={filteredPlaces} isLoading={isLoading} />
+      <List
+        places={filteredPlaces}
+        isLoading={isLoading}
+        setIsCard={setIsCard}
+        setCardData={setCardData}
+      />
 
       <Map
         setCoordinates={setCoordinates}
@@ -110,6 +120,10 @@ const Home = () => {
         //👇 Comment out if using offline database. Uncomment if using API
         // setBounds={setBounds}
         places={filteredPlaces}
+        isCard={isCard}
+        setIsCard={setIsCard}
+        cardData={cardData}
+        setCardData={setCardData}
       />
     </Flex>
   );

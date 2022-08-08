@@ -7,7 +7,7 @@ import AccessibleIcon from "@mui/icons-material/Accessible";
 import PsychologyIcon from "@mui/icons-material/Psychology";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 
-const PlaceDetail = ({ place }) => {
+const PlaceDetail = ({ place, setIsCard, setCardData }) => {
   return (
     <Flex
       marginTop="15px"
@@ -20,6 +20,10 @@ const PlaceDetail = ({ place }) => {
       direction="row"
       maxWidth={"500px"}
       distribute="space-between"
+      onClick={() => {
+        setCardData(place);
+        setIsCard(true);
+      }}
     >
       <Flex direction="column">
         <Flex alignItems={"center"} width={"full"}>
@@ -138,6 +142,3 @@ const PlaceDetail = ({ place }) => {
 };
 
 export default PlaceDetail;
-
-
- 
