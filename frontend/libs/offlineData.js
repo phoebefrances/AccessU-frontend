@@ -278,14 +278,14 @@ export const places = [
   },
   {
     category: "shop",
-    name: "Big Sainsburys",
-    rating: "5.0",
+    name: "`Disney Store",
+    rating: "3.0",
     photo:
-      "https://cached.imagescaler.hbpl.co.uk/resize/scaleHeight/815/cached.offlinehbpl.hbpl.co.uk/news/OTM/sainsburysGettyImages-1192224191.jpg",
+      "https://media.nbcchicago.com/2021/03/disney-store-generica.jpg?quality=85&strip=all&crop&resize=1200%2C675",
 
-    address: "18 Castle Street, Buckingham MK18 1BP England",
-    longitude: "-0.1386631551988991",
-    latitude: "51.51787642984117",
+    address: "350-352 Oxford St, London W1C 1JH",
+    longitude: "-0.14834630151083233",
+    latitude: "51.51481899708076",
     acessibility: {
       accessible: true,
       eye: true,
@@ -294,9 +294,9 @@ export const places = [
       other1: null,
       other2: null,
     },
-    phone_number: "+44 (0) 9845754223",
-    web_address: "www.sainsburys.com",
-    opening_times: "7am-7pm",
+    phone_number: "020 7491 9136",
+    web_address: "https://www.shopdisney.co.uk/",
+    opening_times: "9am-10pm",
   },
   {
     category: "shop",
