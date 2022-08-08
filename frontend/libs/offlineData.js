@@ -256,14 +256,14 @@ export const places = [
   },
   {
     category: "shop",
-    name: "Big Sainsburys",
+    name: "Liberty London",
     rating: "4.0",
     photo:
-      "https://cached.imagescaler.hbpl.co.uk/resize/scaleHeight/815/cached.offlinehbpl.hbpl.co.uk/news/OTM/sainsburysGettyImages-1192224191.jpg",
+      "https://d53bpfpeyyyn7.cloudfront.net/Pictures/380x253/9/1/8/3079918_libertyoflondon_925602_crop.jpg",
 
-    address: "18 Castle Street, Buckingham MK18 1BP England",
-    longitude: "-0.1386631551988991",
-    latitude: "51.51787642984117",
+    address: "Regent St., Carnaby, London W1B 5AH",
+    longitude: "-0.1401228705907921",
+    latitude: "51.513945059519074",
     acessibility: {
       accessible: true,
       eye: true,
@@ -272,9 +272,9 @@ export const places = [
       other1: null,
       other2: null,
     },
-    phone_number: "+44 (0) 9845754223",
-    web_address: "www.sainsburys.com",
-    opening_times: "7am-7pm",
+    phone_number: "020 3893 3062",
+    web_address: "https://www.libertylondon.com/",
+    opening_times: "10am-7pm",
   },
   {
     category: "shop",
