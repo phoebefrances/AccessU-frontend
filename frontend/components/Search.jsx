@@ -14,7 +14,6 @@ import React, { useState } from "react";
 import { TriangleDownIcon, Search2Icon } from "@chakra-ui/icons";
 import OurButton from "./OurButton";
 
-
 const Search = ({
   setCoordinates,
   setCategory,
@@ -40,7 +39,6 @@ const Search = ({
     setCategory(cat);
     setCategoryText(cat);
   }
-
 
   function ratingChanges(rate) {
     console.log(rate);
@@ -77,7 +75,7 @@ const Search = ({
           rounded="full"
           width="32%"
         />
-    
+
         {/* Venue category menu: */}
 
         <Menu>
@@ -139,8 +137,6 @@ const Search = ({
           </MenuList>
         </Menu>
         <Divider orientation="vertical" />
-
-        {/* Rating filter menu */}
 
         <Menu>
           <MenuButton
