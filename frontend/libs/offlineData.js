@@ -234,14 +234,14 @@ export const places = [
   },
   {
     category: "shop",
-    name: "Big Sainsburys",
-    rating: "2.0",
+    name: "The Monocle Shop",
+    rating: "5.0",
     photo:
-      "https://cached.imagescaler.hbpl.co.uk/resize/scaleHeight/815/cached.offlinehbpl.hbpl.co.uk/news/OTM/sainsburysGettyImages-1192224191.jpg",
+      "https://www.hipshops.com/img/shopPhotos/333/2.jpeg",
 
-    address: "18 Castle Street, Buckingham MK18 1BP England",
-    longitude: "-0.1386631551988991",
-    latitude: "51.51787642984117",
+    address: "34 Chiltern St, London W1U 7QH",
+    longitude: "-0.154891203358562",
+    latitude: "51.51913678809084",
     acessibility: {
       accessible: true,
       eye: true,
