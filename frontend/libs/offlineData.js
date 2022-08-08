@@ -278,7 +278,7 @@ export const places = [
   },
   {
     category: "shop",
-    name: "`Disney Store",
+    name: "Disney Store",
     rating: "3.0",
     photo:
       "https://media.nbcchicago.com/2021/03/disney-store-generica.jpg?quality=85&strip=all&crop&resize=1200%2C675",
@@ -322,14 +322,14 @@ export const places = [
   },
   {
     category: "shop",
-    name: "Big Sainsburys",
-    rating: "3.0",
+    name: "Whole Foods Market",
+    rating: "1.0",
     photo:
-      "https://cached.imagescaler.hbpl.co.uk/resize/scaleHeight/815/cached.offlinehbpl.hbpl.co.uk/news/OTM/sainsburysGettyImages-1192224191.jpg",
+      "https://media.timeout.com/images/103584667/1372/772/image.jpg",
 
-    address: "18 Castle Street, Buckingham MK18 1BP England",
-    longitude: "-0.1386631551988991",
-    latitude: "51.51787642984117",
+    address: "20 Glasshouse St, London W1B 5AR",
+    longitude: "-0.13618508801715443",
+    latitude: "51.51071162558321",
     acessibility: {
       accessible: true,
       eye: true,
@@ -338,31 +338,9 @@ export const places = [
       other1: null,
       other2: null,
     },
-    phone_number: "+44 (0) 9845754223",
-    web_address: "www.sainsburys.com",
-    opening_times: "7am-7pm",
-  },
-  {
-    category: "shop",
-    name: "Big Sainsburys",
-    rating: "3.0",
-    photo:
-      "https://cached.imagescaler.hbpl.co.uk/resize/scaleHeight/815/cached.offlinehbpl.hbpl.co.uk/news/OTM/sainsburysGettyImages-1192224191.jpg",
-
-    address: "18 Castle Street, Buckingham MK18 1BP England",
-    longitude: "-0.1386631551988991",
-    latitude: "51.51787642984117",
-    acessibility: {
-      accessible: true,
-      eye: true,
-      hearing: false,
-      brain: false,
-      other1: null,
-      other2: null,
-    },
-    phone_number: "+44 (0) 9845754223",
-    web_address: "www.sainsburys.com",
-    opening_times: "7am-7pm",
+    phone_number: "020 7406 3100",
+    web_address: "https://www.wholefoodsmarket.co.uk/stores/piccadilly/",
+    opening_times: "8am-10pm",
   },
   {
     category: "gym",
