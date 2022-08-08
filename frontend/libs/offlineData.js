@@ -503,9 +503,9 @@ export const places = [
     name: "Caffè Tropea",
     rating: "4.0",
     photo: 'https://www.euansguide.com/remote.axd/nucleusimagery.blob.core.windows.net%2flive%2f1753051f-8a71-4a15-b538-76ba7cd346a2?width=840&height=378&mode=crop',
-    address: "Russell Square, London WC1B 5EH",
-    longitude: "-0.1259253303460434",
-    latitude: "51.522911265339815", 
+    address: "3 Green's Ct, London W1F 0HD",
+    longitude: "-0.13453641870033906",
+    latitude: " 51.51264477396607", 
     acessibility: {
       accessible: true,
       eye: true,
