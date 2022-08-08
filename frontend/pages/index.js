@@ -3,10 +3,11 @@ import { useEffect, useState } from "react";
 import Header from "../components/Header";
 import List from "../components/List";
 import Map from "../components/Map";
-import PlaceDetail from "../components/PlaceDetail";
-import { getPlacesData } from "./api/getPlacesData";
+
+//👇 Comment out if using offline database. Uncomment if using API
+// import { getPlacesData } from "./api/getPlacesData";
+
 import Head from "next/head";
-import LargeCard from "../components/LargeCard";
 
 //👇 Comment out if using API. Uncomment if using offline database.
 import { places } from "../libs/offlineData.js";
@@ -18,7 +19,8 @@ const Home = () => {
   const [searchStatus, setSearchStatus] = useState(false);
   const [filteredPlaces, setFilteredPlaces] = useState([]);
   const [coordinates, setCoordinates] = useState({});
-  const [bounds, setBounds] = useState(null);
+  //👇 Comment out if using offline database. Uncomment if using API
+  // const [bounds, setBounds] = useState(null);
   const [category, setCategory] = useState("");
 
   //❗type is the same as category but we sometimes use one sometimes the other- confusing :(
@@ -108,7 +110,8 @@ const Home = () => {
       <Map
         setCoordinates={setCoordinates}
         coordinates={coordinates}
-        setBounds={setBounds}
+        //👇 Comment out if using offline database. Uncomment if using API
+        // setBounds={setBounds}
         places={filteredPlaces}
       />
     </Flex>

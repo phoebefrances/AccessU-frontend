@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Box, Image, Spacer, Text, Flex } from "@chakra-ui/react";
 import { Rating } from "@material-ui/lab";
 
@@ -110,19 +110,9 @@ const LargeCard = ({ cardData }) => {
         </Text>
         <br></br>
 
-        <Flex
-          width="full"
-          direction="column"
-          gap="3"
-          pt={3}
-        >
+        <Flex width="full" direction="column" gap="3" pt={3}>
           {cardData.acessibility?.accessible && (
-            <Flex
-              alignItems="center"
-              width="full"
-              px={1}
-              height="25%"
-            >
+            <Flex alignItems="center" width="full" px={1} height="25%">
               <Text color="#032396">
                 <AccessibleIcon fontSize="large" />
               </Text>
@@ -154,12 +144,7 @@ const LargeCard = ({ cardData }) => {
             </Flex>
           )}
           {cardData.acessibility?.hearing && (
-            <Flex
-              alignItems={"center"}
-              width={"full"}
-              px={1}
-              height={"25%"}
-            >
+            <Flex alignItems={"center"} width={"full"} px={1} height={"25%"}>
               <Text color={"#032396"}>
                 <HearingIcon fontSize="large" />
               </Text>
@@ -174,12 +159,7 @@ const LargeCard = ({ cardData }) => {
             </Flex>
           )}
           {cardData.acessibility?.brain && (
-            <Flex
-              alignItems={"center"}
-              width={"full"}
-              px={1}
-              height={"25%"}
-            >
+            <Flex alignItems={"center"} width={"full"} px={1} height={"25%"}>
               {" "}
               <Text color={"#032396"}>
                 <PsychologyIcon fontSize="large" />

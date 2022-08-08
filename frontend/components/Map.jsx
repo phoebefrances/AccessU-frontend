@@ -4,7 +4,8 @@ import GoogleMapReact from "google-map-react";
 import { IoLocation } from "react-icons/io5";
 import LargeCard from "./LargeCard";
 
-const Map = ({ coordinates, setCoordinates, setBounds, places }) => {
+//👇setCoordinates and setBounds only used with API
+const Map = ({ coordinates, /*setCoordinates, setBounds,*/ places }) => {
   //This state changes from false to true when a pin/marker (IoLocation in the code) is clicked, indicating that a venue has been selected
   const [isCard, setIsCard] = useState(false);
 
@@ -22,10 +23,13 @@ const Map = ({ coordinates, setCoordinates, setBounds, places }) => {
         options={{
           styles: require("../libs/map-style1.json"),
         }}
-        onChange={(e) => {
-          setCoordinates({ lat: e.center.lat, lng: e.center.lng });
-          setBounds({ ne: e.marginBounds.ne, sw: e.marginBounds.sw });
-        }}
+        //👇 This sets bounds within which the API pins are displayed. This is useful only if we use API. No use for this if we use our own data.
+        //👇 Comment out if using offline database. Uncomment if using API
+        // onChange={(e) => {
+        //   setCoordinates({ lat: e.center.lat, lng: e.center.lng });
+        //   setBounds({ ne: e.marginBounds.ne, sw: e.marginBounds.sw });
+        // }}
+
         //added click event by setting setCardData to places and passed the child as an array to places to get the index number (not getting an object) and set setisCard to true
         onChildClick={(child) => {
           setCardData(places[child]);
