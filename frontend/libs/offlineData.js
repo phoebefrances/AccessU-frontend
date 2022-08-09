@@ -204,7 +204,7 @@ export const places = [
     photo:
       "https://www.hipshops.com/img/shopPhotos/333/2.jpeg",
 
-    address: "34 Chiltern St, London W1U 7QH",
+    address: "34 Chiltern St, 1U 7QH",
     longitude: "-0.154891203358562",
     latitude: "51.51913678809084",
       accessible: true,
@@ -222,7 +222,7 @@ export const places = [
     photo:
       "https://d53bpfpeyyyn7.cloudfront.net/Pictures/380x253/9/1/8/3079918_libertyoflondon_925602_crop.jpg",
 
-    address: "Regent St., Carnaby, London W1B 5AH",
+    address: "Regent St., Carnaby, W1B 5AH",
     longitude: "-0.1401228705907921",
     latitude: "51.513945059519074",
       accessible: true,
@@ -240,7 +240,7 @@ export const places = [
     photo:
       "https://media.nbcchicago.com/2021/03/disney-store-generica.jpg?quality=85&strip=all&crop&resize=1200%2C675",
 
-    address: "350-352 Oxford St, London W1C 1JH",
+    address: "350-352 Oxford St, W1C 1JH",
     longitude: "-0.14834630151083233",
     latitude: "51.51481899708076",
       accessible: true,
@@ -258,7 +258,7 @@ export const places = [
     photo:
       "https://www.nationalgallery.org.uk/media/29323/shopping-feature-page-header.gif",
 
-    address: "National Gallery, London WC2N 5DN",
+    address: "National Gallery, WC2N 5DN",
     longitude: " -0.13005764175658302",
     latitude: "51.50862555612391",
       accessible: true,
@@ -276,7 +276,7 @@ export const places = [
     photo:
       "https://media.timeout.com/images/103584667/1372/772/image.jpg",
 
-    address: "20 Glasshouse St, London W1B 5AR",
+    address: "20 Glasshouse St, W1B 5AR",
     longitude: "-0.13618508801715443",
     latitude: "51.51071162558321",
     acessibility: {
@@ -298,7 +298,7 @@ export const places = [
     photo:
       "https://www.firmdalehotels.com/media/863517/0166-sh-gym.jpg?a=1&anchor=center&mode=crop&width=1596&height=1088&bgcolor=fff&sig=2491ab2ab237c0021a1dadf66ff4295e",
 
-    address: "18 Castle Street, Buckingham MK18 1BP England",
+    address: "67 Brewer St, W1F 9US",
     longitude: "-0.13119588562767506",
     latitude: "51.51683492491375",
       accessible: true,
@@ -311,12 +311,12 @@ export const places = [
   },
   {
     category: "gym",
-    name: "PureGym London Borough",
+    name: "PureGym",
     rating: "4.0",
     photo:
       "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/pure-gym-in-lewisham-seen-with-shut-doors-gyms-indoors-news-photo-1613991986.?crop=1xw:0.74963xh;center,top&resize=1200:*",
 
-    address: "13-16, Empire Square West, Long Ln, London SE1 4NA",
+    address: "13-16, Empire Square West, Long Ln, SE1 4NA",
     longitude: "-0.0907702865000979",
     latitude: "51.50074553962888",
       accessible: true,
@@ -329,12 +329,12 @@ export const places = [
   },
   {
     category: "gym",
-    name: "The Gym Group London Waterloo",
+    name: "The Gym Group",
     rating: "2.0",
     photo:
       "https://cdn.media.amplience.net/i/thegymgroup/The_Gym_Group-Basildon-Entrance?fmt=auto&h=250&w=412&sm=c&qlt=default&$qlt$&$poi$",
 
-    address: "195-203 Waterloo Rd, Baron's Pl, London SE1 8UX",
+    address: "195-203 Waterloo Rd, Baron's Pl, SE1 8UX",
     longitude: "-0.10698782773308783",
     latitude: "51.50100720425664",
       accessible: true,
@@ -347,11 +347,11 @@ export const places = [
   },
   {
     category: "gym",
-    name: "King's Sport - London Bridge Gym",
+    name: "King's Sport",
     rating: "1.0",
     photo:
       "https://www.kcl.ac.uk/newimages/sport/featureimages/gds-feature.png",
-    address: "135 Borough High St, London SE1 1NP",
+    address: "135 Borough High St, SE1 1NP",
     longitude: "-0.08928129869433117",
     latitude: "51.503993178313614",
       accessible: true,
@@ -364,10 +364,10 @@ export const places = [
   },
   {
     category: "gym",
-    name: "CrossFit Central London",
+    name: "CrossFit Central",
     rating: "3.0",
-    photo: "https://pbs.twimg.com/media/CP_DTthWUAAUnvU.jpg",
-    address: "56, 57 Ewer St, London SE1 0NR",
+    photo: "https://img.grouponcdn.com/deal/4YfqedHvgywidijhgqGh/eT-1000x600/v1/t600x362.jpg",
+    address: "56, 57 Ewer St,  SE1 0NR",
     longitude: "-0.09915182744825717",
     latitude: "51.50460757520947",
       accessible: true,
@@ -380,12 +380,12 @@ export const places = [
   },
   {
     category: "gym",
-    name: "Fitness First London Bridge (The Shard)",
+    name: "Fitness First",
     rating: "2.0",
     photo:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCWCzheZsdVQY8qs_Mtx5p1TYUUthRQU0AWQ&usqp=CAU",
     address:
-      "Bridge Hotel, Basement Level, 8-18 London Bridge St, London SE1 9SG",
+      "8-18 London Bridge St, SE1 9SG",
     longitude: "-0.08799383842212893",
     latitude: "51.505996615916146",
       accessible: true,
@@ -401,7 +401,7 @@ export const places = [
     name: "Ace Cafe London",
     rating: "5.0",
     photo: 'https://www.bikesure.co.uk/bikesureblog/wp-content/uploads/2018/06/unnamed.jpg',
-    address: "17 Berwick St, London W1F 0PT",
+    address: "17 Berwick St, W1F 0PT",
     longitude: "-0.1338628658429789",
     latitude: "51.51371860186969",
       accessible: true,
@@ -417,7 +417,7 @@ export const places = [
     name: "Caffè Tropea",
     rating: "4.0",
     photo: 'https://www.euansguide.com/remote.axd/nucleusimagery.blob.core.windows.net%2flive%2f1753051f-8a71-4a15-b538-76ba7cd346a2?width=840&height=378&mode=crop',
-    address: "3 Green's Ct, London W1F 0HD",
+    address: "3 Green's Ct,  W1F 0HD",
     longitude: "-0.13453641870033906",
     latitude: " 51.51264477396607",
       accessible: true,
@@ -433,7 +433,7 @@ export const places = [
     name: "Lilly's cafe",
     rating: "3.0",
     photo:'https://eqtrneuprod01coventsa.blob.core.windows.net/cache/3/2/4/2/d/f/3242dfdd1bc43cfb68d0476a6cfb4f04ed2f4d58.webp',
-    address: "3 Henrietta St, London WC2E 8LU",
+    address: "3 Henrietta St, WC2E 8LU",
     longitude: "-0.12288749966307208",
     latitude: " 51.51144940062013",
       accessible: true,
@@ -449,7 +449,7 @@ export const places = [
     name: "Caffè Concerto ",
     rating: "2.0",
     photo: "https://www.caffeconcerto.co.uk/images-branches/kings-2-jpg_1465827697.jpg",
-    address: "34 Old Compton St, London W1D 4TS",
+    address: "34 Old Compton St, W1D 4TS",
     longitude: "-0.13113938801707892",
     latitude: "51.513520548040034",
       accessible: true,
@@ -466,7 +466,7 @@ export const places = [
     rating: "1.0",
     photo: 'https://media-cdn.tripadvisor.com/media/photo-s/1a/70/49/00/starbucks-oxford-road.jpg',
 
-    address: "G13, 381 Oxford St, London W1C 2JS",
+    address: "G13, 381 Oxford St, W1C 2JS",
     longitude: "-0.14852962536166095",
     latitude: "51.51426534836615",
       accessible: false,
