@@ -366,7 +366,7 @@ export const places = [
     category: "gym",
     name: "CrossFit Central London",
     rating: "3.0",
-    photo: "https://pbs.twimg.com/media/CP_DTthWUAAUnvU.jpg",
+    photo: "https://img.grouponcdn.com/deal/4YfqedHvgywidijhgqGh/eT-1000x600/v1/t600x362.jpg",
     address: "56, 57 Ewer St, London SE1 0NR",
     longitude: "-0.09915182744825717",
     latitude: "51.50460757520947",
