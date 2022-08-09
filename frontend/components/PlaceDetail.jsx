@@ -46,7 +46,7 @@ const PlaceDetail = ({ place }) => {
         )}
 
         <Flex width="full">
-          {place.acessibility?.accessible && (
+          {place?.accessible && (
             <Flex
               alignItems={"center"}
               width={"20%"}
@@ -64,7 +64,7 @@ const PlaceDetail = ({ place }) => {
               </Text>
             </Flex>
           )}
-          {place.acessibility?.eye && (
+          {place?.eye && (
             <Flex
               alignItems={"center"}
               width={"20%"}
@@ -82,7 +82,7 @@ const PlaceDetail = ({ place }) => {
               </Text>
             </Flex>
           )}
-          {place.acessibility?.hearing && (
+          {place?.hearing && (
             <Flex
               alignItems={"center"}
               width={"20%"}
@@ -100,7 +100,7 @@ const PlaceDetail = ({ place }) => {
               </Text>
             </Flex>
           )}
-          {place.acessibility?.brain && (
+          {place?.brain && (
             <Flex
               alignItems={"center"}
               width={"20%"}
