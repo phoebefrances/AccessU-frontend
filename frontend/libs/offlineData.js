@@ -316,7 +316,7 @@ export const places = [
     photo:
       "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/pure-gym-in-lewisham-seen-with-shut-doors-gyms-indoors-news-photo-1613991986.?crop=1xw:0.74963xh;center,top&resize=1200:*",
 
-    address: "13-16, Empire Square West, Long Ln, London SE1 4NA",
+    address: "13-16, Empire Square West, Long Ln, SE1 4NA",
     longitude: "-0.0907702865000979",
     latitude: "51.50074553962888",
       accessible: true,
@@ -334,7 +334,7 @@ export const places = [
     photo:
       "https://cdn.media.amplience.net/i/thegymgroup/The_Gym_Group-Basildon-Entrance?fmt=auto&h=250&w=412&sm=c&qlt=default&$qlt$&$poi$",
 
-    address: "195-203 Waterloo Rd, Baron's Pl, London SE1 8UX",
+    address: "195-203 Waterloo Rd, Baron's Pl, SE1 8UX",
     longitude: "-0.10698782773308783",
     latitude: "51.50100720425664",
       accessible: true,
@@ -351,7 +351,7 @@ export const places = [
     rating: "1.0",
     photo:
       "https://www.kcl.ac.uk/newimages/sport/featureimages/gds-feature.png",
-    address: "135 Borough High St, London SE1 1NP",
+    address: "135 Borough High St, SE1 1NP",
     longitude: "-0.08928129869433117",
     latitude: "51.503993178313614",
       accessible: true,
@@ -367,7 +367,7 @@ export const places = [
     name: "CrossFit Central London",
     rating: "3.0",
     photo: "https://img.grouponcdn.com/deal/4YfqedHvgywidijhgqGh/eT-1000x600/v1/t600x362.jpg",
-    address: "56, 57 Ewer St, London SE1 0NR",
+    address: "56, 57 Ewer St,  SE1 0NR",
     longitude: "-0.09915182744825717",
     latitude: "51.50460757520947",
       accessible: true,
@@ -385,7 +385,7 @@ export const places = [
     photo:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCWCzheZsdVQY8qs_Mtx5p1TYUUthRQU0AWQ&usqp=CAU",
     address:
-      "Bridge Hotel, Basement Level, 8-18 London Bridge St, London SE1 9SG",
+      "Bridge Hotel, Basement Level, 8-18 London Bridge St, SE1 9SG",
     longitude: "-0.08799383842212893",
     latitude: "51.505996615916146",
       accessible: true,
@@ -401,7 +401,7 @@ export const places = [
     name: "Ace Cafe London",
     rating: "5.0",
     photo: 'https://www.bikesure.co.uk/bikesureblog/wp-content/uploads/2018/06/unnamed.jpg',
-    address: "17 Berwick St, London W1F 0PT",
+    address: "17 Berwick St, W1F 0PT",
     longitude: "-0.1338628658429789",
     latitude: "51.51371860186969",
       accessible: true,
