@@ -40,7 +40,7 @@ export const places = [
     name: "Luigi's Ristorantino",
     rating: "3.0",
     photo:
-      "http://www.boccadilupo.com/images/home_image/large/bocca-di-lupo-home_image_image-154272912518571647.jpg",
+    "https://www.thespruceeats.com/thmb/1UnyPp_02WC5KjATQM-9-QAAKo4=/1885x1414/smart/filters:no_upscale()/Cream-tea-GettyImages-183814030-58c5ae3e3df78c353c570344.jpg",
     address: "420 Spaghetti Row, W1 6IT",
     longitude: "-0.13481278619092814",
     latitude: "51.51246090514994",
