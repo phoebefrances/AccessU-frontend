@@ -111,7 +111,7 @@ const LargeCard = ({ cardData }) => {
         <br></br>
 
         <Flex width="full" direction="column" gap="3" pt={3}>
-          {cardData.acessibility?.accessible && (
+          {cardData?.accessible && (
             <Flex alignItems="center" width="full" px={1} height="25%">
               <Text color="#032396">
                 <AccessibleIcon fontSize="large" />
@@ -122,7 +122,7 @@ const LargeCard = ({ cardData }) => {
               </Text>
             </Flex>
           )}
-          {cardData.acessibility?.eye && (
+          {cardData?.eye && (
             <Flex
               alignItems={"center"}
               width={"full"}
@@ -143,7 +143,7 @@ const LargeCard = ({ cardData }) => {
               </Text>
             </Flex>
           )}
-          {cardData.acessibility?.hearing && (
+          {cardData?.hearing && (
             <Flex alignItems={"center"} width={"full"} px={1} height={"25%"}>
               <Text color={"#032396"}>
                 <HearingIcon fontSize="large" />
@@ -158,7 +158,7 @@ const LargeCard = ({ cardData }) => {
               </Text>
             </Flex>
           )}
-          {cardData.acessibility?.brain && (
+          {cardData?.brain && (
             <Flex alignItems={"center"} width={"full"} px={1} height={"25%"}>
               {" "}
               <Text color={"#032396"}>
