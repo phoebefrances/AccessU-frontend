@@ -94,7 +94,7 @@ export const places = [
     rating: "5.0",
     photo: "https://images.savoysystems.co.uk/PCH/9504007.jpg",
 
-    address: "18 Castle Street, Buckingham MK18 1BP England",
+    address: "200 Castle Street, W1D 3QN",
     longitude: "-0.13042340946513464",
     latitude: "51.51184071143942",
       accessible: true,
@@ -113,7 +113,7 @@ export const places = [
       "https://s3picturehouses.s3.eu-central-1.amazonaws.com/cinema/ph_15651810625d4ac486695e1.jpg",
 
     address:
-      "Piccadilly Circus, Corner of Great Windmill Street and, Shaftesbury Ave, London W1D 7DH",
+      "101 Castle Street, W1D 3QN",
 
     longitude: "-0.1337454595132821",
     latitude: "51.510816147883446",
@@ -132,7 +132,7 @@ export const places = [
     photo:
       "https://images.squarespace-cdn.com/content/54f84e69e4b021b24483c6ef/1426513826276-B26Q5RJV1J9QR2YOP7N6/image-asset.jpeg?content-type=image%2Fjpeg",
 
-    address: "99 Shaftesbury Ave, London W1D 5DY",
+    address: "99 Shaftesbury Ave, W1D 5DY",
     longitude: "-0.1305654284984301",
     latitude: "51.512851727291334",
       accessible: true,
@@ -150,7 +150,7 @@ export const places = [
     photo:
       "https://c8.alamy.com/comp/2CC0M9P/a-lone-woman-walks-past-he-curzon-mayfair-cinema-in-curzon-street-mayfair-london-england-uk-2CC0M9P.jpg",
 
-    address: "14 D'Arblay St, London W1F 8DY",
+    address: "14 D'Arblay St, W1F 8DY",
     longitude: "-0.1364835015108443",
     latitude: "51.51471926727698",
       accessible: true,
@@ -168,7 +168,7 @@ export const places = [
     photo:
       "https://i2-prod.birminghammail.co.uk/incoming/article17247369.ece/ALTERNATES/s1200c/3_Broad-Street-roadworks.jpg",
 
-    address: "17 Berwick St, London W1F 0PT",
+    address: "17 Berwick St, W1F 0PT",
     longitude: "-0.1346889861692242",
     latitude: "51.51377201661237",
       accessible: true,
@@ -186,7 +186,7 @@ export const places = [
     photo:
       "https://lh5.googleusercontent.com/p/AF1QipPfGBw5lUaPbrobd3Hlu9lbKUGunHG4_J3VXFcz=w1920-h1080-k-no",
 
-    address: "11/18 Panton St, London SW1Y 4DP",
+    address: "11/18 Panton St, SW1Y 4DP",
     longitude: "-0.13128621685259437",
     latitude: "51.50971082851679",
       accessible: true,
