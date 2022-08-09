@@ -12,6 +12,26 @@ import Head from "next/head";
 import { places } from "../libs/offlineData.js";
 
 const Home = () => {
+
+const [backendData, setBackendData] = useState([])
+
+  useEffect(() => {
+    const getAllPlaces = async () => {
+      try {
+        const response = await fetch(`https://places-table-undefined.herokuapp.com/places`);
+        console.log(response)
+        const data = await response.json();
+        setBackendData(data.payload);
+        console.log(data.payload);
+      } catch (error) {
+        console.log("error", error);
+      }
+    };
+    getAllPlaces();
+  }, []);
+
+  console.log(backendData);
+
   //STATES:
   //Changes from false to true when the user clicks a pin/marker. Then back to false when the user closes the large card pop-up:
   const [isCard, setIsCard] = useState(false);
@@ -50,6 +70,7 @@ const Home = () => {
       }
     );
   }, []);
+
 
   // This now selects places by rating OR category
   useEffect(() => {
