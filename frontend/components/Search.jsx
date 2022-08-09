@@ -13,12 +13,8 @@ import { Autocomplete } from "@react-google-maps/api";
 import React, { useState } from "react";
 import { TriangleDownIcon, Search2Icon } from "@chakra-ui/icons";
 import OurButton from "./OurButton";
-
-const Search = ({
-  setCoordinates,
-  setCategory,
-  setRatings,
-}) => {
+import { Rating } from "@material-ui/lab";
+const Search = ({ setCoordinates, setCategory, setRatings }) => {
   const [autocomplete, setAutocomplete] = useState(null);
   const [categoryText, setCategoryText] = useState("What?");
   const [ratingText, setRatingText] = useState("Rating");
@@ -50,7 +46,7 @@ const Search = ({
       <InputGroup
         width={"50vw"}
         minWidth="500px"
-        height={"90%"}
+        height={"50px"} //these units need to be absolute otherwise Dividers won't show
         shadow="lg"
         border="2px"
         borderColor={`#FF9100`}
@@ -71,7 +67,7 @@ const Search = ({
           rounded="full"
           width="32%"
         />
-
+        <Divider orientation="vertical" />
         {/* Venue category menu: */}
 
         <Menu>
@@ -93,6 +89,14 @@ const Search = ({
             borderColor={`#FF9100`}
             textColor={"#2C2C68"}
           >
+            <MenuItem onClick={() => categoryChanges("all")}>All</MenuItem>
+            <Center height="10px">
+              <Divider
+                borderColor={`#FF9100`}
+                orientation="horizontal"
+                width="90%"
+              />
+            </Center>
             <MenuItem onClick={() => categoryChanges("restaurant")}>
               Restaurant
             </MenuItem>
@@ -145,7 +149,15 @@ const Search = ({
             fontSize={17}
             width="32%"
           >
-            {ratingText}
+            {/* If ratingText's value is "Rating" (as it will be upon load- it's
+            the default), this prints "Rating". Otherwise (if it's a number-string), it displays it in
+            star rating format. */}
+            {ratingText == "Rating" ? (
+              ratingText
+            ) : (
+              <Rating value={Number(ratingText)} readOnly />
+              //{ratingText} stars and up
+            )}
           </MenuButton>
           <MenuList
             rounded="lg"
@@ -153,7 +165,9 @@ const Search = ({
             borderColor={`#FF9100`}
             textColor={"#2C2C68"}
           >
-            <MenuItem onClick={() => ratingChanges("1")}>1 Star</MenuItem>
+            <MenuItem onClick={() => ratingChanges("1")}>
+              <Rating size="medium" value={1} readOnly /> & Up
+            </MenuItem>
             <Center height="10px">
               <Divider
                 borderColor={`#FF9100`}
@@ -161,7 +175,9 @@ const Search = ({
                 width="90%"
               />
             </Center>
-            <MenuItem onClick={() => ratingChanges("2")}>2 Stars</MenuItem>
+            <MenuItem onClick={() => ratingChanges("2")}>
+              <Rating size="medium" value={2} readOnly /> & Up
+            </MenuItem>
             <Center height="10px">
               <Divider
                 borderColor={`#FF9100`}
@@ -169,7 +185,9 @@ const Search = ({
                 width="90%"
               />
             </Center>
-            <MenuItem onClick={() => ratingChanges("3")}>3 Stars</MenuItem>
+            <MenuItem onClick={() => ratingChanges("3")}>
+              <Rating size="medium" value={3} readOnly /> & Up
+            </MenuItem>
             <Center height="10px">
               <Divider
                 borderColor={`#FF9100`}
@@ -177,7 +195,9 @@ const Search = ({
                 width="90%"
               />
             </Center>
-            <MenuItem onClick={() => ratingChanges("4")}>4 Stars</MenuItem>
+            <MenuItem onClick={() => ratingChanges("4")}>
+              <Rating size="medium" value={4} readOnly /> & Up
+            </MenuItem>
             <Center height="10px">
               <Divider
                 borderColor={`#FF9100`}
@@ -185,14 +205,13 @@ const Search = ({
                 width="90%"
               />
             </Center>
-            <MenuItem onClick={() => ratingChanges("5")}>5 Stars</MenuItem>
+            <MenuItem onClick={() => ratingChanges("5")}>
+              <Rating size="medium" value={5} readOnly /> & Up
+            </MenuItem>
           </MenuList>
         </Menu>
 
-        <OurButton
-          text={"Search"}
-          icon={<Search2Icon />}
-        />
+        <OurButton text={"Search"} icon={<Search2Icon />} />
       </InputGroup>
     </Autocomplete>
   );
