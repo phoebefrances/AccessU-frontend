@@ -3,42 +3,45 @@ import { useEffect, useState } from "react";
 import Header from "../components/Header";
 import List from "../components/List";
 import Map from "../components/Map";
+import Head from "next/head";
 
 //👇 Comment out if using offline database. Uncomment if using API
 // import { getPlacesData } from "./api/getPlacesData";
-
-import Head from "next/head";
 
 //👇 Comment out if using API. Uncomment if using offline database.
 import { places } from "../libs/offlineData.js";
 
 const Home = () => {
-  //This state changes from false to true when a pin/marker (IoLocation in the code) is clicked, indicating that a venue has been selected
+  //STATES:
+  //Changes from false to true when the user clicks a pin/marker. Then back to false when the user closes the large card pop-up:
   const [isCard, setIsCard] = useState(false);
 
-  //This state holds the details of the venue that has been selected. This is later passed to Large Card to be displayed.
+  //Holds the details of the venue that has been selected. This is later passed to Large Card to be displayed:
   const [cardData, setCardData] = useState(null);
 
-  //👇 Comment out if using offline database. Uncomment if using API
-  // const [places, setPlaces] = useState({});
-
-  const [filteredPlaces, setFilteredPlaces] = useState([]);
-  const [coordinates, setCoordinates] = useState({});
-  //👇 Comment out if using offline database. Uncomment if using API
-  // const [bounds, setBounds] = useState(null);
+  // User-selected category and rating are put here for filtering purposes:
   const [category, setCategory] = useState("");
-
-  // this sets the initial state of the ratings.
-
   const [ratings, setRatings] = useState("");
 
-  // This is not used, unless this is used in conjunction with API. It is not useful without that.
+  //Results of filtering go here:
+  const [filteredPlaces, setFilteredPlaces] = useState([]);
 
+  //Used to display the skeleton whilst data are being fetched from API. Doesn't do anything when using offline data:
   const [isLoading, setIsLoading] = useState(false);
 
-  //👇 Comment out if using API. Uncomment if using offline database. ❗What was here and where did it go?
+  // Gets the users current location on intial login
+  const [coordinates, setCoordinates] = useState({});
 
-  // get the users current location on intial login
+  //👇 Comment out if using offline database. Uncomment if using API ------------------------------------------
+
+  // const [bounds, setBounds] = useState(null);
+
+  // const [places, setPlaces] = useState({});
+
+  //❗There might have been another line of code here that got deleted ❗
+
+  //☝️ Comment out if using offline database. Uncomment if using API ------------------------------------------
+
   useEffect(() => {
     navigator.geolocation.getCurrentPosition(
       ({ coords: { latitude, longitude } }) => {
@@ -75,17 +78,7 @@ const Home = () => {
     setFilteredPlaces(filteredData);
   }, [ratings, category]);
 
-  // 👇 Updates the data to the users choice of category or location
-  // 👇 Comment out if using offline database. Uncomment if using the API
-  // useEffect(() => {
-  //   setIsLoading(true);
-  //   getPlacesData(type, bounds?.sw, bounds?.ne).then((data) => {
-  //     console.log(`This is data: ${data}`);
-  //     console.dir(data);
-  //     setPlaces(data);
-  //     setIsLoading(false);
-  //   });
-  // }, [type, coordinates, bounds]);
+  //❗ If using an API, move the commented-out useEffect (currently at the bottom of the file) here and uncomment it. ❗
 
   return (
     <Flex
@@ -133,3 +126,16 @@ const Home = () => {
 };
 
 export default Home;
+
+// 👇 Comment out if using offline database. Uncomment AND PUT INSIDE THE HOME COMPONENT if using the API.
+// Updates the data to the users choice of category or location
+
+// useEffect(() => {
+//   setIsLoading(true);
+//   getPlacesData(type, bounds?.sw, bounds?.ne).then((data) => {
+//     console.log(`This is data: ${data}`);
+//     console.dir(data);
+//     setPlaces(data);
+//     setIsLoading(false);
+//   });
+// }, [type, coordinates, bounds]);
