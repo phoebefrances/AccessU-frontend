@@ -204,7 +204,7 @@ export const places = [
     photo:
       "https://www.hipshops.com/img/shopPhotos/333/2.jpeg",
 
-    address: "34 Chiltern St, London W1U 7QH",
+    address: "34 Chiltern St, 1U 7QH",
     longitude: "-0.154891203358562",
     latitude: "51.51913678809084",
       accessible: true,
@@ -222,7 +222,7 @@ export const places = [
     photo:
       "https://d53bpfpeyyyn7.cloudfront.net/Pictures/380x253/9/1/8/3079918_libertyoflondon_925602_crop.jpg",
 
-    address: "Regent St., Carnaby, London W1B 5AH",
+    address: "Regent St., Carnaby, W1B 5AH",
     longitude: "-0.1401228705907921",
     latitude: "51.513945059519074",
       accessible: true,
@@ -240,7 +240,7 @@ export const places = [
     photo:
       "https://media.nbcchicago.com/2021/03/disney-store-generica.jpg?quality=85&strip=all&crop&resize=1200%2C675",
 
-    address: "350-352 Oxford St, London W1C 1JH",
+    address: "350-352 Oxford St, W1C 1JH",
     longitude: "-0.14834630151083233",
     latitude: "51.51481899708076",
       accessible: true,
@@ -258,7 +258,7 @@ export const places = [
     photo:
       "https://www.nationalgallery.org.uk/media/29323/shopping-feature-page-header.gif",
 
-    address: "National Gallery, London WC2N 5DN",
+    address: "National Gallery, WC2N 5DN",
     longitude: " -0.13005764175658302",
     latitude: "51.50862555612391",
       accessible: true,
@@ -276,7 +276,7 @@ export const places = [
     photo:
       "https://media.timeout.com/images/103584667/1372/772/image.jpg",
 
-    address: "20 Glasshouse St, London W1B 5AR",
+    address: "20 Glasshouse St, W1B 5AR",
     longitude: "-0.13618508801715443",
     latitude: "51.51071162558321",
     acessibility: {
