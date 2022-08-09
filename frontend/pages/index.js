@@ -16,18 +16,16 @@ const Home = () => {
 const [backendData, setBackendData] = useState([])
 
   useEffect(() => {
-    const getAllPlaces = async () => {
+    const fetchData = async () => {
       try {
         const response = await fetch(`https://places-table-undefined.herokuapp.com/places`);
-        console.log(response)
         const data = await response.json();
         setBackendData(data.payload);
-        console.log(data.payload);
       } catch (error) {
         console.log("error", error);
       }
     };
-    getAllPlaces();
+    fetchData();
   }, []);
 
   console.log(backendData);
