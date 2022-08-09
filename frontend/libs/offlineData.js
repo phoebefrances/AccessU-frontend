@@ -298,7 +298,7 @@ export const places = [
     photo:
       "https://www.firmdalehotels.com/media/863517/0166-sh-gym.jpg?a=1&anchor=center&mode=crop&width=1596&height=1088&bgcolor=fff&sig=2491ab2ab237c0021a1dadf66ff4295e",
 
-    address: "18 Castle Street, Buckingham MK18 1BP England",
+    address: "67 Brewer St, London W1F 9US",
     longitude: "-0.13119588562767506",
     latitude: "51.51683492491375",
       accessible: true,
@@ -311,7 +311,7 @@ export const places = [
   },
   {
     category: "gym",
-    name: "PureGym London Borough",
+    name: "PureGym",
     rating: "4.0",
     photo:
       "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/pure-gym-in-lewisham-seen-with-shut-doors-gyms-indoors-news-photo-1613991986.?crop=1xw:0.74963xh;center,top&resize=1200:*",
@@ -329,7 +329,7 @@ export const places = [
   },
   {
     category: "gym",
-    name: "The Gym Group London Waterloo",
+    name: "The Gym Group",
     rating: "2.0",
     photo:
       "https://cdn.media.amplience.net/i/thegymgroup/The_Gym_Group-Basildon-Entrance?fmt=auto&h=250&w=412&sm=c&qlt=default&$qlt$&$poi$",
@@ -347,7 +347,7 @@ export const places = [
   },
   {
     category: "gym",
-    name: "King's Sport - London Bridge Gym",
+    name: "King's Sport",
     rating: "1.0",
     photo:
       "https://www.kcl.ac.uk/newimages/sport/featureimages/gds-feature.png",
@@ -364,7 +364,7 @@ export const places = [
   },
   {
     category: "gym",
-    name: "CrossFit Central London",
+    name: "CrossFit Central",
     rating: "3.0",
     photo: "https://img.grouponcdn.com/deal/4YfqedHvgywidijhgqGh/eT-1000x600/v1/t600x362.jpg",
     address: "56, 57 Ewer St,  SE1 0NR",
@@ -380,7 +380,7 @@ export const places = [
   },
   {
     category: "gym",
-    name: "Fitness First London Bridge (The Shard)",
+    name: "Fitness First",
     rating: "2.0",
     photo:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCWCzheZsdVQY8qs_Mtx5p1TYUUthRQU0AWQ&usqp=CAU",
