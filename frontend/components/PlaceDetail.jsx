@@ -64,7 +64,7 @@ const PlaceDetail = ({ place }) => {
               </Text>
             </Flex>
           )}
-          {place.acessibility?.eye && (
+          {place?.eye && (
             <Flex
               alignItems={"center"}
               width={"20%"}
