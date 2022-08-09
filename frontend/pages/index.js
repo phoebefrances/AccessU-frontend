@@ -51,7 +51,10 @@ const Home = () => {
   // This now selects places by rating OR category
   useEffect(() => {
     function conditionSelector(place) {
-      return ratings && category
+      return category == "all"
+        ? place.rating > ratings
+        : //☝️ if user selected category to be "all", this filters by rating alone (NB: rating is "" by default, which gets coerced into 0. So, if the user selected category "all", and didn't select rating, it'll display all items with rating > 0, i.e. all items)
+        ratings && category
         ? place.rating > ratings && place.category == category
         : //☝️ if user selected both ratings and category, it filters for those places which meet both
 

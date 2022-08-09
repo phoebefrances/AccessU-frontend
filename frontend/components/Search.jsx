@@ -89,6 +89,14 @@ const Search = ({ setCoordinates, setCategory, setRatings }) => {
             borderColor={`#FF9100`}
             textColor={"#2C2C68"}
           >
+            <MenuItem onClick={() => categoryChanges("all")}>All</MenuItem>
+            <Center height="10px">
+              <Divider
+                borderColor={`#FF9100`}
+                orientation="horizontal"
+                width="90%"
+              />
+            </Center>
             <MenuItem onClick={() => categoryChanges("restaurant")}>
               Restaurant
             </MenuItem>
