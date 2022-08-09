@@ -298,7 +298,7 @@ export const places = [
     photo:
       "https://www.firmdalehotels.com/media/863517/0166-sh-gym.jpg?a=1&anchor=center&mode=crop&width=1596&height=1088&bgcolor=fff&sig=2491ab2ab237c0021a1dadf66ff4295e",
 
-    address: "67 Brewer St, London W1F 9US",
+    address: "67 Brewer St, W1F 9US",
     longitude: "-0.13119588562767506",
     latitude: "51.51683492491375",
       accessible: true,
@@ -385,7 +385,7 @@ export const places = [
     photo:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCWCzheZsdVQY8qs_Mtx5p1TYUUthRQU0AWQ&usqp=CAU",
     address:
-      "Bridge Hotel, Basement Level, 8-18 London Bridge St, SE1 9SG",
+      "8-18 London Bridge St, SE1 9SG",
     longitude: "-0.08799383842212893",
     latitude: "51.505996615916146",
       accessible: true,
