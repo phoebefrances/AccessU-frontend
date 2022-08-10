@@ -70,6 +70,7 @@ const Search = ({
         </Flex>
         <Autocomplete onLoad={onLoad} onPlaceChanged={onPlaceChanged}>
           <InputGroup
+          
             width={"50vw"}
             minWidth="500px"
             height={"50px"} //these units need to be absolute otherwise Dividers won't show
@@ -82,6 +83,7 @@ const Search = ({
             justify="center"
           >
             <Input
+            className="input-where"
               type={"text"}
               variant={"filled"}
               fontSize={17}
@@ -98,6 +100,7 @@ const Search = ({
 
             <Menu>
               <MenuButton
+              className="category"
                 color={`#2C2C68`}
                 as={Button}
                 rounded="full"
@@ -170,6 +173,7 @@ const Search = ({
 
             <Menu>
               <MenuButton
+              className="rating"
                 color={`#2C2C68`}
                 as={Button}
                 rounded="full"
@@ -242,6 +246,7 @@ const Search = ({
             </Menu>
 
             <OurButton
+             className="search"
               text={"Search"}
               icon={<Search2Icon />}
               onClick={searchFunction}
