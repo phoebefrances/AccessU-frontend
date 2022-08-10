@@ -32,6 +32,9 @@ const Home = () => {
   // Gets the users current location on intial login
   const [coordinates, setCoordinates] = useState({});
 
+  //This controls rendering of map, list and small logo + controls styling of Searchbar
+  const [searchStatus, setSearchStatus] = useState(false);
+
   //👇 Comment out if using offline database. Uncomment if using API ------------------------------------------
 
   // const [bounds, setBounds] = useState(null);
@@ -101,25 +104,31 @@ const Home = () => {
         setRatings={setRatings}
         setCoordinates={setCoordinates}
         setCategory={setCategory}
+        setSearchStatus={setSearchStatus}
+        searchStatus={searchStatus}
       />
 
-      <List
-        places={filteredPlaces}
-        isLoading={isLoading}
-        setIsCard={setIsCard}
-        setCardData={setCardData}
-      />
+      {searchStatus && (
+        <List
+          places={filteredPlaces}
+          isLoading={isLoading}
+          setIsCard={setIsCard}
+          setCardData={setCardData}
+        />
+      )}
 
-      <Map
-        setCoordinates={setCoordinates}
-        coordinates={coordinates}
-        // setBounds={setBounds} //👈 Comment out if using offline database. Uncomment if using API
-        places={filteredPlaces}
-        isCard={isCard}
-        setIsCard={setIsCard}
-        cardData={cardData}
-        setCardData={setCardData}
-      />
+      {searchStatus && (
+        <Map
+          setCoordinates={setCoordinates}
+          coordinates={coordinates}
+          // setBounds={setBounds} //👈 Comment out if using offline database. Uncomment if using API
+          places={filteredPlaces}
+          isCard={isCard}
+          setIsCard={setIsCard}
+          cardData={cardData}
+          setCardData={setCardData}
+        />
+      )}
     </Flex>
   );
 };
