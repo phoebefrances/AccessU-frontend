@@ -19,6 +19,7 @@ const PlaceDetail = ({ place, setIsCard, setCardData }) => {
       direction="row"
       maxWidth={"500px"}
       distribute="space-between"
+      cursor="pointer"
       onClick={() => {
         setCardData(place);
         setIsCard(true);
