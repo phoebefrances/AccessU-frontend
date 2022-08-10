@@ -9,17 +9,19 @@ import Head from "next/head";
 // import { getPlacesData } from "./api/getPlacesData";
 
 //👇 Comment out if using API. Uncomment if using offline database.
-import { places } from "../libs/offlineData.js";
+// import { places } from "../libs/offlineData.js";
 
 const Home = () => {
-
-const [backendData, setBackendData] = useState([])
+  const [backendData, setBackendData] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`https://places-table-undefined.herokuapp.com/places`);
+        const response = await fetch(
+          `https://places-table-undefined.herokuapp.com/places`
+        );
         const data = await response.json();
+        // setPlaces(data.payload.rows);
         setBackendData(data.payload.rows);
       } catch (error) {
         console.log("error", error);
@@ -72,7 +74,6 @@ const [backendData, setBackendData] = useState([])
     );
   }, []);
 
-
   // This now selects places by rating OR category
   useEffect(() => {
     function conditionSelector(place) {
@@ -95,7 +96,8 @@ const [backendData, setBackendData] = useState([])
       //☝️ else, if neither category nor rating is selected, it filters for places with rating of 420, which don't exist in our database
     }
 
-    const filteredData = places.filter(conditionSelector);
+    // const filteredData = places.filter(conditionSelector);
+    const filteredData = backendData.filter(conditionSelector);
 
     setFilteredPlaces(filteredData);
   }, [ratings, category]);
