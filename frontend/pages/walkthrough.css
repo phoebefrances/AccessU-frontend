@@ -1,0 +1,7 @@
+.uf-free-badge {
+    display: none;
+}
+
+button.uf-button.uf-button-primary {
+    background-image: linear-gradient(to right, #17CEDA, #032396);
+}
