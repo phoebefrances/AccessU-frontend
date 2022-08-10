@@ -1,6 +1,7 @@
 import React from "react";
 import { Box, Image, Spacer, Text, Flex } from "@chakra-ui/react";
 import { Rating } from "@material-ui/lab";
+import { BiX } from "react-icons/bi";
 
 //Icon imports:
 
@@ -9,7 +10,7 @@ import HearingIcon from "@mui/icons-material/Hearing";
 import PsychologyIcon from "@mui/icons-material/Psychology";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 
-const LargeCard = ({ cardData }) => {
+const LargeCard = ({ cardData, setIsCard }) => {
   return (
     <Box
       bg="white"
@@ -21,6 +22,25 @@ const LargeCard = ({ cardData }) => {
       bottom="50px"
       borderRadius="15"
     >
+      {/* This is the close-card X button */}
+      <Box
+        cursor={"pointer"}
+        position={"absolute"}
+        top={2}
+        right={2}
+        width={"30px"}
+        height={"30px"}
+        bg={"#032396"}
+        rounded={"full"}
+        display={"flex"}
+        justifyContent={"center"}
+        alignItems={"center"}
+        onClick={() => {
+          setIsCard(false);
+        }}
+      >
+        <BiX fontSize={20} color="white" />
+      </Box>
       {/* Chakra Image component to display place Image on cards */}
 
       <Image
@@ -95,7 +115,9 @@ const LargeCard = ({ cardData }) => {
           isTruncated
           color="#2C2C68"
         >
-          {cardData.web_address}
+          <a href={`https://${cardData.web_address}`} target="_blank">
+            {cardData.web_address}
+          </a>
         </Text>
         <br></br>
         <Text

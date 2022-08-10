@@ -14,7 +14,7 @@ const Map = ({
   setCardData,
 }) => {
   return (
-    <Box width={"full"} height={"full"}>
+    <Box className="map-box" width={"full"} height={"full"}>
       <GoogleMapReact
         bootstrapURLKeys={{ key: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY }}
         defaultCenter={coordinates}
@@ -36,10 +36,6 @@ const Map = ({
           setCardData(places[child]);
           setIsCard(true);
         }}
-        //This kills the big card when the user clicks away from it (i.e. when they click anywhere on the map)
-        onClick={() => {
-          setIsCard(false);
-        }}
       >
         {places?.map((place, i) => (
           <Box
@@ -49,12 +45,12 @@ const Map = ({
             position={"relative"}
             cursor="pointer"
           >
-            <IoLocation color="#2C2C68" fontSize={30} />
+            <IoLocation color="#032396" fontSize={30} />
           </Box>
         ))}
 
         {/* Conditionally rendered the LargeCard component if isCard is true  */}
-        {isCard && <LargeCard cardData={cardData} />}
+        {isCard && <LargeCard cardData={cardData} setIsCard={setIsCard} />}
       </GoogleMapReact>
     </Box>
   );

@@ -61,7 +61,7 @@ const List = ({ places, isLoading, setIsCard, setCardData }) => {
       overflow="hidden"
       px={2}
     >
-      <Flex flex={1} overflowY="scroll" mt={16} direction="column">
+      <Flex className="places-list" flex={1} overflowY="scroll" mt={16} direction="column">
         {places.length ? (
           places &&
           places.map((place, i) => (
