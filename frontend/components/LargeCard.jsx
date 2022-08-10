@@ -96,7 +96,7 @@ const LargeCard = ({ cardData }) => {
           isTruncated
           color="#2C2C68"
         >
-        <a href="www.google.com">
+        <a href={cardData.web_address}>
           {cardData.web_address}
        </a>
         </Text>
