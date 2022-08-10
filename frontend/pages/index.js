@@ -20,7 +20,7 @@ const [backendData, setBackendData] = useState([])
       try {
         const response = await fetch(`https://places-table-undefined.herokuapp.com/places`);
         const data = await response.json();
-        setBackendData(data.payload);
+        setBackendData(data.payload.rows);
       } catch (error) {
         console.log("error", error);
       }
