@@ -14,7 +14,7 @@ const Map = ({
   setCardData,
 }) => {
   return (
-    <Box width={"full"} height={"full"}>
+    <Box className="map-box" width={"full"} height={"full"}>
       <GoogleMapReact
         bootstrapURLKeys={{ key: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY }}
         defaultCenter={coordinates}
