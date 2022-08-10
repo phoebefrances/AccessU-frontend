@@ -21,7 +21,7 @@ const Home = () => {
           `https://places-table-undefined.herokuapp.com/places`
         );
         const data = await response.json();
-        setPlaces(data.payload.rows);
+        // setPlaces(data.payload.rows);
         setBackendData(data.payload.rows);
       } catch (error) {
         console.log("error", error);
