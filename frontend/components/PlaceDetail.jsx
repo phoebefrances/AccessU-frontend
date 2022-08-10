@@ -15,7 +15,6 @@ const PlaceDetail = ({ place, setIsCard, setCardData }) => {
       px={4}
       py={2}
       m={1} //comment out if want fewer cards to display at the same time
-      // shadow="lg"
       alignItems={"left"}
       direction="row"
       maxWidth={"500px"}
@@ -136,6 +135,7 @@ const PlaceDetail = ({ place, setIsCard, setCardData }) => {
             ? place.photo
             : "https://explorelompoc.com/wp-content/uploads/2021/06/food_placeholder.jpg"
         }
+        alt={place.alt}
       />
     </Flex>
   );
