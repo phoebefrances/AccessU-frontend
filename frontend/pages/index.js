@@ -59,7 +59,7 @@ const Home = () => {
 
   // const [bounds, setBounds] = useState(null);
 
-  const [places, setPlaces] = useState({});
+  // const [places, setPlaces] = useState({});
 
   //❗There might have been another line of code here that got deleted ❗
 
