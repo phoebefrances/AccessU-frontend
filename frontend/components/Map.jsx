@@ -37,9 +37,9 @@ const Map = ({
           setIsCard(true);
         }}
         //This kills the big card when the user clicks away from it (i.e. when they click anywhere on the map)
-        onClick={() => {
-          setIsCard(false);
-        }}
+        // onClick={() => {
+        //   setIsCard(false);
+        // }}
       >
         {places?.map((place, i) => (
           <Box

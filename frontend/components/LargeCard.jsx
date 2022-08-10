@@ -1,6 +1,7 @@
 import React from "react";
 import { Box, Image, Spacer, Text, Flex } from "@chakra-ui/react";
 import { Rating } from "@material-ui/lab";
+import { Link } from '@chakra-ui/react'
 
 //Icon imports:
 
@@ -95,7 +96,9 @@ const LargeCard = ({ cardData }) => {
           isTruncated
           color="#2C2C68"
         >
+        <a href="www.google.com">
           {cardData.web_address}
+       </a>
         </Text>
         <br></br>
         <Text
