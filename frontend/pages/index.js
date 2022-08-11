@@ -4,7 +4,7 @@ import Header from "../components/Header";
 import List from "../components/List";
 import Map from "../components/Map";
 import Head from "next/head";
-import About from "./About";
+
 
 //👇 Comment out if using offline database. Uncomment if using API
 // import { getPlacesData } from "./api/getPlacesData";
