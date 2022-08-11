@@ -1,5 +1,5 @@
 import { render, screen  } from "@testing-library/react";
-import Home from "../frontend/pages/index.js"
+import Home from "../pages/index.js"
 import "@testing-library/jest-dom";
 import "@jest/globals";
 
