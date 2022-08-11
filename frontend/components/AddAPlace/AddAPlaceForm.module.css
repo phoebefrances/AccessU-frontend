@@ -1,0 +1,37 @@
+.new-entry__controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    text-align: left;
+  }
+  
+  .new-entry__control label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+  
+  .new-entry__control input {
+    font: inherit;
+    padding: 0.5rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    width: 20rem;
+    max-width: 100%;
+  }
+  
+  .new-entry__actions {
+    text-align: right;
+  }
+  .new-entry__textbox input {
+    font: inherit;
+    padding-top: 20px;
+    padding-right: 10px;
+    padding-bottom: 200px;
+    padding-left: 10px;
+    border: 1px solid #ccc;
+    width: 90rem;
+    height: 10rem;
+    margin-bottom: 20px;
+  }
