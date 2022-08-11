@@ -25,6 +25,7 @@ import highContrastMap from "../public/high-contrast.png";
 import React, { useState, useContext } from "react";
 // importing map style props
 import { MapStyleContext } from "./MapStyleContext";
+import Link from 'next/link';
 
 const MapStylesToggle = ({}) => {
    // importing mapStyle useState from our MapStyleContext which withold the styling information.
@@ -32,6 +33,21 @@ const MapStylesToggle = ({}) => {
    // SetMapStyle(`require('../libs/map-grayscale.json')`)
   return (
     <Menu>
+    <Link href ='/About'>
+    <MenuButton
+        color={`#2C2C68`}
+        as={Button}
+        rounded="full"
+        bg={"white"}
+        fontWeight={"bold"}
+        fontSize={17}
+        width="240px"
+        border="2px"
+        borderColor={`#FF9100`}
+      >
+        About
+      </MenuButton>
+      </Link>
       <MenuButton
         color={`#2C2C68`}
         as={Button}
