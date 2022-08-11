@@ -55,17 +55,17 @@ export default function About() {
           />
         </Flex>
         <Flex>
-          <QuestionOutlineIcon color={`#FF9100`} w={20} h={12} />
+          <QuestionOutlineIcon color={`#FF9100`} w={20} h={16} />
          
           <h1> Do you have to spend ages planning your trip? </h1>
 
-          <QuestionOutlineIcon color={`#FF9100`} w={20} h={12} />
+          <QuestionOutlineIcon color={`#FF9100`} w={20} h={16}/>
           <h1>
             Have you visited somewhere to only find the access wasn't as you
             thought?
           </h1>
 
-          <QuestionOutlineIcon color={`#FF9100`} w={20} h={12} />
+          <QuestionOutlineIcon color={`#FF9100`} w={20} h={16} />
           <h1>
             Are you anxious visiting a new place so much so it stopped you from
             making that trip?
