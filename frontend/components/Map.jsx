@@ -45,7 +45,7 @@ const Map = ({
             position={"relative"}
             cursor="pointer"
           >
-            <IoLocation color="#032396" fontSize={30} />
+            <IoLocation color="#032396" fontSize={38} />
           </Box>
         ))}
 
