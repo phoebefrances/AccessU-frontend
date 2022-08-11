@@ -1,10 +1,10 @@
 import { render, screen  } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import "@jest/globals";
-import Search from '../frontend/components/Search,js';
+import Search from '../frontend/components/Search.js';
 
-describe('Checks to see if the PlaceDetail renders to the cards', () => {
-  it('Checks to see if the PlaceDetail renders to the cards', () => {
+describe('Checks to see if the Search placeholder text renders', () => {
+  it('Checks to see if the Search placeholder text renders', () => {
     render(<Search />)
     expect(screen.getByPlaceholderText("Where?")).toBeInTheDocument();
     // const placeDetail = screen.getByRole('heading', {

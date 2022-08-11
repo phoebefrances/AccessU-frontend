@@ -4,7 +4,8 @@
 
   // Render tests 
     // - Search 
-      // - 3 placeholders - getByPlaceholderText
+      // - 1 placeholders - getByPlaceholderText =  Where?
+      // - 2 placeholder - getByText =  What?, Rating
       // - button - getByRole
 
     // -LargeCard 
