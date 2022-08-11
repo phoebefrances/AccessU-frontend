@@ -19,7 +19,7 @@ const Map = ({
         bootstrapURLKeys={{ key: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY }}
         defaultCenter={coordinates}
         center={coordinates}
-        defaultZoom={10}
+        defaultZoom={7.5}
         margin={[50, 50, 50, 50]}
         options={{
           styles: require("../libs/map-style1.json"),

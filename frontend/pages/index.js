@@ -66,14 +66,18 @@ const Home = () => {
   //☝️ Comment out if using offline database. Uncomment if using API ------------------------------------------
 
   useEffect(() => {
-    navigator.geolocation.getCurrentPosition(
-      ({ coords: { latitude, longitude } }) => {
-        console.log({ latitude, longitude });
-        setCoordinates({ lat: latitude, lng: longitude });
-      }
-    );
+    //  navigator.geolocation.getCurrentPosition(
+    //   ({ coords: { latitude, longitude } }) => {
+    //     console.log({ latitude, longitude });
+        setCoordinates({ lat: 51.60376294670231, lng:-0.010961442420194591
+        });
+    //   }
+    // );
   }, []);
 
+
+
+   
   // This now selects places by rating OR category
   useEffect(() => {
     function conditionSelector(place) {
@@ -116,7 +120,7 @@ const Home = () => {
     >
       <Head>
         <script
-          src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyD93tjfea30qHGkuhHJWQ0vQB9FF-HYIZo"
+          src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyD93tjfea30qHGkuhHJWQ0vQB9FF-HYIZo&region=GB"
           async
         ></script>
       </Head>
