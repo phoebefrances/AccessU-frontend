@@ -56,7 +56,8 @@ const Home = () => {
   const [searchStatus, setSearchStatus] = useState(false);
 
 //Logs search button triggers. E.g. anytime the search button is clicked, the status will change, and that in turn will run the useEffect to fetch the map data
-  const [searchClick, setSearchClick] = useState(false);
+//We will pass setSearchClick to Header > Search component. 
+const [searchClick, setSearchClick] = useState(false);
 
   //👇 Comment out if using offline database. Uncomment if using API ------------------------------------------
 
@@ -107,7 +108,7 @@ const Home = () => {
     const filteredData = backendData.filter(conditionSelector);
 
     setFilteredPlaces(filteredData);
-  }, [ratings, category]);
+  }, [searchClick]);
 
   //❗ If using an API, move the commented-out useEffect (currently at the bottom of the file) here and uncomment it. ❗
 
@@ -134,6 +135,8 @@ const Home = () => {
         setCategory={setCategory}
         setSearchStatus={setSearchStatus}
         searchStatus={searchStatus}
+        setSearchClick={setSearchClick}
+        searchClick={searchClick}
       />
 
       {searchStatus && (

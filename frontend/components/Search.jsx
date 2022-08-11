@@ -26,6 +26,8 @@ const Search = ({
   setRatings,
   setSearchStatus,
   searchStatus,
+  setSearchClick,
+  searchClick,
 }) => {
   const [autocomplete, setAutocomplete] = useState(null);
   const [categoryText, setCategoryText] = useState("What?");
@@ -61,6 +63,7 @@ const Search = ({
   }
   function searchFunction() {
     setSearchStatus(true);
+    setSearchClick(!searchClick)
   }
   return (
     <div>

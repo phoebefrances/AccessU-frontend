@@ -10,6 +10,8 @@ const Header = ({
   setRatings,
   setSearchStatus,
   searchStatus,
+  setSearchClick,
+  searchClick,
 }) => {
   // console.log(searchStatus,"better be false")
   // let imageDisplay = "none";
@@ -55,6 +57,8 @@ const Header = ({
             setRatings={setRatings}
             setSearchStatus={setSearchStatus}
             searchStatus={searchStatus}
+            setSearchClick={setSearchClick}
+            searchClick={searchClick}
           />
         </GridItem>
         {/* <Spacer bgColor={"blue"} /> */}
