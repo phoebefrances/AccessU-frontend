@@ -45,8 +45,8 @@ const Header = ({
           {/* This is the small logo next to the searchbar  */}
           <Flex display={imageDisplay} cursor="pointer">
             <Image
+              alt='Logo'
               src={Logo}
-              alt={"logo"}
               width={"150px"}
               height={"50px"}
               style={{ zIndex: 99 }}
