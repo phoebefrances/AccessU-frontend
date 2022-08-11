@@ -3,6 +3,9 @@ import { Flex} from "@chakra-ui/react";
 import Logo from "../public/logo.png";
 import Image from "next/image";
 import { useRouter } from 'next/router'
+import Header from "../components/Header";
+import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
+import {QuestionOutlineIcon} from '@chakra-ui/icons'
 
 // https://final-project-front-end-undefinedd.vercel.app/
 
@@ -18,20 +21,28 @@ export default function About() {
         <div>
             <div>
                 <Head>
-                <title>About</title>
+                <title>About | Enabled </title>
                 </Head>
-          <Flex cursor="pointer" justify="centre" >
+          <Flex cursor="pointer" align='center' >
             <Image
               src={Logo}
               alt={"logo"}
               style={{ zIndex: 99 }}
               onClick={handleClick}
             />
+          
+          </Flex> 
+          <Flex>
+              <QuestionOutlineIcon color={`#FF9100`} w={20} h={12} />
+              <p>Do you have to spend ages planning your trip?</p>
+
+              <QuestionOutlineIcon color={`#FF9100`} w={20} h={12}/>
+              <p>Have you visited somewhere to only find the access wasn't as you thought?</p>
+
+              <QuestionOutlineIcon color={`#FF9100`} w={20} h={12}/>
+              <p>Are you anxious visiting a new place so much so it stopped you from making that trip?</p>
           </Flex>
              </div>
-                 <div>
-                     <h1>This is our About Page</h1>
-                </div>
              </div>
     )
 }
