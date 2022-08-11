@@ -21,6 +21,8 @@ const LargeCard = ({ cardData, setIsCard }) => {
       left="-25vw"
       bottom="50px"
       borderRadius="15"
+      border="2px"
+      borderColor={`#FF9100`}
     >
       {/* This is the close-card X button */}
       <Box
@@ -30,7 +32,7 @@ const LargeCard = ({ cardData, setIsCard }) => {
         right={2}
         width={"30px"}
         height={"30px"}
-        bg={"#032396"}
+        bgGradient="linear(to-tr, #17CEDA, #0954a9, #032396)" //this gradient works better on this small element than the gradient in OurButton
         rounded={"full"}
         display={"flex"}
         justifyContent={"center"}
@@ -39,16 +41,17 @@ const LargeCard = ({ cardData, setIsCard }) => {
           setIsCard(false);
         }}
       >
-        <BiX fontSize={20} color="white" />
+        <BiX fontSize={28} color="white" />
       </Box>
       {/* Chakra Image component to display place Image on cards */}
 
       <Image
-        alt={"Display Place"}
+        alt={cardData.alt}
         objectFit="cover"
         width="full"
         height="120px"
-        rounded="lg"
+        borderRadius="13"
+        borderBottomRadius="0"
         src={cardData.photo}
       />
 
