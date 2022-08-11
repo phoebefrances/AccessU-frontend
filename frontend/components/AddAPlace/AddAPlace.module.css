@@ -1,0 +1,39 @@
+.new-entry {
+    background-color: #4a90e2;
+    padding: 1rem;
+    margin: 2rem auto;
+    width: 100rem;
+    max-width: 95%;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+  }
+
+.new-entry button {
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 1rem 2rem;
+    border: 1px solid #4a90e2;
+    background-color: white;
+    color: black;
+    border-radius: 12px;
+    margin-right: 1rem;
+  }
+  
+.new-entry button:hover,
+.new-entry button:active {
+    background-color: gold;
+    border-color: white;
+  }
+  
+.new-entry button.alternative {
+    color: #220131;
+    border-color: transparent;
+    background-color: transparent;
+  }
+  
+.new-entry button.alternative:hover,
+.new-entry button.alternative:active {
+    background-color: #ddb3f8;
+  }
