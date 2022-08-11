@@ -9,6 +9,7 @@ import {
   MenuDivider,
   Button,
   Divider,
+  Text,
 } from "@chakra-ui/react";
 import {
   PhoneIcon,
@@ -18,7 +19,9 @@ import {
   TriangleDownIcon,
 } from "@chakra-ui/icons";
 import Image from "next/image";
-import worldmap from "../public/world-map.jpg";
+import defaultMap from "../public/default.png";
+import grayScaleMap from "../public/grayscale.png";
+import highContrastMap from "../public/high-contrast.png";
 import React, { useState, useContext } from "react";
 // importing map style props
 import { MapStyleContext } from "./MapStyleContext";
@@ -36,18 +39,19 @@ const MapStylesToggle = ({}) => {
         bg={"white"}
         fontWeight={"bold"}
         fontSize={17}
-        width="200px"
+        width="240px"
         border="2px"
         borderColor={`#FF9100`}
         rightIcon={<TriangleDownIcon color={`#FF9100`} />}
       >
-        Theme
+        Map Colour
       </MenuButton>
       <MenuList
         rounded="lg"
         border="2px"
         borderColor={`#FF9100`}
-        textColor={"#2C2C68"}
+        textColor={"#2C2C68"}S
+       
       >
         <MenuItem
           onClick={() =>
@@ -58,16 +62,20 @@ const MapStylesToggle = ({}) => {
           minH="48px"
           minW={"100px"}
         >
+       
           <Image
             boxSize="2rem"
             borderRadius="full"
-            src={worldmap}
+            src={defaultMap}
             alt="Fluffybuns the destroyer"
             mr="12px"
-            width="100px"
-            height="100px"
+            width="50px"
+            height="50px" 
+            
+            
           />
-          <span>Default</span>
+           
+        <Text margin="10px">Default</Text>
         </MenuItem>
         <Divider
           orientation="horizontal"
@@ -87,13 +95,13 @@ const MapStylesToggle = ({}) => {
           <Image
             boxSize="2rem"
             borderRadius="full"
-            src={worldmap}
+            src={grayScaleMap}
             alt="Simon the pensive"
             mr="12px"
-            width="100px"
-            height="100px"
+            width="50px"
+            height="50px"
           />
-          <span>GrayScale</span>
+          <Text margin="10px">GrayScale</Text>
         </MenuItem>
         <Divider
           orientation="horizontal"
@@ -113,13 +121,13 @@ const MapStylesToggle = ({}) => {
           <Image
             boxSize="2rem"
             borderRadius="full"
-            src={worldmap}
+            src={highContrastMap}
             alt="Simon the pensive"
             mr="12px"
-            width="100px"
-            height="100px"
+            width="50px"
+            height="50px"
           />
-          <span>High Contrast </span>
+          <Text margin="10px" >High Contrast </Text>
         </MenuItem>
       </MenuList>
     </Menu>
