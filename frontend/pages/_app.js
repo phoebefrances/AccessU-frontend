@@ -2,6 +2,7 @@ import { ChakraProvider } from "@chakra-ui/react";
 import React from 'react';
 import './walkthrough.css'
 import TagManager from 'react-gtm-module'
+import {MapStyleProvider} from '../components/MapStyleContext'
 
 function MyApp({ Component, pageProps }) {
   // Import our Google Tag Manager ID, this is found on Google Tag Manager's Dashboard
@@ -15,9 +16,11 @@ if (process.browser) {
   TagManager.initialize(tagManagerArgs);
 }
   return (
+    <MapStyleProvider>
     <ChakraProvider>
       <Component {...pageProps} />
     </ChakraProvider>
+    </MapStyleProvider>
   );
 }
 
