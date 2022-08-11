@@ -2,6 +2,7 @@ import { Flex, Spacer, GridItem, Grid } from "@chakra-ui/react";
 import Search from "./Search";
 import Logo from "../public/logo.png";
 import Image from "next/image";
+import Link from 'next/link';
 
 const Header = ({
   setCategory,
@@ -60,6 +61,13 @@ const Header = ({
         {/* <Spacer bgColor={"blue"} /> */}
         <GridItem w="50%" h="10">
           <Spacer />
+        </GridItem>
+        <GridItem>
+        <Link href='/About'>
+        <button>
+            About
+          </button>
+        </Link>
         </GridItem>
       </Grid>
     </Flex>

@@ -5,6 +5,7 @@ import List from "../components/List";
 import Map from "../components/Map";
 import Head from "next/head";
 
+
 //👇 Comment out if using offline database. Uncomment if using API
 // import { getPlacesData } from "./api/getPlacesData";
 
@@ -123,6 +124,7 @@ const Home = () => {
           src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyD93tjfea30qHGkuhHJWQ0vQB9FF-HYIZo&region=GB"
           async
         ></script>
+       
       </Head>
 
       <Header
