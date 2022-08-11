@@ -1,8 +1,11 @@
 import { Flex, Spacer, GridItem, Grid } from "@chakra-ui/react";
 import Search from "./Search";
 import Logo from "../public/logo.png";
+import MapStylesToggle from "./MapStylesToggle";
+
 import Image from "next/image";
 import Link from 'next/link';
+
 
 const Header = ({
   setCategory,
@@ -17,6 +20,8 @@ const Header = ({
   // if (searchStatus) {
   //   imageDisplay = "display";
   // }
+
+
   let imageDisplay;
   searchStatus ? (imageDisplay = "display") : (imageDisplay = "none");
   return (
@@ -70,6 +75,9 @@ const Header = ({
         </Link>
         </GridItem>
       </Grid>
+      {searchStatus && (
+      <MapStylesToggle />
+      )}
     </Flex>
   );
 };

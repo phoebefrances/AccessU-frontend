@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Box } from "@chakra-ui/react";
 import GoogleMapReact from "google-map-react";
 import { IoLocation } from "react-icons/io5";
 import LargeCard from "./LargeCard";
-
+import {MapStyleContext} from './MapStyleContext'
 //👇setCoordinates and setBounds only used with API
 const Map = ({
   coordinates,
@@ -13,6 +13,9 @@ const Map = ({
   cardData,
   setCardData,
 }) => {
+  const [mapStyle, SetMapStyle] = useContext(MapStyleContext)
+
+
   return (
     <Box className="map-box" width={"full"} height={"full"}>
       <GoogleMapReact
@@ -21,9 +24,7 @@ const Map = ({
         center={coordinates}
         defaultZoom={7.5}
         margin={[50, 50, 50, 50]}
-        options={{
-          styles: require("../libs/map-style1.json"),
-        }}
+        options={mapStyle}
         //👇 This sets bounds within which the API pins are displayed. This is useful only if we use API. No use for this if we use our own data.
         //👇 Comment out if using offline database. Uncomment if using API
         // onChange={(e) => {
