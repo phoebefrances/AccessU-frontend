@@ -67,8 +67,9 @@ const Header = ({
           <Spacer />
         </GridItem>
       </Grid>
+      {searchStatus && (
       <MapStylesToggle />
-
+      )}
     </Flex>
   );
 };
