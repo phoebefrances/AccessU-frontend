@@ -15,6 +15,8 @@ function MyApp({ Component, pageProps }) {
 if (process.browser) {
   TagManager.initialize(tagManagerArgs);
 }
+
+// Map style provider is passing props from MapStyleContext to the rest of our app.
   return (
     <MapStyleProvider>
     <ChakraProvider>

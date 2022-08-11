@@ -4,8 +4,7 @@ import Logo from "../public/logo.png";
 import MapStylesToggle from "./MapStylesToggle";
 
 import Image from "next/image";
-import React, { useState, useContext } from "react";
-import {MapStyleContext} from './MapStyleContext'
+
 
 const Header = ({
   setCategory,
@@ -20,8 +19,8 @@ const Header = ({
   // if (searchStatus) {
   //   imageDisplay = "display";
   // }
-  const [mapStyle, SetMapStyle] = useContext(MapStyleContext)
-  // SetMapStyle(`require('../libs/map-grayscale.json')`)
+
+
   let imageDisplay;
   searchStatus ? (imageDisplay = "display") : (imageDisplay = "none");
   return (
