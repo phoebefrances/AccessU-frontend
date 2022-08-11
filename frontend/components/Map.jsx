@@ -22,7 +22,7 @@ const Map = ({
         bootstrapURLKeys={{ key: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY }}
         defaultCenter={coordinates}
         center={coordinates}
-        defaultZoom={10}
+        defaultZoom={7.5}
         margin={[50, 50, 50, 50]}
         options={mapStyle}
         //👇 This sets bounds within which the API pins are displayed. This is useful only if we use API. No use for this if we use our own data.
@@ -46,7 +46,7 @@ const Map = ({
             position={"relative"}
             cursor="pointer"
           >
-            <IoLocation color="#032396" fontSize={30} />
+            <IoLocation color="#032396" fontSize={38} />
           </Box>
         ))}
 

@@ -40,7 +40,8 @@ const Header = ({
       <Grid templateColumns="repeat(3, 1fr)" gap={1}>
         {/* <Flex className="logo-name-container" bgColor={"red"}> */}
         <GridItem w="100%" h="10">
-          <Flex display={imageDisplay}>
+          {/* This is the small logo next to the searchbar  */}
+          <Flex display={imageDisplay} cursor="pointer">
             <Image
               src={Logo}
               alt={"logo"}
