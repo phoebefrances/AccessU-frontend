@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
 
-import './AddAPlaceForm.module.css'
+import '../Styles/AddAPlaceForm.module.css'
 
 const emptyPlaceDetails = {
     category: "",

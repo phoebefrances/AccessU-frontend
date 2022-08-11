@@ -1,7 +1,7 @@
 import React from 'react';
 
 import AddAPlaceForm from './AddAPlaceForm';
-import './AddAPlace.module.css';
+import '../Styles/AddAPlace.module.css';
 
 const AddAPlace = () => {
   return (
