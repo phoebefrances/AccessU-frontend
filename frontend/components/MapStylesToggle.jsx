@@ -11,6 +11,7 @@ import {
   Divider,
   Text,
   Flex,
+  Center,
 } from "@chakra-ui/react";
 import {
   PhoneIcon,
@@ -98,13 +99,14 @@ const MapStylesToggle = ({}) => {
 
             <Text margin="10px">Default</Text>
           </MenuItem>
-          <Divider
-            orientation="horizontal"
-            borderColor={`#FF9100`}
-            weight="10px"
-            width="100%"
-            alignSelf="center"
-          />
+          <Center height="10px">
+            <Divider
+              orientation="horizontal"
+              borderColor={`#FF9100`}
+              weight="10px"
+              width="90%"
+            />
+          </Center>
           <MenuItem
             onClick={() =>
               SetMapStyle({
@@ -124,13 +126,14 @@ const MapStylesToggle = ({}) => {
             />
             <Text margin="10px">GrayScale</Text>
           </MenuItem>
-          <Divider
-            orientation="horizontal"
-            borderColor={`#FF9100`}
-            weight="10px"
-            width="100%"
-            alignSelf="center"
-          />
+          <Center height="10px">
+            <Divider
+              orientation="horizontal"
+              borderColor={`#FF9100`}
+              weight="10px"
+              width="90%"
+            />
+          </Center>
           <MenuItem
             onClick={() =>
               SetMapStyle({
