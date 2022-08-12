@@ -1,12 +1,20 @@
 import Head from "next/head";
-import { Flex, Text, Divider } from "@chakra-ui/react";
+import { Flex, Text, Divider, Center } from "@chakra-ui/react";
 import Logo from "../public/logo.png";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import Header from "../components/Header";
+import { Heading } from "@chakra-ui/react";
 import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
 import { QuestionOutlineIcon } from "@chakra-ui/icons";
 import { fontWeight } from "@mui/system";
+import {
+  List,
+  ListItem,
+  ListIcon,
+  OrderedList,
+  UnorderedList,
+} from "@chakra-ui/react";
 
 // https://final-project-front-end-undefinedd.vercel.app/
 
@@ -70,43 +78,54 @@ export default function About() {
             </Text>
           </Flex>
         </Flex>
+        <Flex justify="center">
+          <Flex width="60%">
+            <main>
+              <br />
+              <Heading color={"#2C2C68"}>Welcome!</Heading>
 
-        <main>
-          <br />
-          <h2>Welcome!</h2>
+              <Text>
+                Enabled is here to take the stress out of planning. Our aim is
+                to provide you with all the accessibility information you need
+                in order to plan your trip.
+              </Text>
+              <br />
+              <Center height="10px">
+                <Divider
+                  borderColor={`#FF9100`}
+                  orientation="horizontal"
+                  width="90%"
+                />
+              </Center>
+              <Heading color={"#2C2C68"}>Why?</Heading>
 
-          <p>
-            Enabled is here to take the stress out of planning. Our aim is to
-            provide you with all the accessibility information you need in order
-            to plan your trip.
-          </p>
-          <br />
+              <UnorderedList>
+                <ListItem>
+                  1 in 4 households are impacted by disability
+                </ListItem>
+                <ListItem>
+                  98% of disabled people look for accessibility information
+                  before visiting somewhere for the first time
+                </ListItem>
+                <ListItem>
+                  Over 75% of disabled people don’t visit somewhere they wanted
+                  to go because they couldn’t find the accessibility information
+                  they needed
+                </ListItem>
+                <ListItem>
+                  This results in disabled people making 26% fewer trips than
+                  those without a disability
+                </ListItem>
+              </UnorderedList>
+              <br />
 
-          <h2>Why?</h2>
-
-          <ol>
-            <li>1 in 4 households are impacted by disability</li>
-            <li>
-              98% of disabled people look for accessibility information before
-              visiting somewhere for the first time
-            </li>
-            <li>
-              Over 75% of disabled people don’t visit somewhere they wanted to
-              go because they couldn’t find the accessibility information they
-              needed
-            </li>
-            <li>
-              This results in disabled people making 26% fewer trips than those
-              without a disability
-            </li>
-          </ol>
-          <br />
-
-          <p>
-            With Enabled we hope you can be more spontaneous, visit, recommend
-            and return!
-          </p>
-        </main>
+              <Text>
+                With Enabled we hope you can be more spontaneous, visit,
+                recommend and return!
+              </Text>
+            </main>
+          </Flex>
+        </Flex>
       </div>
     </div>
   );
