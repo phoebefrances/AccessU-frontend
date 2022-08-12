@@ -25,28 +25,28 @@ import highContrastMap from "../public/high-contrast.png";
 import React, { useState, useContext } from "react";
 // importing map style props
 import { MapStyleContext } from "./MapStyleContext";
-import Link from 'next/link';
+import Link from "next/link";
 
 const MapStylesToggle = ({}) => {
-   // importing mapStyle useState from our MapStyleContext which withold the styling information.
+  // importing mapStyle useState from our MapStyleContext which withold the styling information.
   const [mapStyle, SetMapStyle] = useContext(MapStyleContext);
-   // SetMapStyle(`require('../libs/map-grayscale.json')`)
+  // SetMapStyle(`require('../libs/map-grayscale.json')`)
   return (
     <Menu>
-    <Link href ='/About'>
-    <MenuButton
-        color={`#2C2C68`}
-        as={Button}
-        rounded="full"
-        bg={"white"}
-        fontWeight={"bold"}
-        fontSize={17}
-        width="240px"
-        border="2px"
-        borderColor={`#FF9100`}
-      >
-        About
-      </MenuButton>
+      <Link href="/About">
+        <MenuButton
+          color={`#2C2C68`}
+          as={Button}
+          rounded="full"
+          bg={"white"}
+          fontWeight={"bold"}
+          fontSize={17}
+          width="240px"
+          border="2px"
+          borderColor={`#FF9100`}
+        >
+          About
+        </MenuButton>
       </Link>
       <MenuButton
         color={`#2C2C68`}
@@ -59,6 +59,9 @@ const MapStylesToggle = ({}) => {
         border="2px"
         borderColor={`#FF9100`}
         rightIcon={<TriangleDownIcon color={`#FF9100`} />}
+        position={"absolute"}
+        top={"100px"}
+        right={"10px"}
       >
         Map Colour
       </MenuButton>
@@ -66,8 +69,8 @@ const MapStylesToggle = ({}) => {
         rounded="lg"
         border="2px"
         borderColor={`#FF9100`}
-        textColor={"#2C2C68"}S
-       
+        textColor={"#2C2C68"}
+        S
       >
         <MenuItem
           onClick={() =>
@@ -78,7 +81,6 @@ const MapStylesToggle = ({}) => {
           minH="48px"
           minW={"100px"}
         >
-       
           <Image
             boxSize="2rem"
             borderRadius="full"
@@ -86,12 +88,10 @@ const MapStylesToggle = ({}) => {
             alt="Fluffybuns the destroyer"
             mr="12px"
             width="50px"
-            height="50px" 
-            
-            
+            height="50px"
           />
-           
-        <Text margin="10px">Default</Text>
+
+          <Text margin="10px">Default</Text>
         </MenuItem>
         <Divider
           orientation="horizontal"
@@ -143,7 +143,7 @@ const MapStylesToggle = ({}) => {
             width="50px"
             height="50px"
           />
-          <Text margin="10px" >High Contrast </Text>
+          <Text margin="10px">High Contrast </Text>
         </MenuItem>
       </MenuList>
     </Menu>
