@@ -34,6 +34,9 @@ const Home = () => {
   console.log(backendData);
 
   //STATES:
+  //Rating status passed down from here
+  const [rating, setRating] = useState(null);
+  
   //Changes from false to true when the user clicks a pin/marker. Then back to false when the user closes the large card pop-up:
   const [isCard, setIsCard] = useState(false);
 
@@ -147,6 +150,8 @@ const [searchClick, setSearchClick] = useState(false);
           isLoading={isLoading}
           setIsCard={setIsCard}
           setCardData={setCardData}
+          rating={rating}
+          setRating={setRating}
         />
       )}
 
@@ -160,6 +165,8 @@ const [searchClick, setSearchClick] = useState(false);
           setIsCard={setIsCard}
           cardData={cardData}
           setCardData={setCardData}
+          rating={rating}
+          setRating={setRating}
         />
       )}
     </Flex>
