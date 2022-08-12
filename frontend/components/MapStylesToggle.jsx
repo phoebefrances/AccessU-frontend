@@ -44,6 +44,9 @@ const MapStylesToggle = ({}) => {
           width="240px"
           border="2px"
           borderColor={`#FF9100`}
+          _hover={{
+            backgroundImage: "linear-gradient(to right, #fff500 , #ff9100)",
+          }}
         >
           About
         </MenuButton>
