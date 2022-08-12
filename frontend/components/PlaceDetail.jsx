@@ -6,6 +6,7 @@ import HearingIcon from "@mui/icons-material/Hearing";
 import AccessibleIcon from "@mui/icons-material/Accessible";
 import PsychologyIcon from "@mui/icons-material/Psychology";
 import VisibilityIcon from "@mui/icons-material/Visibility";
+import StarRating from "./StarRating";
 
 const PlaceDetail = ({ place, setIsCard, setCardData }) => {
   return (
@@ -138,6 +139,7 @@ const PlaceDetail = ({ place, setIsCard, setCardData }) => {
         }
         alt={place.alt}
       />
+      
     </Flex>
   );
 };

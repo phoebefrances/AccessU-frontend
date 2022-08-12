@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { Box, Image, Spacer, Text, Flex } from "@chakra-ui/react";
 import { Rating } from "@material-ui/lab";
 import { BiX } from "react-icons/bi";
@@ -9,12 +9,16 @@ import AccessibleIcon from "@mui/icons-material/Accessible";
 import HearingIcon from "@mui/icons-material/Hearing";
 import PsychologyIcon from "@mui/icons-material/Psychology";
 import VisibilityIcon from "@mui/icons-material/Visibility";
+import StarRating from "./StarRating";
 
 const LargeCard = ({ cardData, setIsCard }) => {
+//trigger useEffect in StarRating component
+const [starClicked, setStarClicked] = useState(false)
+
   return (
     <Box
       bg="white"
-      height="550px"
+      height="600px"
       width="250px"
       position="absolute"
       top="-25vh"
@@ -199,6 +203,17 @@ const LargeCard = ({ cardData, setIsCard }) => {
               </Text>
             </Flex>
           )}
+          <Flex>
+          <Text
+                fontSize={"small"}
+                fontWeight={500}
+                color={"#2C2C68"}
+                ml={1}
+              >
+                How would you rate this place?
+              </Text>
+              <StarRating  place_id={cardData.id}/>
+          </Flex>
         </Flex>
       </Box>
     </Box>
