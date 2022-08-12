@@ -68,6 +68,7 @@ const MapStylesToggle = ({}) => {
           position={"absolute"}
           top={"100px"}
           right={"15px"}
+          _pressed={{}}
         >
           Map Colour
         </MenuButton>
