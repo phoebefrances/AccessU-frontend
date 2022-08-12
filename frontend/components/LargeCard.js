@@ -143,7 +143,7 @@ const LargeCard = ({ cardData, setIsCard }) => {
               </Text>
 
               <Text fontSize="small" fontWeight={500} color="#2C2C68">
-                This place is wheelchair accesible
+                <p>This place is wheelchair accesible</p>
               </Text>
             </Flex>
           )}
@@ -164,7 +164,7 @@ const LargeCard = ({ cardData, setIsCard }) => {
                 color={"#2C2C68"}
                 ml={1}
               >
-                This place has adjustments for visual impairments
+                <p>place has adjustments for visual impairments</p>
               </Text>
             </Flex>
           )}
@@ -179,7 +179,7 @@ const LargeCard = ({ cardData, setIsCard }) => {
                 color={"#2C2C68"}
                 ml={1}
               >
-                This place has adjustments for hearing impairments
+                <p>This place has adjustments for hearing impairments</p>
               </Text>
             </Flex>
           )}

@@ -115,6 +115,7 @@ const [searchClick, setSearchClick] = useState(false);
 
   return (
     <Flex
+      data-testid="home-test"
       justifyContent={"center"}
       alignItems={"center"}
       width={"100vw"}
@@ -143,6 +144,7 @@ const [searchClick, setSearchClick] = useState(false);
 
       {searchStatus && (
         <List
+          data-testid="home-test"
           places={filteredPlaces}
           isLoading={isLoading}
           setIsCard={setIsCard}
