@@ -4,7 +4,7 @@ import Logo from "../public/logo.png";
 import MapStylesToggle from "./MapStylesToggle";
 
 import Image from "next/image";
-import Link from 'next/link';
+
 
 
 const Header = ({
@@ -71,13 +71,13 @@ const Header = ({
         <GridItem w="50%" h="10">
           <Spacer />
         </GridItem>
-        <GridItem>
+        {/* <GridItem>
         <Link href='/About'>
         <button>
             About
           </button>
         </Link>
-        </GridItem>
+        </GridItem> */}
       </Grid>
       {searchStatus && (
       <MapStylesToggle />
