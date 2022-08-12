@@ -1,20 +1,33 @@
 import React, { useState, useEffect } from "react";
 import { FaStar } from "react-icons/fa";
 import { Box, Flex } from "@chakra-ui/react";
+import Delayed from "./Delayed";
+
 
 export default function StarRating({place_id, setStarClicked, starClicked}) {
   const [rating, setRating] = useState(null);
   const [hover, setHover] = useState(null);
 
-  useEffect(() => {
-    console.log(`Rating for place with the ID of ${place_id} , is ${rating}`)
-    
-  }, [rating]);
+
+
+ 
+    useEffect(() => {
+
+        if(rating != null){
+            console.log(`Rating for place with the ID of ${place_id} , is ${rating}`)
+        }
+        
+        
+      }, [rating]);
+
+ 
   
 
   return (
     <>
-      <Flex>
+    <button className="runButton"></button>
+    {rating == null
+      ?<Flex className="rating">
         <label>
           <input
             type="radio"
@@ -96,6 +109,38 @@ export default function StarRating({place_id, setStarClicked, starClicked}) {
           />
         </label>
       </Flex>
+      
+      :
+      <Flex> 
+      <FaStar
+            className="star"
+            color={rating >= 1 ? "#ffc107" : "#e4e5e9"}
+            size={25}
+          />
+           <FaStar
+            className="star"
+            color={rating >= 2? "#ffc107" : "#e4e5e9"}
+            size={25}
+          /> <FaStar
+          className="star"
+          color={rating >= 3 ? "#ffc107" : "#e4e5e9"}
+          size={25}
+        /> <FaStar
+        className="star"
+        color={rating >= 4 ? "#ffc107" : "#e4e5e9"}
+        size={25}
+      />
+      <FaStar
+        className="star"
+        color={rating >= 5 ? "#ffc107" : "#e4e5e9"}
+        size={25}
+      />
+      <Delayed>
+      <label> Thank you for rating!</label>
+        </Delayed>
+      </Flex>
+      
+    } 
     </>
   );
 }

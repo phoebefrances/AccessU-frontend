@@ -18,7 +18,7 @@ const [starClicked, setStarClicked] = useState(false)
   return (
     <Box
       bg="white"
-      height="600px"
+      height="650px"
       width="250px"
       position="absolute"
       top="-25vh"
