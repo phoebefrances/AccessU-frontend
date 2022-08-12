@@ -55,7 +55,7 @@ const MapStylesToggle = ({}) => {
         bg={"white"}
         fontWeight={"bold"}
         fontSize={17}
-        width="240px"
+        width="160px"
         border="2px"
         borderColor={`#FF9100`}
         rightIcon={<TriangleDownIcon color={`#FF9100`} />}
