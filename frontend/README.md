@@ -17,11 +17,11 @@
 
 </br>
 
-&nbsp; &nbsp;[Introduction](#🧰-access+)
+&nbsp; &nbsp;[Introduction](#♿-access-app)
 
-&nbsp; &nbsp;[Problem](#➕-solution)
+&nbsp; &nbsp;[Problem](#x-the-problem)
 
-&nbsp; &nbsp;[Solution](#➕-solution)
+&nbsp; &nbsp;[Solution](#whitecheckmark-our-solution)
 
 &nbsp; &nbsp;[Features](#➕-features)
 
