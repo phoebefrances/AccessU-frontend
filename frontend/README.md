@@ -1,10 +1,17 @@
 <!-- ![](https://i.imgur.com/XgsioqF.jpg) -->
 
  <center>
-<img src="./public/logo.png" style="width: 200px" />
+<img src="./public/logo.png" style="width: 500px" />
 </center>
 
-</br></br>
+
+<center>
+ <span style="color:#17CEDA"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;Helping you find what you need, where you need it. </span> 
+</center>
+
+</br></br></br></br></br></br></br></br></br>
+
+
 
 ## Table Of Contents
 
@@ -36,9 +43,23 @@
 
 &nbsp; &nbsp;[Acknowledgements](#❤️-acknowledgements)
 
+
+
+</br></br>
 </br></br>
 
+
+
+
+
+
+
 ## ♿ Access+ App
+</br>
+
+&nbsp;Checkout our LIVE app here: 
+
+</br>
 
 &nbsp; Hello and thanks for your interest in our web app.
 
@@ -206,21 +227,37 @@ PGPORT=
 After this, first run the create table script in the terminal.
 
 ```
-npm run db:createTable
+npm run db:createPlacesTable
 ```
 
 Next, populate the table with the data from the libs folder with the following script.
 
 ```
-npm run db:populateTable
+npm run db:populatePlacesTable
+```
+
+If you'd like to reset the table, run the following script:
+
+```
+npm run db:resetPlacesTable
+
 ```
 
 If you'd like to drop the table completely, run the following script:
 
 ```
-npm run db:dropTable
+npm run db:dropPlacesTable
 
 ```
+
+If you'd like to drop the table completely, run the following script:
+
+```
+npm run db:dropPlacesTable
+
+```
+
+
 
 </br>
 
@@ -231,9 +268,9 @@ npm run db:dropTable
 
 </br>
 
-**Client:** React, CSS
+**Client:** Next js, Chakra UI, Material UI, Google Maps API, Jest, Cypress
 
-**Server:** Node, Express, PostgreSQL
+**Server:** Node, Express, PostgreSQL, Supertest
 
 </br>
 
@@ -249,7 +286,7 @@ npm run db:dropTable
 
 </br>
 
-GET http://localhost:3001/resources/
+GET http://localhost:3000/places/
 
 This returns the entire contents of the database.
 
@@ -259,9 +296,9 @@ This returns the entire contents of the database.
 
 </br>
 
-GET http://localhost:3001/resources/{id}
+GET http://localhost:3000/places/{id}
 
-e.g. GET http://localhost:3001/resources/4
+e.g. GET http://localhost:3000/places/4
 
 </br>
 
@@ -274,130 +311,27 @@ This returns:
 
  "payload": [
      {
-         "id": 4,
-         "url": "https://linguinecode.com/post/react-usereducer-vs-usestate",
-         "title": "React useReducer vs React useState: When to use one over the other?",
-         "type": "Article",
-         "topic": "React",
-         "description": "An article about what React.useReducer is used for, and when to use it instead ofReact.useState"
-         "isFavourite": "false"
+        category: "restaurant",
+    name: "Katya's Stolovaya",
+    rating: "2.0",
+    photo:
+      "https://static01.nyt.com/images/2019/12/15/travel/04moscow-restaurants-nostalgia14/merlin_164050035_f02f14a5-a9be-49bc-bea0-926aa064a13e-mobileMasterAt3x.jpg",
+    alt: "Indoor seating area of Katya's Stolovaya restaurant with wallpaper filled with various images of musicians and guitars pinned to the wall and yellow light fittings",
+    address: "19/84 Orwell Street, W1 6CO",
+    longitude: "-0.13321278619092814",
+    latitude: "51.51226090514994",
+    accessible: false,
+    eye: false,
+    hearing: false,
+    brain: false,
+    phone_number: "+44 (0) 9845754223",
+    web_address: "https://restaurantguru.com/Canteen-No-16-Saint-Petersburg",
+    opening_times: "7am-7pm"
      }
  ]
 
 }
 ```
-
-</br>
-
-The value of isFavourite is a string instead of a boolean.
-
-### To GET Resources by title:
-
-</br>
-
-GET http://localhost:3001/resources?title=value
-
-</br>
-
-e.g. GET http://localhost:3001/resources?title=react
-
-</br>
-
-This returns:
-
-```
-{
-
-    "success": true,
-    "payload": [
-        {
-            "id": 2,
-            "url": "https://testing-library.com/docs/react-testing-library/cheatsheet/",
-            "title": "A cheatsheet for the React Testing Library",
-            "type": "Documentation",
-            "topic": "React",
-            "description": "A short guide to all the exported functions in React Testing Library"
-            "isFavourite": "false"
-        },
-        {
-            "id": 4,
-            "url": "https://linguinecode.com/post/react-usereducer-vs-usestate",
-            "title": "React useReducer vs React useState: When to use one over the other?",
-            "type": "Article",
-            "topic": "React",
-            "description": "An article about what React.useReducer is used for, and when to use it instead ofReact.useState"
-            "isFavourite": "false"
-        }
-    ]
-}
-```
-
-### To Add To Database:
-
-</br>
-
-POST http://localhost:3001/resources
-
-</br>
-
-e.g. POST http://localhost:3001/resources
-
-Post an object with this structure:
-
-```
-
-{
-
-"url": "newurl.com",
-
-"title": "A Title",
-
-"type": "A Type",
-
-"topic": "A Topic",
-
-"description": "Your description here."
-
-}
-
-```
-
-The value of id is automatically set and the value of isFavourite is automatically set to "false"
-
-</br>
-
-### To Update Database:
-
-</br>
-
-PUT: http://localhost:3001/resources/{id}
-
-</br>
-
-e.g. PUT http://localhost:3001/resources/5
-
-Update using an object with this structure:
-
-```
-
-{
-"url": "updatedurl.com",
-
-"title": "A Title",
-
-"type": "A Type",
-
-"topic": "A Topic",
-
-"description": "Your description here."
-
-"isFavourite": "true/false"
-
-}
-
-```
-
-Reminder: the value of isFavourite is a string so update this value with a lowercase string.
 
 </br>
 
@@ -427,10 +361,18 @@ To run tests, run the following commands..
 
 ### Front End
 
-The front end runs tests based from the React Testing Library.
+The front end runs unit tests based from the Jest and React Testing Library.
 
 ```bash
   npm run test
+```
+
+</br>
+
+The second front end runs end 2 end tests based from Cypress.
+
+```bash
+  ./node_modules/.bin/cypress open
 ```
 
 </br>
@@ -450,7 +392,7 @@ The back end runs tests in Supertest and Jest.
 
 </br>
 
-We're a group of five young, talented, ambitious full stack developers that wanted to create an app that solved the problem of accessing resources.
+We're a group of six young, talented, ambitious full stack developers that wanted to create an app that helped find places around the world that accomodate better for those with accessibility needs. 
 
 </br>
 
@@ -463,6 +405,18 @@ We're a group of five young, talented, ambitious full stack developers that want
 </br>
 
 Teamwork makes the dream work..
+
+</br>
+
+</br>
+
+A good plan always makes the day run smoother, not perfect, but much better overall. 
+
+</br>
+
+</br>
+
+The plan is a living document and can always be iterated upon as you go, it doesn't need to be perfect. 
 
 </br>
 
@@ -494,15 +448,15 @@ Let things go if need be.. Sometimes it’s just not worth it..
 
 </br>
 
-[Dan Hawkesford](https://github.com/DHawkesford)
+[Phoebe Francis](https://github.com/phoebefrances)
 
 </br>
 
-[Jena Azzubaydi](https://github.com/jena-84)
+[Philip Kaminski](https://github.com/AureaFlamma)
 
 </br>
 
-[Simran Rai](https://github.com/srai98i)
+[Kieran Dickerson](https://github.com/kd071090)
 
 </br>
 
