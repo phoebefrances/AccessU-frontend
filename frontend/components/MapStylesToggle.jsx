@@ -10,6 +10,7 @@ import {
   Button,
   Divider,
   Text,
+  Flex,
 } from "@chakra-ui/react";
 import {
   PhoneIcon,
@@ -32,8 +33,26 @@ const MapStylesToggle = ({}) => {
   const [mapStyle, SetMapStyle] = useContext(MapStyleContext);
   // SetMapStyle(`require('../libs/map-grayscale.json')`)
   return (
-    <Menu>
-      <Link href="/About">
+    <Flex align={"center"}>
+      <Menu>
+        <Link href="/About">
+          <MenuButton
+            color={`#2C2C68`}
+            as={Button}
+            rounded="full"
+            bg={"white"}
+            fontWeight={"bold"}
+            fontSize={17}
+            width="240px"
+            border="2px"
+            borderColor={`#FF9100`}
+            _hover={{
+              backgroundImage: "linear-gradient(to right, #fff500 , #ff9100)",
+            }}
+          >
+            About
+          </MenuButton>
+        </Link>
         <MenuButton
           color={`#2C2C68`}
           as={Button}
@@ -41,115 +60,99 @@ const MapStylesToggle = ({}) => {
           bg={"white"}
           fontWeight={"bold"}
           fontSize={17}
-          width="240px"
+          width="160px"
           border="2px"
           borderColor={`#FF9100`}
-          _hover={{
-            backgroundImage: "linear-gradient(to right, #fff500 , #ff9100)",
-          }}
+          rightIcon={<TriangleDownIcon color={`#FF9100`} />}
+          position={"absolute"}
+          top={"100px"}
+          right={"15px"}
         >
-          About
+          Map Colour
         </MenuButton>
-      </Link>
-      <MenuButton
-        color={`#2C2C68`}
-        as={Button}
-        rounded="full"
-        bg={"white"}
-        fontWeight={"bold"}
-        fontSize={17}
-        width="160px"
-        border="2px"
-        borderColor={`#FF9100`}
-        rightIcon={<TriangleDownIcon color={`#FF9100`} />}
-        position={"absolute"}
-        top={"100px"}
-        right={"15px"}
-      >
-        Map Colour
-      </MenuButton>
-      <MenuList
-        rounded="lg"
-        border="2px"
-        borderColor={`#FF9100`}
-        textColor={"#2C2C68"}
-        S
-      >
-        <MenuItem
-          onClick={() =>
-            SetMapStyle({
-              styles: require("../libs/map-default.json"),
-            })
-          }
-          minH="48px"
-          minW={"100px"}
+        <MenuList
+          rounded="lg"
+          border="2px"
+          borderColor={`#FF9100`}
+          textColor={"#2C2C68"}
+          S
         >
-          <Image
-            boxSize="2rem"
-            borderRadius="full"
-            src={defaultMap}
-            alt="Fluffybuns the destroyer"
-            mr="12px"
-            width="50px"
-            height="50px"
-          />
+          <MenuItem
+            onClick={() =>
+              SetMapStyle({
+                styles: require("../libs/map-default.json"),
+              })
+            }
+            minH="48px"
+            minW={"100px"}
+          >
+            <Image
+              boxSize="2rem"
+              borderRadius="full"
+              src={defaultMap}
+              alt="Fluffybuns the destroyer"
+              mr="12px"
+              width="50px"
+              height="50px"
+            />
 
-          <Text margin="10px">Default</Text>
-        </MenuItem>
-        <Divider
-          orientation="horizontal"
-          borderColor={`#FF9100`}
-          weight="10px"
-          width="100%"
-          alignSelf="center"
-        />
-        <MenuItem
-          onClick={() =>
-            SetMapStyle({
-              styles: require("../libs/map-grayscale.json"),
-            })
-          }
-          minH="40px"
-        >
-          <Image
-            boxSize="2rem"
-            borderRadius="full"
-            src={grayScaleMap}
-            alt="Simon the pensive"
-            mr="12px"
-            width="50px"
-            height="50px"
+            <Text margin="10px">Default</Text>
+          </MenuItem>
+          <Divider
+            orientation="horizontal"
+            borderColor={`#FF9100`}
+            weight="10px"
+            width="100%"
+            alignSelf="center"
           />
-          <Text margin="10px">GrayScale</Text>
-        </MenuItem>
-        <Divider
-          orientation="horizontal"
-          borderColor={`#FF9100`}
-          weight="10px"
-          width="100%"
-          alignSelf="center"
-        />
-        <MenuItem
-          onClick={() =>
-            SetMapStyle({
-              styles: require("../libs/map-colorblind.json"),
-            })
-          }
-          minH="40px"
-        >
-          <Image
-            boxSize="2rem"
-            borderRadius="full"
-            src={highContrastMap}
-            alt="Simon the pensive"
-            mr="12px"
-            width="50px"
-            height="50px"
+          <MenuItem
+            onClick={() =>
+              SetMapStyle({
+                styles: require("../libs/map-grayscale.json"),
+              })
+            }
+            minH="40px"
+          >
+            <Image
+              boxSize="2rem"
+              borderRadius="full"
+              src={grayScaleMap}
+              alt="Simon the pensive"
+              mr="12px"
+              width="50px"
+              height="50px"
+            />
+            <Text margin="10px">GrayScale</Text>
+          </MenuItem>
+          <Divider
+            orientation="horizontal"
+            borderColor={`#FF9100`}
+            weight="10px"
+            width="100%"
+            alignSelf="center"
           />
-          <Text margin="10px">High Contrast </Text>
-        </MenuItem>
-      </MenuList>
-    </Menu>
+          <MenuItem
+            onClick={() =>
+              SetMapStyle({
+                styles: require("../libs/map-colorblind.json"),
+              })
+            }
+            minH="40px"
+          >
+            <Image
+              boxSize="2rem"
+              borderRadius="full"
+              src={highContrastMap}
+              alt="Simon the pensive"
+              mr="12px"
+              width="50px"
+              height="50px"
+            />
+            <Text margin="10px">High Contrast </Text>
+          </MenuItem>
+        </MenuList>
+      </Menu>
+    </Flex>
   );
 };
 
