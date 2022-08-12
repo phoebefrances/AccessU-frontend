@@ -61,7 +61,7 @@ export default function About() {
 
           <QuestionOutlineIcon color={`#FF9100`} w={20} h={16}/>
           <h1>
-            Have you visited somewhere to only find the access wasn't as you
+            Have you visited somewhere to only find the access wasn&apos;t as you
             thought?
           </h1>
 

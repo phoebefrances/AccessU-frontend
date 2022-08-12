@@ -124,7 +124,7 @@ const LargeCard = ({ cardData, setIsCard, rating, setRating }) => {
           isTruncated
           color="#2C2C68"
         >
-          <a href={`https://${cardData.web_address}`} target="_blank">
+          <a href={`https://${cardData.web_address}`} target="_blank" rel="noreferrer">
             {cardData.web_address}
           </a>
         </Text>
@@ -149,7 +149,7 @@ const LargeCard = ({ cardData, setIsCard, rating, setRating }) => {
               </Text>
 
               <Text fontSize="small" fontWeight={500} color="#2C2C68">
-                This place is wheelchair accesible
+                <p>This place is wheelchair accesible</p>
               </Text>
             </Flex>
           )}
@@ -170,7 +170,7 @@ const LargeCard = ({ cardData, setIsCard, rating, setRating }) => {
                 color={"#2C2C68"}
                 ml={1}
               >
-                This place has adjustments for visual impairments
+                <p>place has adjustments for visual impairments</p>
               </Text>
             </Flex>
           )}
@@ -185,7 +185,7 @@ const LargeCard = ({ cardData, setIsCard, rating, setRating }) => {
                 color={"#2C2C68"}
                 ml={1}
               >
-                This place has adjustments for hearing impairments
+                <p>This place has adjustments for hearing impairments</p>
               </Text>
             </Flex>
           )}

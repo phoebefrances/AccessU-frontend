@@ -5,3 +5,8 @@
 button.uf-button.uf-button-primary {
     background-image: linear-gradient(to right, #17CEDA, #032396);
 }
+
+.uf-actions.left button.uf-button {
+
+    background-image: linear-gradient(to right, #17CEDA, #032396);
+}
