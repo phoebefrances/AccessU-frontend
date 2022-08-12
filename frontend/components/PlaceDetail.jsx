@@ -8,7 +8,7 @@ import PsychologyIcon from "@mui/icons-material/Psychology";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import StarRating from "./StarRating";
 
-const PlaceDetail = ({ place, setIsCard, setCardData }) => {
+const PlaceDetail = ({ place, setIsCard, setCardData, rating, setRating }) => {
   return (
     <Flex
       marginTop="15px"
@@ -24,6 +24,8 @@ const PlaceDetail = ({ place, setIsCard, setCardData }) => {
       onClick={() => {
         setCardData(place);
         setIsCard(true);
+        setRating(null)
+
       }}
     >
       <Flex direction="column" width="full">

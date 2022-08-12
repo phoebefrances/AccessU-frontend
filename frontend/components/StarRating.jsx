@@ -4,8 +4,8 @@ import { Box, Flex } from "@chakra-ui/react";
 import Delayed from "./Delayed";
 
 
-export default function StarRating({place_id, setStarClicked, starClicked}) {
-  const [rating, setRating] = useState(null);
+export default function StarRating({place_id, setStarClicked, starClicked, rating, setRating}) {
+  
   const [hover, setHover] = useState(null);
 
 
@@ -16,8 +16,6 @@ export default function StarRating({place_id, setStarClicked, starClicked}) {
         if(rating != null){
             console.log(`Rating for place with the ID of ${place_id} , is ${rating}`)
         }
-        
-        
       }, [rating]);
 
  

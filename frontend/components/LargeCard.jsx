@@ -11,9 +11,10 @@ import PsychologyIcon from "@mui/icons-material/Psychology";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import StarRating from "./StarRating";
 
-const LargeCard = ({ cardData, setIsCard }) => {
-//trigger useEffect in StarRating component
-const [starClicked, setStarClicked] = useState(false)
+const LargeCard = ({ cardData, setIsCard, rating, setRating }) => {
+
+
+
 
   return (
     <Box
@@ -43,6 +44,7 @@ const [starClicked, setStarClicked] = useState(false)
         alignItems={"center"}
         onClick={() => {
           setIsCard(false);
+          setRating(null)
         }}
       >
         <BiX fontSize={28} color="white" />
@@ -212,7 +214,7 @@ const [starClicked, setStarClicked] = useState(false)
               >
                 How would you rate this place?
               </Text>
-              <StarRating  place_id={cardData.id}/>
+              <StarRating rating={rating} setRating={setRating} place_id={cardData.id}/>
           </Flex>
         </Flex>
       </Box>
