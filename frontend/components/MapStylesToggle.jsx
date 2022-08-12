@@ -61,7 +61,7 @@ const MapStylesToggle = ({}) => {
         rightIcon={<TriangleDownIcon color={`#FF9100`} />}
         position={"absolute"}
         top={"100px"}
-        right={"10px"}
+        right={"15px"}
       >
         Map Colour
       </MenuButton>
