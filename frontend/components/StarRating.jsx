@@ -4,6 +4,13 @@ import { Box, Flex } from "@chakra-ui/react";
 import Delayed from "./Delayed";
 
 
+let emptyRatingDetails = {
+  place_id: "",
+  rating: "",
+  comment: "",
+  user_id: "",
+}
+
 export default function StarRating({place_id, setStarClicked, starClicked, rating, setRating}) {
   
   const [hover, setHover] = useState(null);
@@ -15,11 +22,37 @@ export default function StarRating({place_id, setStarClicked, starClicked, ratin
 
         if(rating != null){
             console.log(`Rating for place with the ID of ${place_id} , is ${rating}`)
+            emptyRatingDetails = {
+              place_id: place_id,
+              rating: rating,
+              comment: "",
+              user_id: "",
+            }
+            sendRating(emptyRatingDetails)
         }
       }, [rating]);
 
- 
-  
+
+
+      async function sendRating(ratingData) {
+        try {
+          console.log("Rating Data", ratingData);
+          const res = await fetch(`http://localhost:5000/reviews`, {
+          method: "POST",
+          body: JSON.stringify(ratingData),
+          headers: {
+            "Content-type": "application/json; charset=UTF-8",
+          },
+        });
+        const data = await res.json();
+        console.log('Returned data is' , data);
+
+        } catch (error) {
+          console.log('ERROR fetching data...',  error)
+        }
+        
+        
+      }
 
   return (
     <>
