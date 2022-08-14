@@ -44,7 +44,7 @@ const MapStylesToggle = ({}) => {
             bg={"white"}
             fontWeight={"bold"}
             fontSize={17}
-            width="240px"
+            width="160px"
             border="2px"
             borderColor={`#FF9100`}
             _hover={{
@@ -54,6 +54,11 @@ const MapStylesToggle = ({}) => {
             About
           </MenuButton>
         </Link>
+      <Divider
+          borderColor= 'white'
+          width='1%'
+          orientation="vertical"
+        /> 
         <Link href="/AddAPlace">
           <MenuButton
             color={`#2C2C68`}
@@ -62,7 +67,7 @@ const MapStylesToggle = ({}) => {
             bg={"white"}
             fontWeight={"bold"}
             fontSize={17}
-            width="240px"
+            width="160px"
             border="2px"
             borderColor={`#FF9100`}
             _hover={{
