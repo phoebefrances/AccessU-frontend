@@ -19,11 +19,11 @@ const LargeCard = ({ cardData, setIsCard, rating, setRating }) => {
   return (
     <Box
       bg="white"
-      height="650px"
+      height="690px"
       width="250px"
-      position="absolute"
+      position="relative"
       top="-25vh"
-      left="-25vw"
+      left="-15vw"
       bottom="50px"
       borderRadius="15"
       border="2px"

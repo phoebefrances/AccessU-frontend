@@ -15,6 +15,8 @@ import Head from "next/head";
 const Home = () => {
   const [backendData, setBackendData] = useState([]);
 
+  const [reviewData, setReviewData] = useState([]);
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -28,8 +30,24 @@ const Home = () => {
         console.log("error", error);
       }
     };
+    const fetchReviewData = async () => {
+      try {
+        const response = await fetch(
+          `http://localhost:5000/reviews`
+        );
+        const data = await response.json();
+        // setPlaces(data.payload.rows);
+        setReviewData(data.payload.rows);
+        console.log('Review Data is...', data.payload.rows)
+      } catch (error) {
+        console.log("error", error);
+      }
+    };
+    fetchReviewData();
     fetchData();
   }, []);
+
+  
 
   console.log(backendData);
 
