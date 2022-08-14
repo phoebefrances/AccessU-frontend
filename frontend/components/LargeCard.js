@@ -124,7 +124,7 @@ const LargeCard = ({ cardData, setIsCard, rating, setRating }) => {
           isTruncated
           color="#2C2C68"
         >
-          <a href={`https://${cardData.web_address}`} target="_blank" rel="noreferrer">
+          <a href={`${cardData.web_address}`} target="_blank" rel="noreferrer">
             {cardData.web_address}
           </a>
         </Text>
