@@ -54,6 +54,24 @@ const MapStylesToggle = ({}) => {
             About
           </MenuButton>
         </Link>
+        <Link href="/AddAPlace">
+          <MenuButton
+            color={`#2C2C68`}
+            as={Button}
+            rounded="full"
+            bg={"white"}
+            fontWeight={"bold"}
+            fontSize={17}
+            width="240px"
+            border="2px"
+            borderColor={`#FF9100`}
+            _hover={{
+              backgroundImage: "linear-gradient(to right, #fff500 , #ff9100)",
+            }}
+          >
+            Add A Place
+          </MenuButton>
+        </Link>
         <MenuButton
           color={`#2C2C68`}
           as={Button}

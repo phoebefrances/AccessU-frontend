@@ -3,7 +3,8 @@ import { Flex } from "@chakra-ui/react";
 import Logo from "../public/logo.png";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import AddAPlace from '../components/AddAPlace/Place/AddAPlace.js'
+// import AddAPlace from '../components/AddAPlace/Place/AddAPlace.js'
+import AddAPlaceForm from "../components/AddAPlaceForm";
 
 export default function AddANewPlace() {
     const router = useRouter();
@@ -28,6 +29,6 @@ export default function AddANewPlace() {
             onClick={handleClick}
           />
         </Flex>
-        <AddAPlace/>
+        <AddAPlaceForm/>
         </div>
     )}
