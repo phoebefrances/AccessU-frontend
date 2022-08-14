@@ -17,6 +17,7 @@ const Home = () => {
 
   const [reviewData, setReviewData] = useState([]);
 
+  const [starRating, setStarRating] = useState()
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -161,6 +162,9 @@ const [searchClick, setSearchClick] = useState(false);
         searchStatus={searchStatus}
         setSearchClick={setSearchClick}
         searchClick={searchClick}
+        reviewData={reviewData}
+       
+
       />
 
       {searchStatus && (
@@ -172,6 +176,9 @@ const [searchClick, setSearchClick] = useState(false);
           setCardData={setCardData}
           rating={rating}
           setRating={setRating}
+          reviewData={reviewData}
+          setStarRating={setStarRating}
+          starRating={starRating}
         />
       )}
 
@@ -187,6 +194,8 @@ const [searchClick, setSearchClick] = useState(false);
           setCardData={setCardData}
           rating={rating}
           setRating={setRating}
+          setStarRating={setStarRating}
+          starRating={starRating}
         />
       )}
     </Flex>

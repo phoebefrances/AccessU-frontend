@@ -8,7 +8,10 @@ import PsychologyIcon from "@mui/icons-material/Psychology";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import StarRating from "./StarRating";
 
-const PlaceDetail = ({ place, setIsCard, setCardData, rating, setRating }) => {
+const PlaceDetail = ({ place, setIsCard, setCardData, rating, setRating, reviewData }) => {
+
+
+  
   return (
     <Flex
       marginTop="15px"
@@ -37,9 +40,9 @@ const PlaceDetail = ({ place, setIsCard, setCardData, rating, setRating }) => {
             fontWeight={"bold"}
             color={"#2C2C68"}
           >
-            {place.name}
+            {place.name} THIS IS TESTTT
           </Text>
-          <Rating size="small" value={Number(place.rating)} readOnly />
+          {/* <Rating size="small" value={Number(place.rating)} readOnly /> */}
         </Flex>
 
         {place?.address && (
@@ -47,7 +50,7 @@ const PlaceDetail = ({ place, setIsCard, setCardData, rating, setRating }) => {
             <IoLocation fontSize={20} color="#2C2C68" />
 
             <Text fontSize={"12px"} fontWeight={500} color={"gray.700"} ml={1}>
-              {place.address}
+              {place.address} THIS IS ADDRESSSSS
             </Text>
           </Flex>
         )}
@@ -144,6 +147,6 @@ const PlaceDetail = ({ place, setIsCard, setCardData, rating, setRating }) => {
       
     </Flex>
   );
-};
+      }
 
 export default PlaceDetail;

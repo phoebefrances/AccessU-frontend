@@ -7,7 +7,19 @@ import AccessibleIcon from "@mui/icons-material/Accessible";
 import PsychologyIcon from "@mui/icons-material/Psychology";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 
-const PlaceDetail = ({ place, setIsCard, setCardData }) => {
+const PlaceDetail = ({ place, setIsCard, setCardData, rating, setRating, reviewData }) => {
+  let selectedPlace = place.id
+  let averageRating = []
+  console.log('*********************LIST JSX**********************')
+  reviewData.map((rating, i)=>{
+    if (selectedPlace == rating.place_id) {
+      console.log(i, ` rating is `, rating.rating, 'place id is', rating.place_id)
+      averageRating.push(rating.rating)
+    }
+  })
+  const average = averageRating.reduce((a, b) => a + b, 0) / averageRating.length
+  console.log('Average Rating Array isss.....', average)
+
   return (
     <Flex
       marginTop="15px"
@@ -23,6 +35,7 @@ const PlaceDetail = ({ place, setIsCard, setCardData }) => {
       onClick={() => {
         setCardData(place);
         setIsCard(true);
+        setRating(null)
       }}
     >
       <Flex direction="column" width="full">
@@ -36,7 +49,7 @@ const PlaceDetail = ({ place, setIsCard, setCardData }) => {
           >
             {place.name}
           </Text>
-          <Rating size="small" value={Number(place.rating)} readOnly />
+          <Rating size="small" value={Number(average)} readOnly />
         </Flex>
 
         {place?.address && (
