@@ -46,7 +46,7 @@
 
 
 
-/*DO NOT CHANGE THE 2 STYLES BELOW!!!!
+/*❗❗❗DO NOT CHANGE THE 2 STYLES BELOW❗❗❗
 These style the border of the large pop-up
 Took me ages of trial-and-error to get it right. They follow no logic and I got it working by pure luck.
 It seems like *both* selectors need to be in use in order for the border to show. No idea why*/
@@ -63,7 +63,7 @@ body > div.uf-modal.uf-visible.uf-7b694293-8d8f-46a4-8488-bca44ccccf38 > div {
     border: 2px;
     border-color: #ff9100;
 }
-/*DO NOT CHANGE THE 2 STYLES ABOVE!!!*/
+/*❗❗ ❗  DO NOT CHANGE THE 2 STYLES ABOVE❗❗❗ */ 
 
 /*The two below style the buttons*/
 .uf-button {
