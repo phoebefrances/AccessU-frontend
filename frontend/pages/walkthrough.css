@@ -31,3 +31,36 @@ button.uf-button.uf-button-primary {
 .uf-bubble-content p span {
     color: #2C2C68 !important;
 }
+.uf-content p span {
+    color: #2C2C68 !important;
+}
+
+/* The two selectors below are my unsuccesful attempts at giving the large pop-up a border. Both selectors target the desired element as can be checked by uncommenting the background props */
+
+div.uf-modal-inner  {
+    border-style: solid !important;
+    border: 2px;
+    border-color: #ff9100 
+    /* background-color: red; */
+    
+    
+}
+
+body > div.uf-modal.uf-visible.uf-7b694293-8d8f-46a4-8488-bca44ccccf38 > div {
+    /* background-color: green; */
+    border-style: solid;
+    border: 2px;
+    border-color: #ff9100;
+}
+
+/*The two below style the buttons*/
+.uf-button {
+    background-image: linear-gradient(to right, #17CEDA, #032396) !important;
+    border-style: none !important;
+    color: white !important;
+    border-radius: 50px !important;
+    
+}
+.uf-button:hover {
+    background-image: linear-gradient(to right, #19f7fa , #1c8cfb) !important;
+}
