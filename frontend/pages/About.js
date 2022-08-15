@@ -29,7 +29,7 @@ export default function About() {
     <div>
       <div>
         <Head>
-          <title>About | Enabled </title>
+          <title>About | AccessU </title>
           <meta name="description" content="About" />
         </Head>
 
@@ -41,7 +41,7 @@ export default function About() {
         >
           <Image
             src={Logo}
-            alt={"logo"}
+            alt={"AccessU logo"}
             style={{ zIndex: 99 }}
             onClick={handleClick}
           />{" "}
