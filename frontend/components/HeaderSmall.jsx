@@ -8,7 +8,6 @@ import Image from "next/image";
 const HeaderSmall = ({
   setCategory,
   setCoordinates,
-  setAccessibility,
   setRatings,
   setSearchStatus,
   setSearchClick,
@@ -40,7 +39,6 @@ const HeaderSmall = ({
         <Search
           setCoordinates={setCoordinates}
           setCategory={setCategory}
-          setAccessibility={setAccessibility}
           setRatings={setRatings}
           setSearchStatus={setSearchStatus}
           setSearchClick={setSearchClick}
