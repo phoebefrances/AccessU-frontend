@@ -1,7 +1,7 @@
 import { Flex, Spacer } from "@chakra-ui/react";
 import Search from "./Search";
 import Logo from "../public/logo_new_resized.png";
-import MapStylesToggle from "./MapStylesToggle";
+import HeaderMenu from "./HeaderMenu";
 
 import Image from "next/image";
 
@@ -47,7 +47,7 @@ const HeaderSmall = ({
           searchClick={searchClick}
         />
         <Spacer />
-        <MapStylesToggle />
+        <HeaderMenu />
       </Flex>
     </>
   );

@@ -20,7 +20,7 @@ import React, { useState, useContext } from "react";
 import { MapStyleContext } from "./MapStyleContext";
 import Link from "next/link";
 
-const MapStylesToggle = ({}) => {
+const HeaderMenu = ({}) => {
   // importing mapStyle useState from our MapStyleContext which withold the styling information.
   const [mapStyle, SetMapStyle] = useContext(MapStyleContext);
 
@@ -189,4 +189,4 @@ const MapStylesToggle = ({}) => {
   );
 };
 
-export default MapStylesToggle;
+export default HeaderMenu;

@@ -3,7 +3,6 @@ import { Flex, Text, Divider, Center } from "@chakra-ui/react";
 import Logo from "../public/logo.png";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import Header from "../components/Header";
 import { Heading } from "@chakra-ui/react";
 import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
 import { QuestionOutlineIcon } from "@chakra-ui/icons";
