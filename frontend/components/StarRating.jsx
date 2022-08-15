@@ -37,7 +37,7 @@ export default function StarRating({place_id, setStarClicked, starClicked, ratin
       async function sendRating(ratingData) {
         try {
           console.log("Rating Data", ratingData);
-          const res = await fetch(`http://localhost:5000/reviews`, {
+          const res = await fetch(`https://undefined-room4.herokuapp.com/reviews`, {
           method: "POST",
           body: JSON.stringify(ratingData),
           headers: {
