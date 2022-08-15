@@ -1,5 +1,13 @@
-import React, {useState} from "react";
-import { Box, Image, Spacer, Text, Flex } from "@chakra-ui/react";
+import React, { useState } from "react";
+import {
+  Box,
+  Image,
+  Spacer,
+  Text,
+  Flex,
+  Divider,
+  Center,
+} from "@chakra-ui/react";
 import { Rating } from "@material-ui/lab";
 import { BiX } from "react-icons/bi";
 
@@ -12,10 +20,6 @@ import VisibilityIcon from "@mui/icons-material/Visibility";
 import StarRating from "./StarRating";
 
 const LargeCard = ({ cardData, setIsCard, rating, setRating }) => {
-
-
-
-
   return (
     <Box
       bg="white"
@@ -44,13 +48,12 @@ const LargeCard = ({ cardData, setIsCard, rating, setRating }) => {
         alignItems={"center"}
         onClick={() => {
           setIsCard(false);
-          setRating(null)
+          setRating(null);
         }}
       >
         <BiX fontSize={28} color="white" />
       </Box>
-      {/* Chakra Image component to display place Image on cards */}
-
+      {/* Place image */}
       <Image
         alt={cardData.alt}
         objectFit="cover"
@@ -60,8 +63,6 @@ const LargeCard = ({ cardData, setIsCard, rating, setRating }) => {
         borderBottomRadius="0"
         src={cardData.photo}
       />
-
-      {/* Chakra Text component to display place name details on cards */}
 
       <Box padding="3">
         <Text
@@ -205,17 +206,19 @@ const LargeCard = ({ cardData, setIsCard, rating, setRating }) => {
               </Text>
             </Flex>
           )}
-          <Flex>
-          <Text
-                fontSize={"small"}
-                fontWeight={500}
-                color={"#2C2C68"}
-                ml={1}
-              >
-                How would you rate this place?
-              </Text>
-              <StarRating rating={rating} setRating={setRating} place_id={cardData.id}/>
-          </Flex>
+          <Center>
+            <Divider
+              borderColor={`#FF9100`}
+              orientation="horizontal"
+              width="90%"
+            />
+          </Center>
+
+          <StarRating
+            rating={rating}
+            setRating={setRating}
+            place_id={cardData.id}
+          />
         </Flex>
       </Box>
     </Box>

@@ -12,8 +12,17 @@ import {
 
 // When the page loads, the skeleton frame shows, but only if we're using the API.
 
-const List = ({ places, isLoading, setIsCard, setCardData, setRating, rating, reviewData, starRating, setStarRating }) => {
-
+const List = ({
+  places,
+  isLoading,
+  setIsCard,
+  setCardData,
+  setRating,
+  rating,
+  reviewData,
+  starRating,
+  setStarRating,
+}) => {
   if (isLoading)
     return (
       <Flex
@@ -62,12 +71,18 @@ const List = ({ places, isLoading, setIsCard, setCardData, setRating, rating, re
       overflow="hidden"
       px={2}
     >
-      <Flex className="places-list" flex={1} overflowY="scroll" mt={16} direction="column">
+      <Flex
+        className="places-list"
+        flex={1}
+        overflowY="scroll"
+        mt={16}
+        direction="column"
+      >
         {places.length ? (
           places &&
           places.map((place, i) => (
             <>
-              <PlaceDetail 
+              <PlaceDetail
                 place={place}
                 key={i}
                 setIsCard={setIsCard}
