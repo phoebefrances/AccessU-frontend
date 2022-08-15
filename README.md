@@ -1,7 +1,7 @@
 <!-- ![](https://i.imgur.com/XgsioqF.jpg) -->
 
  <center>
-<img src="./public/logo.png" style="width: 500px" />
+<img src="./frontend/public/logo.png" style="width: 500px" />
 </center>
 
 
