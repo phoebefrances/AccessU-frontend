@@ -44,7 +44,7 @@ const MapStylesToggle = ({}) => {
             bg={"white"}
             fontWeight={"bold"}
             fontSize={17}
-            width="240px"
+            width="160px"
             border="2px"
             borderColor={`#FF9100`}
             _hover={{
@@ -52,6 +52,29 @@ const MapStylesToggle = ({}) => {
             }}
           >
             About
+          </MenuButton>
+        </Link>
+      <Divider
+          borderColor= 'white'
+          width='1%'
+          orientation="vertical"
+        /> 
+        <Link href="/AddAPlace">
+          <MenuButton
+            color={`#2C2C68`}
+            as={Button}
+            rounded="full"
+            bg={"white"}
+            fontWeight={"bold"}
+            fontSize={17}
+            width="160px"
+            border="2px"
+            borderColor={`#FF9100`}
+            _hover={{
+              backgroundImage: "linear-gradient(to right, #fff500 , #ff9100)",
+            }}
+          >
+            Add A Place
           </MenuButton>
         </Link>
         <MenuButton
