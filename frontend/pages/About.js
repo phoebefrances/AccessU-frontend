@@ -66,7 +66,7 @@ export default function About() {
           <Flex align="center" width="25%">
             <QuestionOutlineIcon color={`white`} w={20} h={16} />
             <Text color="white" fontWeight={"bold"}>
-              Have you visited somewhere to only find the access wasn&apos;'t as you
+              Have you visited somewhere to only find the access wasn&apos;t as you
               thought?
             </Text>
           </Flex>
