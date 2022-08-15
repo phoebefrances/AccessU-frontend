@@ -3,18 +3,27 @@ import {
   MenuButton,
   MenuList,
   MenuItem,
+  MenuItemOption,
+  MenuGroup,
+  MenuOptionGroup,
+  MenuDivider,
   Button,
   Divider,
   Text,
   Flex,
   Center,
 } from "@chakra-ui/react";
-import { TriangleDownIcon } from "@chakra-ui/icons";
+import {
+  PhoneIcon,
+  AddIcon,
+  WarningIcon,
+  ChevronDownIcon,
+  TriangleDownIcon,
+} from "@chakra-ui/icons";
 import Image from "next/image";
-import defaultMap from "../public/map-thumb-default.png";
-import greyScaleMap from "../public/map-thumb-greyscale.png";
-import contrastMap from "../public/map-thumb-contrast.png";
-import colourBlindMap from "../public/map-thumb-colourblind.png";
+import defaultMap from "../public/default.png";
+import grayScaleMap from "../public/grayscale.png";
+import highContrastMap from "../public/high-contrast.png";
 import React, { useState, useContext } from "react";
 // importing map style props
 import { MapStyleContext } from "./MapStyleContext";
@@ -23,26 +32,9 @@ import Link from "next/link";
 const MapStylesToggle = ({}) => {
   // importing mapStyle useState from our MapStyleContext which withold the styling information.
   const [mapStyle, SetMapStyle] = useContext(MapStyleContext);
-
+  // SetMapStyle(`require('../libs/map-grayscale.json')`)
   return (
-    <Flex align={"center"} height={"50px"}>
-      <Link href="/About">
-        <Button
-          color={`#2C2C68`}
-          as={Button}
-          rounded="full"
-          bg={"white"}
-          fontWeight={"bold"}
-          fontSize={17}
-          width="100px"
-          _hover={{
-            backgroundImage: "linear-gradient(to right, #fff500 , #ff9100)",
-          }}
-        >
-          About
-        </Button>
-      </Link>
-      <Divider orientation="vertical" height="80%" borderColor={`#FF9100`} />
+    <Flex align={"center"}>
       <Menu>
         <Link href="/About">
           <MenuButton
@@ -62,7 +54,11 @@ const MapStylesToggle = ({}) => {
             About
           </MenuButton>
         </Link>
-        <Divider borderColor="white" width="1%" orientation="vertical" />
+      <Divider
+          borderColor= 'white'
+          width='1%'
+          orientation="vertical"
+        /> 
         <Link href="/AddAPlace">
           <MenuButton
             color={`#2C2C68`}
@@ -81,7 +77,6 @@ const MapStylesToggle = ({}) => {
             Add A Place
           </MenuButton>
         </Link>
-
         <MenuButton
           color={`#2C2C68`}
           as={Button}
@@ -90,12 +85,15 @@ const MapStylesToggle = ({}) => {
           fontWeight={"bold"}
           fontSize={17}
           width="160px"
-          _hover={{
-            backgroundImage: "linear-gradient(to right, #fff500 , #ff9100)",
-          }}
+          border="2px"
+          borderColor={`#FF9100`}
           rightIcon={<TriangleDownIcon color={`#FF9100`} />}
+          position={"absolute"}
+          top={"100px"}
+          right={"15px"}
+          _pressed={{}}
         >
-          Map Theme
+          Map Colour
         </MenuButton>
         <MenuList
           rounded="lg"
@@ -117,7 +115,7 @@ const MapStylesToggle = ({}) => {
               boxSize="2rem"
               borderRadius="full"
               src={defaultMap}
-              alt="Thumbnail of Default Map"
+              alt="Fluffybuns the destroyer"
               mr="12px"
               width="50px"
               height="50px"
@@ -144,40 +142,13 @@ const MapStylesToggle = ({}) => {
             <Image
               boxSize="2rem"
               borderRadius="full"
-              src={greyScaleMap}
-              alt="Thumbnail of Greyscale Map"
+              src={grayScaleMap}
+              alt="Simon the pensive"
               mr="12px"
               width="50px"
               height="50px"
             />
-            <Text margin="10px">Greyscale</Text>
-          </MenuItem>
-          <Center height="10px">
-            <Divider
-              orientation="horizontal"
-              borderColor={`#FF9100`}
-              weight="10px"
-              width="90%"
-            />
-          </Center>
-          <MenuItem
-            onClick={() =>
-              SetMapStyle({
-                styles: require("../libs/map-high-contrast.json"),
-              })
-            }
-            minH="40px"
-          >
-            <Image
-              boxSize="2rem"
-              borderRadius="full"
-              src={colourBlindMap}
-              alt="Thumbnail of Colour Blind Friendly Map"
-              mr="12px"
-              width="50px"
-              height="50px"
-            />
-            <Text margin="10px">Colour Blind Friendly</Text>
+            <Text margin="10px">GrayScale</Text>
           </MenuItem>
           <Center height="10px">
             <Divider
@@ -198,13 +169,13 @@ const MapStylesToggle = ({}) => {
             <Image
               boxSize="2rem"
               borderRadius="full"
-              src={contrastMap}
-              alt="Thumbnail of Ultra High Contrast Map"
+              src={highContrastMap}
+              alt="Simon the pensive"
               mr="12px"
               width="50px"
               height="50px"
             />
-            <Text margin="10px">Ultra High Contrast </Text>
+            <Text margin="10px">High Contrast </Text>
           </MenuItem>
         </MenuList>
       </Menu>

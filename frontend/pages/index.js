@@ -186,14 +186,15 @@ const Home = () => {
         </>
       ) : (
         <>
-          <HeaderBig />
-          setRatings={setRatings}
-          setCoordinates={setCoordinates}
-          setCategory={setCategory}
-          setSearchStatus={setSearchStatus}
-          searchStatus={searchStatus}
-          setSearchClick={setSearchClick}
-          searchClick={searchClick}{" "}
+          <HeaderBig
+            setRatings={setRatings}
+            setCoordinates={setCoordinates}
+            setCategory={setCategory}
+            setSearchStatus={setSearchStatus}
+            searchStatus={searchStatus}
+            setSearchClick={setSearchClick}
+            searchClick={searchClick}
+          />
         </>
       )}
     </Flex>
