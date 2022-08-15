@@ -32,7 +32,7 @@ const MapStylesToggle = ({}) => {
           as={Button}
           rounded="full"
           bg={"white"}
-          fontWeight={"bold"}
+          p={2}
           fontSize={17}
           _hover={{
             backgroundImage: "linear-gradient(to right, #fff500 , #ff9100)",
@@ -48,13 +48,13 @@ const MapStylesToggle = ({}) => {
           as={Button}
           rounded="full"
           bg={"white"}
-          fontWeight={"bold"}
           fontSize={17}
+          p={2}
           _hover={{
             backgroundImage: "linear-gradient(to right, #fff500 , #ff9100)",
           }}
         >
-          Add A Place
+          Add a place
         </Button>
       </Link>
       <Divider orientation="vertical" height="60%" borderColor={`#FF9100`} />
@@ -66,6 +66,7 @@ const MapStylesToggle = ({}) => {
           bg={"white"}
           fontWeight={"bold"}
           fontSize={17}
+          p={2}
           _hover={{
             backgroundImage: "linear-gradient(to right, #fff500 , #ff9100)",
           }}
