@@ -34,7 +34,6 @@ const MapStylesToggle = ({}) => {
           bg={"white"}
           fontWeight={"bold"}
           fontSize={17}
-          width="100px"
           _hover={{
             backgroundImage: "linear-gradient(to right, #fff500 , #ff9100)",
           }}
@@ -42,46 +41,24 @@ const MapStylesToggle = ({}) => {
           About
         </Button>
       </Link>
-      <Divider orientation="vertical" height="80%" borderColor={`#FF9100`} />
+      <Divider orientation="vertical" height="60%" borderColor={`#FF9100`} />
+      <Link href="/AddAPlace">
+        <Button
+          color={`#2C2C68`}
+          as={Button}
+          rounded="full"
+          bg={"white"}
+          fontWeight={"bold"}
+          fontSize={17}
+          _hover={{
+            backgroundImage: "linear-gradient(to right, #fff500 , #ff9100)",
+          }}
+        >
+          Add A Place
+        </Button>
+      </Link>
+      <Divider orientation="vertical" height="60%" borderColor={`#FF9100`} />
       <Menu>
-        <Link href="/About">
-          <MenuButton
-            color={`#2C2C68`}
-            as={Button}
-            rounded="full"
-            bg={"white"}
-            fontWeight={"bold"}
-            fontSize={17}
-            width="160px"
-            border="2px"
-            borderColor={`#FF9100`}
-            _hover={{
-              backgroundImage: "linear-gradient(to right, #fff500 , #ff9100)",
-            }}
-          >
-            About
-          </MenuButton>
-        </Link>
-        <Divider borderColor="white" width="1%" orientation="vertical" />
-        <Link href="/AddAPlace">
-          <MenuButton
-            color={`#2C2C68`}
-            as={Button}
-            rounded="full"
-            bg={"white"}
-            fontWeight={"bold"}
-            fontSize={17}
-            width="160px"
-            border="2px"
-            borderColor={`#FF9100`}
-            _hover={{
-              backgroundImage: "linear-gradient(to right, #fff500 , #ff9100)",
-            }}
-          >
-            Add A Place
-          </MenuButton>
-        </Link>
-
         <MenuButton
           color={`#2C2C68`}
           as={Button}
@@ -89,7 +66,6 @@ const MapStylesToggle = ({}) => {
           bg={"white"}
           fontWeight={"bold"}
           fontSize={17}
-          width="160px"
           _hover={{
             backgroundImage: "linear-gradient(to right, #fff500 , #ff9100)",
           }}
@@ -111,7 +87,7 @@ const MapStylesToggle = ({}) => {
               })
             }
             minH="48px"
-            minW={"100px"}
+            minW={"120px"}
           >
             <Image
               boxSize="2rem"
