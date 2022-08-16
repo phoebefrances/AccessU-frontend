@@ -2,11 +2,77 @@
     display: none;
 }
 
-button.uf-button.uf-button-primary {
-    background-image: linear-gradient(to right, #17CEDA, #032396);
+/*this gives the smaller pop-ups a border*/
+.uf-bubble {
+    
+    border-color: #ff9100 !important;
 }
 
-.uf-actions.left button.uf-button {
+/* This overrides the styling of the title in the bubble */
+.uf-title {
+    color: #2C2C68 !important;
+    font-weight: bold !important;
+}
 
-    background-image: linear-gradient(to right, #17CEDA, #032396);
+/* These 2 override the styling of the text in the bubble */
+.uf-bubble-content p span {
+    color: #2C2C68 !important;
+}
+.uf-content p span {
+    color: #2C2C68 !important;
+}
+
+/* This is an attempt to change the border colour of the pointer element by brute force. So far unsuccessful. */
+/* .uf-bubble .pointer {
+    border: #ff9100 !important;
+    border-top: #ff9100 !important;
+    border-color: #ff9100 !important;
+    color: #ff9100 !important;
+    visibility: visible !important;
+} */
+
+/* This selects one of the pointers. However, instead of giving the pointer a border, it puts a border in the square around it. */
+body > div.uf-bubble.uf-e7aef4ba-a3c1-41af-a858-65e710e3126d > div.pointer {
+    border: #ff9100;
+    border-style:solid;
+    border-top: #ff9100;
+    border-bottom: #ff9100;
+    border-color: #ff9100;
+    color: #ff9100;
+    visibility: visible;
+    background-color: #ff9100;
+}
+
+
+
+
+/*❗❗❗DO NOT CHANGE THE 2 STYLES BELOW❗❗❗
+These style the border of the large pop-up
+Took me ages of trial-and-error to get it right. They follow no logic and I got it working by pure luck.
+It seems like *both* selectors need to be in use in order for the border to show. No idea why*/
+div.uf-modal-inner  {
+    border-style: solid !important;
+    
+    
+    
+}
+
+body > div.uf-modal.uf-visible.uf-7b694293-8d8f-46a4-8488-bca44ccccf38 > div {
+    
+    border-style: solid;
+    border: 2px;
+    border-color: #ff9100;
+}
+/*❗❗ ❗  DO NOT CHANGE THE 2 STYLES ABOVE❗❗❗ */ 
+
+/*The two below style the buttons*/
+.uf-button {
+    background-image: linear-gradient(to right, #17CEDA, #032396) !important;
+    border-style: none !important;
+    color: white !important;
+    border-radius: 50px !important;
+    
+}
+.uf-button:hover {
+    background-image: linear-gradient(to right, #19f7fa , #1c8cfb) !important;
 }

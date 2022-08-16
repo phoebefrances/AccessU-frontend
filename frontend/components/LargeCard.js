@@ -1,7 +1,16 @@
-import React, {useState} from "react";
-import { Box, Image, Spacer, Text, Flex } from "@chakra-ui/react";
+import React, { useState } from "react";
+import {
+  Box,
+  Image,
+  Spacer,
+  Text,
+  Flex,
+  Divider,
+  Center,
+} from "@chakra-ui/react";
 import { Rating } from "@material-ui/lab";
 import { BiX } from "react-icons/bi";
+import { ExternalLinkIcon } from "@chakra-ui/icons";
 
 //Icon imports:
 
@@ -12,19 +21,14 @@ import VisibilityIcon from "@mui/icons-material/Visibility";
 import StarRating from "./StarRating";
 
 const LargeCard = ({ cardData, setIsCard, rating, setRating }) => {
-
-
-
-
   return (
     <Box
       bg="white"
       height="690px"
       width="250px"
-      position="relative"
-      top="-25vh"
-      left="-15vw"
-      bottom="50px"
+      position="absolute" //This positioning is very haphazard. Will need to be changed
+      top="-30vh"
+      left="-25vw"
       borderRadius="15"
       border="2px"
       borderColor={`#FF9100`}
@@ -44,13 +48,12 @@ const LargeCard = ({ cardData, setIsCard, rating, setRating }) => {
         alignItems={"center"}
         onClick={() => {
           setIsCard(false);
-          setRating(null)
+          setRating(null);
         }}
       >
         <BiX fontSize={28} color="white" />
       </Box>
-      {/* Chakra Image component to display place Image on cards */}
-
+      {/* Place image */}
       <Image
         alt={cardData.alt}
         objectFit="cover"
@@ -60,8 +63,6 @@ const LargeCard = ({ cardData, setIsCard, rating, setRating }) => {
         borderBottomRadius="0"
         src={cardData.photo}
       />
-
-      {/* Chakra Text component to display place name details on cards */}
 
       <Box padding="3">
         <Text
@@ -125,7 +126,7 @@ const LargeCard = ({ cardData, setIsCard, rating, setRating }) => {
           color="#2C2C68"
         >
           <a href={`${cardData.web_address}`} target="_blank" rel="noreferrer">
-            {cardData.web_address}
+            website link <ExternalLinkIcon mx="2px" />
           </a>
         </Text>
         <br></br>
@@ -205,17 +206,19 @@ const LargeCard = ({ cardData, setIsCard, rating, setRating }) => {
               </Text>
             </Flex>
           )}
-          <Flex>
-          <Text
-                fontSize={"small"}
-                fontWeight={500}
-                color={"#2C2C68"}
-                ml={1}
-              >
-                How would you rate this place?
-              </Text>
-              <StarRating rating={rating} setRating={setRating} place_id={cardData.id}/>
-          </Flex>
+          <Center>
+            <Divider
+              borderColor={`#FF9100`}
+              orientation="horizontal"
+              width="90%"
+            />
+          </Center>
+
+          <StarRating
+            rating={rating}
+            setRating={setRating}
+            place_id={cardData.id}
+          />
         </Flex>
       </Box>
     </Box>
