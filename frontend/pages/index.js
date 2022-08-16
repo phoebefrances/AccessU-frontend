@@ -169,6 +169,7 @@ const Home = () => {
             reviewData={reviewData}
             setStarRating={setStarRating}
             starRating={starRating}
+            CardData={cardData}
           />
           <Map
             setCoordinates={setCoordinates}
@@ -191,6 +192,7 @@ const Home = () => {
               setIsCard={setIsCard}
               rating={rating}
               setRating={setRating}
+              reviewData={reviewData}
             />
           )}
         </>

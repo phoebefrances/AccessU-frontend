@@ -20,7 +20,31 @@ import PsychologyIcon from "@mui/icons-material/Psychology";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import StarRating from "./StarRating";
 
-const LargeCard = ({ cardData, setIsCard, rating, setRating }) => {
+const LargeCard = ({ cardData, setIsCard, rating, setRating, reviewData }) => {
+  // get the place is from our cardData object that is passed to this component
+  let selectedPlace = cardData.id;
+  // Create an empty array to store all the ratings for that specific place. This is later used to calculate average
+  let averageRating = [];
+  reviewData.map((rating, i) => {
+    //filter out ONLY places that match the CURRENT place_id ,and find their star rating
+    if (selectedPlace == rating.place_id) {
+      // console.log(
+      //   i,
+      //   ` rating is `,
+      //   rating.rating,
+      //   "place id is",
+      //   rating.place_id
+      // );
+      //then push the star rating for that place into the array
+      averageRating.push(rating.rating);
+    }
+  });
+  //use reducer to loop through the N number of ratings and calculate the average
+  const average =
+    averageRating.reduce((a, b) => a + b, 0) / averageRating.length;
+  //the average constant will now replace the value for the Rating component in our render.
+  // console.log('Average Rating Array isss.....', average)
+
   return (
     <Box
       bg="white"
@@ -91,7 +115,7 @@ const LargeCard = ({ cardData, setIsCard, rating, setRating }) => {
           isTruncated
           color="#2C2C68"
         >
-          <Rating size="small" value={Number(cardData.rating)} readOnly />
+          <Rating size="small" value={Number(average)} readOnly />
         </Text>
         <Spacer />
         <Text

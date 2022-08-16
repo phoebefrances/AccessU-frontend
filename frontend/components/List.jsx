@@ -22,6 +22,7 @@ const List = ({
   reviewData,
   starRating,
   setStarRating,
+  CardData,
 }) => {
   if (isLoading)
     return (
@@ -90,6 +91,7 @@ const List = ({
                 setRating={setRating}
                 rating={rating}
                 reviewData={reviewData}
+                CardData={CardData}
               />
               <Divider
                 orientation="horizontal"
