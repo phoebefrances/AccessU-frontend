@@ -7,12 +7,6 @@ import Map from "../components/Map";
 import Head from "next/head";
 import LargeCard from "../components/LargeCard";
 
-//👇 Comment out if using offline database. Uncomment if using API
-// import { getPlacesData } from "./api/getPlacesData";
-
-//👇 Comment out if using API. Uncomment if using offline database.
-// import { places } from "../libs/offlineData.js";
-
 const Home = () => {
   const [backendData, setBackendData] = useState([]);
 
@@ -26,7 +20,6 @@ const Home = () => {
           `https://undefined-room4.herokuapp.com/places`
         );
         const data = await response.json();
-        // setPlaces(data.payload.rows);
         setBackendData(data.payload.rows);
       } catch (error) {
         console.log("error", error);
@@ -38,9 +31,8 @@ const Home = () => {
           `https://undefined-room4.herokuapp.com/reviews`
         );
         const data = await response.json();
-        // setPlaces(data.payload.rows);
+
         setReviewData(data.payload.rows);
-        console.log("Review Data is...", data.payload.rows);
       } catch (error) {
         console.log("error", error);
       }
@@ -48,8 +40,6 @@ const Home = () => {
     fetchReviewData();
     fetchData();
   }, []);
-
-  console.log(backendData);
 
   //STATES:
   //Rating status passed down from here
