@@ -10,6 +10,7 @@ import {
 } from "@chakra-ui/react";
 import { Rating } from "@material-ui/lab";
 import { BiX } from "react-icons/bi";
+import { ExternalLinkIcon } from "@chakra-ui/icons";
 
 //Icon imports:
 
@@ -125,7 +126,7 @@ const LargeCard = ({ cardData, setIsCard, rating, setRating }) => {
           color="#2C2C68"
         >
           <a href={`${cardData.web_address}`} target="_blank" rel="noreferrer">
-            {cardData.web_address}
+            website link <ExternalLinkIcon mx="2px" />
           </a>
         </Text>
         <br></br>
