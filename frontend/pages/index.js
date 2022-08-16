@@ -5,6 +5,7 @@ import HeaderSmall from "../components/HeaderSmall";
 import List from "../components/List";
 import Map from "../components/Map";
 import Head from "next/head";
+import LargeCard from "../components/LargeCard";
 
 //👇 Comment out if using offline database. Uncomment if using API
 // import { getPlacesData } from "./api/getPlacesData";
@@ -183,6 +184,15 @@ const Home = () => {
             setStarRating={setStarRating}
             starRating={starRating}
           />
+          {/* Conditionally rendered the LargeCard component if isCard is true  */}
+          {isCard && (
+            <LargeCard
+              cardData={cardData}
+              setIsCard={setIsCard}
+              rating={rating}
+              setRating={setRating}
+            />
+          )}
         </>
       ) : (
         <>

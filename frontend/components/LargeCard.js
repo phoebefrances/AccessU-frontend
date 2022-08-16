@@ -26,9 +26,8 @@ const LargeCard = ({ cardData, setIsCard, rating, setRating }) => {
       bg="white"
       height="690px"
       width="250px"
-      position="absolute" //This positioning is very haphazard. Will need to be changed
-      top="-30vh"
-      left="-25vw"
+      position="absolute"
+      left="470px" //This left-offset is the width of the List + 20px. This means it will always be 20px away from the List.
       borderRadius="15"
       border="2px"
       borderColor={`#FF9100`}

@@ -3,7 +3,7 @@ import { Box } from "@chakra-ui/react";
 import GoogleMapReact from "google-map-react";
 import { IoLocation } from "react-icons/io5";
 import LargeCard from "./LargeCard";
-import {MapStyleContext} from './MapStyleContext'
+import { MapStyleContext } from "./MapStyleContext";
 //👇setCoordinates and setBounds only used with API
 const Map = ({
   coordinates,
@@ -15,8 +15,7 @@ const Map = ({
   rating,
   setRating,
 }) => {
-  const [mapStyle, SetMapStyle] = useContext(MapStyleContext)
-
+  const [mapStyle, SetMapStyle] = useContext(MapStyleContext);
 
   return (
     <Box className="map-box" width={"full"} height={"full"}>
@@ -51,9 +50,6 @@ const Map = ({
             <IoLocation color="#032396" fontSize={38} />
           </Box>
         ))}
-
-        {/* Conditionally rendered the LargeCard component if isCard is true  */}
-        {isCard && <LargeCard cardData={cardData} setIsCard={setIsCard} rating={rating} setRating={setRating} />}
       </GoogleMapReact>
     </Box>
   );
