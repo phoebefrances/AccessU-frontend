@@ -26,8 +26,8 @@ const LargeCard = ({ cardData, setIsCard, rating, setRating }) => {
       height="690px"
       width="250px"
       position="absolute" //This positioning is very haphazard. Will need to be changed
-      top="-350px"
-      left="-450px"
+      top="-30vh"
+      left="-25vw"
       borderRadius="15"
       border="2px"
       borderColor={`#FF9100`}
