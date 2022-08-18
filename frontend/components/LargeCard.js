@@ -128,7 +128,7 @@ const LargeCard = ({ cardData, setIsCard, rating, setRating, reviewData }) => {
         >
           {cardData.address}
         </Text>
-        <br></br>
+
         <Text
           textTransform="capitalize"
           width="full"
@@ -139,8 +139,7 @@ const LargeCard = ({ cardData, setIsCard, rating, setRating, reviewData }) => {
         >
           {cardData.phone_number}
         </Text>
-        <Spacer />
-        <br></br>
+        {/* <Spacer /> */}
         <Text
           width="full"
           fontSize="14px"
@@ -152,7 +151,7 @@ const LargeCard = ({ cardData, setIsCard, rating, setRating, reviewData }) => {
             website link <ExternalLinkIcon mx="2px" />
           </a>
         </Text>
-        <br></br>
+        {/* <br></br> */}
         <Text
           textTransform="capitalize"
           width="full"
