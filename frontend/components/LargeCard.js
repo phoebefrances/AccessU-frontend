@@ -20,15 +20,38 @@ import PsychologyIcon from "@mui/icons-material/Psychology";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import StarRating from "./StarRating";
 
-const LargeCard = ({ cardData, setIsCard, rating, setRating }) => {
+const LargeCard = ({ cardData, setIsCard, rating, setRating, reviewData }) => {
+  // get the place is from our cardData object that is passed to this component
+  let selectedPlace = cardData.id;
+  // Create an empty array to store all the ratings for that specific place. This is later used to calculate average
+  let averageRating = [];
+  reviewData.map((rating, i) => {
+    //filter out ONLY places that match the CURRENT place_id ,and find their star rating
+    if (selectedPlace == rating.place_id) {
+      // console.log(
+      //   i,
+      //   ` rating is `,
+      //   rating.rating,
+      //   "place id is",
+      //   rating.place_id
+      // );
+      //then push the star rating for that place into the array
+      averageRating.push(rating.rating);
+    }
+  });
+  //use reducer to loop through the N number of ratings and calculate the average
+  const average =
+    averageRating.reduce((a, b) => a + b, 0) / averageRating.length;
+  //the average constant will now replace the value for the Rating component in our render.
+  // console.log('Average Rating Array isss.....', average)
+
   return (
     <Box
       bg="white"
       height="690px"
       width="250px"
-      position="absolute" //This positioning is very haphazard. Will need to be changed
-      top="-30vh"
-      left="-25vw"
+      position="absolute"
+      left="470px" //This left-offset is the width of the List + 20px. This means it will always be 20px away from the List.
       borderRadius="15"
       border="2px"
       borderColor={`#FF9100`}
@@ -92,7 +115,7 @@ const LargeCard = ({ cardData, setIsCard, rating, setRating }) => {
           isTruncated
           color="#2C2C68"
         >
-          <Rating size="small" value={Number(cardData.rating)} readOnly />
+          <Rating size="small" value={Number(average)} readOnly />
         </Text>
         <Spacer />
         <Text
@@ -105,7 +128,7 @@ const LargeCard = ({ cardData, setIsCard, rating, setRating }) => {
         >
           {cardData.address}
         </Text>
-        <br></br>
+
         <Text
           textTransform="capitalize"
           width="full"
@@ -116,8 +139,7 @@ const LargeCard = ({ cardData, setIsCard, rating, setRating }) => {
         >
           {cardData.phone_number}
         </Text>
-        <Spacer />
-        <br></br>
+        {/* <Spacer /> */}
         <Text
           width="full"
           fontSize="14px"
@@ -129,7 +151,7 @@ const LargeCard = ({ cardData, setIsCard, rating, setRating }) => {
             website link <ExternalLinkIcon mx="2px" />
           </a>
         </Text>
-        <br></br>
+        {/* <br></br> */}
         <Text
           textTransform="capitalize"
           width="full"

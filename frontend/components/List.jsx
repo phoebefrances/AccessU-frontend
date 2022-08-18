@@ -22,6 +22,7 @@ const List = ({
   reviewData,
   starRating,
   setStarRating,
+  CardData,
 }) => {
   if (isLoading)
     return (
@@ -61,7 +62,7 @@ const List = ({
     <Flex
       direction="column"
       bg="whiteAlpha.900"
-      width={"37vw"}
+      // width={"37vw"}
       maxWidth="450px" //If width of the gallery is causing problems, comment this line out
       height="100vh"
       position="fixed"
@@ -90,6 +91,7 @@ const List = ({
                 setRating={setRating}
                 rating={rating}
                 reviewData={reviewData}
+                CardData={CardData}
               />
               <Divider
                 orientation="horizontal"

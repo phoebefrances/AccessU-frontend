@@ -32,7 +32,7 @@
 } */
 
 /* This selects one of the pointers. However, instead of giving the pointer a border, it puts a border in the square around it. */
-body > div.uf-bubble.uf-e7aef4ba-a3c1-41af-a858-65e710e3126d > div.pointer {
+/* body > div.uf-bubble.uf-e7aef4ba-a3c1-41af-a858-65e710e3126d > div.pointer {
     border: #ff9100;
     border-style:solid;
     border-top: #ff9100;
@@ -41,7 +41,7 @@ body > div.uf-bubble.uf-e7aef4ba-a3c1-41af-a858-65e710e3126d > div.pointer {
     color: #ff9100;
     visibility: visible;
     background-color: #ff9100;
-}
+} */
 
 
 
