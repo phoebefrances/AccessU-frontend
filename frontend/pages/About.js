@@ -21,7 +21,7 @@ export default function About() {
 
   const handleClick = (e) => {
     e.preventDefault();
-    router.push("http://localhost:3000/");
+    router.push("/");
   };
 
   return (
@@ -63,8 +63,8 @@ export default function About() {
           <Flex align="center" width="25%">
             <QuestionOutlineIcon color={`white`} w={20} h={16} />
             <Text color="white" fontWeight={"bold"}>
-              Have you visited somewhere to only find the access wasn&apos;t as you
-              thought?
+              Have you visited somewhere to only find the access wasn&apos;t as
+              you thought?
             </Text>
           </Flex>
           <Flex align="center" width="25%">
