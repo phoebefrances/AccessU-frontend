@@ -4,14 +4,11 @@
 <img src="./frontend/public/logo_new_resized.png" style="width: 500px" />
 </center>
 
-
 <center>
  <span style="color:#17CEDA; font-weight: 600;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;  ✨ Helping you find what you need, where you need it. ✨  </span> 
 </center>
 
 </br></br></br></br></br></br></br></br></br>
-
-
 
 ## Table Of Contents
 
@@ -43,21 +40,14 @@
 
 &nbsp; &nbsp;[Acknowledgements](#❤️-acknowledgements)
 
-
-
 </br></br>
 </br></br>
-
-
-
-
-
-
 
 ## ♿ AccessU App
+
 </br>
 
-&nbsp;Checkout our LIVE app here: 
+&nbsp;Checkout our LIVE app here:
 
 &nbsp;https://accessu-undefinedsoc.vercel.app/
 
@@ -65,16 +55,15 @@
 
 &nbsp; Hello and thanks for your interest in our web app.
 
-&nbsp; We hope you find this document helpful in understanding the problem we aimed to solve, the solution&nbsp; &nbsp; or app we created to solve this problem, how to install the app, details about what's going on in the &nbsp; &nbsp; &nbsp; &nbsp; code and how to use it. 
+&nbsp; We hope you find this document helpful in understanding the problem we aimed to solve, the solution&nbsp; &nbsp; or app we created to solve this problem, how to install the app, details about what's going on in the &nbsp; &nbsp; &nbsp; &nbsp; code and how to use it.
 
 </br></br>
 
-## :x: The Problem 
+## ❌ The Problem
 
 </br>
 
 - 1 in 4 households are impacted by disability
-  
 
 - 98% of disabled people look for accessibility information before visiting somewhere for the first time.
 
@@ -88,14 +77,16 @@
 
 </br>
 
-## :white_check_mark: Our Solution 
+## ✅ Our Solution
 
 </br>
 
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AccessU is here to take the stress out of planning. 
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Our aim is to provide you with all the accessibility information you need in order to feel assured & 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;wherever you want to go has what you need. 
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Our aim is to provide you with all the accessibility information you need in order to feel assured &
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;wherever you want to go has what you need.
 
 </br>
 
@@ -259,8 +250,6 @@ npm run db:dropPlacesTable
 
 ```
 
-
-
 </br>
 
 [Back to Top](#table-of-contents)
@@ -394,7 +383,7 @@ The back end runs tests in Supertest and Jest.
 
 </br>
 
-We're a group of six young, talented, ambitious full stack developers that wanted to create an app that helped find places around the world that accomodate better for those with accessibility needs. 
+We're a group of six young, talented, ambitious full stack developers that wanted to create an app that helped find places around the world that accomodate better for those with accessibility needs.
 
 </br>
 
@@ -412,13 +401,13 @@ Teamwork makes the dream work..
 
 </br>
 
-A good plan always makes the day run smoother, not perfect, but much better overall. 
+A good plan always makes the day run smoother, not perfect, but much better overall.
 
 </br>
 
 </br>
 
-The plan is a living document and can always be iterated upon as you go, it doesn't need to be perfect. 
+The plan is a living document and can always be iterated upon as you go, it doesn't need to be perfect.
 
 </br>
 
@@ -450,7 +439,7 @@ Let things go if need be.. Sometimes it’s just not worth it..
 
 </br>
 
-[Phoebe Francis](https://github.com/phoebefrances)
+[Phoebe Windham](https://github.com/phoebefrances)
 
 </br>
 
@@ -503,4 +492,3 @@ Let things go if need be.. Sometimes it’s just not worth it..
  </br>
 
 [Back to Top](#table-of-contents)
-
