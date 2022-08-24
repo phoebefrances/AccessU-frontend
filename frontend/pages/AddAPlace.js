@@ -11,7 +11,7 @@ export default function AddANewPlace() {
 
   const handleClick = (e) => {
     e.preventDefault();
-    router.push("http://localhost:3000/");
+    router.push("/");
   };
 
   return (
