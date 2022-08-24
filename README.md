@@ -1,7 +1,7 @@
 <!-- ![](https://i.imgur.com/XgsioqF.jpg) -->
 
  <center>
-<img src="./frontend/public/logo.png" style="width: 500px" />
+<img src="./frontend/public/logo_new_resized.png" style="width: 500px" />
 </center>
 
 <center>
@@ -81,7 +81,9 @@
 
 </br>
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Access+ is here to take the stress out of planning.
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AccessU is here to take the stress out of planning. 
+
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Our aim is to provide you with all the accessibility information you need in order to feel assured &
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;wherever you want to go has what you need.
