@@ -57,6 +57,8 @@
 
 &nbsp; We hope you find this document helpful in understanding the problem we aimed to solve, the solution&nbsp; &nbsp; or app we created to solve this problem, how to install the app, details about what's going on in the &nbsp; &nbsp; &nbsp; &nbsp; code and how to use it.
 
+The user data that's been added to our app and system is in and around London or Soho. They'd be the best place to see the fullest capactiy of our app. 
+
 </br></br>
 
 ## ❌ The Problem
