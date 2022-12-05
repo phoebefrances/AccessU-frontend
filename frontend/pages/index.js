@@ -17,7 +17,7 @@ const Home = () => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          `https://undefined-room4.herokuapp.com/places`
+          `https://places-table-undefined.herokuapp.com/places`
         );
         const data = await response.json();
         setBackendData(data.payload.rows);
@@ -28,7 +28,7 @@ const Home = () => {
     const fetchReviewData = async () => {
       try {
         const response = await fetch(
-          `https://undefined-room4.herokuapp.com/reviews`
+          `https://places-table-undefined.herokuapp.com/reviews`
         );
         const data = await response.json();
 
