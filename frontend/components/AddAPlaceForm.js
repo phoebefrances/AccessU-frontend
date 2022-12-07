@@ -159,6 +159,7 @@ const AddAPlaceForm = () => {
     );
     const data = await res.json();
     console.log(data);
+    setSuccess(true);
   }
 
   function handleSubmit(e) {
@@ -453,10 +454,10 @@ const AddAPlaceForm = () => {
       </fieldset>
       
     </form>
-    {/* {success && <Alert status='success'>
+    {success && <Alert status='success'>
   <AlertIcon />
   <AlertTitle>Thank you, your place has been added!</AlertTitle>
-</Alert> } */}
+</Alert> }
     </div>
   );
   
