@@ -13,6 +13,7 @@ const Home = () => {
   const [reviewData, setReviewData] = useState([]);
 
   const [starRating, setStarRating] = useState();
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -25,6 +26,7 @@ const Home = () => {
         console.log("error", error);
       }
     };
+
     const fetchReviewData = async () => {
       try {
         const response = await fetch(
@@ -71,23 +73,11 @@ const Home = () => {
   //We will pass setSearchClick to Header > Search component.
   const [searchClick, setSearchClick] = useState(false);
 
-  //👇 Comment out if using offline database. Uncomment if using API ------------------------------------------
-
-  // const [bounds, setBounds] = useState(null);
-
-  // const [places, setPlaces] = useState({});
-
-  //❗There might have been another line of code here that got deleted ❗
-
-  //☝️ Comment out if using offline database. Uncomment if using API ------------------------------------------
 
   useEffect(() => {
-    //  navigator.geolocation.getCurrentPosition(
-    //   ({ coords: { latitude, longitude } }) => {
-    //     console.log({ latitude, longitude });
+ 
     setCoordinates({ lat: 51.60376294670231, lng: -0.010961442420194591 });
-    //   }
-    // );
+  
   }, []);
 
   // This now selects places by rating OR category
@@ -164,7 +154,7 @@ const Home = () => {
           <Map
             setCoordinates={setCoordinates}
             coordinates={coordinates}
-            // setBounds={setBounds} //👈 Comment out if using offline database. Uncomment if using API
+           
             places={filteredPlaces}
             isCard={isCard}
             setIsCard={setIsCard}
@@ -205,15 +195,3 @@ const Home = () => {
 
 export default Home;
 
-// 👇 Comment out if using offline database. Uncomment AND PUT INSIDE THE HOME COMPONENT if using the API.
-// Updates the data to the users choice of category or location
-
-// useEffect(() => {
-//   setIsLoading(true);
-//   getPlacesData(type, bounds?.sw, bounds?.ne).then((data) => {
-//     console.log(`This is data: ${data}`);
-//     console.dir(data);
-//     setPlaces(data);
-//     setIsLoading(false);
-//   });
-// }, [type, coordinates, bounds]);

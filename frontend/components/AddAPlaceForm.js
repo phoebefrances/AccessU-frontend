@@ -1,6 +1,14 @@
+import { TriangleUpIcon } from "@chakra-ui/icons";
+import { orange } from "@material-ui/core/colors";
 import { borderColor } from "@mui/system";
 import React, { useEffect } from "react";
 import { useState } from "react";
+import {
+  Alert,
+  AlertIcon,
+  AlertTitle,
+  AlertDescription,
+} from '@chakra-ui/react'
 
 const emptyPlaceDetails = {
   category: "",
@@ -38,6 +46,9 @@ const AddAPlaceForm = () => {
 
   // Form Data
   const [formData, setFormData] = useState(emptyPlaceDetails);
+
+  // Success message for place submission to database 
+  const [success, setSuccess] = useState(false)
 
   useEffect(() => {
     function updateFormData() {
@@ -148,15 +159,21 @@ const AddAPlaceForm = () => {
     );
     const data = await res.json();
     console.log(data);
+    setSuccess(true)
   }
 
   function handleSubmit(e) {
     e.preventDefault();
     console.log("handle submit working, here is the form data", formData);
     sendFormData(formData);
+    setTimeout(() => {
+      setSuccess(false);
+    }, 3000);
   }
 
+
   return (
+    <div>
     <form className="place_form">
       <style jsx>
         {`
@@ -224,6 +241,29 @@ const AddAPlaceForm = () => {
           }
         `}
       </style>
+      <style jsx> 
+{`.alert {
+  padding: 20px;
+  background-color: #f44336;
+  color: white;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}`}
+</style>
+    
 
       <fieldset className="place_form_fieldset">
         <h2 className="place_form_title">Add Place Details</h2>
@@ -412,8 +452,15 @@ const AddAPlaceForm = () => {
           onClick={handleSubmit}
         />
       </fieldset>
+      
     </form>
+    {success && <Alert status='success'>
+  <AlertIcon />
+  <AlertTitle>Thank you, your place has been added!</AlertTitle>
+</Alert> }
+    </div>
   );
+  
 };
 
 export default AddAPlaceForm;
