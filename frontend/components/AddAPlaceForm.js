@@ -159,7 +159,6 @@ const AddAPlaceForm = () => {
     );
     const data = await res.json();
     console.log(data);
-    setSuccess(true)
   }
 
   function handleSubmit(e) {
